@@ -1,0 +1,67 @@
+{
+  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/.codex/skills/openspec-apply-change/SKILL.md": {
+    "mtime": 1781443655.550553,
+    "ast_hash": "ef62fef14cd5c347e2be60d2af4ea59f",
+    "semantic_hash": "ef62fef14cd5c347e2be60d2af4ea59f"
+  },
+  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/.codex/skills/openspec-archive-change/SKILL.md": {
+    "mtime": 1781443655.5511894,
+    "ast_hash": "a853b3ce25149061a7f13f05b127350c",
+    "semantic_hash": "a853b3ce25149061a7f13f05b127350c"
+  },
+  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/.codex/skills/openspec-bulk-archive-change/SKILL.md": {
+    "mtime": 1781443655.5513406,
+    "ast_hash": "4c4243b11da830e2a11e06fb236397a7",
+    "semantic_hash": "4c4243b11da830e2a11e06fb236397a7"
+  },
+  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/.codex/skills/openspec-continue-change/SKILL.md": {
+    "mtime": 1781443655.5503242,
+    "ast_hash": "2f94797a9d8e395b9beeba7ea9a43288",
+    "semantic_hash": "2f94797a9d8e395b9beeba7ea9a43288"
+  },
+  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/.codex/skills/openspec-explore/SKILL.md": {
+    "mtime": 1781443655.5499856,
+    "ast_hash": "61496eebbad91c2af8b3e5bf7fc9d256",
+    "semantic_hash": "61496eebbad91c2af8b3e5bf7fc9d256"
+  },
+  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/.codex/skills/openspec-ff-change/SKILL.md": {
+    "mtime": 1781443655.5507216,
+    "ast_hash": "1ed86fa2b49c8ddc08652ee4c88f0b45",
+    "semantic_hash": "1ed86fa2b49c8ddc08652ee4c88f0b45"
+  },
+  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/.codex/skills/openspec-new-change/SKILL.md": {
+    "mtime": 1781443655.5501387,
+    "ast_hash": "a391aba5d8946da580904fe3782e190d",
+    "semantic_hash": "a391aba5d8946da580904fe3782e190d"
+  },
+  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/.codex/skills/openspec-onboard/SKILL.md": {
+    "mtime": 1781443655.5517168,
+    "ast_hash": "310fc85a6f93383a1ec59e0cfe24e211",
+    "semantic_hash": "310fc85a6f93383a1ec59e0cfe24e211"
+  },
+  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/.codex/skills/openspec-propose/SKILL.md": {
+    "mtime": 1781443655.5518618,
+    "ast_hash": "5fe13ada44751b3ff94f56c22c383749",
+    "semantic_hash": "5fe13ada44751b3ff94f56c22c383749"
+  },
+  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/.codex/skills/openspec-sync-specs/SKILL.md": {
+    "mtime": 1781443655.5508847,
+    "ast_hash": "211bc14ef7cb2d1e24b6b73e878d8509",
+    "semantic_hash": "211bc14ef7cb2d1e24b6b73e878d8509"
+  },
+  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/.codex/skills/openspec-verify-change/SKILL.md": {
+    "mtime": 1781443655.5515432,
+    "ast_hash": "2baab6b815515578795441106d2d5abd",
+    "semantic_hash": "2baab6b815515578795441106d2d5abd"
+  },
+  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/README.md": {
+    "mtime": 1781450518.1165302,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/docs/superpowers/specs/2026-06-14-assisted-file-redaction-design.md": {
+    "mtime": 1781450375.4169004,
+    "ast_hash": "4c53e4f4993af4f090a52a4ecba3660f",
+    "semantic_hash": "4c53e4f4993af4f090a52a4ecba3660f"
+  }
+}
