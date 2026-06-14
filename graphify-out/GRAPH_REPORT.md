@@ -1,63 +1,59 @@
 # Graph Report - .  (2026-06-14)
 
 ## Corpus Check
-- cluster-only mode — file stats not available
+- 10 files · ~7,155 words
+- Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 302 nodes · 299 edges · 33 communities (32 shown, 1 thin omitted)
-- Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 14 edges (avg confidence: 0.93)
-- Token cost: 0 input · 0 output
-
-## Graph Freshness
-- Built from commit: `c9ab4084`
-- Run `git rev-parse HEAD` and compare to check if the graph is stale.
-- Run `graphify update .` after code changes (no API cost).
+- 321 nodes · 327 edges · 33 communities (32 shown, 1 thin omitted)
+- Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 16 edges (avg confidence: 0.93)
+- Token cost: 6,120 input · 6,650 output
 
 ## Community Hubs (Navigation)
+- [[_COMMUNITY_Project Architecture|Project Architecture]]
+- [[_COMMUNITY_Technical Scope|Technical Scope]]
+- [[_COMMUNITY_Working Agreement|Working Agreement]]
+- [[_COMMUNITY_Governance Specification|Governance Specification]]
 - [[_COMMUNITY_OpenSpec Change Lifecycle|OpenSpec Change Lifecycle]]
-- [[_COMMUNITY_Documentation and Contribution Policy|Documentation and Contribution Policy]]
-- [[_COMMUNITY_Redaction System Architecture|Redaction System Architecture]]
-- [[_COMMUNITY_Security Reporting and Fixtures|Security Reporting and Fixtures]]
-- [[_COMMUNITY_Automated Quality and Pages|Automated Quality and Pages]]
-- [[_COMMUNITY_Protected Main and Publication|Protected Main and Publication]]
+- [[_COMMUNITY_Archived Governance Requirements|Archived Governance Requirements]]
+- [[_COMMUNITY_Governance Automation|Governance Automation]]
+- [[_COMMUNITY_OpenSpec Onboarding|OpenSpec Onboarding]]
+- [[_COMMUNITY_Bootstrap Execution|Bootstrap Execution]]
+- [[_COMMUNITY_Security Reporting|Security Reporting]]
+- [[_COMMUNITY_Governance Design|Governance Design]]
+- [[_COMMUNITY_OpenSpec Exploration|OpenSpec Exploration]]
+- [[_COMMUNITY_AWS System Architecture|AWS System Architecture]]
+- [[_COMMUNITY_Governance Proposal|Governance Proposal]]
+- [[_COMMUNITY_Governance ADR|Governance ADR]]
+- [[_COMMUNITY_MADR Template|MADR Template]]
+- [[_COMMUNITY_Contribution Workflow|Contribution Workflow]]
+- [[_COMMUNITY_Pull Request Checklist|Pull Request Checklist]]
 - [[_COMMUNITY_Repository Linting|Repository Linting]]
-- [[_COMMUNITY_Architecture Decision Records|Architecture Decision Records]]
-- [[_COMMUNITY_Feature Request Intake|Feature Request Intake]]
-- [[_COMMUNITY_Dependency Automation|Dependency Automation]]
-- [[_COMMUNITY_Community 13|Community 13]]
-- [[_COMMUNITY_Community 14|Community 14]]
-- [[_COMMUNITY_Community 15|Community 15]]
-- [[_COMMUNITY_Community 16|Community 16]]
-- [[_COMMUNITY_Community 17|Community 17]]
-- [[_COMMUNITY_Community 18|Community 18]]
-- [[_COMMUNITY_Community 19|Community 19]]
-- [[_COMMUNITY_Community 20|Community 20]]
-- [[_COMMUNITY_Community 21|Community 21]]
-- [[_COMMUNITY_Community 22|Community 22]]
-- [[_COMMUNITY_Community 23|Community 23]]
-- [[_COMMUNITY_Community 24|Community 24]]
-- [[_COMMUNITY_Community 25|Community 25]]
-- [[_COMMUNITY_Community 26|Community 26]]
+- [[_COMMUNITY_Bootstrap Decisions|Bootstrap Decisions]]
+- [[_COMMUNITY_ADR Index|ADR Index]]
+- [[_COMMUNITY_Documentation Home|Documentation Home]]
+- [[_COMMUNITY_Feature Requests|Feature Requests]]
+- [[_COMMUNITY_Dependency Updates|Dependency Updates]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `Project Working Agreement` - 14 edges
+1. `Project Working Agreement` - 16 edges
 2. `Development workflow` - 14 edges
 3. `Technical Scope: Assisted File Redaction Application` - 13 edges
 4. `Assisted File Redaction technical scope` - 13 edges
 5. `ADDED Requirements` - 11 edges
 6. `Requirements` - 11 edges
 7. `ADR 0001: Documentation and GitHub governance` - 11 edges
-8. `3. Functional Requirements` - 7 edges
-9. `9. Testing Strategy` - 7 edges
-10. `OpenSpec Onboarding` - 7 edges
+8. `Quality workflow` - 8 edges
+9. `3. Functional Requirements` - 7 edges
+10. `9. Testing Strategy` - 7 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Pull request definition of done` --semantically_similar_to--> `Project Working Agreement`  [INFERRED] [semantically similar]
   .github/PULL_REQUEST_TEMPLATE.md → AGENTS.md
-- `Sensitive data exclusion` --semantically_similar_to--> `Synthetic or sanitized bug fixtures`  [INFERRED] [semantically similar]
-  SECURITY.md → .github/ISSUE_TEMPLATE/bug.yml
 - `Local validation suite` --semantically_similar_to--> `Quality workflow`  [INFERRED] [semantically similar]
   docs/development.md → .github/workflows/quality.yml
+- `Sensitive data exclusion` --semantically_similar_to--> `Synthetic or sanitized bug fixtures`  [INFERRED] [semantically similar]
+  SECURITY.md → .github/ISSUE_TEMPLATE/bug.yml
 - `Issue-to-PR lifecycle` --semantically_similar_to--> `OpenSpec change workflow`  [INFERRED] [semantically similar]
   CONTRIBUTING.md → AGENTS.md
 - `Markdown and YAML linting` --references--> `PyMarkdown lint configuration`  [EXTRACTED]
@@ -66,119 +62,124 @@
 ## Import Cycles
 - None detected.
 
+## Hyperedges (group relationships)
+- **Repository quality enforcement** — agents_definition_of_done, repository_governance_spec_automated_quality, workflows_quality_quality_workflow, pre_commit_config_pre_commit_checks [INFERRED 0.95]
+- **Versioned documentation delivery** — agents_documentation_as_code, repository_governance_spec_published_documentation, workflows_pages_strict_mkdocs_build, workflows_pages_github_pages_deployment [INFERRED 0.95]
+- **Tracked knowledge asset lifecycle** — agents_tracked_knowledge_assets, agents_graphify_workflow, repository_governance_spec_tracked_assets, 2026_06_14_gh_1_bootstrap_governance_tasks_completed_bootstrap [INFERRED 0.85]
+
 ## Communities (33 total, 1 thin omitted)
 
-### Community 1 - "OpenSpec Change Lifecycle"
-Cohesion: 0.12
-Nodes (22): OpenSpec Apply Change, Task-Driven Implementation, Archive Validation, OpenSpec Archive Change, OpenSpec Bulk Archive Change, Spec Conflict Resolution, Artifact Dependency Order, OpenSpec Continue Change (+14 more)
-
-### Community 2 - "Documentation and Contribution Policy"
+### Community 0 - "Project Architecture"
 Cohesion: 0.08
-Nodes (32): ADR 0001: Documentation and GitHub governance, Apache License 2.0, Reproducible governance controls before application code, Solo-maintainer merge policy, Change Workflow, Collaboration Platform, Definition of Done, Documentation as Code (+24 more)
+Nodes (31): Documentation as Code, 24-hour job retention, Assisted File Redaction technical scope, Private AWS architecture, Official AWS ECS regional price index, Checkpoint recovery, AWS Batch Fargate Spot processing, Mandatory human review (+23 more)
 
-### Community 3 - "Redaction System Architecture"
-Cohesion: 0.10
-Nodes (23): Append-only decision history, Architecture decision record index, Decision trade-off structure, MADR template, 24-hour job retention, Assisted File Redaction technical scope, Private AWS architecture, Official AWS ECS regional price index (+15 more)
-
-### Community 5 - "Security Reporting and Fixtures"
-Cohesion: 0.15
-Nodes (12): Privacy-preserving logging, Bug report issue template, Reproducible bug reports, Synthetic or sanitized bug fixtures, Issue template configuration, GitHub private vulnerability reporting, Coordinated vulnerability disclosure, Reporting a vulnerability (+4 more)
-
-### Community 6 - "Automated Quality and Pages"
-Cohesion: 0.29
-Nodes (7): Local validation suite, GitHub Pages deployment, GitHub Pages workflow, Strict MkDocs build, OpenSpec strict validation, Pre-commit validation, Quality workflow
-
-### Community 7 - "Protected Main and Publication"
+### Community 1 - "Technical Scope"
 Cohesion: 0.06
 Nodes (30): 10. Acceptance Criteria, 11. Principal Risks, 12. References, 1. Objective, 2. Scope, 3. Functional Requirements, 5. Core Data Model, 6. Security Requirements (+22 more)
 
-### Community 8 - "Repository Linting"
-Cohesion: 0.33
-Nodes (6): Markdown and YAML linting, Pre-commit configuration, Repository hygiene hooks, PyMarkdown lint configuration, Relaxed Markdown rules, YAML lint configuration
-
-### Community 9 - "Architecture Decision Records"
+### Community 2 - "Working Agreement"
 Cohesion: 0.09
-Nodes (21): Requirement: Architecture decision records, Requirement: Automated pull request quality, Requirement: Dependency and security automation, Requirement: Managed roadmap, Requirement: Protected main workflow, Requirement: Published documentation, Requirement: Repository contribution metadata, Requirement: Reproducible repository tooling (+13 more)
+Nodes (27): ADR 0001: Documentation and GitHub governance, Apache License 2.0, Reproducible governance controls before application code, Solo-maintainer merge policy, Append-only decision history, Architecture decision record index, Decision trade-off structure, MADR template (+19 more)
 
-### Community 10 - "Feature Request Intake"
-Cohesion: 0.67
-Nodes (3): Feature request issue template, Observable success, Scope boundaries
-
-### Community 13 - "Community 13"
+### Community 3 - "Governance Specification"
 Cohesion: 0.08
 Nodes (23): Requirement: Architecture decision records, Requirement: Automated pull request quality, Requirement: Dependency and security automation, Requirement: Managed roadmap, Requirement: Protected main workflow, Requirement: Published documentation, Requirement: Repository contribution metadata, Requirement: Reproducible repository tooling (+15 more)
 
-### Community 14 - "Community 14"
+### Community 4 - "OpenSpec Change Lifecycle"
+Cohesion: 0.12
+Nodes (22): OpenSpec Apply Change, Task-Driven Implementation, Archive Validation, OpenSpec Archive Change, OpenSpec Bulk Archive Change, Spec Conflict Resolution, Artifact Dependency Order, OpenSpec Continue Change (+14 more)
+
+### Community 5 - "Archived Governance Requirements"
+Cohesion: 0.09
+Nodes (21): Requirement: Architecture decision records, Requirement: Automated pull request quality, Requirement: Dependency and security automation, Requirement: Managed roadmap, Requirement: Protected main workflow, Requirement: Published documentation, Requirement: Repository contribution metadata, Requirement: Reproducible repository tooling (+13 more)
+
+### Community 6 - "Governance Automation"
+Cohesion: 0.12
+Nodes (21): Repository governance proposal, Repository governance capability, Completed governance bootstrap tasks, Local validation suite, PyMarkdown validation, Pre-commit repository checks, YAML lint validation, Archived repository governance requirements (+13 more)
+
+### Community 7 - "OpenSpec Onboarding"
 Cohesion: 0.10
 Nodes (19): Codebase Analysis, Graceful Exit Handling, Guardrails, Phase 10: Archive, Phase 11: Recap & Next Steps, Phase 1: Welcome, Phase 2: Task Selection, Phase 3: Explore Demo (+11 more)
 
-### Community 15 - "Community 15"
+### Community 8 - "Bootstrap Execution"
+Cohesion: 0.15
+Nodes (11): 1. Reproducible Tooling, 3. GitHub Repository Files, 4. Knowledge Graph and Local Verification, 5. GitHub Publication, 6. Completion, Contributing, Documentation, License (+3 more)
+
+### Community 9 - "Security Reporting"
+Cohesion: 0.15
+Nodes (12): Privacy-preserving logging, Bug report issue template, Reproducible bug reports, Synthetic or sanitized bug fixtures, Issue template configuration, GitHub private vulnerability reporting, Coordinated vulnerability disclosure, Reporting a vulnerability (+4 more)
+
+### Community 10 - "Governance Design"
 Cohesion: 0.17
 Nodes (11): Configure GitHub as part of bootstrap, Context, Decisions, Goals / Non-Goals, Keep agent and Graphify assets versioned, Migration Plan, Open Questions, Publish documentation from `docs/` (+3 more)
 
-### Community 16 - "Community 16"
-Cohesion: 0.18
-Nodes (10): Check for context, Ending Discovery, Guardrails, Handling Different Entry Points, OpenSpec Awareness, The Stance, What You Don't Have To Do, What You Might Do (+2 more)
+### Community 11 - "OpenSpec Exploration"
+Cohesion: 0.20
+Nodes (9): Check for context, Ending Discovery, Guardrails, Handling Different Entry Points, OpenSpec Awareness, The Stance, What You Don't Have To Do, What You Might Do (+1 more)
 
-### Community 17 - "Community 17"
+### Community 12 - "AWS System Architecture"
 Cohesion: 0.25
 Nodes (8): 4. System Architecture, Amazon DynamoDB, Amazon S3, Control Plane, Frontend, Persistence, Processing, Region
 
-### Community 18 - "Community 18"
+### Community 13 - "Governance Proposal"
 Cohesion: 0.29
 Nodes (6): Capabilities, Impact, Modified Capabilities, New Capabilities, What Changes, Why
 
-### Community 19 - "Community 19"
-Cohesion: 0.29
-Nodes (6): 1. Reproducible Tooling, 2. Documentation, 3. GitHub Repository Files, 4. Knowledge Graph and Local Verification, 5. GitHub Publication, 6. Completion
-
-### Community 20 - "Community 20"
+### Community 14 - "Governance ADR"
 Cohesion: 0.29
 Nodes (6): ADR 0001: Adopt documentation-as-code and GitHub governance, Consequences, Considered alternatives, Context, Decision, References
 
-### Community 21 - "Community 21"
+### Community 15 - "MADR Template"
 Cohesion: 0.29
 Nodes (6): ADR NNNN: Decision title, Consequences, Considered alternatives, Context, Decision, References
 
-### Community 22 - "Community 22"
-Cohesion: 0.29
-Nodes (6): Contributing, Documentation, License, Local setup, Redact All The Things, Security
-
-### Community 23 - "Community 23"
+### Community 16 - "Contribution Workflow"
 Cohesion: 0.33
 Nodes (5): Before starting, Contributing, Local checks, Pull requests, Workflow
 
-### Community 24 - "Community 24"
+### Community 17 - "Pull Request Checklist"
 Cohesion: 0.33
 Nodes (5): Documentation and architecture, OpenSpec, Security and privacy, Summary, Validation
 
-### Community 25 - "Community 25"
+### Community 18 - "Repository Linting"
+Cohesion: 0.33
+Nodes (6): Markdown and YAML linting, Pre-commit configuration, Repository hygiene hooks, PyMarkdown lint configuration, Relaxed Markdown rules, YAML lint configuration
+
+### Community 19 - "Bootstrap Decisions"
+Cohesion: 0.50
+Nodes (4): Bootstrap governance architecture, Reproducible uv documentation toolchain, Required Quality workflow design, Spec-driven bootstrap governance change
+
+### Community 20 - "ADR Index"
 Cohesion: 0.50
 Nodes (3): Architecture decision records, Creating a record, Records
 
-### Community 26 - "Community 26"
+### Community 21 - "Documentation Home"
 Cohesion: 0.50
 Nodes (3): Project principles, Redact All The Things, Start here
 
+### Community 22 - "Feature Requests"
+Cohesion: 0.67
+Nodes (3): Feature request issue template, Observable success, Scope boundaries
+
 ## Knowledge Gaps
-- **166 isolated node(s):** `The Stance`, `What You Might Do`, `Check for context`, `When no change exists`, `When a change exists` (+161 more)
+- **168 isolated node(s):** `The Stance`, `What You Might Do`, `Check for context`, `When a change exists`, `What You Don't Have To Do` (+163 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **1 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Assisted File Redaction technical scope` connect `Redaction System Architecture` to `Documentation and Contribution Policy`, `Security Reporting and Fixtures`?**
-  _High betweenness centrality (0.032) - this node is a cross-community bridge._
-- **Why does `Development workflow` connect `Documentation and Contribution Policy` to `Redaction System Architecture`, `Automated Quality and Pages`?**
-  _High betweenness centrality (0.027) - this node is a cross-community bridge._
-- **Why does `Privacy-preserving logging` connect `Security Reporting and Fixtures` to `Redaction System Architecture`?**
-  _High betweenness centrality (0.017) - this node is a cross-community bridge._
+- **Why does `Assisted File Redaction technical scope` connect `Project Architecture` to `Security Reporting`, `Working Agreement`?**
+  _High betweenness centrality (0.036) - this node is a cross-community bridge._
+- **Why does `Development workflow` connect `Project Architecture` to `Working Agreement`, `Governance Automation`?**
+  _High betweenness centrality (0.033) - this node is a cross-community bridge._
+- **Why does `Project Working Agreement` connect `Working Agreement` to `Project Architecture`, `Governance Automation`?**
+  _High betweenness centrality (0.024) - this node is a cross-community bridge._
 - **What connects `The Stance`, `What You Might Do`, `Check for context` to the rest of the system?**
-  _180 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `OpenSpec Change Lifecycle` be split into smaller, more focused modules?**
-  _Cohesion score 0.12121212121212122 - nodes in this community are weakly interconnected._
-- **Should `Documentation and Contribution Policy` be split into smaller, more focused modules?**
-  _Cohesion score 0.0766488413547237 - nodes in this community are weakly interconnected._
-- **Should `Redaction System Architecture` be split into smaller, more focused modules?**
-  _Cohesion score 0.10276679841897234 - nodes in this community are weakly interconnected._
+  _182 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `Project Architecture` be split into smaller, more focused modules?**
+  _Cohesion score 0.07661290322580645 - nodes in this community are weakly interconnected._
+- **Should `Technical Scope` be split into smaller, more focused modules?**
+  _Cohesion score 0.06451612903225806 - nodes in this community are weakly interconnected._
+- **Should `Working Agreement` be split into smaller, more focused modules?**
+  _Cohesion score 0.09259259259259259 - nodes in this community are weakly interconnected._

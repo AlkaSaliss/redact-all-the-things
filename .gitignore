@@ -291,3 +291,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+graphify-out/cost.json
