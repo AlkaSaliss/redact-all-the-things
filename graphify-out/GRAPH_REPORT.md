@@ -5,12 +5,12 @@
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 308 nodes · 311 edges · 29 communities (26 shown, 3 thin omitted)
-- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 12 edges (avg confidence: 0.93)
+- 306 nodes · 309 edges · 29 communities (26 shown, 3 thin omitted)
+- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 11 edges (avg confidence: 0.93)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `04d43eae`
+- Built from commit: `2f826c5a`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -49,8 +49,8 @@
 1. `Project Working Agreement` - 17 edges
 2. `Technical Scope: Assisted File Redaction Application` - 13 edges
 3. `Development workflow` - 12 edges
-4. `ADDED Requirements` - 11 edges
-5. `Requirements` - 11 edges
+4. `Requirements` - 11 edges
+5. `ADDED Requirements` - 11 edges
 6. `Assisted File Redaction technical scope` - 11 edges
 7. `ADR 0001: Documentation and GitHub governance` - 10 edges
 8. `Quality workflow` - 8 edges
@@ -80,8 +80,8 @@
 ## Communities (29 total, 3 thin omitted)
 
 ### Community 0 - "Project Architecture"
-Cohesion: 0.09
-Nodes (24): 24-hour job retention, Assisted File Redaction technical scope, Private AWS architecture, Official AWS ECS regional price index, Checkpoint recovery, AWS Batch Fargate Spot processing, Mandatory human review, Normalized redaction regions (+16 more)
+Cohesion: 0.14
+Nodes (16): 24-hour job retention, Assisted File Redaction technical scope, Private AWS architecture, Official AWS ECS regional price index, Checkpoint recovery, AWS Batch Fargate Spot processing, Mandatory human review, Normalized redaction regions (+8 more)
 
 ### Community 1 - "Technical Scope"
 Cohesion: 0.08
@@ -93,7 +93,7 @@ Nodes (29): ADR 0001: Documentation and GitHub governance, Apache License 2.0, R
 
 ### Community 3 - "Governance Specification"
 Cohesion: 0.08
-Nodes (25): Requirement: Architecture decision records, Requirement: Automated pull request quality, Requirement: Dependency and security automation, Requirement: Managed roadmap, Requirement: Protected main workflow, Requirement: Published documentation, Requirement: Repository contribution metadata, Requirement: Reproducible repository tooling (+17 more)
+Nodes (25): Requirement: Managed roadmap, Scenario: Milestone completes, Scenario: Next milestone is selected, Scenario: Roadmap order is published, Purpose, Repository Governance Specification, Requirement: Architecture decision records, Requirement: Automated pull request quality (+17 more)
 
 ### Community 4 - "OpenSpec Change Lifecycle"
 Cohesion: 0.12
@@ -104,8 +104,8 @@ Cohesion: 0.09
 Nodes (21): Requirement: Architecture decision records, Requirement: Automated pull request quality, Requirement: Dependency and security automation, Requirement: Managed roadmap, Requirement: Protected main workflow, Requirement: Published documentation, Requirement: Repository contribution metadata, Requirement: Reproducible repository tooling (+13 more)
 
 ### Community 6 - "Governance Automation"
-Cohesion: 0.14
-Nodes (18): Repository governance proposal, Repository governance capability, Completed governance bootstrap tasks, Local validation suite, Archived repository governance requirements, Automated pull request quality requirement, Current Repository Governance Specification, Managed roadmap requirement (+10 more)
+Cohesion: 0.10
+Nodes (24): Repository governance proposal, Repository governance capability, Completed governance bootstrap tasks, Architecture and documentation alignment, Local validation suite, Architecture decisions, Change lifecycle, Development workflow (+16 more)
 
 ### Community 7 - "OpenSpec Onboarding"
 Cohesion: 0.18
@@ -184,7 +184,7 @@ Cohesion: 0.50
 Nodes (3): 1. Versioned Roadmap, 2. GitHub Roadmap Metadata, 3. Verification and Completion
 
 ## Knowledge Gaps
-- **170 isolated node(s):** `Summary`, `OpenSpec`, `Validation`, `Documentation and architecture`, `Security and privacy` (+165 more)
+- **169 isolated node(s):** `Context`, `Goals / Non-Goals`, `Use a numeric Project field`, `Keep the versioned roadmap authoritative`, `Encode gates in milestone issues` (+164 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -195,12 +195,12 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.036) - this node is a cross-community bridge._
 - **Why does `ADR 0001: Documentation and GitHub governance` connect `Working Agreement` to `Project Architecture`?**
   _High betweenness centrality (0.026) - this node is a cross-community bridge._
-- **Why does `Development workflow` connect `Project Architecture` to `Working Agreement`, `Governance Automation`?**
+- **Why does `Project Working Agreement` connect `Working Agreement` to `Governance Automation`?**
   _High betweenness centrality (0.025) - this node is a cross-community bridge._
-- **What connects `Summary`, `OpenSpec`, `Validation` to the rest of the system?**
-  _184 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `Context`, `Goals / Non-Goals`, `Use a numeric Project field` to the rest of the system?**
+  _183 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Project Architecture` be split into smaller, more focused modules?**
-  _Cohesion score 0.08666666666666667 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.14166666666666666 - nodes in this community are weakly interconnected._
 - **Should `Technical Scope` be split into smaller, more focused modules?**
   _Cohesion score 0.08333333333333333 - nodes in this community are weakly interconnected._
 - **Should `Working Agreement` be split into smaller, more focused modules?**
