@@ -49,394 +49,544 @@
   },
   "nodes": [
     {
-      "label": "SKILL.md",
+      "label": "design.md",
       "file_type": "document",
-      "source_file": ".codex/skills/openspec-apply-change/SKILL.md",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/design.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 24,
-      "norm_label": "skill.md",
-      "id": "openspec_apply_change_skill"
-    },
-    {
-      "label": "SKILL.md",
-      "file_type": "document",
-      "source_file": ".codex/skills/openspec-archive-change/SKILL.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 25,
-      "norm_label": "skill.md",
-      "id": "openspec_archive_change_skill"
-    },
-    {
-      "label": "SKILL.md",
-      "file_type": "document",
-      "source_file": ".codex/skills/openspec-bulk-archive-change/SKILL.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 26,
-      "norm_label": "skill.md",
-      "id": "openspec_bulk_archive_change_skill"
-    },
-    {
-      "label": "SKILL.md",
-      "file_type": "document",
-      "source_file": ".codex/skills/openspec-continue-change/SKILL.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 27,
-      "norm_label": "skill.md",
-      "id": "openspec_continue_change_skill"
-    },
-    {
-      "label": "SKILL.md",
-      "file_type": "document",
-      "source_file": ".codex/skills/openspec-explore/SKILL.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 11,
-      "norm_label": "skill.md",
-      "id": "openspec_explore_skill"
-    },
-    {
-      "label": "The Stance",
-      "file_type": "document",
-      "source_file": ".codex/skills/openspec-explore/SKILL.md",
-      "source_location": "L20",
-      "_origin": "ast",
-      "community": 11,
-      "norm_label": "the stance",
-      "id": "openspec_explore_skill_the_stance"
-    },
-    {
-      "label": "What You Might Do",
-      "file_type": "document",
-      "source_file": ".codex/skills/openspec-explore/SKILL.md",
-      "source_location": "L31",
-      "_origin": "ast",
-      "community": 11,
-      "norm_label": "what you might do",
-      "id": "openspec_explore_skill_what_you_might_do"
-    },
-    {
-      "label": "OpenSpec Awareness",
-      "file_type": "document",
-      "source_file": ".codex/skills/openspec-explore/SKILL.md",
-      "source_location": "L78",
-      "_origin": "ast",
-      "community": 11,
-      "norm_label": "openspec awareness",
-      "id": "openspec_explore_skill_openspec_awareness"
-    },
-    {
-      "label": "Check for context",
-      "file_type": "document",
-      "source_file": ".codex/skills/openspec-explore/SKILL.md",
-      "source_location": "L82",
-      "_origin": "ast",
-      "community": 11,
-      "norm_label": "check for context",
-      "id": "openspec_explore_skill_check_for_context"
-    },
-    {
-      "label": "When a change exists",
-      "file_type": "document",
-      "source_file": ".codex/skills/openspec-explore/SKILL.md",
-      "source_location": "L101",
-      "_origin": "ast",
-      "community": 11,
-      "norm_label": "when a change exists",
-      "id": "openspec_explore_skill_when_a_change_exists"
-    },
-    {
-      "label": "What You Don't Have To Do",
-      "file_type": "document",
-      "source_file": ".codex/skills/openspec-explore/SKILL.md",
-      "source_location": "L134",
-      "_origin": "ast",
-      "community": 11,
-      "norm_label": "what you don't have to do",
-      "id": "openspec_explore_skill_what_you_don_t_have_to_do"
-    },
-    {
-      "label": "Handling Different Entry Points",
-      "file_type": "document",
-      "source_file": ".codex/skills/openspec-explore/SKILL.md",
-      "source_location": "L145",
-      "_origin": "ast",
-      "community": 11,
-      "norm_label": "handling different entry points",
-      "id": "openspec_explore_skill_handling_different_entry_points"
-    },
-    {
-      "label": "Ending Discovery",
-      "file_type": "document",
-      "source_file": ".codex/skills/openspec-explore/SKILL.md",
-      "source_location": "L249",
-      "_origin": "ast",
-      "community": 11,
-      "norm_label": "ending discovery",
-      "id": "openspec_explore_skill_ending_discovery"
-    },
-    {
-      "label": "Guardrails",
-      "file_type": "document",
-      "source_file": ".codex/skills/openspec-explore/SKILL.md",
-      "source_location": "L278",
-      "_origin": "ast",
-      "community": 11,
-      "norm_label": "guardrails",
-      "id": "openspec_explore_skill_guardrails"
-    },
-    {
-      "label": "SKILL.md",
-      "file_type": "document",
-      "source_file": ".codex/skills/openspec-ff-change/SKILL.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 28,
-      "norm_label": "skill.md",
-      "id": "openspec_ff_change_skill"
-    },
-    {
-      "label": "SKILL.md",
-      "file_type": "document",
-      "source_file": ".codex/skills/openspec-new-change/SKILL.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 29,
-      "norm_label": "skill.md",
-      "id": "openspec_new_change_skill"
-    },
-    {
-      "label": "SKILL.md",
-      "file_type": "document",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
-      "source_location": "L1",
-      "_origin": "ast",
+      "id": "2026_06_14_gh_12_roadmap_order_design",
       "community": 7,
-      "norm_label": "skill.md",
-      "id": "openspec_onboard_skill"
+      "norm_label": "design.md"
     },
     {
-      "label": "Preflight",
+      "label": "Context",
       "file_type": "document",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
-      "source_location": "L16",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/design.md",
+      "source_location": "L1",
       "_origin": "ast",
+      "id": "2026_06_14_gh_12_roadmap_order_design_context",
       "community": 7,
-      "norm_label": "preflight",
-      "id": "openspec_onboard_skill_preflight"
+      "norm_label": "context"
     },
     {
-      "label": "Phase 1: Welcome",
+      "label": "Goals / Non-Goals",
       "file_type": "document",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/design.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "2026_06_14_gh_12_roadmap_order_design_goals_non_goals",
+      "community": 7,
+      "norm_label": "goals / non-goals"
+    },
+    {
+      "label": "Decisions",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/design.md",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "2026_06_14_gh_12_roadmap_order_design_decisions",
+      "community": 7,
+      "norm_label": "decisions"
+    },
+    {
+      "label": "Use a numeric Project field",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/design.md",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "2026_06_14_gh_12_roadmap_order_design_use_a_numeric_project_field",
+      "community": 7,
+      "norm_label": "use a numeric project field"
+    },
+    {
+      "label": "Keep the versioned roadmap authoritative",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/design.md",
       "source_location": "L34",
       "_origin": "ast",
+      "id": "2026_06_14_gh_12_roadmap_order_design_keep_the_versioned_roadmap_authoritative",
       "community": 7,
-      "norm_label": "phase 1: welcome",
-      "id": "openspec_onboard_skill_phase_1_welcome"
+      "norm_label": "keep the versioned roadmap authoritative"
     },
     {
-      "label": "Phase 2: Task Selection",
+      "label": "Encode gates in milestone issues",
       "file_type": "document",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/design.md",
+      "source_location": "L41",
+      "_origin": "ast",
+      "id": "2026_06_14_gh_12_roadmap_order_design_encode_gates_in_milestone_issues",
+      "community": 7,
+      "norm_label": "encode gates in milestone issues"
+    },
+    {
+      "label": "Limit solo work in progress",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/design.md",
+      "source_location": "L47",
+      "_origin": "ast",
+      "id": "2026_06_14_gh_12_roadmap_order_design_limit_solo_work_in_progress",
+      "community": 7,
+      "norm_label": "limit solo work in progress"
+    },
+    {
+      "label": "Risks / Trade-offs",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/design.md",
+      "source_location": "L53",
+      "_origin": "ast",
+      "id": "2026_06_14_gh_12_roadmap_order_design_risks_trade_offs",
+      "community": 7,
+      "norm_label": "risks / trade-offs"
+    },
+    {
+      "label": "Migration Plan",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/design.md",
+      "source_location": "L63",
+      "_origin": "ast",
+      "id": "2026_06_14_gh_12_roadmap_order_design_migration_plan",
+      "community": 7,
+      "norm_label": "migration plan"
+    },
+    {
+      "label": "Open Questions",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/design.md",
+      "source_location": "L74",
+      "_origin": "ast",
+      "id": "2026_06_14_gh_12_roadmap_order_design_open_questions",
+      "community": 7,
+      "norm_label": "open questions"
+    },
+    {
+      "label": "proposal.md",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/proposal.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "2026_06_14_gh_12_roadmap_order_proposal",
+      "community": 11,
+      "norm_label": "proposal.md"
+    },
+    {
+      "label": "Why",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/proposal.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "2026_06_14_gh_12_roadmap_order_proposal_why",
+      "community": 11,
+      "norm_label": "why"
+    },
+    {
+      "label": "What Changes",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/proposal.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "2026_06_14_gh_12_roadmap_order_proposal_what_changes",
+      "community": 11,
+      "norm_label": "what changes"
+    },
+    {
+      "label": "Capabilities",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/proposal.md",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "2026_06_14_gh_12_roadmap_order_proposal_capabilities",
+      "community": 11,
+      "norm_label": "capabilities"
+    },
+    {
+      "label": "New Capabilities",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/proposal.md",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "2026_06_14_gh_12_roadmap_order_proposal_new_capabilities",
+      "community": 11,
+      "norm_label": "new capabilities"
+    },
+    {
+      "label": "Modified Capabilities",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/proposal.md",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "2026_06_14_gh_12_roadmap_order_proposal_modified_capabilities",
+      "community": 11,
+      "norm_label": "modified capabilities"
+    },
+    {
+      "label": "Impact",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/proposal.md",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "2026_06_14_gh_12_roadmap_order_proposal_impact",
+      "community": 11,
+      "norm_label": "impact"
+    },
+    {
+      "label": "spec.md",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/specs/repository-governance/spec.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_06_14_gh_12_roadmap_order_specs_repository_governance_spec_md_repository_governance_spec",
+      "community": 25,
+      "norm_label": "spec.md"
+    },
+    {
+      "label": "MODIFIED Requirements",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/specs/repository-governance/spec.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "repository_governance_spec_modified_requirements",
+      "community": 25,
+      "norm_label": "modified requirements"
+    },
+    {
+      "label": "Requirement: Managed roadmap",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/specs/repository-governance/spec.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_06_14_gh_12_roadmap_order_specs_repository_governance_spec_md_repository_governance_spec_requirement_managed_roadmap",
+      "community": 25,
+      "norm_label": "requirement: managed roadmap"
+    },
+    {
+      "label": "Scenario: Roadmap order is published",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/specs/repository-governance/spec.md",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_06_14_gh_12_roadmap_order_specs_repository_governance_spec_md_repository_governance_spec_scenario_roadmap_order_is_published",
+      "community": 25,
+      "norm_label": "scenario: roadmap order is published"
+    },
+    {
+      "label": "Scenario: Next milestone is selected",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/specs/repository-governance/spec.md",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_06_14_gh_12_roadmap_order_specs_repository_governance_spec_md_repository_governance_spec_scenario_next_milestone_is_selected",
+      "community": 25,
+      "norm_label": "scenario: next milestone is selected"
+    },
+    {
+      "label": "Scenario: Milestone completes",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/specs/repository-governance/spec.md",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_06_14_gh_12_roadmap_order_specs_repository_governance_spec_md_repository_governance_spec_scenario_milestone_completes",
+      "community": 25,
+      "norm_label": "scenario: milestone completes"
+    },
+    {
+      "label": "tasks.md",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/tasks.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "2026_06_14_gh_12_roadmap_order_tasks",
+      "community": 28,
+      "norm_label": "tasks.md"
+    },
+    {
+      "label": "1. Versioned Roadmap",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/tasks.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "2026_06_14_gh_12_roadmap_order_tasks_1_versioned_roadmap",
+      "community": 28,
+      "norm_label": "1. versioned roadmap"
+    },
+    {
+      "label": "2. GitHub Roadmap Metadata",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/tasks.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "2026_06_14_gh_12_roadmap_order_tasks_2_github_roadmap_metadata",
+      "community": 28,
+      "norm_label": "2. github roadmap metadata"
+    },
+    {
+      "label": "3. Verification and Completion",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/tasks.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "2026_06_14_gh_12_roadmap_order_tasks_3_verification_and_completion",
+      "community": 28,
+      "norm_label": "3. verification and completion"
+    },
+    {
+      "label": "spec.md",
+      "file_type": "document",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "openspec_specs_repository_governance_spec_md_repository_governance_spec",
+      "community": 3,
+      "norm_label": "spec.md"
+    },
+    {
+      "label": "Repository Governance Specification",
+      "file_type": "document",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "repository_governance_spec_repository_governance_specification",
+      "community": 3,
+      "norm_label": "repository governance specification"
+    },
+    {
+      "label": "Purpose",
+      "file_type": "document",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "repository_governance_spec_purpose",
+      "community": 3,
+      "norm_label": "purpose"
+    },
+    {
+      "label": "Requirements",
+      "file_type": "document",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "repository_governance_spec_requirements",
+      "community": 3,
+      "norm_label": "requirements"
+    },
+    {
+      "label": "Requirement: Reproducible repository tooling",
+      "file_type": "document",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "repository_governance_spec_requirement_reproducible_repository_tooling",
+      "community": 3,
+      "norm_label": "requirement: reproducible repository tooling"
+    },
+    {
+      "label": "Scenario: Install locked tooling",
+      "file_type": "document",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "repository_governance_spec_scenario_install_locked_tooling",
+      "community": 3,
+      "norm_label": "scenario: install locked tooling"
+    },
+    {
+      "label": "Requirement: Versioned project documentation",
+      "file_type": "document",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "repository_governance_spec_requirement_versioned_project_documentation",
+      "community": 3,
+      "norm_label": "requirement: versioned project documentation"
+    },
+    {
+      "label": "Scenario: Build documentation locally",
+      "file_type": "document",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "repository_governance_spec_scenario_build_documentation_locally",
+      "community": 3,
+      "norm_label": "scenario: build documentation locally"
+    },
+    {
+      "label": "Requirement: Architecture decision records",
+      "file_type": "document",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "repository_governance_spec_requirement_architecture_decision_records",
+      "community": 3,
+      "norm_label": "requirement: architecture decision records"
+    },
+    {
+      "label": "Scenario: Record bootstrap architecture",
+      "file_type": "document",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "repository_governance_spec_scenario_record_bootstrap_architecture",
+      "community": 3,
+      "norm_label": "scenario: record bootstrap architecture"
+    },
+    {
+      "label": "Requirement: Automated pull request quality",
+      "file_type": "document",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "repository_governance_spec_requirement_automated_pull_request_quality",
+      "community": 3,
+      "norm_label": "requirement: automated pull request quality"
+    },
+    {
+      "label": "Scenario: Pull request changes repository content",
+      "file_type": "document",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L41",
+      "_origin": "ast",
+      "id": "repository_governance_spec_scenario_pull_request_changes_repository_content",
+      "community": 3,
+      "norm_label": "scenario: pull request changes repository content"
+    },
+    {
+      "label": "Requirement: Published documentation",
+      "file_type": "document",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L45",
+      "_origin": "ast",
+      "id": "repository_governance_spec_requirement_published_documentation",
+      "community": 3,
+      "norm_label": "requirement: published documentation"
+    },
+    {
+      "label": "Scenario: Documentation reaches main",
+      "file_type": "document",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L49",
+      "_origin": "ast",
+      "id": "repository_governance_spec_scenario_documentation_reaches_main",
+      "community": 3,
+      "norm_label": "scenario: documentation reaches main"
+    },
+    {
+      "label": "Requirement: Repository contribution metadata",
+      "file_type": "document",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L53",
+      "_origin": "ast",
+      "id": "repository_governance_spec_requirement_repository_contribution_metadata",
+      "community": 3,
+      "norm_label": "requirement: repository contribution metadata"
+    },
+    {
+      "label": "Scenario: Contributor proposes a change",
+      "file_type": "document",
+      "source_file": "openspec/specs/repository-governance/spec.md",
       "source_location": "L58",
       "_origin": "ast",
-      "community": 7,
-      "norm_label": "phase 2: task selection",
-      "id": "openspec_onboard_skill_phase_2_task_selection"
+      "id": "repository_governance_spec_scenario_contributor_proposes_a_change",
+      "community": 3,
+      "norm_label": "scenario: contributor proposes a change"
     },
     {
-      "label": "Codebase Analysis",
+      "label": "Requirement: Dependency and security automation",
       "file_type": "document",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
-      "source_location": "L60",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L62",
       "_origin": "ast",
-      "community": 7,
-      "norm_label": "codebase analysis",
-      "id": "openspec_onboard_skill_codebase_analysis"
+      "id": "repository_governance_spec_requirement_dependency_and_security_automation",
+      "community": 3,
+      "norm_label": "requirement: dependency and security automation"
     },
     {
-      "label": "Present Suggestions",
+      "label": "Scenario: Supported dependency update exists",
       "file_type": "document",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L66",
+      "_origin": "ast",
+      "id": "repository_governance_spec_scenario_supported_dependency_update_exists",
+      "community": 3,
+      "norm_label": "scenario: supported dependency update exists"
+    },
+    {
+      "label": "Requirement: Protected main workflow",
+      "file_type": "document",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L70",
+      "_origin": "ast",
+      "id": "repository_governance_spec_requirement_protected_main_workflow",
+      "community": 3,
+      "norm_label": "requirement: protected main workflow"
+    },
+    {
+      "label": "Scenario: Owner merges a change",
+      "file_type": "document",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L75",
+      "_origin": "ast",
+      "id": "repository_governance_spec_scenario_owner_merges_a_change",
+      "community": 3,
+      "norm_label": "scenario: owner merges a change"
+    },
+    {
+      "label": "Requirement: Tracked agent knowledge assets",
+      "file_type": "document",
+      "source_file": "openspec/specs/repository-governance/spec.md",
       "source_location": "L79",
       "_origin": "ast",
-      "community": 7,
-      "norm_label": "present suggestions",
-      "id": "openspec_onboard_skill_present_suggestions"
+      "id": "repository_governance_spec_requirement_tracked_agent_knowledge_assets",
+      "community": 3,
+      "norm_label": "requirement: tracked agent knowledge assets"
     },
     {
-      "label": "Scope Guardrail",
+      "label": "Scenario: Architecture documentation changes",
       "file_type": "document",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
-      "source_location": "L112",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L84",
       "_origin": "ast",
-      "community": 7,
-      "norm_label": "scope guardrail",
-      "id": "openspec_onboard_skill_scope_guardrail"
+      "id": "repository_governance_spec_scenario_architecture_documentation_changes",
+      "community": 3,
+      "norm_label": "scenario: architecture documentation changes"
     },
     {
-      "label": "Phase 3: Explore Demo",
+      "label": "Requirement: Managed roadmap",
       "file_type": "document",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
-      "source_location": "L133",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L88",
       "_origin": "ast",
-      "community": 7,
-      "norm_label": "phase 3: explore demo",
-      "id": "openspec_onboard_skill_phase_3_explore_demo"
+      "id": "openspec_specs_repository_governance_spec_md_repository_governance_spec_requirement_managed_roadmap",
+      "community": 3,
+      "norm_label": "requirement: managed roadmap"
     },
     {
-      "label": "Phase 4: Create the Change",
+      "label": "Scenario: Roadmap order is published",
       "file_type": "document",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
-      "source_location": "L164",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L100",
       "_origin": "ast",
-      "community": 7,
-      "norm_label": "phase 4: create the change",
-      "id": "openspec_onboard_skill_phase_4_create_the_change"
+      "id": "openspec_specs_repository_governance_spec_md_repository_governance_spec_scenario_roadmap_order_is_published",
+      "community": 3,
+      "norm_label": "scenario: roadmap order is published"
     },
     {
-      "label": "Phase 5: Proposal",
+      "label": "Scenario: Next milestone is selected",
       "file_type": "document",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
-      "source_location": "L198",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L104",
       "_origin": "ast",
-      "community": 7,
-      "norm_label": "phase 5: proposal",
-      "id": "openspec_onboard_skill_phase_5_proposal"
+      "id": "openspec_specs_repository_governance_spec_md_repository_governance_spec_scenario_next_milestone_is_selected",
+      "community": 3,
+      "norm_label": "scenario: next milestone is selected"
     },
     {
-      "label": "Phase 6: Specs",
+      "label": "Scenario: Milestone completes",
       "file_type": "document",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
-      "source_location": "L258",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L108",
       "_origin": "ast",
-      "community": 7,
-      "norm_label": "phase 6: specs",
-      "id": "openspec_onboard_skill_phase_6_specs"
-    },
-    {
-      "label": "Phase 7: Design",
-      "file_type": "document",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
-      "source_location": "L303",
-      "_origin": "ast",
-      "community": 7,
-      "norm_label": "phase 7: design",
-      "id": "openspec_onboard_skill_phase_7_design"
-    },
-    {
-      "label": "Phase 8: Tasks",
-      "file_type": "document",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
-      "source_location": "L348",
-      "_origin": "ast",
-      "community": 7,
-      "norm_label": "phase 8: tasks",
-      "id": "openspec_onboard_skill_phase_8_tasks"
-    },
-    {
-      "label": "Phase 9: Apply (Implementation)",
-      "file_type": "document",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
-      "source_location": "L386",
-      "_origin": "ast",
-      "community": 7,
-      "norm_label": "phase 9: apply (implementation)",
-      "id": "openspec_onboard_skill_phase_9_apply_implementation"
-    },
-    {
-      "label": "Phase 10: Archive",
-      "file_type": "document",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
-      "source_location": "L420",
-      "_origin": "ast",
-      "community": 7,
-      "norm_label": "phase 10: archive",
-      "id": "openspec_onboard_skill_phase_10_archive"
-    },
-    {
-      "label": "Phase 11: Recap & Next Steps",
-      "file_type": "document",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
-      "source_location": "L445",
-      "_origin": "ast",
-      "community": 7,
-      "norm_label": "phase 11: recap & next steps",
-      "id": "openspec_onboard_skill_phase_11_recap_next_steps"
-    },
-    {
-      "label": "Graceful Exit Handling",
-      "file_type": "document",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
-      "source_location": "L494",
-      "_origin": "ast",
-      "community": 7,
-      "norm_label": "graceful exit handling",
-      "id": "openspec_onboard_skill_graceful_exit_handling"
-    },
-    {
-      "label": "User wants to stop mid-way",
-      "file_type": "document",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
-      "source_location": "L496",
-      "_origin": "ast",
-      "community": 7,
-      "norm_label": "user wants to stop mid-way",
-      "id": "openspec_onboard_skill_user_wants_to_stop_mid_way"
-    },
-    {
-      "label": "User just wants command reference",
-      "file_type": "document",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
-      "source_location": "L512",
-      "_origin": "ast",
-      "community": 7,
-      "norm_label": "user just wants command reference",
-      "id": "openspec_onboard_skill_user_just_wants_command_reference"
-    },
-    {
-      "label": "Guardrails",
-      "file_type": "document",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
-      "source_location": "L544",
-      "_origin": "ast",
-      "community": 7,
-      "norm_label": "guardrails",
-      "id": "openspec_onboard_skill_guardrails"
-    },
-    {
-      "label": "SKILL.md",
-      "file_type": "document",
-      "source_file": ".codex/skills/openspec-propose/SKILL.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 30,
-      "norm_label": "skill.md",
-      "id": "openspec_propose_skill"
-    },
-    {
-      "label": "SKILL.md",
-      "file_type": "document",
-      "source_file": ".codex/skills/openspec-sync-specs/SKILL.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 31,
-      "norm_label": "skill.md",
-      "id": "openspec_sync_specs_skill"
-    },
-    {
-      "label": "SKILL.md",
-      "file_type": "document",
-      "source_file": ".codex/skills/openspec-verify-change/SKILL.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 32,
-      "norm_label": "skill.md",
-      "id": "openspec_verify_change_skill"
+      "id": "openspec_specs_repository_governance_spec_md_repository_governance_spec_scenario_milestone_completes",
+      "community": 3,
+      "norm_label": "scenario: milestone completes"
     },
     {
       "label": "PULL_REQUEST_TEMPLATE.md",
@@ -554,7 +704,7 @@
       "source_file": "AGENTS.md",
       "source_location": "L77",
       "_origin": "ast",
-      "community": 0,
+      "community": 2,
       "norm_label": "documentation as code",
       "id": "agents_documentation_as_code"
     },
@@ -577,6 +727,16 @@
       "community": 2,
       "norm_label": "engineering guidance",
       "id": "agents_engineering_guidance"
+    },
+    {
+      "label": "graphify",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L149",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "graphify",
+      "id": "agents_graphify"
     },
     {
       "label": "CONTRIBUTING.md",
@@ -1004,7 +1164,7 @@
       "source_file": "docs/architecture/technical-scope.md",
       "source_location": "L50",
       "_origin": "ast",
-      "community": 1,
+      "community": 26,
       "norm_label": "3. functional requirements",
       "id": "architecture_technical_scope_3_functional_requirements"
     },
@@ -1014,7 +1174,7 @@
       "source_file": "docs/architecture/technical-scope.md",
       "source_location": "L52",
       "_origin": "ast",
-      "community": 1,
+      "community": 26,
       "norm_label": "authentication",
       "id": "architecture_technical_scope_authentication"
     },
@@ -1024,7 +1184,7 @@
       "source_file": "docs/architecture/technical-scope.md",
       "source_location": "L58",
       "_origin": "ast",
-      "community": 1,
+      "community": 26,
       "norm_label": "upload",
       "id": "architecture_technical_scope_upload"
     },
@@ -1034,7 +1194,7 @@
       "source_file": "docs/architecture/technical-scope.md",
       "source_location": "L67",
       "_origin": "ast",
-      "community": 1,
+      "community": 26,
       "norm_label": "analysis",
       "id": "architecture_technical_scope_analysis"
     },
@@ -1044,7 +1204,7 @@
       "source_file": "docs/architecture/technical-scope.md",
       "source_location": "L78",
       "_origin": "ast",
-      "community": 1,
+      "community": 26,
       "norm_label": "review",
       "id": "architecture_technical_scope_review"
     },
@@ -1054,7 +1214,7 @@
       "source_file": "docs/architecture/technical-scope.md",
       "source_location": "L96",
       "_origin": "ast",
-      "community": 1,
+      "community": 26,
       "norm_label": "export",
       "id": "architecture_technical_scope_export"
     },
@@ -1064,7 +1224,7 @@
       "source_file": "docs/architecture/technical-scope.md",
       "source_location": "L106",
       "_origin": "ast",
-      "community": 1,
+      "community": 26,
       "norm_label": "retention",
       "id": "architecture_technical_scope_retention"
     },
@@ -1334,7 +1494,7 @@
       "source_file": "docs/development.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 0,
+      "community": 6,
       "norm_label": "development.md",
       "id": "docs_development"
     },
@@ -1344,7 +1504,7 @@
       "source_file": "docs/development.md",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 0,
+      "community": 6,
       "norm_label": "development workflow",
       "id": "docs_development_development_workflow"
     },
@@ -1354,7 +1514,7 @@
       "source_file": "docs/development.md",
       "source_location": "L6",
       "_origin": "ast",
-      "community": 0,
+      "community": 6,
       "norm_label": "prerequisites",
       "id": "docs_development_prerequisites"
     },
@@ -1364,7 +1524,7 @@
       "source_file": "docs/development.md",
       "source_location": "L14",
       "_origin": "ast",
-      "community": 0,
+      "community": 6,
       "norm_label": "install tooling",
       "id": "docs_development_install_tooling"
     },
@@ -1374,7 +1534,7 @@
       "source_file": "docs/development.md",
       "source_location": "L21",
       "_origin": "ast",
-      "community": 0,
+      "community": 6,
       "norm_label": "change lifecycle",
       "id": "docs_development_change_lifecycle"
     },
@@ -1384,7 +1544,7 @@
       "source_file": "docs/development.md",
       "source_location": "L33",
       "_origin": "ast",
-      "community": 0,
+      "community": 6,
       "norm_label": "local validation",
       "id": "docs_development_local_validation"
     },
@@ -1394,7 +1554,7 @@
       "source_file": "docs/development.md",
       "source_location": "L50",
       "_origin": "ast",
-      "community": 0,
+      "community": 6,
       "norm_label": "documentation requirements",
       "id": "docs_development_documentation_requirements"
     },
@@ -1404,7 +1564,7 @@
       "source_file": "docs/development.md",
       "source_location": "L63",
       "_origin": "ast",
-      "community": 0,
+      "community": 6,
       "norm_label": "architecture decisions",
       "id": "docs_development_architecture_decisions"
     },
@@ -1447,6 +1607,66 @@
       "community": 21,
       "norm_label": "start here",
       "id": "docs_index_start_here"
+    },
+    {
+      "label": "roadmap.md",
+      "file_type": "document",
+      "source_file": "docs/roadmap.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 24,
+      "norm_label": "roadmap.md",
+      "id": "docs_roadmap"
+    },
+    {
+      "label": "Implementation roadmap",
+      "file_type": "document",
+      "source_file": "docs/roadmap.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 24,
+      "norm_label": "implementation roadmap",
+      "id": "docs_roadmap_implementation_roadmap"
+    },
+    {
+      "label": "Sequence",
+      "file_type": "document",
+      "source_file": "docs/roadmap.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 24,
+      "norm_label": "sequence",
+      "id": "docs_roadmap_sequence"
+    },
+    {
+      "label": "Dependency flow",
+      "file_type": "document",
+      "source_file": "docs/roadmap.md",
+      "source_location": "L18",
+      "_origin": "ast",
+      "community": 24,
+      "norm_label": "dependency flow",
+      "id": "docs_roadmap_dependency_flow"
+    },
+    {
+      "label": "Delivery policy",
+      "file_type": "document",
+      "source_file": "docs/roadmap.md",
+      "source_location": "L32",
+      "_origin": "ast",
+      "community": 24,
+      "norm_label": "delivery policy",
+      "id": "docs_roadmap_delivery_policy"
+    },
+    {
+      "label": "Contract ownership",
+      "file_type": "document",
+      "source_file": "docs/roadmap.md",
+      "source_location": "L47",
+      "_origin": "ast",
+      "community": 24,
+      "norm_label": "contract ownership",
+      "id": "docs_roadmap_contract_ownership"
     },
     {
       "label": "design.md",
@@ -1856,7 +2076,7 @@
       "_origin": "ast",
       "community": 5,
       "norm_label": "scenario: bootstrap completes",
-      "id": "openspec_changes_archive_2026_06_14_gh_1_bootstrap_governance_specs_repository_governance_spec_md_repository_governance_spec_scenario_bootstrap_completes"
+      "id": "repository_governance_spec_scenario_bootstrap_completes"
     },
     {
       "label": "tasks.md",
@@ -1877,6 +2097,16 @@
       "community": 8,
       "norm_label": "1. reproducible tooling",
       "id": "2026_06_14_gh_1_bootstrap_governance_tasks_1_reproducible_tooling"
+    },
+    {
+      "label": "2. Documentation",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-1-bootstrap-governance/tasks.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "2. documentation",
+      "id": "2026_06_14_gh_1_bootstrap_governance_tasks_2_documentation"
     },
     {
       "label": "3. GitHub Repository Files",
@@ -1917,246 +2147,6 @@
       "community": 8,
       "norm_label": "6. completion",
       "id": "2026_06_14_gh_1_bootstrap_governance_tasks_6_completion"
-    },
-    {
-      "label": "spec.md",
-      "file_type": "document",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "spec.md",
-      "id": "openspec_specs_repository_governance_spec_md_repository_governance_spec"
-    },
-    {
-      "label": "Repository Governance Specification",
-      "file_type": "document",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "repository governance specification",
-      "id": "repository_governance_spec_repository_governance_specification"
-    },
-    {
-      "label": "Purpose",
-      "file_type": "document",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L3",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "purpose",
-      "id": "repository_governance_spec_purpose"
-    },
-    {
-      "label": "Requirements",
-      "file_type": "document",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L8",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "requirements",
-      "id": "repository_governance_spec_requirements"
-    },
-    {
-      "label": "Requirement: Reproducible repository tooling",
-      "file_type": "document",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L10",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "requirement: reproducible repository tooling",
-      "id": "openspec_specs_repository_governance_spec_md_repository_governance_spec_requirement_reproducible_repository_tooling"
-    },
-    {
-      "label": "Scenario: Install locked tooling",
-      "file_type": "document",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L15",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "scenario: install locked tooling",
-      "id": "openspec_specs_repository_governance_spec_md_repository_governance_spec_scenario_install_locked_tooling"
-    },
-    {
-      "label": "Requirement: Versioned project documentation",
-      "file_type": "document",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L19",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "requirement: versioned project documentation",
-      "id": "openspec_specs_repository_governance_spec_md_repository_governance_spec_requirement_versioned_project_documentation"
-    },
-    {
-      "label": "Scenario: Build documentation locally",
-      "file_type": "document",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L24",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "scenario: build documentation locally",
-      "id": "openspec_specs_repository_governance_spec_md_repository_governance_spec_scenario_build_documentation_locally"
-    },
-    {
-      "label": "Requirement: Architecture decision records",
-      "file_type": "document",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L28",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "requirement: architecture decision records",
-      "id": "openspec_specs_repository_governance_spec_md_repository_governance_spec_requirement_architecture_decision_records"
-    },
-    {
-      "label": "Scenario: Record bootstrap architecture",
-      "file_type": "document",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L33",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "scenario: record bootstrap architecture",
-      "id": "openspec_specs_repository_governance_spec_md_repository_governance_spec_scenario_record_bootstrap_architecture"
-    },
-    {
-      "label": "Requirement: Automated pull request quality",
-      "file_type": "document",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L37",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "requirement: automated pull request quality",
-      "id": "openspec_specs_repository_governance_spec_md_repository_governance_spec_requirement_automated_pull_request_quality"
-    },
-    {
-      "label": "Scenario: Pull request changes repository content",
-      "file_type": "document",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L41",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "scenario: pull request changes repository content",
-      "id": "openspec_specs_repository_governance_spec_md_repository_governance_spec_scenario_pull_request_changes_repository_content"
-    },
-    {
-      "label": "Requirement: Published documentation",
-      "file_type": "document",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L45",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "requirement: published documentation",
-      "id": "openspec_specs_repository_governance_spec_md_repository_governance_spec_requirement_published_documentation"
-    },
-    {
-      "label": "Scenario: Documentation reaches main",
-      "file_type": "document",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L49",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "scenario: documentation reaches main",
-      "id": "openspec_specs_repository_governance_spec_md_repository_governance_spec_scenario_documentation_reaches_main"
-    },
-    {
-      "label": "Requirement: Repository contribution metadata",
-      "file_type": "document",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L53",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "requirement: repository contribution metadata",
-      "id": "openspec_specs_repository_governance_spec_md_repository_governance_spec_requirement_repository_contribution_metadata"
-    },
-    {
-      "label": "Scenario: Contributor proposes a change",
-      "file_type": "document",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L58",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "scenario: contributor proposes a change",
-      "id": "openspec_specs_repository_governance_spec_md_repository_governance_spec_scenario_contributor_proposes_a_change"
-    },
-    {
-      "label": "Requirement: Dependency and security automation",
-      "file_type": "document",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L62",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "requirement: dependency and security automation",
-      "id": "openspec_specs_repository_governance_spec_md_repository_governance_spec_requirement_dependency_and_security_automation"
-    },
-    {
-      "label": "Scenario: Supported dependency update exists",
-      "file_type": "document",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L66",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "scenario: supported dependency update exists",
-      "id": "openspec_specs_repository_governance_spec_md_repository_governance_spec_scenario_supported_dependency_update_exists"
-    },
-    {
-      "label": "Requirement: Protected main workflow",
-      "file_type": "document",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L70",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "requirement: protected main workflow",
-      "id": "openspec_specs_repository_governance_spec_md_repository_governance_spec_requirement_protected_main_workflow"
-    },
-    {
-      "label": "Scenario: Owner merges a change",
-      "file_type": "document",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L75",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "scenario: owner merges a change",
-      "id": "openspec_specs_repository_governance_spec_md_repository_governance_spec_scenario_owner_merges_a_change"
-    },
-    {
-      "label": "Requirement: Tracked agent knowledge assets",
-      "file_type": "document",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L79",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "requirement: tracked agent knowledge assets",
-      "id": "openspec_specs_repository_governance_spec_md_repository_governance_spec_requirement_tracked_agent_knowledge_assets"
-    },
-    {
-      "label": "Scenario: Architecture documentation changes",
-      "file_type": "document",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L84",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "scenario: architecture documentation changes",
-      "id": "openspec_specs_repository_governance_spec_md_repository_governance_spec_scenario_architecture_documentation_changes"
-    },
-    {
-      "label": "Requirement: Managed roadmap",
-      "file_type": "document",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L88",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "requirement: managed roadmap",
-      "id": "openspec_specs_repository_governance_spec_md_repository_governance_spec_requirement_managed_roadmap"
-    },
-    {
-      "label": "Scenario: Bootstrap completes",
-      "file_type": "document",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L93",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "scenario: bootstrap completes",
-      "id": "openspec_specs_repository_governance_spec_md_repository_governance_spec_scenario_bootstrap_completes"
     },
     {
       "label": "OpenSpec Apply Change",
@@ -2723,45 +2713,6 @@
       "id": "workflows_quality_openspec_strict_validation"
     },
     {
-      "label": "Pre-commit configuration",
-      "file_type": "document",
-      "source_file": ".pre-commit-config.yaml",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 18,
-      "norm_label": "pre-commit configuration",
-      "id": "pre_commit_config_pre_commit_configuration"
-    },
-    {
-      "label": "Repository hygiene hooks",
-      "file_type": "concept",
-      "source_file": ".pre-commit-config.yaml",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 18,
-      "norm_label": "repository hygiene hooks",
-      "id": "pre_commit_config_repository_hygiene_hooks"
-    },
-    {
-      "label": "Markdown and YAML linting",
-      "file_type": "concept",
-      "source_file": ".pre-commit-config.yaml",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 18,
-      "norm_label": "markdown and yaml linting",
-      "id": "pre_commit_config_markdown_and_yaml_linting"
-    },
-    {
       "label": "YAML lint configuration",
       "file_type": "document",
       "source_file": ".yamllint.yaml",
@@ -2770,7 +2721,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 18,
+      "community": 27,
       "norm_label": "yaml lint configuration",
       "id": "yamllint_yaml_lint_configuration"
     },
@@ -3238,87 +3189,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 6,
       "norm_label": "architecture and documentation alignment",
       "id": "development_architecture_documentation_alignment"
-    },
-    {
-      "label": "Project documentation home",
-      "file_type": "document",
-      "source_file": "docs/index.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 0,
-      "norm_label": "project documentation home",
-      "id": "docs_index_project_documentation_home"
-    },
-    {
-      "label": "Automatic detection as assistance",
-      "file_type": "rationale",
-      "source_file": "docs/index.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 0,
-      "norm_label": "automatic detection as assistance",
-      "id": "docs_index_detection_as_assistance"
-    },
-    {
-      "label": "Bounded concurrency",
-      "file_type": "concept",
-      "source_file": "docs/index.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 0,
-      "norm_label": "bounded concurrency",
-      "id": "docs_index_bounded_concurrency"
-    },
-    {
-      "label": "MkDocs site configuration",
-      "file_type": "document",
-      "source_file": "mkdocs.yml",
-      "source_location": null,
-      "source_url": "https://alkasaliss.github.io/redact-all-the-things/",
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 0,
-      "norm_label": "mkdocs site configuration",
-      "id": "mkdocs_mkdocs_site_configuration"
-    },
-    {
-      "label": "Material for MkDocs",
-      "file_type": "concept",
-      "source_file": "mkdocs.yml",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 0,
-      "norm_label": "material for mkdocs",
-      "id": "mkdocs_material_for_mkdocs"
-    },
-    {
-      "label": "Versioned documentation navigation",
-      "file_type": "concept",
-      "source_file": "mkdocs.yml",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 0,
-      "norm_label": "versioned documentation navigation",
-      "id": "mkdocs_versioned_documentation_navigation"
     },
     {
       "label": "Pages workflow",
@@ -3329,9 +3202,9 @@
       "captured_at": "2026-06-14",
       "author": null,
       "contributor": null,
-      "id": "workflows_pages_pages_workflow",
       "community": 6,
-      "norm_label": "pages workflow"
+      "norm_label": "pages workflow",
+      "id": "workflows_pages_pages_workflow"
     },
     {
       "label": "Repository validation checks",
@@ -3342,48 +3215,9 @@
       "captured_at": "2026-06-14",
       "author": null,
       "contributor": null,
-      "id": "workflows_quality_repository_validation",
       "community": 6,
-      "norm_label": "repository validation checks"
-    },
-    {
-      "label": "Pre-commit repository checks",
-      "file_type": "concept",
-      "source_file": ".pre-commit-config.yaml",
-      "source_location": "lines 1-31",
-      "source_url": "https://github.com/pre-commit/pre-commit-hooks",
-      "captured_at": "2026-06-14",
-      "author": null,
-      "contributor": null,
-      "id": "pre_commit_config_pre_commit_checks",
-      "community": 6,
-      "norm_label": "pre-commit repository checks"
-    },
-    {
-      "label": "PyMarkdown validation",
-      "file_type": "concept",
-      "source_file": ".pre-commit-config.yaml",
-      "source_location": "lines 20-26",
-      "source_url": null,
-      "captured_at": "2026-06-14",
-      "author": null,
-      "contributor": null,
-      "id": "pre_commit_config_markdown_validation",
-      "community": 6,
-      "norm_label": "pymarkdown validation"
-    },
-    {
-      "label": "YAML lint validation",
-      "file_type": "concept",
-      "source_file": ".pre-commit-config.yaml",
-      "source_location": "lines 27-31",
-      "source_url": null,
-      "captured_at": "2026-06-14",
-      "author": null,
-      "contributor": null,
-      "id": "pre_commit_config_yaml_validation",
-      "community": 6,
-      "norm_label": "yaml lint validation"
+      "norm_label": "repository validation checks",
+      "id": "workflows_quality_repository_validation"
     },
     {
       "label": "Tracked agent and Graphify assets",
@@ -3394,9 +3228,9 @@
       "captured_at": "2026-06-14",
       "author": null,
       "contributor": null,
-      "id": "agents_tracked_knowledge_assets",
       "community": 2,
-      "norm_label": "tracked agent and graphify assets"
+      "norm_label": "tracked agent and graphify assets",
+      "id": "agents_tracked_knowledge_assets"
     },
     {
       "label": "Graphify query and refresh workflow",
@@ -3407,9 +3241,9 @@
       "captured_at": "2026-06-14",
       "author": null,
       "contributor": null,
-      "id": "agents_graphify_workflow",
       "community": 2,
-      "norm_label": "graphify query and refresh workflow"
+      "norm_label": "graphify query and refresh workflow",
+      "id": "agents_graphify_workflow"
     },
     {
       "label": "Spec-driven bootstrap governance change",
@@ -3420,9 +3254,9 @@
       "captured_at": "2026-06-14",
       "author": null,
       "contributor": null,
-      "id": "2026_06_14_gh_1_bootstrap_governance_openspec_spec_driven_change",
       "community": 19,
-      "norm_label": "spec-driven bootstrap governance change"
+      "norm_label": "spec-driven bootstrap governance change",
+      "id": "2026_06_14_gh_1_bootstrap_governance_openspec_spec_driven_change"
     },
     {
       "label": "Bootstrap governance architecture",
@@ -3433,9 +3267,9 @@
       "captured_at": "2026-06-14",
       "author": null,
       "contributor": null,
-      "id": "2026_06_14_gh_1_bootstrap_governance_design_governance_architecture",
       "community": 19,
-      "norm_label": "bootstrap governance architecture"
+      "norm_label": "bootstrap governance architecture",
+      "id": "2026_06_14_gh_1_bootstrap_governance_design_governance_architecture"
     },
     {
       "label": "Reproducible uv documentation toolchain",
@@ -3446,9 +3280,9 @@
       "captured_at": "2026-06-14",
       "author": null,
       "contributor": null,
-      "id": "2026_06_14_gh_1_bootstrap_governance_design_reproducible_toolchain",
       "community": 19,
-      "norm_label": "reproducible uv documentation toolchain"
+      "norm_label": "reproducible uv documentation toolchain",
+      "id": "2026_06_14_gh_1_bootstrap_governance_design_reproducible_toolchain"
     },
     {
       "label": "Required Quality workflow design",
@@ -3459,9 +3293,9 @@
       "captured_at": "2026-06-14",
       "author": null,
       "contributor": null,
-      "id": "2026_06_14_gh_1_bootstrap_governance_design_required_quality_workflow",
       "community": 19,
-      "norm_label": "required quality workflow design"
+      "norm_label": "required quality workflow design",
+      "id": "2026_06_14_gh_1_bootstrap_governance_design_required_quality_workflow"
     },
     {
       "label": "Repository governance proposal",
@@ -3472,9 +3306,9 @@
       "captured_at": "2026-06-14",
       "author": null,
       "contributor": null,
-      "id": "2026_06_14_gh_1_bootstrap_governance_proposal_repository_governance",
       "community": 6,
-      "norm_label": "repository governance proposal"
+      "norm_label": "repository governance proposal",
+      "id": "2026_06_14_gh_1_bootstrap_governance_proposal_repository_governance"
     },
     {
       "label": "Repository governance capability",
@@ -3485,9 +3319,9 @@
       "captured_at": "2026-06-14",
       "author": null,
       "contributor": null,
-      "id": "2026_06_14_gh_1_bootstrap_governance_proposal_repository_governance_capability",
       "community": 6,
-      "norm_label": "repository governance capability"
+      "norm_label": "repository governance capability",
+      "id": "2026_06_14_gh_1_bootstrap_governance_proposal_repository_governance_capability"
     },
     {
       "label": "Archived repository governance requirements",
@@ -3498,9 +3332,9 @@
       "captured_at": "2026-06-14",
       "author": null,
       "contributor": null,
-      "id": "repository_governance_spec_archived_requirements",
       "community": 6,
-      "norm_label": "archived repository governance requirements"
+      "norm_label": "archived repository governance requirements",
+      "id": "repository_governance_spec_archived_requirements"
     },
     {
       "label": "Automated pull request quality requirement",
@@ -3511,9 +3345,9 @@
       "captured_at": "2026-06-14",
       "author": null,
       "contributor": null,
-      "id": "repository_governance_spec_automated_quality",
       "community": 6,
-      "norm_label": "automated pull request quality requirement"
+      "norm_label": "automated pull request quality requirement",
+      "id": "repository_governance_spec_automated_quality"
     },
     {
       "label": "Published documentation requirement",
@@ -3524,9 +3358,9 @@
       "captured_at": "2026-06-14",
       "author": null,
       "contributor": null,
-      "id": "repository_governance_spec_published_documentation",
       "community": 6,
-      "norm_label": "published documentation requirement"
+      "norm_label": "published documentation requirement",
+      "id": "repository_governance_spec_published_documentation"
     },
     {
       "label": "Protected main workflow requirement",
@@ -3537,9 +3371,9 @@
       "captured_at": "2026-06-14",
       "author": null,
       "contributor": null,
-      "id": "repository_governance_spec_protected_main",
       "community": 6,
-      "norm_label": "protected main workflow requirement"
+      "norm_label": "protected main workflow requirement",
+      "id": "repository_governance_spec_protected_main"
     },
     {
       "label": "Tracked agent knowledge assets requirement",
@@ -3550,9 +3384,9 @@
       "captured_at": "2026-06-14",
       "author": null,
       "contributor": null,
-      "id": "repository_governance_spec_tracked_assets",
       "community": 2,
-      "norm_label": "tracked agent knowledge assets requirement"
+      "norm_label": "tracked agent knowledge assets requirement",
+      "id": "repository_governance_spec_tracked_assets"
     },
     {
       "label": "Completed governance bootstrap tasks",
@@ -3563,317 +3397,501 @@
       "captured_at": "2026-06-14",
       "author": null,
       "contributor": null,
-      "id": "2026_06_14_gh_1_bootstrap_governance_tasks_completed_bootstrap",
       "community": 6,
-      "norm_label": "completed governance bootstrap tasks"
-    },
-    {
-      "label": "Current Repository Governance Specification",
-      "file_type": "document",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "lines 1-97",
-      "source_url": null,
-      "captured_at": "2026-06-14",
-      "author": null,
-      "contributor": null,
-      "id": "repository_governance_spec_current_specification",
-      "community": 6,
-      "norm_label": "current repository governance specification"
-    },
-    {
-      "label": "Managed roadmap requirement",
-      "file_type": "concept",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "Managed roadmap",
-      "source_url": null,
-      "captured_at": "2026-06-14",
-      "author": null,
-      "contributor": null,
-      "id": "repository_governance_spec_managed_roadmap",
-      "community": 6,
-      "norm_label": "managed roadmap requirement"
+      "norm_label": "completed governance bootstrap tasks",
+      "id": "2026_06_14_gh_1_bootstrap_governance_tasks_completed_bootstrap"
     }
   ],
   "links": [
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": ".codex/skills/openspec-explore/SKILL.md",
-      "source_location": "L249",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/design.md",
+      "source_location": "L1",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "openspec_explore_skill",
-      "target": "openspec_explore_skill_ending_discovery"
+      "source": "2026_06_14_gh_12_roadmap_order_design",
+      "target": "2026_06_14_gh_12_roadmap_order_design_context"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": ".codex/skills/openspec-explore/SKILL.md",
-      "source_location": "L278",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/design.md",
+      "source_location": "L25",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "openspec_explore_skill",
-      "target": "openspec_explore_skill_guardrails"
+      "source": "2026_06_14_gh_12_roadmap_order_design",
+      "target": "2026_06_14_gh_12_roadmap_order_design_decisions"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": ".codex/skills/openspec-explore/SKILL.md",
-      "source_location": "L145",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/design.md",
+      "source_location": "L9",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "openspec_explore_skill",
-      "target": "openspec_explore_skill_handling_different_entry_points"
+      "source": "2026_06_14_gh_12_roadmap_order_design",
+      "target": "2026_06_14_gh_12_roadmap_order_design_goals_non_goals"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": ".codex/skills/openspec-explore/SKILL.md",
-      "source_location": "L78",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/design.md",
+      "source_location": "L63",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "openspec_explore_skill",
-      "target": "openspec_explore_skill_openspec_awareness"
+      "source": "2026_06_14_gh_12_roadmap_order_design",
+      "target": "2026_06_14_gh_12_roadmap_order_design_migration_plan"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": ".codex/skills/openspec-explore/SKILL.md",
-      "source_location": "L20",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/design.md",
+      "source_location": "L74",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "openspec_explore_skill",
-      "target": "openspec_explore_skill_the_stance"
+      "source": "2026_06_14_gh_12_roadmap_order_design",
+      "target": "2026_06_14_gh_12_roadmap_order_design_open_questions"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": ".codex/skills/openspec-explore/SKILL.md",
-      "source_location": "L134",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/design.md",
+      "source_location": "L53",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "openspec_explore_skill",
-      "target": "openspec_explore_skill_what_you_don_t_have_to_do"
+      "source": "2026_06_14_gh_12_roadmap_order_design",
+      "target": "2026_06_14_gh_12_roadmap_order_design_risks_trade_offs"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": ".codex/skills/openspec-explore/SKILL.md",
-      "source_location": "L31",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/design.md",
+      "source_location": "L41",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "openspec_explore_skill",
-      "target": "openspec_explore_skill_what_you_might_do"
+      "source": "2026_06_14_gh_12_roadmap_order_design_decisions",
+      "target": "2026_06_14_gh_12_roadmap_order_design_encode_gates_in_milestone_issues"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": ".codex/skills/openspec-explore/SKILL.md",
-      "source_location": "L82",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "openspec_explore_skill_openspec_awareness",
-      "target": "openspec_explore_skill_check_for_context"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".codex/skills/openspec-explore/SKILL.md",
-      "source_location": "L94",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "openspec_explore_skill_openspec_awareness",
-      "target": "openspec_explore_skill_when_a_change_exists"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
-      "source_location": "L494",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "openspec_onboard_skill",
-      "target": "openspec_onboard_skill_graceful_exit_handling"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
-      "source_location": "L544",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "openspec_onboard_skill",
-      "target": "openspec_onboard_skill_guardrails"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
-      "source_location": "L420",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "openspec_onboard_skill",
-      "target": "openspec_onboard_skill_phase_10_archive"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
-      "source_location": "L445",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "openspec_onboard_skill",
-      "target": "openspec_onboard_skill_phase_11_recap_next_steps"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/design.md",
       "source_location": "L34",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "openspec_onboard_skill",
-      "target": "openspec_onboard_skill_phase_1_welcome"
+      "source": "2026_06_14_gh_12_roadmap_order_design_decisions",
+      "target": "2026_06_14_gh_12_roadmap_order_design_keep_the_versioned_roadmap_authoritative"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
-      "source_location": "L58",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/design.md",
+      "source_location": "L47",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "openspec_onboard_skill",
-      "target": "openspec_onboard_skill_phase_2_task_selection"
+      "source": "2026_06_14_gh_12_roadmap_order_design_decisions",
+      "target": "2026_06_14_gh_12_roadmap_order_design_limit_solo_work_in_progress"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
-      "source_location": "L133",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/design.md",
+      "source_location": "L27",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "openspec_onboard_skill",
-      "target": "openspec_onboard_skill_phase_3_explore_demo"
+      "source": "2026_06_14_gh_12_roadmap_order_design_decisions",
+      "target": "2026_06_14_gh_12_roadmap_order_design_use_a_numeric_project_field"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
-      "source_location": "L164",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/proposal.md",
+      "source_location": "L21",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "openspec_onboard_skill",
-      "target": "openspec_onboard_skill_phase_4_create_the_change"
+      "source": "2026_06_14_gh_12_roadmap_order_proposal",
+      "target": "2026_06_14_gh_12_roadmap_order_proposal_capabilities"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
-      "source_location": "L198",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/proposal.md",
+      "source_location": "L33",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "openspec_onboard_skill",
-      "target": "openspec_onboard_skill_phase_5_proposal"
+      "source": "2026_06_14_gh_12_roadmap_order_proposal",
+      "target": "2026_06_14_gh_12_roadmap_order_proposal_impact"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
-      "source_location": "L258",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/proposal.md",
+      "source_location": "L9",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "openspec_onboard_skill",
-      "target": "openspec_onboard_skill_phase_6_specs"
+      "source": "2026_06_14_gh_12_roadmap_order_proposal",
+      "target": "2026_06_14_gh_12_roadmap_order_proposal_what_changes"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
-      "source_location": "L303",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/proposal.md",
+      "source_location": "L1",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "openspec_onboard_skill",
-      "target": "openspec_onboard_skill_phase_7_design"
+      "source": "2026_06_14_gh_12_roadmap_order_proposal",
+      "target": "2026_06_14_gh_12_roadmap_order_proposal_why"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
-      "source_location": "L348",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/proposal.md",
+      "source_location": "L27",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "openspec_onboard_skill",
-      "target": "openspec_onboard_skill_phase_8_tasks"
+      "source": "2026_06_14_gh_12_roadmap_order_proposal_capabilities",
+      "target": "2026_06_14_gh_12_roadmap_order_proposal_modified_capabilities"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
-      "source_location": "L386",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/proposal.md",
+      "source_location": "L23",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "openspec_onboard_skill",
-      "target": "openspec_onboard_skill_phase_9_apply_implementation"
+      "source": "2026_06_14_gh_12_roadmap_order_proposal_capabilities",
+      "target": "2026_06_14_gh_12_roadmap_order_proposal_new_capabilities"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
-      "source_location": "L16",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/specs/repository-governance/spec.md",
+      "source_location": "L1",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "openspec_onboard_skill",
-      "target": "openspec_onboard_skill_preflight"
+      "source": "openspec_changes_archive_2026_06_14_gh_12_roadmap_order_specs_repository_governance_spec_md_repository_governance_spec",
+      "target": "repository_governance_spec_modified_requirements"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
-      "source_location": "L60",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/specs/repository-governance/spec.md",
+      "source_location": "L3",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "openspec_onboard_skill_phase_2_task_selection",
-      "target": "openspec_onboard_skill_codebase_analysis"
+      "source": "repository_governance_spec_modified_requirements",
+      "target": "openspec_changes_archive_2026_06_14_gh_12_roadmap_order_specs_repository_governance_spec_md_repository_governance_spec_requirement_managed_roadmap"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/specs/repository-governance/spec.md",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "openspec_changes_archive_2026_06_14_gh_12_roadmap_order_specs_repository_governance_spec_md_repository_governance_spec_requirement_managed_roadmap",
+      "target": "openspec_changes_archive_2026_06_14_gh_12_roadmap_order_specs_repository_governance_spec_md_repository_governance_spec_scenario_milestone_completes"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/specs/repository-governance/spec.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "openspec_changes_archive_2026_06_14_gh_12_roadmap_order_specs_repository_governance_spec_md_repository_governance_spec_requirement_managed_roadmap",
+      "target": "openspec_changes_archive_2026_06_14_gh_12_roadmap_order_specs_repository_governance_spec_md_repository_governance_spec_scenario_next_milestone_is_selected"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/specs/repository-governance/spec.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "openspec_changes_archive_2026_06_14_gh_12_roadmap_order_specs_repository_governance_spec_md_repository_governance_spec_requirement_managed_roadmap",
+      "target": "openspec_changes_archive_2026_06_14_gh_12_roadmap_order_specs_repository_governance_spec_md_repository_governance_spec_scenario_roadmap_order_is_published"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/tasks.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "2026_06_14_gh_12_roadmap_order_tasks",
+      "target": "2026_06_14_gh_12_roadmap_order_tasks_1_versioned_roadmap"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/tasks.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "2026_06_14_gh_12_roadmap_order_tasks",
+      "target": "2026_06_14_gh_12_roadmap_order_tasks_2_github_roadmap_metadata"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/tasks.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "2026_06_14_gh_12_roadmap_order_tasks",
+      "target": "2026_06_14_gh_12_roadmap_order_tasks_3_verification_and_completion"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "openspec_specs_repository_governance_spec_md_repository_governance_spec",
+      "target": "repository_governance_spec_repository_governance_specification"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "repository_governance_spec_repository_governance_specification",
+      "target": "repository_governance_spec_purpose"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "repository_governance_spec_repository_governance_specification",
+      "target": "repository_governance_spec_requirements"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L88",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "repository_governance_spec_requirements",
+      "target": "openspec_specs_repository_governance_spec_md_repository_governance_spec_requirement_managed_roadmap"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "repository_governance_spec_requirements",
+      "target": "repository_governance_spec_requirement_architecture_decision_records",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "repository_governance_spec_requirements",
+      "target": "repository_governance_spec_requirement_automated_pull_request_quality",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "repository_governance_spec_requirements",
+      "target": "repository_governance_spec_requirement_dependency_and_security_automation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "repository_governance_spec_requirements",
+      "target": "repository_governance_spec_requirement_protected_main_workflow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "repository_governance_spec_requirements",
+      "target": "repository_governance_spec_requirement_published_documentation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "repository_governance_spec_requirements",
+      "target": "repository_governance_spec_requirement_repository_contribution_metadata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "repository_governance_spec_requirements",
+      "target": "repository_governance_spec_requirement_reproducible_repository_tooling",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/repository-governance/spec.md",
       "source_location": "L79",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "openspec_onboard_skill_phase_2_task_selection",
-      "target": "openspec_onboard_skill_present_suggestions"
+      "source": "repository_governance_spec_requirements",
+      "target": "repository_governance_spec_requirement_tracked_agent_knowledge_assets",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
-      "source_location": "L112",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L19",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "openspec_onboard_skill_phase_2_task_selection",
-      "target": "openspec_onboard_skill_scope_guardrail"
+      "source": "repository_governance_spec_requirements",
+      "target": "repository_governance_spec_requirement_versioned_project_documentation",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
-      "source_location": "L512",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L15",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "openspec_onboard_skill_graceful_exit_handling",
-      "target": "openspec_onboard_skill_user_just_wants_command_reference"
+      "source": "repository_governance_spec_requirement_reproducible_repository_tooling",
+      "target": "repository_governance_spec_scenario_install_locked_tooling",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md",
-      "source_location": "L496",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "repository_governance_spec_requirement_versioned_project_documentation",
+      "target": "repository_governance_spec_scenario_build_documentation_locally",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "repository_governance_spec_requirement_architecture_decision_records",
+      "target": "repository_governance_spec_scenario_record_bootstrap_architecture",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "repository_governance_spec_requirement_automated_pull_request_quality",
+      "target": "repository_governance_spec_scenario_pull_request_changes_repository_content",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "repository_governance_spec_requirement_published_documentation",
+      "target": "repository_governance_spec_scenario_documentation_reaches_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "repository_governance_spec_requirement_repository_contribution_metadata",
+      "target": "repository_governance_spec_scenario_contributor_proposes_a_change",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "repository_governance_spec_requirement_dependency_and_security_automation",
+      "target": "repository_governance_spec_scenario_supported_dependency_update_exists",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L75",
+      "weight": 1.0,
+      "source": "repository_governance_spec_requirement_protected_main_workflow",
+      "target": "repository_governance_spec_scenario_owner_merges_a_change",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L84",
+      "weight": 1.0,
+      "source": "repository_governance_spec_requirement_tracked_agent_knowledge_assets",
+      "target": "repository_governance_spec_scenario_architecture_documentation_changes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L108",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "openspec_onboard_skill_graceful_exit_handling",
-      "target": "openspec_onboard_skill_user_wants_to_stop_mid_way"
+      "source": "openspec_specs_repository_governance_spec_md_repository_governance_spec_requirement_managed_roadmap",
+      "target": "openspec_specs_repository_governance_spec_md_repository_governance_spec_scenario_milestone_completes"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L104",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "openspec_specs_repository_governance_spec_md_repository_governance_spec_requirement_managed_roadmap",
+      "target": "openspec_specs_repository_governance_spec_md_repository_governance_spec_scenario_next_milestone_is_selected"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/repository-governance/spec.md",
+      "source_location": "L100",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "openspec_specs_repository_governance_spec_md_repository_governance_spec_requirement_managed_roadmap",
+      "target": "openspec_specs_repository_governance_spec_md_repository_governance_spec_scenario_roadmap_order_is_published"
     },
     {
       "relation": "contains",
@@ -3978,10 +3996,10 @@
     {
       "relation": "implements",
       "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
       "source_file": "AGENTS.md",
       "source_location": null,
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_project_working_agreement",
       "target": "agents_documentation_as_code"
     },
@@ -4014,6 +4032,16 @@
       "weight": 1.0,
       "source": "agents_project_working_agreement",
       "target": "agents_github_collaboration_platform"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L149",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_project_working_agreement",
+      "target": "agents_graphify"
     },
     {
       "relation": "defines",
@@ -4094,16 +4122,6 @@
       "weight": 1.0,
       "source": "adr_0001_documentation_and_governance_adr_0001",
       "target": "agents_documentation_as_code"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.95,
-      "source_file": "AGENTS.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "agents_documentation_as_code",
-      "target": "mkdocs_mkdocs_site_configuration"
     },
     {
       "relation": "recognizes_exception_for",
@@ -4939,26 +4957,6 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "docs/index.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_index_project_documentation_home",
-      "target": "docs_development_development_workflow"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "mkdocs.yml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "mkdocs_versioned_documentation_navigation",
-      "target": "docs_development_development_workflow"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
       "source_file": "README.md",
       "source_location": null,
       "weight": 1.0,
@@ -4994,6 +4992,56 @@
       "confidence_score": 1.0,
       "source": "docs_index_redact_all_the_things",
       "target": "docs_index_start_here"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/roadmap.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_roadmap",
+      "target": "docs_roadmap_implementation_roadmap"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/roadmap.md",
+      "source_location": "L47",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_roadmap_implementation_roadmap",
+      "target": "docs_roadmap_contract_ownership"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/roadmap.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_roadmap_implementation_roadmap",
+      "target": "docs_roadmap_delivery_policy"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/roadmap.md",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_roadmap_implementation_roadmap",
+      "target": "docs_roadmap_dependency_flow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/roadmap.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_roadmap_implementation_roadmap",
+      "target": "docs_roadmap_sequence"
     },
     {
       "relation": "contains",
@@ -5373,7 +5421,7 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "openspec_changes_archive_2026_06_14_gh_1_bootstrap_governance_specs_repository_governance_spec_md_repository_governance_spec_requirement_managed_roadmap",
-      "target": "openspec_changes_archive_2026_06_14_gh_1_bootstrap_governance_specs_repository_governance_spec_md_repository_governance_spec_scenario_bootstrap_completes"
+      "target": "repository_governance_spec_scenario_bootstrap_completes"
     },
     {
       "relation": "contains",
@@ -5384,6 +5432,16 @@
       "confidence_score": 1.0,
       "source": "2026_06_14_gh_1_bootstrap_governance_tasks",
       "target": "2026_06_14_gh_1_bootstrap_governance_tasks_1_reproducible_tooling"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-06-14-gh-1-bootstrap-governance/tasks.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "2026_06_14_gh_1_bootstrap_governance_tasks",
+      "target": "2026_06_14_gh_1_bootstrap_governance_tasks_2_documentation"
     },
     {
       "relation": "contains",
@@ -5424,236 +5482,6 @@
       "confidence_score": 1.0,
       "source": "2026_06_14_gh_1_bootstrap_governance_tasks",
       "target": "2026_06_14_gh_1_bootstrap_governance_tasks_6_completion"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "openspec_specs_repository_governance_spec_md_repository_governance_spec",
-      "target": "repository_governance_spec_repository_governance_specification"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "repository_governance_spec_repository_governance_specification",
-      "target": "repository_governance_spec_purpose"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "repository_governance_spec_repository_governance_specification",
-      "target": "repository_governance_spec_requirements"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L28",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "repository_governance_spec_requirements",
-      "target": "openspec_specs_repository_governance_spec_md_repository_governance_spec_requirement_architecture_decision_records"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L37",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "repository_governance_spec_requirements",
-      "target": "openspec_specs_repository_governance_spec_md_repository_governance_spec_requirement_automated_pull_request_quality"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L62",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "repository_governance_spec_requirements",
-      "target": "openspec_specs_repository_governance_spec_md_repository_governance_spec_requirement_dependency_and_security_automation"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L88",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "repository_governance_spec_requirements",
-      "target": "openspec_specs_repository_governance_spec_md_repository_governance_spec_requirement_managed_roadmap"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L70",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "repository_governance_spec_requirements",
-      "target": "openspec_specs_repository_governance_spec_md_repository_governance_spec_requirement_protected_main_workflow"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L45",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "repository_governance_spec_requirements",
-      "target": "openspec_specs_repository_governance_spec_md_repository_governance_spec_requirement_published_documentation"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L53",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "repository_governance_spec_requirements",
-      "target": "openspec_specs_repository_governance_spec_md_repository_governance_spec_requirement_repository_contribution_metadata"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "repository_governance_spec_requirements",
-      "target": "openspec_specs_repository_governance_spec_md_repository_governance_spec_requirement_reproducible_repository_tooling"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L79",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "repository_governance_spec_requirements",
-      "target": "openspec_specs_repository_governance_spec_md_repository_governance_spec_requirement_tracked_agent_knowledge_assets"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L19",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "repository_governance_spec_requirements",
-      "target": "openspec_specs_repository_governance_spec_md_repository_governance_spec_requirement_versioned_project_documentation"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "openspec_specs_repository_governance_spec_md_repository_governance_spec_requirement_reproducible_repository_tooling",
-      "target": "openspec_specs_repository_governance_spec_md_repository_governance_spec_scenario_install_locked_tooling"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L24",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "openspec_specs_repository_governance_spec_md_repository_governance_spec_requirement_versioned_project_documentation",
-      "target": "openspec_specs_repository_governance_spec_md_repository_governance_spec_scenario_build_documentation_locally"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L33",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "openspec_specs_repository_governance_spec_md_repository_governance_spec_requirement_architecture_decision_records",
-      "target": "openspec_specs_repository_governance_spec_md_repository_governance_spec_scenario_record_bootstrap_architecture"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L41",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "openspec_specs_repository_governance_spec_md_repository_governance_spec_requirement_automated_pull_request_quality",
-      "target": "openspec_specs_repository_governance_spec_md_repository_governance_spec_scenario_pull_request_changes_repository_content"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L49",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "openspec_specs_repository_governance_spec_md_repository_governance_spec_requirement_published_documentation",
-      "target": "openspec_specs_repository_governance_spec_md_repository_governance_spec_scenario_documentation_reaches_main"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L58",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "openspec_specs_repository_governance_spec_md_repository_governance_spec_requirement_repository_contribution_metadata",
-      "target": "openspec_specs_repository_governance_spec_md_repository_governance_spec_scenario_contributor_proposes_a_change"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L66",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "openspec_specs_repository_governance_spec_md_repository_governance_spec_requirement_dependency_and_security_automation",
-      "target": "openspec_specs_repository_governance_spec_md_repository_governance_spec_scenario_supported_dependency_update_exists"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L75",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "openspec_specs_repository_governance_spec_md_repository_governance_spec_requirement_protected_main_workflow",
-      "target": "openspec_specs_repository_governance_spec_md_repository_governance_spec_scenario_owner_merges_a_change"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L84",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "openspec_specs_repository_governance_spec_md_repository_governance_spec_requirement_tracked_agent_knowledge_assets",
-      "target": "openspec_specs_repository_governance_spec_md_repository_governance_spec_scenario_architecture_documentation_changes"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "L93",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "openspec_specs_repository_governance_spec_md_repository_governance_spec_requirement_managed_roadmap",
-      "target": "openspec_specs_repository_governance_spec_md_repository_governance_spec_scenario_bootstrap_completes"
     },
     {
       "relation": "implements",
@@ -5936,16 +5764,6 @@
       "target": "openspec_verify_change_skill_three_dimension_verification"
     },
     {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".pre-commit-config.yaml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "pre_commit_config_markdown_and_yaml_linting",
-      "target": "pymarkdown_markdown_lint_configuration"
-    },
-    {
       "relation": "implements",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -6209,36 +6027,6 @@
       "relation": "implements",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": ".pre-commit-config.yaml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "pre_commit_config_pre_commit_configuration",
-      "target": "pre_commit_config_markdown_and_yaml_linting"
-    },
-    {
-      "relation": "implements",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".pre-commit-config.yaml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "pre_commit_config_pre_commit_configuration",
-      "target": "pre_commit_config_repository_hygiene_hooks"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.95,
-      "source_file": ".yamllint.yaml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "yamllint_yaml_lint_configuration",
-      "target": "pre_commit_config_markdown_and_yaml_linting"
-    },
-    {
-      "relation": "implements",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
       "source_file": "docs/adr/0001-documentation-and-governance.md",
       "source_location": null,
       "weight": 1.0,
@@ -6436,16 +6224,6 @@
       "target": "adr_0001_documentation_and_governance_adr_0001"
     },
     {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "mkdocs.yml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "mkdocs_versioned_documentation_navigation",
-      "target": "adr_0001_documentation_and_governance_adr_0001"
-    },
-    {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -6464,16 +6242,6 @@
       "weight": 1.0,
       "source": "adr_index_architecture_decision_record_index",
       "target": "adr_template_madr_template"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/index.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_index_project_documentation_home",
-      "target": "adr_index_architecture_decision_record_index"
     },
     {
       "relation": "implements",
@@ -6556,36 +6324,6 @@
       "target": "architecture_technical_scope_privacy_preserving_logging"
     },
     {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/index.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_index_project_documentation_home",
-      "target": "architecture_technical_scope_assisted_file_redaction_scope"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "mkdocs.yml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "mkdocs_versioned_documentation_navigation",
-      "target": "architecture_technical_scope_assisted_file_redaction_scope"
-    },
-    {
-      "relation": "semantically_similar_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.95,
-      "source_file": "docs/architecture/technical-scope.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "architecture_technical_scope_mandatory_human_review",
-      "target": "docs_index_detection_as_assistance"
-    },
-    {
       "relation": "implements",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -6626,66 +6364,6 @@
       "target": "architecture_technical_scope_fargate_spot_processing"
     },
     {
-      "relation": "conceptually_related_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "source_file": "docs/index.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_index_bounded_concurrency",
-      "target": "architecture_technical_scope_fargate_spot_processing"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/index.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_index_detection_as_assistance",
-      "target": "docs_index_project_documentation_home"
-    },
-    {
-      "relation": "implements",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/index.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_index_project_documentation_home",
-      "target": "docs_index_bounded_concurrency"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "mkdocs.yml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "mkdocs_versioned_documentation_navigation",
-      "target": "docs_index_project_documentation_home"
-    },
-    {
-      "relation": "implements",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "mkdocs.yml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "mkdocs_mkdocs_site_configuration",
-      "target": "mkdocs_material_for_mkdocs"
-    },
-    {
-      "relation": "implements",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "mkdocs.yml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "mkdocs_mkdocs_site_configuration",
-      "target": "mkdocs_versioned_documentation_navigation"
-    },
-    {
       "relation": "records_completion_of",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -6704,36 +6382,6 @@
       "weight": 1.0,
       "source": "repository_governance_spec_published_documentation",
       "target": "workflows_pages_pages_workflow"
-    },
-    {
-      "relation": "invokes",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".github/workflows/quality.yml",
-      "source_location": "Run pre-commit step",
-      "weight": 1.0,
-      "source": "workflows_quality_repository_validation",
-      "target": "pre_commit_config_pre_commit_checks"
-    },
-    {
-      "relation": "includes",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".pre-commit-config.yaml",
-      "source_location": "pymarkdown hook",
-      "weight": 1.0,
-      "source": "pre_commit_config_pre_commit_checks",
-      "target": "pre_commit_config_markdown_validation"
-    },
-    {
-      "relation": "includes",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": ".pre-commit-config.yaml",
-      "source_location": "yamllint hook",
-      "weight": 1.0,
-      "source": "pre_commit_config_pre_commit_checks",
-      "target": "pre_commit_config_yaml_validation"
     },
     {
       "relation": "requires_refresh_via",
@@ -6844,26 +6492,6 @@
       "weight": 1.0,
       "source": "repository_governance_spec_archived_requirements",
       "target": "repository_governance_spec_tracked_assets"
-    },
-    {
-      "relation": "incorporates",
-      "confidence": "INFERRED",
-      "confidence_score": 0.95,
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "matching requirement set",
-      "weight": 0.95,
-      "source": "repository_governance_spec_current_specification",
-      "target": "repository_governance_spec_archived_requirements"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "openspec/specs/repository-governance/spec.md",
-      "source_location": "Managed roadmap",
-      "weight": 1.0,
-      "source": "repository_governance_spec_current_specification",
-      "target": "repository_governance_spec_managed_roadmap"
     }
   ],
   "hyperedges": [
@@ -6910,5 +6538,5 @@
       "source_file": "AGENTS.md"
     }
   ],
-  "built_at_commit": "197f3fd084372edca860dd35c9d95ad5f8e6ae69"
+  "built_at_commit": "2f826c5a6f93272de4e2a10263021463ec05bca8"
 }

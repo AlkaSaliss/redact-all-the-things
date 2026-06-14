@@ -23,12 +23,17 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.highlight:
       anchor_linenums: true
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - toc:
       permalink: true
 
 nav:
   - Home: index.md
+  - Roadmap: roadmap.md
   - Development: development.md
   - Architecture:
       - Technical scope: architecture/technical-scope.md
