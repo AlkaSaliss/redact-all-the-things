@@ -14,4 +14,4 @@
 - [x] 3.1 Refresh Graphify for the roadmap and OpenSpec changes
 - [x] 3.2 Run pre-commit, strict MkDocs, and strict OpenSpec validation
 - [x] 3.3 Verify implementation against the OpenSpec change
-- [ ] 3.4 Synchronize and archive the OpenSpec change before merge
+- [x] 3.4 Synchronize and archive the OpenSpec change before merge

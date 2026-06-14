@@ -185,38 +185,38 @@
     "semantic_hash": "5439ec090c98a27f690aec7c36c7af72"
   },
   "openspec/specs/repository-governance/spec.md": {
-    "mtime": 1781460490.4598484,
-    "ast_hash": "2ee10de8bf89872834b5d54e3b820401",
-    "semantic_hash": "2ee10de8bf89872834b5d54e3b820401"
+    "mtime": 1781473389.3839796,
+    "ast_hash": "3a57cfc9f5dda1e7bb2cce082e30427d",
+    "semantic_hash": ""
   },
   "docs/roadmap.md": {
     "mtime": 1781471404.9088445,
     "ast_hash": "97c50edd8c047c937479b8baa391e84a",
     "semantic_hash": ""
   },
-  "openspec/changes/gh-12-roadmap-order/.openspec.yaml": {
+  "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/.openspec.yaml": {
     "mtime": 1781471217.9990337,
     "ast_hash": "d3f3cdfce511e197472e6dee42eaf5d8",
     "semantic_hash": ""
   },
-  "openspec/changes/gh-12-roadmap-order/design.md": {
+  "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/design.md": {
     "mtime": 1781471332.7480004,
     "ast_hash": "e4f892fbdb6ec5151683c05831a7fd23",
     "semantic_hash": ""
   },
-  "openspec/changes/gh-12-roadmap-order/proposal.md": {
+  "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/proposal.md": {
     "mtime": 1781471306.678377,
     "ast_hash": "16047775eb921cd2aefe6aed60c0551f",
     "semantic_hash": ""
   },
-  "openspec/changes/gh-12-roadmap-order/specs/repository-governance/spec.md": {
+  "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/specs/repository-governance/spec.md": {
     "mtime": 1781471332.616233,
     "ast_hash": "e2d665d0d2b1cc3d0ad0d6de105ed4a0",
     "semantic_hash": ""
   },
-  "openspec/changes/gh-12-roadmap-order/tasks.md": {
-    "mtime": 1781471852.1309235,
-    "ast_hash": "95ee35d2adcc275c273d5e54e7a52d87",
+  "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/tasks.md": {
+    "mtime": 1781473389.5183508,
+    "ast_hash": "8cf9f9bd3553d864aafb3e8de0b1211c",
     "semantic_hash": ""
   }
 }

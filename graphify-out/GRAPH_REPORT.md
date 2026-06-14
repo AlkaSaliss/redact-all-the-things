@@ -1,16 +1,16 @@
 # Graph Report - redact-all-the-things  (2026-06-14)
 
 ## Corpus Check
-- 22 files · ~8,518 words
+- 22 files · ~8,634 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 318 nodes · 330 edges · 27 communities (26 shown, 1 thin omitted)
-- Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 16 edges (avg confidence: 0.93)
+- 308 nodes · 311 edges · 29 communities (26 shown, 3 thin omitted)
+- Extraction: 96% EXTRACTED · 4% INFERRED · 0% AMBIGUOUS · INFERRED: 12 edges (avg confidence: 0.93)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `6e9a41db`
+- Built from commit: `04d43eae`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -42,15 +42,17 @@
 - [[_COMMUNITY_OpenSpec Apply|OpenSpec Apply]]
 - [[_COMMUNITY_OpenSpec Archive|OpenSpec Archive]]
 - [[_COMMUNITY_OpenSpec Bulk Archive|OpenSpec Bulk Archive]]
+- [[_COMMUNITY_Community 27|Community 27]]
+- [[_COMMUNITY_Community 28|Community 28]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Project Working Agreement` - 17 edges
-2. `Development workflow` - 14 edges
-3. `Technical Scope: Assisted File Redaction Application` - 13 edges
-4. `Assisted File Redaction technical scope` - 13 edges
-5. `ADDED Requirements` - 11 edges
-6. `Requirements` - 11 edges
-7. `ADR 0001: Documentation and GitHub governance` - 11 edges
+2. `Technical Scope: Assisted File Redaction Application` - 13 edges
+3. `Development workflow` - 12 edges
+4. `ADDED Requirements` - 11 edges
+5. `Requirements` - 11 edges
+6. `Assisted File Redaction technical scope` - 11 edges
+7. `ADR 0001: Documentation and GitHub governance` - 10 edges
 8. `Quality workflow` - 8 edges
 9. `3. Functional Requirements` - 7 edges
 10. `9. Testing Strategy` - 7 edges
@@ -64,8 +66,8 @@
   SECURITY.md → .github/ISSUE_TEMPLATE/bug.yml
 - `Issue-to-PR lifecycle` --semantically_similar_to--> `OpenSpec change workflow`  [INFERRED] [semantically similar]
   CONTRIBUTING.md → AGENTS.md
-- `Markdown and YAML linting` --references--> `PyMarkdown lint configuration`  [EXTRACTED]
-  .pre-commit-config.yaml → .pymarkdown.json
+- `Completed governance bootstrap tasks` --records_update_to--> `Project Working Agreement`  [EXTRACTED]
+  openspec/changes/archive/2026-06-14-gh-1-bootstrap-governance/tasks.md → AGENTS.md
 
 ## Import Cycles
 - None detected.
@@ -75,23 +77,23 @@
 - **Versioned documentation delivery** — agents_documentation_as_code, repository_governance_spec_published_documentation, workflows_pages_strict_mkdocs_build, workflows_pages_github_pages_deployment [INFERRED 0.95]
 - **Tracked knowledge asset lifecycle** — agents_tracked_knowledge_assets, agents_graphify_workflow, repository_governance_spec_tracked_assets, 2026_06_14_gh_1_bootstrap_governance_tasks_completed_bootstrap [INFERRED 0.85]
 
-## Communities (27 total, 1 thin omitted)
+## Communities (29 total, 3 thin omitted)
 
 ### Community 0 - "Project Architecture"
-Cohesion: 0.08
-Nodes (31): Documentation as Code, 24-hour job retention, Assisted File Redaction technical scope, Private AWS architecture, Official AWS ECS regional price index, Checkpoint recovery, AWS Batch Fargate Spot processing, Mandatory human review (+23 more)
+Cohesion: 0.09
+Nodes (24): 24-hour job retention, Assisted File Redaction technical scope, Private AWS architecture, Official AWS ECS regional price index, Checkpoint recovery, AWS Batch Fargate Spot processing, Mandatory human review, Normalized redaction regions (+16 more)
 
 ### Community 1 - "Technical Scope"
-Cohesion: 0.06
-Nodes (30): 10. Acceptance Criteria, 11. Principal Risks, 12. References, 1. Objective, 2. Scope, 3. Functional Requirements, 5. Core Data Model, 6. Security Requirements (+22 more)
+Cohesion: 0.08
+Nodes (23): 10. Acceptance Criteria, 11. Principal Risks, 12. References, 1. Objective, 2. Scope, 5. Core Data Model, 6. Security Requirements, 7. Cost Controls (+15 more)
 
 ### Community 2 - "Working Agreement"
 Cohesion: 0.09
-Nodes (28): ADR 0001: Documentation and GitHub governance, Apache License 2.0, Reproducible governance controls before application code, Solo-maintainer merge policy, Append-only decision history, Architecture decision record index, Decision trade-off structure, MADR template (+20 more)
+Nodes (29): ADR 0001: Documentation and GitHub governance, Apache License 2.0, Reproducible governance controls before application code, Solo-maintainer merge policy, Append-only decision history, Architecture decision record index, Decision trade-off structure, MADR template (+21 more)
 
 ### Community 3 - "Governance Specification"
 Cohesion: 0.08
-Nodes (23): Requirement: Architecture decision records, Requirement: Automated pull request quality, Requirement: Dependency and security automation, Requirement: Managed roadmap, Requirement: Protected main workflow, Requirement: Published documentation, Requirement: Repository contribution metadata, Requirement: Reproducible repository tooling (+15 more)
+Nodes (25): Requirement: Architecture decision records, Requirement: Automated pull request quality, Requirement: Dependency and security automation, Requirement: Managed roadmap, Requirement: Protected main workflow, Requirement: Published documentation, Requirement: Repository contribution metadata, Requirement: Reproducible repository tooling (+17 more)
 
 ### Community 4 - "OpenSpec Change Lifecycle"
 Cohesion: 0.12
@@ -102,8 +104,8 @@ Cohesion: 0.09
 Nodes (21): Requirement: Architecture decision records, Requirement: Automated pull request quality, Requirement: Dependency and security automation, Requirement: Managed roadmap, Requirement: Protected main workflow, Requirement: Published documentation, Requirement: Repository contribution metadata, Requirement: Reproducible repository tooling (+13 more)
 
 ### Community 6 - "Governance Automation"
-Cohesion: 0.12
-Nodes (21): Repository governance proposal, Repository governance capability, Completed governance bootstrap tasks, Local validation suite, PyMarkdown validation, Pre-commit repository checks, YAML lint validation, Archived repository governance requirements (+13 more)
+Cohesion: 0.14
+Nodes (18): Repository governance proposal, Repository governance capability, Completed governance bootstrap tasks, Local validation suite, Archived repository governance requirements, Automated pull request quality requirement, Current Repository Governance Specification, Managed roadmap requirement (+10 more)
 
 ### Community 7 - "OpenSpec Onboarding"
 Cohesion: 0.18
@@ -149,10 +151,6 @@ Nodes (5): Before starting, Contributing, Local checks, Pull requests, Workflow
 Cohesion: 0.33
 Nodes (5): Documentation and architecture, OpenSpec, Security and privacy, Summary, Validation
 
-### Community 18 - "Repository Linting"
-Cohesion: 0.33
-Nodes (6): Markdown and YAML linting, Pre-commit configuration, Repository hygiene hooks, PyMarkdown lint configuration, Relaxed Markdown rules, YAML lint configuration
-
 ### Community 19 - "Bootstrap Decisions"
 Cohesion: 0.50
 Nodes (4): Bootstrap governance architecture, Reproducible uv documentation toolchain, Required Quality workflow design, Spec-driven bootstrap governance change
@@ -175,31 +173,35 @@ Nodes (5): Contract ownership, Delivery policy, Dependency flow, Implementation 
 
 ### Community 25 - "OpenSpec Archive"
 Cohesion: 0.33
-Nodes (5): Requirement: Managed roadmap, MODIFIED Requirements, Scenario: Milestone completes, Scenario: Next milestone is selected, Scenario: Roadmap order is published
+Nodes (5): Requirement: Managed roadmap, Scenario: Milestone completes, Scenario: Next milestone is selected, Scenario: Roadmap order is published, MODIFIED Requirements
 
 ### Community 26 - "OpenSpec Bulk Archive"
+Cohesion: 0.29
+Nodes (7): 3. Functional Requirements, Analysis, Authentication, Export, Retention, Review, Upload
+
+### Community 28 - "Community 28"
 Cohesion: 0.50
 Nodes (3): 1. Versioned Roadmap, 2. GitHub Roadmap Metadata, 3. Verification and Completion
 
 ## Knowledge Gaps
-- **169 isolated node(s):** `Summary`, `OpenSpec`, `Validation`, `Documentation and architecture`, `Security and privacy` (+164 more)
+- **170 isolated node(s):** `Summary`, `OpenSpec`, `Validation`, `Documentation and architecture`, `Security and privacy` (+165 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **1 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Assisted File Redaction technical scope` connect `Project Architecture` to `Security Reporting`, `Working Agreement`?**
-  _High betweenness centrality (0.037) - this node is a cross-community bridge._
-- **Why does `Development workflow` connect `Project Architecture` to `Working Agreement`, `Governance Automation`?**
-  _High betweenness centrality (0.035) - this node is a cross-community bridge._
-- **Why does `Project Working Agreement` connect `Working Agreement` to `Project Architecture`, `Governance Automation`?**
+  _High betweenness centrality (0.036) - this node is a cross-community bridge._
+- **Why does `ADR 0001: Documentation and GitHub governance` connect `Working Agreement` to `Project Architecture`?**
   _High betweenness centrality (0.026) - this node is a cross-community bridge._
+- **Why does `Development workflow` connect `Project Architecture` to `Working Agreement`, `Governance Automation`?**
+  _High betweenness centrality (0.025) - this node is a cross-community bridge._
 - **What connects `Summary`, `OpenSpec`, `Validation` to the rest of the system?**
-  _183 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _184 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Project Architecture` be split into smaller, more focused modules?**
-  _Cohesion score 0.07661290322580645 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08666666666666667 - nodes in this community are weakly interconnected._
 - **Should `Technical Scope` be split into smaller, more focused modules?**
-  _Cohesion score 0.06451612903225806 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08333333333333333 - nodes in this community are weakly interconnected._
 - **Should `Working Agreement` be split into smaller, more focused modules?**
-  _Cohesion score 0.08866995073891626 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08735632183908046 - nodes in this community are weakly interconnected._
