@@ -100,9 +100,9 @@
     "semantic_hash": "4a36f160ca9f93af8da7815c636b9a8b"
   },
   ".pre-commit-config.yaml": {
-    "mtime": 1781460490.4163759,
-    "ast_hash": "2a76f4f21e3f4da2f3fe0565631e8c43",
-    "semantic_hash": "2a76f4f21e3f4da2f3fe0565631e8c43"
+    "mtime": 1781471827.14252,
+    "ast_hash": "b90366739d43e994bd2b9547b14739a4",
+    "semantic_hash": ""
   },
   ".yamllint.yaml": {
     "mtime": 1781460490.4219434,
@@ -150,14 +150,14 @@
     "semantic_hash": "dc95d0bdd8f1fc67de74d8688ea8a8a2"
   },
   "docs/index.md": {
-    "mtime": 1781460490.4318264,
-    "ast_hash": "ae133aa7d0d654cb36f35406e50f85ce",
-    "semantic_hash": "ae133aa7d0d654cb36f35406e50f85ce"
+    "mtime": 1781471405.1612833,
+    "ast_hash": "25f988ec1eb553cbbeb809743c1ace43",
+    "semantic_hash": ""
   },
   "mkdocs.yml": {
-    "mtime": 1781460490.4556172,
-    "ast_hash": "5eea3e601a9af59c47d2586bb93627b6",
-    "semantic_hash": "5eea3e601a9af59c47d2586bb93627b6"
+    "mtime": 1781471786.1035824,
+    "ast_hash": "253298303e11ce36e7238cdfc00ccf3b",
+    "semantic_hash": ""
   },
   "openspec/changes/archive/2026-06-14-gh-1-bootstrap-governance/.openspec.yaml": {
     "mtime": 1781460490.45625,
@@ -188,5 +188,35 @@
     "mtime": 1781460490.4598484,
     "ast_hash": "2ee10de8bf89872834b5d54e3b820401",
     "semantic_hash": "2ee10de8bf89872834b5d54e3b820401"
+  },
+  "docs/roadmap.md": {
+    "mtime": 1781471404.9088445,
+    "ast_hash": "97c50edd8c047c937479b8baa391e84a",
+    "semantic_hash": ""
+  },
+  "openspec/changes/gh-12-roadmap-order/.openspec.yaml": {
+    "mtime": 1781471217.9990337,
+    "ast_hash": "d3f3cdfce511e197472e6dee42eaf5d8",
+    "semantic_hash": ""
+  },
+  "openspec/changes/gh-12-roadmap-order/design.md": {
+    "mtime": 1781471332.7480004,
+    "ast_hash": "e4f892fbdb6ec5151683c05831a7fd23",
+    "semantic_hash": ""
+  },
+  "openspec/changes/gh-12-roadmap-order/proposal.md": {
+    "mtime": 1781471306.678377,
+    "ast_hash": "16047775eb921cd2aefe6aed60c0551f",
+    "semantic_hash": ""
+  },
+  "openspec/changes/gh-12-roadmap-order/specs/repository-governance/spec.md": {
+    "mtime": 1781471332.616233,
+    "ast_hash": "e2d665d0d2b1cc3d0ad0d6de105ed4a0",
+    "semantic_hash": ""
+  },
+  "openspec/changes/gh-12-roadmap-order/tasks.md": {
+    "mtime": 1781471852.1309235,
+    "ast_hash": "95ee35d2adcc275c273d5e54e7a52d87",
+    "semantic_hash": ""
   }
 }

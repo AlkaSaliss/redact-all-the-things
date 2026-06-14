@@ -1,13 +1,18 @@
-# Graph Report - .  (2026-06-14)
+# Graph Report - redact-all-the-things  (2026-06-14)
 
 ## Corpus Check
-- 10 files · ~7,155 words
+- 22 files · ~8,518 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 321 nodes · 327 edges · 33 communities (32 shown, 1 thin omitted)
+- 318 nodes · 330 edges · 27 communities (26 shown, 1 thin omitted)
 - Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 16 edges (avg confidence: 0.93)
-- Token cost: 6,120 input · 6,650 output
+- Token cost: 0 input · 0 output
+
+## Graph Freshness
+- Built from commit: `6e9a41db`
+- Run `git rev-parse HEAD` and compare to check if the graph is stale.
+- Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - [[_COMMUNITY_Project Architecture|Project Architecture]]
@@ -34,9 +39,12 @@
 - [[_COMMUNITY_Documentation Home|Documentation Home]]
 - [[_COMMUNITY_Feature Requests|Feature Requests]]
 - [[_COMMUNITY_Dependency Updates|Dependency Updates]]
+- [[_COMMUNITY_OpenSpec Apply|OpenSpec Apply]]
+- [[_COMMUNITY_OpenSpec Archive|OpenSpec Archive]]
+- [[_COMMUNITY_OpenSpec Bulk Archive|OpenSpec Bulk Archive]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `Project Working Agreement` - 16 edges
+1. `Project Working Agreement` - 17 edges
 2. `Development workflow` - 14 edges
 3. `Technical Scope: Assisted File Redaction Application` - 13 edges
 4. `Assisted File Redaction technical scope` - 13 edges
@@ -67,7 +75,7 @@
 - **Versioned documentation delivery** — agents_documentation_as_code, repository_governance_spec_published_documentation, workflows_pages_strict_mkdocs_build, workflows_pages_github_pages_deployment [INFERRED 0.95]
 - **Tracked knowledge asset lifecycle** — agents_tracked_knowledge_assets, agents_graphify_workflow, repository_governance_spec_tracked_assets, 2026_06_14_gh_1_bootstrap_governance_tasks_completed_bootstrap [INFERRED 0.85]
 
-## Communities (33 total, 1 thin omitted)
+## Communities (27 total, 1 thin omitted)
 
 ### Community 0 - "Project Architecture"
 Cohesion: 0.08
@@ -79,7 +87,7 @@ Nodes (30): 10. Acceptance Criteria, 11. Principal Risks, 12. References, 1. Obj
 
 ### Community 2 - "Working Agreement"
 Cohesion: 0.09
-Nodes (27): ADR 0001: Documentation and GitHub governance, Apache License 2.0, Reproducible governance controls before application code, Solo-maintainer merge policy, Append-only decision history, Architecture decision record index, Decision trade-off structure, MADR template (+19 more)
+Nodes (28): ADR 0001: Documentation and GitHub governance, Apache License 2.0, Reproducible governance controls before application code, Solo-maintainer merge policy, Append-only decision history, Architecture decision record index, Decision trade-off structure, MADR template (+20 more)
 
 ### Community 3 - "Governance Specification"
 Cohesion: 0.08
@@ -98,12 +106,12 @@ Cohesion: 0.12
 Nodes (21): Repository governance proposal, Repository governance capability, Completed governance bootstrap tasks, Local validation suite, PyMarkdown validation, Pre-commit repository checks, YAML lint validation, Archived repository governance requirements (+13 more)
 
 ### Community 7 - "OpenSpec Onboarding"
-Cohesion: 0.10
-Nodes (19): Codebase Analysis, Graceful Exit Handling, Guardrails, Phase 10: Archive, Phase 11: Recap & Next Steps, Phase 1: Welcome, Phase 2: Task Selection, Phase 3: Explore Demo (+11 more)
+Cohesion: 0.18
+Nodes (10): Context, Decisions, Encode gates in milestone issues, Goals / Non-Goals, Keep the versioned roadmap authoritative, Limit solo work in progress, Migration Plan, Open Questions (+2 more)
 
 ### Community 8 - "Bootstrap Execution"
-Cohesion: 0.15
-Nodes (11): 1. Reproducible Tooling, 3. GitHub Repository Files, 4. Knowledge Graph and Local Verification, 5. GitHub Publication, 6. Completion, Contributing, Documentation, License (+3 more)
+Cohesion: 0.14
+Nodes (12): 1. Reproducible Tooling, 2. Documentation, 3. GitHub Repository Files, 4. Knowledge Graph and Local Verification, 5. GitHub Publication, 6. Completion, Contributing, Documentation (+4 more)
 
 ### Community 9 - "Security Reporting"
 Cohesion: 0.15
@@ -114,8 +122,8 @@ Cohesion: 0.17
 Nodes (11): Configure GitHub as part of bootstrap, Context, Decisions, Goals / Non-Goals, Keep agent and Graphify assets versioned, Migration Plan, Open Questions, Publish documentation from `docs/` (+3 more)
 
 ### Community 11 - "OpenSpec Exploration"
-Cohesion: 0.20
-Nodes (9): Check for context, Ending Discovery, Guardrails, Handling Different Entry Points, OpenSpec Awareness, The Stance, What You Don't Have To Do, What You Might Do (+1 more)
+Cohesion: 0.29
+Nodes (6): Capabilities, Impact, Modified Capabilities, New Capabilities, What Changes, Why
 
 ### Community 12 - "AWS System Architecture"
 Cohesion: 0.25
@@ -161,8 +169,20 @@ Nodes (3): Project principles, Redact All The Things, Start here
 Cohesion: 0.67
 Nodes (3): Feature request issue template, Observable success, Scope boundaries
 
+### Community 24 - "OpenSpec Apply"
+Cohesion: 0.33
+Nodes (5): Contract ownership, Delivery policy, Dependency flow, Implementation roadmap, Sequence
+
+### Community 25 - "OpenSpec Archive"
+Cohesion: 0.33
+Nodes (5): Requirement: Managed roadmap, MODIFIED Requirements, Scenario: Milestone completes, Scenario: Next milestone is selected, Scenario: Roadmap order is published
+
+### Community 26 - "OpenSpec Bulk Archive"
+Cohesion: 0.50
+Nodes (3): 1. Versioned Roadmap, 2. GitHub Roadmap Metadata, 3. Verification and Completion
+
 ## Knowledge Gaps
-- **168 isolated node(s):** `The Stance`, `What You Might Do`, `Check for context`, `When a change exists`, `What You Don't Have To Do` (+163 more)
+- **169 isolated node(s):** `Summary`, `OpenSpec`, `Validation`, `Documentation and architecture`, `Security and privacy` (+164 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **1 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -170,16 +190,16 @@ Nodes (3): Feature request issue template, Observable success, Scope boundaries
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Assisted File Redaction technical scope` connect `Project Architecture` to `Security Reporting`, `Working Agreement`?**
-  _High betweenness centrality (0.036) - this node is a cross-community bridge._
+  _High betweenness centrality (0.037) - this node is a cross-community bridge._
 - **Why does `Development workflow` connect `Project Architecture` to `Working Agreement`, `Governance Automation`?**
-  _High betweenness centrality (0.033) - this node is a cross-community bridge._
+  _High betweenness centrality (0.035) - this node is a cross-community bridge._
 - **Why does `Project Working Agreement` connect `Working Agreement` to `Project Architecture`, `Governance Automation`?**
-  _High betweenness centrality (0.024) - this node is a cross-community bridge._
-- **What connects `The Stance`, `What You Might Do`, `Check for context` to the rest of the system?**
-  _182 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _High betweenness centrality (0.026) - this node is a cross-community bridge._
+- **What connects `Summary`, `OpenSpec`, `Validation` to the rest of the system?**
+  _183 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Project Architecture` be split into smaller, more focused modules?**
   _Cohesion score 0.07661290322580645 - nodes in this community are weakly interconnected._
 - **Should `Technical Scope` be split into smaller, more focused modules?**
   _Cohesion score 0.06451612903225806 - nodes in this community are weakly interconnected._
 - **Should `Working Agreement` be split into smaller, more focused modules?**
-  _Cohesion score 0.09259259259259259 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08866995073891626 - nodes in this community are weakly interconnected._

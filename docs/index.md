@@ -19,6 +19,7 @@ changes.
 
 ## Start here
 
+- Follow the [implementation roadmap](roadmap.md).
 - Read the [technical scope](architecture/technical-scope.md).
 - Follow the [development workflow](development.md).
 - Review the [architecture decisions](adr/index.md).
