@@ -1,53 +1,7 @@
 {
   "directed": false,
   "multigraph": false,
-  "graph": {
-    "hyperedges": [
-      {
-        "id": "openspec_artifact_workflow",
-        "label": "OpenSpec Artifact Workflow",
-        "nodes": [
-          "openspec_new_change_skill_openspec_new_change",
-          "openspec_continue_change_skill_openspec_continue_change",
-          "openspec_ff_change_skill_openspec_fast_forward_change",
-          "openspec_propose_skill_openspec_propose"
-        ],
-        "relation": "participate_in",
-        "confidence": "INFERRED",
-        "confidence_score": 0.95,
-        "source_file": ".codex/skills/openspec-onboard/SKILL.md"
-      },
-      {
-        "id": "openspec_change_lifecycle",
-        "label": "OpenSpec Change Lifecycle",
-        "nodes": [
-          "openspec_explore_skill_openspec_explore",
-          "openspec_new_change_skill_openspec_new_change",
-          "openspec_apply_change_skill_openspec_apply_change",
-          "openspec_verify_change_skill_openspec_verify_change",
-          "openspec_archive_change_skill_openspec_archive_change"
-        ],
-        "relation": "form",
-        "confidence": "EXTRACTED",
-        "confidence_score": 1.0,
-        "source_file": ".codex/skills/openspec-onboard/SKILL.md"
-      },
-      {
-        "id": "assisted_redaction_safety_model",
-        "label": "Assisted Redaction Safety Model",
-        "nodes": [
-          "specs_2026_06_14_assisted_file_redaction_design_pii_detection_pipeline",
-          "specs_2026_06_14_assisted_file_redaction_design_human_review_editor",
-          "specs_2026_06_14_assisted_file_redaction_design_permanent_rasterized_redaction",
-          "specs_2026_06_14_assisted_file_redaction_design_quality_and_security_testing"
-        ],
-        "relation": "form",
-        "confidence": "EXTRACTED",
-        "confidence_score": 1.0,
-        "source_file": "docs/superpowers/specs/2026-06-14-assisted-file-redaction-design.md"
-      }
-    ]
-  },
+  "graph": {},
   "nodes": [
     {
       "label": "OpenSpec Apply Change",
@@ -58,9 +12,9 @@
       "captured_at": null,
       "author": "openspec",
       "contributor": null,
-      "id": "openspec_apply_change_skill_openspec_apply_change",
-      "community": 2,
-      "norm_label": "openspec apply change"
+      "community": 1,
+      "norm_label": "openspec apply change",
+      "id": "openspec_apply_change_skill_openspec_apply_change"
     },
     {
       "label": "Task-Driven Implementation",
@@ -72,9 +26,9 @@
       "author": "openspec",
       "contributor": null,
       "rationale": "Implementation proceeds through pending tasks with minimal changes, immediate checkbox updates, and pauses for ambiguity or blockers.",
-      "id": "openspec_apply_change_skill_task_driven_implementation",
-      "community": 2,
-      "norm_label": "task-driven implementation"
+      "community": 1,
+      "norm_label": "task-driven implementation",
+      "id": "openspec_apply_change_skill_task_driven_implementation"
     },
     {
       "label": "OpenSpec Archive Change",
@@ -85,9 +39,9 @@
       "captured_at": null,
       "author": "openspec",
       "contributor": null,
-      "id": "openspec_archive_change_skill_openspec_archive_change",
-      "community": 3,
-      "norm_label": "openspec archive change"
+      "community": 1,
+      "norm_label": "openspec archive change",
+      "id": "openspec_archive_change_skill_openspec_archive_change"
     },
     {
       "label": "Archive Validation",
@@ -99,9 +53,9 @@
       "author": "openspec",
       "contributor": null,
       "rationale": "Artifact completion, task completion, and delta-spec sync state are assessed before preserving the change in the archive.",
-      "id": "openspec_archive_change_skill_archive_validation",
-      "community": 3,
-      "norm_label": "archive validation"
+      "community": 1,
+      "norm_label": "archive validation",
+      "id": "openspec_archive_change_skill_archive_validation"
     },
     {
       "label": "OpenSpec Bulk Archive Change",
@@ -112,9 +66,9 @@
       "captured_at": null,
       "author": "openspec",
       "contributor": null,
-      "id": "openspec_bulk_archive_change_skill_openspec_bulk_archive_change",
-      "community": 3,
-      "norm_label": "openspec bulk archive change"
+      "community": 1,
+      "norm_label": "openspec bulk archive change",
+      "id": "openspec_bulk_archive_change_skill_openspec_bulk_archive_change"
     },
     {
       "label": "Spec Conflict Resolution",
@@ -126,9 +80,9 @@
       "author": "openspec",
       "contributor": null,
       "rationale": "Conflicting delta specs are resolved using implementation evidence; implemented changes are applied chronologically when both exist.",
-      "id": "openspec_bulk_archive_change_skill_spec_conflict_resolution",
-      "community": 3,
-      "norm_label": "spec conflict resolution"
+      "community": 1,
+      "norm_label": "spec conflict resolution",
+      "id": "openspec_bulk_archive_change_skill_spec_conflict_resolution"
     },
     {
       "label": "OpenSpec Continue Change",
@@ -139,9 +93,9 @@
       "captured_at": null,
       "author": "openspec",
       "contributor": null,
-      "id": "openspec_continue_change_skill_openspec_continue_change",
-      "community": 5,
-      "norm_label": "openspec continue change"
+      "community": 1,
+      "norm_label": "openspec continue change",
+      "id": "openspec_continue_change_skill_openspec_continue_change"
     },
     {
       "label": "Artifact Dependency Order",
@@ -152,9 +106,9 @@
       "captured_at": null,
       "author": "openspec",
       "contributor": null,
-      "id": "openspec_continue_change_skill_artifact_dependency_order",
-      "community": 5,
-      "norm_label": "artifact dependency order"
+      "community": 1,
+      "norm_label": "artifact dependency order",
+      "id": "openspec_continue_change_skill_artifact_dependency_order"
     },
     {
       "label": "OpenSpec Explore",
@@ -165,9 +119,9 @@
       "captured_at": null,
       "author": "openspec",
       "contributor": null,
-      "id": "openspec_explore_skill_openspec_explore",
-      "community": 0,
-      "norm_label": "openspec explore"
+      "community": 1,
+      "norm_label": "openspec explore",
+      "id": "openspec_explore_skill_openspec_explore"
     },
     {
       "label": "Thinking, Not Implementation",
@@ -179,9 +133,9 @@
       "author": "openspec",
       "contributor": null,
       "rationale": "Explore mode permits investigation and artifact capture but prohibits application-code implementation so assumptions and options can be examined first.",
-      "id": "openspec_explore_skill_thinking_not_implementation",
-      "community": 0,
-      "norm_label": "thinking, not implementation"
+      "community": 1,
+      "norm_label": "thinking, not implementation",
+      "id": "openspec_explore_skill_thinking_not_implementation"
     },
     {
       "label": "OpenSpec Fast-Forward Change",
@@ -192,9 +146,9 @@
       "captured_at": null,
       "author": "openspec",
       "contributor": null,
-      "id": "openspec_ff_change_skill_openspec_fast_forward_change",
-      "community": 2,
-      "norm_label": "openspec fast-forward change"
+      "community": 1,
+      "norm_label": "openspec fast-forward change",
+      "id": "openspec_ff_change_skill_openspec_fast_forward_change"
     },
     {
       "label": "Apply-Ready Artifacts",
@@ -205,9 +159,9 @@
       "captured_at": null,
       "author": "openspec",
       "contributor": null,
-      "id": "openspec_ff_change_skill_apply_ready_artifacts",
-      "community": 2,
-      "norm_label": "apply-ready artifacts"
+      "community": 1,
+      "norm_label": "apply-ready artifacts",
+      "id": "openspec_ff_change_skill_apply_ready_artifacts"
     },
     {
       "label": "OpenSpec New Change",
@@ -218,9 +172,9 @@
       "captured_at": null,
       "author": "openspec",
       "contributor": null,
-      "id": "openspec_new_change_skill_openspec_new_change",
-      "community": 5,
-      "norm_label": "openspec new change"
+      "community": 1,
+      "norm_label": "openspec new change",
+      "id": "openspec_new_change_skill_openspec_new_change"
     },
     {
       "label": "Artifact-Driven Workflow",
@@ -231,9 +185,9 @@
       "captured_at": null,
       "author": "openspec",
       "contributor": null,
-      "id": "openspec_new_change_skill_artifact_driven_workflow",
-      "community": 5,
-      "norm_label": "artifact-driven workflow"
+      "community": 1,
+      "norm_label": "artifact-driven workflow",
+      "id": "openspec_new_change_skill_artifact_driven_workflow"
     },
     {
       "label": "OpenSpec Onboarding",
@@ -244,9 +198,9 @@
       "captured_at": null,
       "author": "openspec",
       "contributor": null,
-      "id": "openspec_onboard_skill_openspec_onboarding",
-      "community": 0,
-      "norm_label": "openspec onboarding"
+      "community": 1,
+      "norm_label": "openspec onboarding",
+      "id": "openspec_onboard_skill_openspec_onboarding"
     },
     {
       "label": "Complete OpenSpec Change Cycle",
@@ -257,9 +211,9 @@
       "captured_at": null,
       "author": "openspec",
       "contributor": null,
-      "id": "openspec_onboard_skill_complete_change_cycle",
-      "community": 0,
-      "norm_label": "complete openspec change cycle"
+      "community": 1,
+      "norm_label": "complete openspec change cycle",
+      "id": "openspec_onboard_skill_complete_change_cycle"
     },
     {
       "label": "OpenSpec Propose",
@@ -270,9 +224,9 @@
       "captured_at": null,
       "author": "openspec",
       "contributor": null,
-      "id": "openspec_propose_skill_openspec_propose",
-      "community": 2,
-      "norm_label": "openspec propose"
+      "community": 1,
+      "norm_label": "openspec propose",
+      "id": "openspec_propose_skill_openspec_propose"
     },
     {
       "label": "Complete Change Artifacts",
@@ -283,9 +237,9 @@
       "captured_at": null,
       "author": "openspec",
       "contributor": null,
-      "id": "openspec_propose_skill_complete_change_artifacts",
-      "community": 2,
-      "norm_label": "complete change artifacts"
+      "community": 1,
+      "norm_label": "complete change artifacts",
+      "id": "openspec_propose_skill_complete_change_artifacts"
     },
     {
       "label": "OpenSpec Sync Specs",
@@ -296,9 +250,9 @@
       "captured_at": null,
       "author": "openspec",
       "contributor": null,
-      "id": "openspec_sync_specs_skill_openspec_sync_specs",
-      "community": 3,
-      "norm_label": "openspec sync specs"
+      "community": 1,
+      "norm_label": "openspec sync specs",
+      "id": "openspec_sync_specs_skill_openspec_sync_specs"
     },
     {
       "label": "Intelligent Delta Spec Merge",
@@ -310,9 +264,9 @@
       "author": "openspec",
       "contributor": null,
       "rationale": "Delta specs represent intent rather than wholesale replacement, allowing partial scenario additions while preserving unrelated main-spec content.",
-      "id": "openspec_sync_specs_skill_intelligent_delta_merge",
-      "community": 3,
-      "norm_label": "intelligent delta spec merge"
+      "community": 1,
+      "norm_label": "intelligent delta spec merge",
+      "id": "openspec_sync_specs_skill_intelligent_delta_merge"
     },
     {
       "label": "OpenSpec Verify Change",
@@ -323,9 +277,9 @@
       "captured_at": null,
       "author": "openspec",
       "contributor": null,
-      "id": "openspec_verify_change_skill_openspec_verify_change",
-      "community": 0,
-      "norm_label": "openspec verify change"
+      "community": 1,
+      "norm_label": "openspec verify change",
+      "id": "openspec_verify_change_skill_openspec_verify_change"
     },
     {
       "label": "Three-Dimension Verification",
@@ -336,9 +290,9 @@
       "captured_at": null,
       "author": "openspec",
       "contributor": null,
-      "id": "openspec_verify_change_skill_three_dimension_verification",
-      "community": 0,
-      "norm_label": "three-dimension verification"
+      "community": 1,
+      "norm_label": "three-dimension verification",
+      "id": "openspec_verify_change_skill_three_dimension_verification"
     },
     {
       "label": "Assisted File Redaction Application",
@@ -349,9 +303,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "specs_2026_06_14_assisted_file_redaction_design_assisted_file_redaction_application",
-      "community": 1,
-      "norm_label": "assisted file redaction application"
+      "community": 4,
+      "norm_label": "assisted file redaction application",
+      "id": "specs_2026_06_14_assisted_file_redaction_design_assisted_file_redaction_application"
     },
     {
       "label": "Private Invited Access",
@@ -362,9 +316,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "specs_2026_06_14_assisted_file_redaction_design_private_invited_access",
-      "community": 1,
-      "norm_label": "private invited access"
+      "community": 4,
+      "norm_label": "private invited access",
+      "id": "specs_2026_06_14_assisted_file_redaction_design_private_invited_access"
     },
     {
       "label": "PII Detection Pipeline",
@@ -375,9 +329,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "specs_2026_06_14_assisted_file_redaction_design_pii_detection_pipeline",
-      "community": 1,
-      "norm_label": "pii detection pipeline"
+      "community": 4,
+      "norm_label": "pii detection pipeline",
+      "id": "specs_2026_06_14_assisted_file_redaction_design_pii_detection_pipeline"
     },
     {
       "label": "Human Review Redaction Editor",
@@ -388,9 +342,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "specs_2026_06_14_assisted_file_redaction_design_human_review_editor",
-      "community": 1,
-      "norm_label": "human review redaction editor"
+      "community": 4,
+      "norm_label": "human review redaction editor",
+      "id": "specs_2026_06_14_assisted_file_redaction_design_human_review_editor"
     },
     {
       "label": "Permanent Rasterized Redaction",
@@ -402,9 +356,9 @@
       "author": null,
       "contributor": null,
       "rationale": "Outputs are rebuilt from rasterized pages with opaque rectangles to remove text layers, metadata, annotations, attachments, and forms.",
-      "id": "specs_2026_06_14_assisted_file_redaction_design_permanent_rasterized_redaction",
-      "community": 1,
-      "norm_label": "permanent rasterized redaction"
+      "community": 4,
+      "norm_label": "permanent rasterized redaction",
+      "id": "specs_2026_06_14_assisted_file_redaction_design_permanent_rasterized_redaction"
     },
     {
       "label": "Checkpointed Sequential Processing",
@@ -416,9 +370,9 @@
       "author": null,
       "contributor": null,
       "rationale": "Pages are processed sequentially and checkpointed to bound memory and recover from Fargate Spot interruptions.",
-      "id": "specs_2026_06_14_assisted_file_redaction_design_checkpointed_processing",
       "community": 4,
-      "norm_label": "checkpointed sequential processing"
+      "norm_label": "checkpointed sequential processing",
+      "id": "specs_2026_06_14_assisted_file_redaction_design_checkpointed_processing"
     },
     {
       "label": "24-Hour Job Retention",
@@ -429,9 +383,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "specs_2026_06_14_assisted_file_redaction_design_twenty_four_hour_retention",
-      "community": 1,
-      "norm_label": "24-hour job retention"
+      "community": 4,
+      "norm_label": "24-hour job retention",
+      "id": "specs_2026_06_14_assisted_file_redaction_design_twenty_four_hour_retention"
     },
     {
       "label": "Serverless AWS Architecture",
@@ -443,9 +397,9 @@
       "author": null,
       "contributor": null,
       "rationale": "Static hosting, a serverless control plane, Fargate Spot, and no NAT Gateway are selected to keep expected monthly operating cost below EUR 25.",
-      "id": "specs_2026_06_14_assisted_file_redaction_design_serverless_aws_architecture",
       "community": 4,
-      "norm_label": "serverless aws architecture"
+      "norm_label": "serverless aws architecture",
+      "id": "specs_2026_06_14_assisted_file_redaction_design_serverless_aws_architecture"
     },
     {
       "label": "Security and Privacy Controls",
@@ -456,9 +410,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "specs_2026_06_14_assisted_file_redaction_design_security_and_privacy_controls",
-      "community": 1,
-      "norm_label": "security and privacy controls"
+      "community": 4,
+      "norm_label": "security and privacy controls",
+      "id": "specs_2026_06_14_assisted_file_redaction_design_security_and_privacy_controls"
     },
     {
       "label": "Quality and Redaction Security Testing",
@@ -469,9 +423,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "specs_2026_06_14_assisted_file_redaction_design_quality_and_security_testing",
-      "community": 0,
-      "norm_label": "quality and redaction security testing"
+      "community": 1,
+      "norm_label": "quality and redaction security testing",
+      "id": "specs_2026_06_14_assisted_file_redaction_design_quality_and_security_testing"
     },
     {
       "label": "AWS Batch Pricing",
@@ -482,9 +436,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "specs_2026_06_14_assisted_file_redaction_design_aws_batch_pricing",
       "community": 4,
-      "norm_label": "aws batch pricing"
+      "norm_label": "aws batch pricing",
+      "id": "specs_2026_06_14_assisted_file_redaction_design_aws_batch_pricing"
     },
     {
       "label": "AWS Fargate Pricing",
@@ -495,9 +449,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "specs_2026_06_14_assisted_file_redaction_design_aws_fargate_pricing",
       "community": 4,
-      "norm_label": "aws fargate pricing"
+      "norm_label": "aws fargate pricing",
+      "id": "specs_2026_06_14_assisted_file_redaction_design_aws_fargate_pricing"
     },
     {
       "label": "AWS Lambda Quotas",
@@ -508,9 +462,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "specs_2026_06_14_assisted_file_redaction_design_aws_lambda_quotas",
       "community": 4,
-      "norm_label": "aws lambda quotas"
+      "norm_label": "aws lambda quotas",
+      "id": "specs_2026_06_14_assisted_file_redaction_design_aws_lambda_quotas"
     },
     {
       "label": "AWS ECS Regional Price Index",
@@ -521,9 +475,1387 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "specs_2026_06_14_assisted_file_redaction_design_aws_ecs_regional_price_index",
       "community": 4,
-      "norm_label": "aws ecs regional price index"
+      "norm_label": "aws ecs regional price index",
+      "id": "specs_2026_06_14_assisted_file_redaction_design_aws_ecs_regional_price_index"
+    },
+    {
+      "label": "PyMarkdown lint configuration",
+      "file_type": "document",
+      "source_file": ".pymarkdown.json",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "pymarkdown_markdown_lint_configuration",
+      "community": 8,
+      "norm_label": "pymarkdown lint configuration"
+    },
+    {
+      "label": "Relaxed Markdown rules",
+      "file_type": "rationale",
+      "source_file": ".pymarkdown.json",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "pymarkdown_relaxed_markdown_rules",
+      "community": 8,
+      "norm_label": "relaxed markdown rules"
+    },
+    {
+      "label": "Bug report issue template",
+      "file_type": "document",
+      "source_file": ".github/ISSUE_TEMPLATE/bug.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "issue_template_bug_bug_report",
+      "community": 5,
+      "norm_label": "bug report issue template"
+    },
+    {
+      "label": "Synthetic or sanitized bug fixtures",
+      "file_type": "concept",
+      "source_file": ".github/ISSUE_TEMPLATE/bug.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "issue_template_bug_synthetic_bug_fixtures",
+      "community": 5,
+      "norm_label": "synthetic or sanitized bug fixtures"
+    },
+    {
+      "label": "Reproducible bug reports",
+      "file_type": "rationale",
+      "source_file": ".github/ISSUE_TEMPLATE/bug.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "issue_template_bug_reproducible_bug_reports",
+      "community": 5,
+      "norm_label": "reproducible bug reports"
+    },
+    {
+      "label": "Issue template configuration",
+      "file_type": "document",
+      "source_file": ".github/ISSUE_TEMPLATE/config.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "issue_template_config_issue_template_configuration",
+      "community": 5,
+      "norm_label": "issue template configuration"
+    },
+    {
+      "label": "GitHub private vulnerability reporting",
+      "file_type": "concept",
+      "source_file": ".github/ISSUE_TEMPLATE/config.yml",
+      "source_location": null,
+      "source_url": "https://github.com/AlkaSaliss/redact-all-the-things/security/advisories/new",
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "issue_template_config_private_vulnerability_reporting",
+      "community": 5,
+      "norm_label": "github private vulnerability reporting"
+    },
+    {
+      "label": "Feature request issue template",
+      "file_type": "document",
+      "source_file": ".github/ISSUE_TEMPLATE/feature.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "issue_template_feature_feature_request",
+      "community": 10,
+      "norm_label": "feature request issue template"
+    },
+    {
+      "label": "Observable success",
+      "file_type": "rationale",
+      "source_file": ".github/ISSUE_TEMPLATE/feature.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "issue_template_feature_observable_success",
+      "community": 10,
+      "norm_label": "observable success"
+    },
+    {
+      "label": "Scope boundaries",
+      "file_type": "concept",
+      "source_file": ".github/ISSUE_TEMPLATE/feature.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "issue_template_feature_scope_boundaries",
+      "community": 10,
+      "norm_label": "scope boundaries"
+    },
+    {
+      "label": "Pull request checklist",
+      "file_type": "document",
+      "source_file": ".github/PULL_REQUEST_TEMPLATE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "github_pull_request_template_pull_request_checklist",
+      "community": 2,
+      "norm_label": "pull request checklist"
+    },
+    {
+      "label": "Pull request definition of done",
+      "file_type": "concept",
+      "source_file": ".github/PULL_REQUEST_TEMPLATE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "github_pull_request_template_definition_of_done",
+      "community": 2,
+      "norm_label": "pull request definition of done"
+    },
+    {
+      "label": "Graphify refresh check",
+      "file_type": "concept",
+      "source_file": ".github/PULL_REQUEST_TEMPLATE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "github_pull_request_template_graphify_refresh_check",
+      "community": 2,
+      "norm_label": "graphify refresh check"
+    },
+    {
+      "label": "Dependabot update configuration",
+      "file_type": "document",
+      "source_file": ".github/dependabot.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "github_dependabot_dependency_update_configuration",
+      "community": 12,
+      "norm_label": "dependabot update configuration"
+    },
+    {
+      "label": "Weekly grouped dependency updates",
+      "file_type": "concept",
+      "source_file": ".github/dependabot.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "github_dependabot_weekly_grouped_updates",
+      "community": 12,
+      "norm_label": "weekly grouped dependency updates"
+    },
+    {
+      "label": "GitHub Pages workflow",
+      "file_type": "document",
+      "source_file": ".github/workflows/pages.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "workflows_pages_github_pages_workflow",
+      "community": 6,
+      "norm_label": "github pages workflow"
+    },
+    {
+      "label": "Strict MkDocs build",
+      "file_type": "concept",
+      "source_file": ".github/workflows/pages.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "workflows_pages_strict_mkdocs_build",
+      "community": 6,
+      "norm_label": "strict mkdocs build"
+    },
+    {
+      "label": "GitHub Pages deployment",
+      "file_type": "concept",
+      "source_file": ".github/workflows/pages.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "workflows_pages_github_pages_deployment",
+      "community": 6,
+      "norm_label": "github pages deployment"
+    },
+    {
+      "label": "Quality workflow",
+      "file_type": "document",
+      "source_file": ".github/workflows/quality.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "workflows_quality_quality_workflow",
+      "community": 6,
+      "norm_label": "quality workflow"
+    },
+    {
+      "label": "Pre-commit validation",
+      "file_type": "concept",
+      "source_file": ".github/workflows/quality.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "workflows_quality_pre_commit_validation",
+      "community": 6,
+      "norm_label": "pre-commit validation"
+    },
+    {
+      "label": "OpenSpec strict validation",
+      "file_type": "concept",
+      "source_file": ".github/workflows/quality.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "workflows_quality_openspec_strict_validation",
+      "community": 6,
+      "norm_label": "openspec strict validation"
+    },
+    {
+      "label": "Pre-commit configuration",
+      "file_type": "document",
+      "source_file": ".pre-commit-config.yaml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "pre_commit_config_pre_commit_configuration",
+      "community": 8,
+      "norm_label": "pre-commit configuration"
+    },
+    {
+      "label": "Repository hygiene hooks",
+      "file_type": "concept",
+      "source_file": ".pre-commit-config.yaml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "pre_commit_config_repository_hygiene_hooks",
+      "community": 8,
+      "norm_label": "repository hygiene hooks"
+    },
+    {
+      "label": "Markdown and YAML linting",
+      "file_type": "concept",
+      "source_file": ".pre-commit-config.yaml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "pre_commit_config_markdown_and_yaml_linting",
+      "community": 8,
+      "norm_label": "markdown and yaml linting"
+    },
+    {
+      "label": "YAML lint configuration",
+      "file_type": "document",
+      "source_file": ".yamllint.yaml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "yamllint_yaml_lint_configuration",
+      "community": 8,
+      "norm_label": "yaml lint configuration"
+    },
+    {
+      "label": "Project Working Agreement",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "agents_project_working_agreement",
+      "community": 2,
+      "norm_label": "project working agreement"
+    },
+    {
+      "label": "GitHub collaboration platform",
+      "file_type": "concept",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "agents_github_collaboration_platform",
+      "community": 2,
+      "norm_label": "github collaboration platform"
+    },
+    {
+      "label": "OpenSpec change workflow",
+      "file_type": "concept",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "agents_openspec_change_workflow",
+      "community": 2,
+      "norm_label": "openspec change workflow"
+    },
+    {
+      "label": "Documentation as code",
+      "file_type": "concept",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "agents_documentation_as_code",
+      "community": 2,
+      "norm_label": "documentation as code"
+    },
+    {
+      "label": "MADR architecture decisions",
+      "file_type": "concept",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "agents_madr_architecture_decisions",
+      "community": 2,
+      "norm_label": "madr architecture decisions"
+    },
+    {
+      "label": "Versioned Graphify output",
+      "file_type": "concept",
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "agents_versioned_graphify_output",
+      "community": 2,
+      "norm_label": "versioned graphify output"
+    },
+    {
+      "label": "Contribution guide",
+      "file_type": "document",
+      "source_file": "CONTRIBUTING.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "contributing_contribution_guide",
+      "community": 2,
+      "norm_label": "contribution guide"
+    },
+    {
+      "label": "Issue-to-PR lifecycle",
+      "file_type": "concept",
+      "source_file": "CONTRIBUTING.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "contributing_issue_to_pr_lifecycle",
+      "community": 2,
+      "norm_label": "issue-to-pr lifecycle"
+    },
+    {
+      "label": "Focused pull requests",
+      "file_type": "rationale",
+      "source_file": "CONTRIBUTING.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "contributing_focused_pull_requests",
+      "community": 2,
+      "norm_label": "focused pull requests"
+    },
+    {
+      "label": "Redact All The Things overview",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_redact_all_the_things_overview",
+      "community": 3,
+      "norm_label": "redact all the things overview"
+    },
+    {
+      "label": "Assisted redaction application",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_assisted_redaction_application",
+      "community": 3,
+      "norm_label": "assisted redaction application"
+    },
+    {
+      "label": "PaddleOCR",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_paddleocr",
+      "community": 3,
+      "norm_label": "paddleocr"
+    },
+    {
+      "label": "GLiNER2",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_gliner2",
+      "community": 3,
+      "norm_label": "gliner2"
+    },
+    {
+      "label": "Permanent rasterized redaction",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_permanent_rasterized_redaction",
+      "community": 3,
+      "norm_label": "permanent rasterized redaction"
+    },
+    {
+      "label": "Security policy",
+      "file_type": "document",
+      "source_file": "SECURITY.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "security_security_policy",
+      "community": 5,
+      "norm_label": "security policy"
+    },
+    {
+      "label": "Coordinated vulnerability disclosure",
+      "file_type": "concept",
+      "source_file": "SECURITY.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "security_coordinated_vulnerability_disclosure",
+      "community": 5,
+      "norm_label": "coordinated vulnerability disclosure"
+    },
+    {
+      "label": "Sensitive data exclusion",
+      "file_type": "concept",
+      "source_file": "SECURITY.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "security_sensitive_data_exclusion",
+      "community": 5,
+      "norm_label": "sensitive data exclusion"
+    },
+    {
+      "label": "ADR 0001: Documentation and GitHub governance",
+      "file_type": "document",
+      "source_file": "docs/adr/0001-documentation-and-governance.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "@AlkaSaliss",
+      "contributor": null,
+      "id": "adr_0001_documentation_and_governance_adr_0001",
+      "community": 2,
+      "norm_label": "adr 0001: documentation and github governance"
+    },
+    {
+      "label": "Reproducible governance controls before application code",
+      "file_type": "rationale",
+      "source_file": "docs/adr/0001-documentation-and-governance.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "@AlkaSaliss",
+      "contributor": null,
+      "id": "adr_0001_documentation_and_governance_reproducible_governance_controls",
+      "community": 2,
+      "norm_label": "reproducible governance controls before application code"
+    },
+    {
+      "label": "Solo-maintainer merge policy",
+      "file_type": "rationale",
+      "source_file": "docs/adr/0001-documentation-and-governance.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": "@AlkaSaliss",
+      "contributor": null,
+      "id": "adr_0001_documentation_and_governance_solo_maintainer_merge_policy",
+      "community": 2,
+      "norm_label": "solo-maintainer merge policy"
+    },
+    {
+      "label": "Apache License 2.0",
+      "file_type": "concept",
+      "source_file": "docs/adr/0001-documentation-and-governance.md",
+      "source_location": null,
+      "source_url": "https://www.apache.org/licenses/LICENSE-2.0",
+      "captured_at": null,
+      "author": "@AlkaSaliss",
+      "contributor": null,
+      "id": "adr_0001_documentation_and_governance_apache_2_0",
+      "community": 2,
+      "norm_label": "apache license 2.0"
+    },
+    {
+      "label": "Architecture decision record index",
+      "file_type": "document",
+      "source_file": "docs/adr/index.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "adr_index_architecture_decision_record_index",
+      "community": 9,
+      "norm_label": "architecture decision record index"
+    },
+    {
+      "label": "Append-only decision history",
+      "file_type": "rationale",
+      "source_file": "docs/adr/index.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "adr_index_append_only_decision_history",
+      "community": 9,
+      "norm_label": "append-only decision history"
+    },
+    {
+      "label": "MADR template",
+      "file_type": "document",
+      "source_file": "docs/adr/template.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "adr_template_madr_template",
+      "community": 9,
+      "norm_label": "madr template"
+    },
+    {
+      "label": "Decision trade-off structure",
+      "file_type": "concept",
+      "source_file": "docs/adr/template.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "adr_template_decision_tradeoff_structure",
+      "community": 9,
+      "norm_label": "decision trade-off structure"
+    },
+    {
+      "label": "Assisted File Redaction technical scope",
+      "file_type": "document",
+      "source_file": "docs/architecture/technical-scope.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "architecture_technical_scope_assisted_file_redaction_scope",
+      "community": 3,
+      "norm_label": "assisted file redaction technical scope"
+    },
+    {
+      "label": "Mandatory human review",
+      "file_type": "concept",
+      "source_file": "docs/architecture/technical-scope.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "architecture_technical_scope_mandatory_human_review",
+      "community": 3,
+      "norm_label": "mandatory human review"
+    },
+    {
+      "label": "Private AWS architecture",
+      "file_type": "concept",
+      "source_file": "docs/architecture/technical-scope.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "architecture_technical_scope_aws_private_architecture",
+      "community": 3,
+      "norm_label": "private aws architecture"
+    },
+    {
+      "label": "Serverless control plane",
+      "file_type": "concept",
+      "source_file": "docs/architecture/technical-scope.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "architecture_technical_scope_serverless_control_plane",
+      "community": 3,
+      "norm_label": "serverless control plane"
+    },
+    {
+      "label": "AWS Batch Fargate Spot processing",
+      "file_type": "concept",
+      "source_file": "docs/architecture/technical-scope.md",
+      "source_location": null,
+      "source_url": "https://aws.amazon.com/fargate/pricing/",
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "architecture_technical_scope_fargate_spot_processing",
+      "community": 3,
+      "norm_label": "aws batch fargate spot processing"
+    },
+    {
+      "label": "24-hour job retention",
+      "file_type": "concept",
+      "source_file": "docs/architecture/technical-scope.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "architecture_technical_scope_24_hour_retention",
+      "community": 3,
+      "norm_label": "24-hour job retention"
+    },
+    {
+      "label": "Normalized redaction regions",
+      "file_type": "concept",
+      "source_file": "docs/architecture/technical-scope.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "architecture_technical_scope_normalized_redaction_regions",
+      "community": 3,
+      "norm_label": "normalized redaction regions"
+    },
+    {
+      "label": "Optimistic page-manifest versioning",
+      "file_type": "concept",
+      "source_file": "docs/architecture/technical-scope.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "architecture_technical_scope_optimistic_manifest_versioning",
+      "community": 3,
+      "norm_label": "optimistic page-manifest versioning"
+    },
+    {
+      "label": "Privacy-preserving logging",
+      "file_type": "concept",
+      "source_file": "docs/architecture/technical-scope.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "architecture_technical_scope_privacy_preserving_logging",
+      "community": 5,
+      "norm_label": "privacy-preserving logging"
+    },
+    {
+      "label": "Scale-to-zero cost controls",
+      "file_type": "rationale",
+      "source_file": "docs/architecture/technical-scope.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "architecture_technical_scope_scale_to_zero_cost_controls",
+      "community": 3,
+      "norm_label": "scale-to-zero cost controls"
+    },
+    {
+      "label": "Checkpoint recovery",
+      "file_type": "concept",
+      "source_file": "docs/architecture/technical-scope.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "architecture_technical_scope_checkpoint_recovery",
+      "community": 3,
+      "norm_label": "checkpoint recovery"
+    },
+    {
+      "label": "Official AWS ECS regional price index",
+      "file_type": "concept",
+      "source_file": "docs/architecture/technical-scope.md",
+      "source_location": null,
+      "source_url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonECS/current/region_index.json",
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "architecture_technical_scope_aws_regional_price_index",
+      "community": 3,
+      "norm_label": "official aws ecs regional price index"
+    },
+    {
+      "label": "Development workflow",
+      "file_type": "document",
+      "source_file": "docs/development.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "development_development_workflow",
+      "community": 2,
+      "norm_label": "development workflow"
+    },
+    {
+      "label": "Local validation suite",
+      "file_type": "concept",
+      "source_file": "docs/development.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "development_local_validation_suite",
+      "community": 6,
+      "norm_label": "local validation suite"
+    },
+    {
+      "label": "Architecture and documentation alignment",
+      "file_type": "rationale",
+      "source_file": "docs/development.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "development_architecture_documentation_alignment",
+      "community": 2,
+      "norm_label": "architecture and documentation alignment"
+    },
+    {
+      "label": "Project documentation home",
+      "file_type": "document",
+      "source_file": "docs/index.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_index_project_documentation_home",
+      "community": 3,
+      "norm_label": "project documentation home"
+    },
+    {
+      "label": "Automatic detection as assistance",
+      "file_type": "rationale",
+      "source_file": "docs/index.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_index_detection_as_assistance",
+      "community": 3,
+      "norm_label": "automatic detection as assistance"
+    },
+    {
+      "label": "Bounded concurrency",
+      "file_type": "concept",
+      "source_file": "docs/index.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_index_bounded_concurrency",
+      "community": 3,
+      "norm_label": "bounded concurrency"
+    },
+    {
+      "label": "MkDocs site configuration",
+      "file_type": "document",
+      "source_file": "mkdocs.yml",
+      "source_location": null,
+      "source_url": "https://alkasaliss.github.io/redact-all-the-things/",
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "mkdocs_mkdocs_site_configuration",
+      "community": 2,
+      "norm_label": "mkdocs site configuration"
+    },
+    {
+      "label": "Material for MkDocs",
+      "file_type": "concept",
+      "source_file": "mkdocs.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "mkdocs_material_for_mkdocs",
+      "community": 2,
+      "norm_label": "material for mkdocs"
+    },
+    {
+      "label": "Versioned documentation navigation",
+      "file_type": "concept",
+      "source_file": "mkdocs.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "mkdocs_versioned_documentation_navigation",
+      "community": 2,
+      "norm_label": "versioned documentation navigation"
+    },
+    {
+      "label": "Bootstrap Governance OpenSpec Change Metadata",
+      "file_type": "document",
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/.openspec.yaml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "gh_1_bootstrap_governance_openspec_change_metadata",
+      "community": 11,
+      "norm_label": "bootstrap governance openspec change metadata"
+    },
+    {
+      "label": "Spec-Driven OpenSpec Schema",
+      "file_type": "concept",
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/.openspec.yaml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "gh_1_bootstrap_governance_openspec_spec_driven_schema",
+      "community": 11,
+      "norm_label": "spec-driven openspec schema"
+    },
+    {
+      "label": "Bootstrap Governance Design",
+      "file_type": "document",
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/design.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "gh_1_bootstrap_governance_design_governance_design",
+      "community": 0,
+      "norm_label": "bootstrap governance design"
+    },
+    {
+      "label": "Reproducible Repository Tooling",
+      "file_type": "concept",
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/design.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "gh_1_bootstrap_governance_design_reproducible_repository_tooling",
+      "community": 0,
+      "norm_label": "reproducible repository tooling"
+    },
+    {
+      "label": "uv Repository Toolchain",
+      "file_type": "concept",
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/design.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "gh_1_bootstrap_governance_design_uv_toolchain",
+      "community": 0,
+      "norm_label": "uv repository toolchain"
+    },
+    {
+      "label": "Versioned Project Documentation",
+      "file_type": "concept",
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/design.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "gh_1_bootstrap_governance_design_versioned_project_documentation",
+      "community": 0,
+      "norm_label": "versioned project documentation"
+    },
+    {
+      "label": "Authoritative Documentation with Supplementary Wiki",
+      "file_type": "rationale",
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/design.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "gh_1_bootstrap_governance_design_authoritative_docs_supplementary_wiki",
+      "community": 0,
+      "norm_label": "authoritative documentation with supplementary wiki"
+    },
+    {
+      "label": "Tracked Agent and Graphify Assets",
+      "file_type": "concept",
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/design.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "gh_1_bootstrap_governance_design_tracked_agent_knowledge_assets",
+      "community": 0,
+      "norm_label": "tracked agent and graphify assets"
+    },
+    {
+      "label": "Graphify Refresh Rule",
+      "file_type": "rationale",
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/design.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "gh_1_bootstrap_governance_design_graphify_refresh_rule",
+      "community": 0,
+      "norm_label": "graphify refresh rule"
+    },
+    {
+      "label": "Required Quality Workflow",
+      "file_type": "concept",
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/design.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "gh_1_bootstrap_governance_design_quality_workflow",
+      "community": 0,
+      "norm_label": "required quality workflow"
+    },
+    {
+      "label": "GitHub Pages Workflow",
+      "file_type": "concept",
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/design.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "gh_1_bootstrap_governance_design_pages_workflow",
+      "community": 0,
+      "norm_label": "github pages workflow"
+    },
+    {
+      "label": "Protected Main Workflow",
+      "file_type": "concept",
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/design.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "gh_1_bootstrap_governance_design_protected_main_workflow",
+      "community": 7,
+      "norm_label": "protected main workflow"
+    },
+    {
+      "label": "Solo Maintainer Review Trade-off",
+      "file_type": "rationale",
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/design.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "gh_1_bootstrap_governance_design_solo_maintainer_review_tradeoff",
+      "community": 7,
+      "norm_label": "solo maintainer review trade-off"
+    },
+    {
+      "label": "Public Repository Security Controls",
+      "file_type": "concept",
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/design.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "gh_1_bootstrap_governance_design_public_repository_security",
+      "community": 7,
+      "norm_label": "public repository security controls"
+    },
+    {
+      "label": "Managed GitHub Project Roadmap",
+      "file_type": "concept",
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/design.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "gh_1_bootstrap_governance_design_managed_roadmap",
+      "community": 0,
+      "norm_label": "managed github project roadmap"
+    },
+    {
+      "label": "OpenSpec Archive Before Merge",
+      "file_type": "rationale",
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/design.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "gh_1_bootstrap_governance_design_openspec_archive_before_merge",
+      "community": 7,
+      "norm_label": "openspec archive before merge"
+    },
+    {
+      "label": "Bootstrap Governance Proposal",
+      "file_type": "document",
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/proposal.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "gh_1_bootstrap_governance_proposal_governance_proposal",
+      "community": 0,
+      "norm_label": "bootstrap governance proposal"
+    },
+    {
+      "label": "Repository Governance",
+      "file_type": "concept",
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/proposal.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "gh_1_bootstrap_governance_proposal_repository_governance",
+      "community": 0,
+      "norm_label": "repository governance"
+    },
+    {
+      "label": "Reproducible, Reviewable, and Documented Changes",
+      "file_type": "rationale",
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/proposal.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "gh_1_bootstrap_governance_proposal_reproducible_reviewable_documented_changes",
+      "community": 0,
+      "norm_label": "reproducible, reviewable, and documented changes"
+    },
+    {
+      "label": "No Application or Infrastructure Runtime Implementation",
+      "file_type": "rationale",
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/proposal.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "gh_1_bootstrap_governance_proposal_no_runtime_implementation",
+      "community": 0,
+      "norm_label": "no application or infrastructure runtime implementation"
+    },
+    {
+      "label": "Repository Governance Specification",
+      "file_type": "document",
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/specs/repository-governance/spec.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "repository_governance_spec_repository_governance_specification",
+      "community": 0,
+      "norm_label": "repository governance specification"
+    },
+    {
+      "label": "Reproducible Repository Tooling Requirement",
+      "file_type": "concept",
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/specs/repository-governance/spec.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "repository_governance_spec_reproducible_repository_tooling",
+      "community": 0,
+      "norm_label": "reproducible repository tooling requirement"
+    },
+    {
+      "label": "Versioned Project Documentation Requirement",
+      "file_type": "concept",
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/specs/repository-governance/spec.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "repository_governance_spec_versioned_project_documentation",
+      "community": 0,
+      "norm_label": "versioned project documentation requirement"
+    },
+    {
+      "label": "Architecture Decision Records Requirement",
+      "file_type": "concept",
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/specs/repository-governance/spec.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "repository_governance_spec_architecture_decision_records",
+      "community": 0,
+      "norm_label": "architecture decision records requirement"
+    },
+    {
+      "label": "Automated Pull Request Quality Requirement",
+      "file_type": "concept",
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/specs/repository-governance/spec.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "repository_governance_spec_automated_pull_request_quality",
+      "community": 0,
+      "norm_label": "automated pull request quality requirement"
+    },
+    {
+      "label": "Published Documentation Requirement",
+      "file_type": "concept",
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/specs/repository-governance/spec.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "repository_governance_spec_published_documentation",
+      "community": 0,
+      "norm_label": "published documentation requirement"
+    },
+    {
+      "label": "Repository Contribution Metadata Requirement",
+      "file_type": "concept",
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/specs/repository-governance/spec.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "repository_governance_spec_repository_contribution_metadata",
+      "community": 0,
+      "norm_label": "repository contribution metadata requirement"
+    },
+    {
+      "label": "Dependency and Security Automation Requirement",
+      "file_type": "concept",
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/specs/repository-governance/spec.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "repository_governance_spec_dependency_security_automation",
+      "community": 0,
+      "norm_label": "dependency and security automation requirement"
+    },
+    {
+      "label": "Protected Main Workflow Requirement",
+      "file_type": "concept",
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/specs/repository-governance/spec.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "repository_governance_spec_protected_main_workflow",
+      "community": 7,
+      "norm_label": "protected main workflow requirement"
+    },
+    {
+      "label": "Tracked Agent Knowledge Assets Requirement",
+      "file_type": "concept",
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/specs/repository-governance/spec.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "repository_governance_spec_tracked_agent_knowledge_assets",
+      "community": 0,
+      "norm_label": "tracked agent knowledge assets requirement"
+    },
+    {
+      "label": "Managed Roadmap Requirement",
+      "file_type": "concept",
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/specs/repository-governance/spec.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "repository_governance_spec_managed_roadmap",
+      "community": 0,
+      "norm_label": "managed roadmap requirement"
+    },
+    {
+      "label": "Bootstrap Governance Implementation Tasks",
+      "file_type": "document",
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/tasks.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "gh_1_bootstrap_governance_tasks_implementation_tasks",
+      "community": 0,
+      "norm_label": "bootstrap governance implementation tasks"
+    },
+    {
+      "label": "Local Governance Verification",
+      "file_type": "concept",
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/tasks.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "gh_1_bootstrap_governance_tasks_local_verification",
+      "community": 0,
+      "norm_label": "local governance verification"
+    },
+    {
+      "label": "GitHub Publication",
+      "file_type": "concept",
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/tasks.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "gh_1_bootstrap_governance_tasks_github_publication",
+      "community": 7,
+      "norm_label": "github publication"
+    },
+    {
+      "label": "OpenSpec Change Completion",
+      "file_type": "concept",
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/tasks.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "gh_1_bootstrap_governance_tasks_change_completion",
+      "community": 7,
+      "norm_label": "openspec change completion"
     }
   ],
   "links": [
@@ -976,52 +2308,1298 @@
       "weight": 1.0,
       "source": "specs_2026_06_14_assisted_file_redaction_design_serverless_aws_architecture",
       "target": "specs_2026_06_14_assisted_file_redaction_design_aws_lambda_quotas"
-    }
-  ],
-  "hyperedges": [
+    },
     {
-      "id": "openspec_artifact_workflow",
-      "label": "OpenSpec Artifact Workflow",
-      "nodes": [
-        "openspec_new_change_skill_openspec_new_change",
-        "openspec_continue_change_skill_openspec_continue_change",
-        "openspec_ff_change_skill_openspec_fast_forward_change",
-        "openspec_propose_skill_openspec_propose"
-      ],
-      "relation": "participate_in",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".pre-commit-config.yaml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "pre_commit_config_markdown_and_yaml_linting",
+      "target": "pymarkdown_markdown_lint_configuration"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".pymarkdown.json",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "pymarkdown_markdown_lint_configuration",
+      "target": "pymarkdown_relaxed_markdown_rules"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/ISSUE_TEMPLATE/bug.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "issue_template_bug_bug_report",
+      "target": "issue_template_bug_synthetic_bug_fixtures"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/ISSUE_TEMPLATE/bug.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "issue_template_bug_reproducible_bug_reports",
+      "target": "issue_template_bug_bug_report"
+    },
+    {
+      "relation": "semantically_similar_to",
       "confidence": "INFERRED",
       "confidence_score": 0.95,
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md"
+      "source_file": "SECURITY.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "security_sensitive_data_exclusion",
+      "target": "issue_template_bug_synthetic_bug_fixtures"
     },
     {
-      "id": "openspec_change_lifecycle",
-      "label": "OpenSpec Change Lifecycle",
-      "nodes": [
-        "openspec_explore_skill_openspec_explore",
-        "openspec_new_change_skill_openspec_new_change",
-        "openspec_apply_change_skill_openspec_apply_change",
-        "openspec_verify_change_skill_openspec_verify_change",
-        "openspec_archive_change_skill_openspec_archive_change"
-      ],
-      "relation": "form",
+      "relation": "implements",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": ".codex/skills/openspec-onboard/SKILL.md"
+      "source_file": ".github/ISSUE_TEMPLATE/config.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "issue_template_config_issue_template_configuration",
+      "target": "issue_template_config_private_vulnerability_reporting"
     },
     {
-      "id": "assisted_redaction_safety_model",
-      "label": "Assisted Redaction Safety Model",
-      "nodes": [
-        "specs_2026_06_14_assisted_file_redaction_design_pii_detection_pipeline",
-        "specs_2026_06_14_assisted_file_redaction_design_human_review_editor",
-        "specs_2026_06_14_assisted_file_redaction_design_permanent_rasterized_redaction",
-        "specs_2026_06_14_assisted_file_redaction_design_quality_and_security_testing"
-      ],
-      "relation": "form",
+      "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "docs/superpowers/specs/2026-06-14-assisted-file-redaction-design.md"
+      "source_file": "SECURITY.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "security_coordinated_vulnerability_disclosure",
+      "target": "issue_template_config_private_vulnerability_reporting"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/ISSUE_TEMPLATE/feature.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "issue_template_feature_feature_request",
+      "target": "issue_template_feature_observable_success"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/ISSUE_TEMPLATE/feature.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "issue_template_feature_feature_request",
+      "target": "issue_template_feature_scope_boundaries"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/PULL_REQUEST_TEMPLATE.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "github_pull_request_template_pull_request_checklist",
+      "target": "agents_openspec_change_workflow"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/PULL_REQUEST_TEMPLATE.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "github_pull_request_template_pull_request_checklist",
+      "target": "github_pull_request_template_definition_of_done"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/PULL_REQUEST_TEMPLATE.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "github_pull_request_template_pull_request_checklist",
+      "target": "github_pull_request_template_graphify_refresh_check"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": ".github/PULL_REQUEST_TEMPLATE.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "github_pull_request_template_definition_of_done",
+      "target": "agents_project_working_agreement"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": ".github/PULL_REQUEST_TEMPLATE.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "github_pull_request_template_graphify_refresh_check",
+      "target": "agents_versioned_graphify_output"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/dependabot.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "github_dependabot_dependency_update_configuration",
+      "target": "github_dependabot_weekly_grouped_updates"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/workflows/pages.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "workflows_pages_github_pages_workflow",
+      "target": "workflows_pages_github_pages_deployment"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/workflows/pages.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "workflows_pages_github_pages_workflow",
+      "target": "workflows_pages_strict_mkdocs_build"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/workflows/quality.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "workflows_quality_quality_workflow",
+      "target": "workflows_pages_strict_mkdocs_build"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "docs/development.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "development_local_validation_suite",
+      "target": "workflows_quality_quality_workflow"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/workflows/quality.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "workflows_quality_quality_workflow",
+      "target": "workflows_quality_openspec_strict_validation"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".github/workflows/quality.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "workflows_quality_quality_workflow",
+      "target": "workflows_quality_pre_commit_validation"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".pre-commit-config.yaml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "pre_commit_config_pre_commit_configuration",
+      "target": "pre_commit_config_markdown_and_yaml_linting"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": ".pre-commit-config.yaml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "pre_commit_config_pre_commit_configuration",
+      "target": "pre_commit_config_repository_hygiene_hooks"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": ".yamllint.yaml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "yamllint_yaml_lint_configuration",
+      "target": "pre_commit_config_markdown_and_yaml_linting"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "agents_project_working_agreement",
+      "target": "agents_documentation_as_code"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "agents_project_working_agreement",
+      "target": "agents_github_collaboration_platform"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "agents_project_working_agreement",
+      "target": "agents_madr_architecture_decisions"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "agents_project_working_agreement",
+      "target": "agents_openspec_change_workflow"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "agents_project_working_agreement",
+      "target": "agents_versioned_graphify_output"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CONTRIBUTING.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "contributing_contribution_guide",
+      "target": "agents_project_working_agreement"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/development.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "development_development_workflow",
+      "target": "agents_project_working_agreement"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0001-documentation-and-governance.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "adr_0001_documentation_and_governance_adr_0001",
+      "target": "agents_github_collaboration_platform"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0001-documentation-and-governance.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "adr_0001_documentation_and_governance_adr_0001",
+      "target": "agents_openspec_change_workflow"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "CONTRIBUTING.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "contributing_issue_to_pr_lifecycle",
+      "target": "agents_openspec_change_workflow"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/development.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "development_development_workflow",
+      "target": "agents_openspec_change_workflow"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0001-documentation-and-governance.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "adr_0001_documentation_and_governance_adr_0001",
+      "target": "agents_documentation_as_code"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "AGENTS.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "agents_documentation_as_code",
+      "target": "mkdocs_mkdocs_site_configuration"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0001-documentation-and-governance.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "adr_0001_documentation_and_governance_adr_0001",
+      "target": "agents_madr_architecture_decisions"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0001-documentation-and-governance.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "adr_0001_documentation_and_governance_adr_0001",
+      "target": "agents_versioned_graphify_output"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CONTRIBUTING.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "contributing_contribution_guide",
+      "target": "contributing_issue_to_pr_lifecycle"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CONTRIBUTING.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "contributing_focused_pull_requests",
+      "target": "contributing_issue_to_pr_lifecycle"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_redact_all_the_things_overview",
+      "target": "architecture_technical_scope_assisted_file_redaction_scope"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_redact_all_the_things_overview",
+      "target": "development_development_workflow"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_redact_all_the_things_overview",
+      "target": "readme_assisted_redaction_application"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_assisted_redaction_application",
+      "target": "readme_gliner2"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_assisted_redaction_application",
+      "target": "readme_paddleocr"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_assisted_redaction_application",
+      "target": "readme_permanent_rasterized_redaction"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/architecture/technical-scope.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "architecture_technical_scope_assisted_file_redaction_scope",
+      "target": "readme_paddleocr"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/architecture/technical-scope.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "architecture_technical_scope_assisted_file_redaction_scope",
+      "target": "readme_gliner2"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "SECURITY.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "security_security_policy",
+      "target": "security_coordinated_vulnerability_disclosure"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "SECURITY.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "security_security_policy",
+      "target": "security_sensitive_data_exclusion"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/architecture/technical-scope.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "architecture_technical_scope_privacy_preserving_logging",
+      "target": "security_sensitive_data_exclusion"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0001-documentation-and-governance.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "adr_0001_documentation_and_governance_adr_0001",
+      "target": "adr_0001_documentation_and_governance_apache_2_0"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0001-documentation-and-governance.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "adr_0001_documentation_and_governance_adr_0001",
+      "target": "architecture_technical_scope_assisted_file_redaction_scope"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0001-documentation-and-governance.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "adr_0001_documentation_and_governance_reproducible_governance_controls",
+      "target": "adr_0001_documentation_and_governance_adr_0001"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0001-documentation-and-governance.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "adr_0001_documentation_and_governance_solo_maintainer_merge_policy",
+      "target": "adr_0001_documentation_and_governance_adr_0001"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/index.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "adr_index_architecture_decision_record_index",
+      "target": "adr_0001_documentation_and_governance_adr_0001"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "mkdocs.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "mkdocs_versioned_documentation_navigation",
+      "target": "adr_0001_documentation_and_governance_adr_0001"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/index.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "adr_index_append_only_decision_history",
+      "target": "adr_index_architecture_decision_record_index"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/index.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "adr_index_architecture_decision_record_index",
+      "target": "adr_template_madr_template"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/index.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_index_project_documentation_home",
+      "target": "adr_index_architecture_decision_record_index"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/template.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "adr_template_madr_template",
+      "target": "adr_template_decision_tradeoff_structure"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/architecture/technical-scope.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "architecture_technical_scope_assisted_file_redaction_scope",
+      "target": "architecture_technical_scope_24_hour_retention"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/architecture/technical-scope.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "architecture_technical_scope_assisted_file_redaction_scope",
+      "target": "architecture_technical_scope_aws_private_architecture"
+    },
+    {
+      "relation": "cites",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/architecture/technical-scope.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "architecture_technical_scope_assisted_file_redaction_scope",
+      "target": "architecture_technical_scope_aws_regional_price_index"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/architecture/technical-scope.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "architecture_technical_scope_assisted_file_redaction_scope",
+      "target": "architecture_technical_scope_mandatory_human_review"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/architecture/technical-scope.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "architecture_technical_scope_assisted_file_redaction_scope",
+      "target": "architecture_technical_scope_normalized_redaction_regions"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/architecture/technical-scope.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "architecture_technical_scope_assisted_file_redaction_scope",
+      "target": "architecture_technical_scope_optimistic_manifest_versioning"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/architecture/technical-scope.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "architecture_technical_scope_assisted_file_redaction_scope",
+      "target": "architecture_technical_scope_privacy_preserving_logging"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/index.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_index_project_documentation_home",
+      "target": "architecture_technical_scope_assisted_file_redaction_scope"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "mkdocs.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "mkdocs_versioned_documentation_navigation",
+      "target": "architecture_technical_scope_assisted_file_redaction_scope"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "docs/architecture/technical-scope.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "architecture_technical_scope_mandatory_human_review",
+      "target": "docs_index_detection_as_assistance"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/architecture/technical-scope.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "architecture_technical_scope_aws_private_architecture",
+      "target": "architecture_technical_scope_fargate_spot_processing"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/architecture/technical-scope.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "architecture_technical_scope_aws_private_architecture",
+      "target": "architecture_technical_scope_serverless_control_plane"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/architecture/technical-scope.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "architecture_technical_scope_scale_to_zero_cost_controls",
+      "target": "architecture_technical_scope_aws_private_architecture"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/architecture/technical-scope.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "architecture_technical_scope_checkpoint_recovery",
+      "target": "architecture_technical_scope_fargate_spot_processing"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/index.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_index_bounded_concurrency",
+      "target": "architecture_technical_scope_fargate_spot_processing"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/development.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "development_architecture_documentation_alignment",
+      "target": "development_development_workflow"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/development.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "development_development_workflow",
+      "target": "development_local_validation_suite"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/index.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_index_project_documentation_home",
+      "target": "development_development_workflow"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "mkdocs.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "mkdocs_versioned_documentation_navigation",
+      "target": "development_development_workflow"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/index.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_index_detection_as_assistance",
+      "target": "docs_index_project_documentation_home"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/index.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_index_project_documentation_home",
+      "target": "docs_index_bounded_concurrency"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "mkdocs.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "mkdocs_versioned_documentation_navigation",
+      "target": "docs_index_project_documentation_home"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "mkdocs.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "mkdocs_mkdocs_site_configuration",
+      "target": "mkdocs_material_for_mkdocs"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "mkdocs.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "mkdocs_mkdocs_site_configuration",
+      "target": "mkdocs_versioned_documentation_navigation"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/.openspec.yaml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "gh_1_bootstrap_governance_openspec_change_metadata",
+      "target": "gh_1_bootstrap_governance_openspec_spec_driven_schema"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "gh_1_bootstrap_governance_design_governance_design",
+      "target": "gh_1_bootstrap_governance_design_managed_roadmap"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "gh_1_bootstrap_governance_design_governance_design",
+      "target": "gh_1_bootstrap_governance_design_quality_workflow"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "gh_1_bootstrap_governance_design_governance_design",
+      "target": "gh_1_bootstrap_governance_design_reproducible_repository_tooling"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "gh_1_bootstrap_governance_design_governance_design",
+      "target": "gh_1_bootstrap_governance_design_tracked_agent_knowledge_assets"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "gh_1_bootstrap_governance_design_governance_design",
+      "target": "gh_1_bootstrap_governance_design_versioned_project_documentation"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "gh_1_bootstrap_governance_design_reproducible_repository_tooling",
+      "target": "repository_governance_spec_reproducible_repository_tooling"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "gh_1_bootstrap_governance_design_uv_toolchain",
+      "target": "gh_1_bootstrap_governance_design_reproducible_repository_tooling"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "gh_1_bootstrap_governance_design_authoritative_docs_supplementary_wiki",
+      "target": "gh_1_bootstrap_governance_design_versioned_project_documentation"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "gh_1_bootstrap_governance_design_pages_workflow",
+      "target": "gh_1_bootstrap_governance_design_versioned_project_documentation"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "gh_1_bootstrap_governance_design_versioned_project_documentation",
+      "target": "repository_governance_spec_versioned_project_documentation"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "gh_1_bootstrap_governance_design_graphify_refresh_rule",
+      "target": "gh_1_bootstrap_governance_design_tracked_agent_knowledge_assets"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "gh_1_bootstrap_governance_design_tracked_agent_knowledge_assets",
+      "target": "repository_governance_spec_tracked_agent_knowledge_assets"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/tasks.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "gh_1_bootstrap_governance_tasks_local_verification",
+      "target": "gh_1_bootstrap_governance_design_graphify_refresh_rule"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "gh_1_bootstrap_governance_design_quality_workflow",
+      "target": "gh_1_bootstrap_governance_design_protected_main_workflow"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "gh_1_bootstrap_governance_design_quality_workflow",
+      "target": "repository_governance_spec_automated_pull_request_quality"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/tasks.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "gh_1_bootstrap_governance_tasks_local_verification",
+      "target": "gh_1_bootstrap_governance_design_quality_workflow"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "gh_1_bootstrap_governance_design_pages_workflow",
+      "target": "repository_governance_spec_published_documentation"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "gh_1_bootstrap_governance_design_openspec_archive_before_merge",
+      "target": "gh_1_bootstrap_governance_design_protected_main_workflow"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "gh_1_bootstrap_governance_design_protected_main_workflow",
+      "target": "repository_governance_spec_protected_main_workflow"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "gh_1_bootstrap_governance_design_public_repository_security",
+      "target": "gh_1_bootstrap_governance_design_protected_main_workflow"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "gh_1_bootstrap_governance_design_solo_maintainer_review_tradeoff",
+      "target": "gh_1_bootstrap_governance_design_protected_main_workflow"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/tasks.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "gh_1_bootstrap_governance_tasks_github_publication",
+      "target": "gh_1_bootstrap_governance_design_protected_main_workflow"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/tasks.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "gh_1_bootstrap_governance_tasks_github_publication",
+      "target": "gh_1_bootstrap_governance_design_public_repository_security"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "gh_1_bootstrap_governance_design_managed_roadmap",
+      "target": "repository_governance_spec_managed_roadmap"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/tasks.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "gh_1_bootstrap_governance_tasks_github_publication",
+      "target": "gh_1_bootstrap_governance_design_managed_roadmap"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/tasks.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "gh_1_bootstrap_governance_tasks_change_completion",
+      "target": "gh_1_bootstrap_governance_design_openspec_archive_before_merge"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/proposal.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "gh_1_bootstrap_governance_proposal_governance_proposal",
+      "target": "gh_1_bootstrap_governance_proposal_repository_governance"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/tasks.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "gh_1_bootstrap_governance_tasks_implementation_tasks",
+      "target": "gh_1_bootstrap_governance_proposal_governance_proposal"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/proposal.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "gh_1_bootstrap_governance_proposal_no_runtime_implementation",
+      "target": "gh_1_bootstrap_governance_proposal_repository_governance"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/proposal.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "gh_1_bootstrap_governance_proposal_reproducible_reviewable_documented_changes",
+      "target": "gh_1_bootstrap_governance_proposal_repository_governance"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/specs/repository-governance/spec.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "repository_governance_spec_repository_governance_specification",
+      "target": "gh_1_bootstrap_governance_proposal_repository_governance"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/tasks.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "gh_1_bootstrap_governance_tasks_implementation_tasks",
+      "target": "repository_governance_spec_repository_governance_specification"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/specs/repository-governance/spec.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "repository_governance_spec_repository_governance_specification",
+      "target": "repository_governance_spec_architecture_decision_records"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/specs/repository-governance/spec.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "repository_governance_spec_repository_governance_specification",
+      "target": "repository_governance_spec_automated_pull_request_quality"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/specs/repository-governance/spec.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "repository_governance_spec_repository_governance_specification",
+      "target": "repository_governance_spec_dependency_security_automation"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/specs/repository-governance/spec.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "repository_governance_spec_repository_governance_specification",
+      "target": "repository_governance_spec_managed_roadmap"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/specs/repository-governance/spec.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "repository_governance_spec_repository_governance_specification",
+      "target": "repository_governance_spec_protected_main_workflow"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/specs/repository-governance/spec.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "repository_governance_spec_repository_governance_specification",
+      "target": "repository_governance_spec_published_documentation"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/specs/repository-governance/spec.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "repository_governance_spec_repository_governance_specification",
+      "target": "repository_governance_spec_repository_contribution_metadata"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/specs/repository-governance/spec.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "repository_governance_spec_repository_governance_specification",
+      "target": "repository_governance_spec_reproducible_repository_tooling"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/specs/repository-governance/spec.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "repository_governance_spec_repository_governance_specification",
+      "target": "repository_governance_spec_tracked_agent_knowledge_assets"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "openspec/changes/gh-1-bootstrap-governance/specs/repository-governance/spec.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "repository_governance_spec_repository_governance_specification",
+      "target": "repository_governance_spec_versioned_project_documentation"
     }
   ],
-  "built_at_commit": "d712b7980e4d1faa88ef249c28315d088abf1003"
+  "hyperedges": [],
+  "built_at_commit": "dac319904bf53c5cc1aaa78aa298b661b06ccd0b"
 }

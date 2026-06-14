@@ -1,0 +1,38 @@
+site_name: Redact All The Things
+site_description: Assisted redaction for PDFs and images
+site_url: https://alkasaliss.github.io/redact-all-the-things/
+repo_url: https://github.com/AlkaSaliss/redact-all-the-things
+repo_name: AlkaSaliss/redact-all-the-things
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  features:
+    - content.action.edit
+    - navigation.indexes
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Development: development.md
+  - Architecture:
+      - Technical scope: architecture/technical-scope.md
+      - Decisions:
+          - Overview: adr/index.md
+          - "0001: Documentation and governance": adr/0001-documentation-and-governance.md
+          - Template: adr/template.md

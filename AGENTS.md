@@ -51,12 +51,13 @@ For non-trivial work:
    review.
 7. Open a pull request containing `Closes #<issue-number>` and move the issue
    to `In Review`.
-8. Merge only after all required CI checks pass and at least one reviewer
-   approves.
-9. Archive the OpenSpec change after acceptance, then move the issue to
-   `Done`.
+8. Run OpenSpec verification, resolve critical findings, and archive the
+   OpenSpec change as the final content update in the pull request.
+9. Merge only after all required CI checks pass on the archived change, then
+   move the issue to `Done`.
 
-Do not merge your own pull request or bypass required checks or approval.
+Do not bypass required checks. Solo maintainers may merge their own pull
+requests after all required checks pass.
 
 ## Git Conventions
 
@@ -108,10 +109,19 @@ A pull request is complete only when:
 - The pull request explains its scope, testing, documentation impact, ADR
   impact, and linked issue.
 - All required CI checks pass.
-- At least one reviewer approves the pull request.
+- OpenSpec verification is complete and the change is archived.
 
-Generated output, local tooling such as `.codex/`, and unrelated changes must
-not be committed unless the issue explicitly requires them.
+Generated output and local tooling must not be committed unless the repository
+explicitly treats them as shared assets or the issue requires them.
+
+This repository intentionally versions:
+
+- `.codex/`, which contains the project's OpenSpec agent workflows.
+- `graphify-out/`, which contains the shared project knowledge graph.
+
+Refresh Graphify when indexed source or architecture documentation changes.
+Commit the refreshed report and graph with the source change. If no refresh is
+needed, explain why in the pull request.
 
 ## Engineering Guidance
 
