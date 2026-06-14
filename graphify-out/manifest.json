@@ -1,187 +1,192 @@
 {
-  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/.codex/skills/openspec-apply-change/SKILL.md": {
+  ".codex/skills/openspec-apply-change/SKILL.md": {
     "mtime": 1781443655.550553,
     "ast_hash": "ef62fef14cd5c347e2be60d2af4ea59f",
     "semantic_hash": "ef62fef14cd5c347e2be60d2af4ea59f"
   },
-  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/.codex/skills/openspec-archive-change/SKILL.md": {
+  ".codex/skills/openspec-archive-change/SKILL.md": {
     "mtime": 1781443655.5511894,
     "ast_hash": "a853b3ce25149061a7f13f05b127350c",
     "semantic_hash": "a853b3ce25149061a7f13f05b127350c"
   },
-  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/.codex/skills/openspec-bulk-archive-change/SKILL.md": {
+  ".codex/skills/openspec-bulk-archive-change/SKILL.md": {
     "mtime": 1781443655.5513406,
     "ast_hash": "4c4243b11da830e2a11e06fb236397a7",
     "semantic_hash": "4c4243b11da830e2a11e06fb236397a7"
   },
-  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/.codex/skills/openspec-continue-change/SKILL.md": {
+  ".codex/skills/openspec-continue-change/SKILL.md": {
     "mtime": 1781443655.5503242,
     "ast_hash": "2f94797a9d8e395b9beeba7ea9a43288",
     "semantic_hash": "2f94797a9d8e395b9beeba7ea9a43288"
   },
-  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/.codex/skills/openspec-explore/SKILL.md": {
+  ".codex/skills/openspec-explore/SKILL.md": {
     "mtime": 1781443655.5499856,
     "ast_hash": "61496eebbad91c2af8b3e5bf7fc9d256",
     "semantic_hash": "61496eebbad91c2af8b3e5bf7fc9d256"
   },
-  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/.codex/skills/openspec-ff-change/SKILL.md": {
+  ".codex/skills/openspec-ff-change/SKILL.md": {
     "mtime": 1781443655.5507216,
     "ast_hash": "1ed86fa2b49c8ddc08652ee4c88f0b45",
     "semantic_hash": "1ed86fa2b49c8ddc08652ee4c88f0b45"
   },
-  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/.codex/skills/openspec-new-change/SKILL.md": {
+  ".codex/skills/openspec-new-change/SKILL.md": {
     "mtime": 1781443655.5501387,
     "ast_hash": "a391aba5d8946da580904fe3782e190d",
     "semantic_hash": "a391aba5d8946da580904fe3782e190d"
   },
-  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/.codex/skills/openspec-onboard/SKILL.md": {
+  ".codex/skills/openspec-onboard/SKILL.md": {
     "mtime": 1781443655.5517168,
     "ast_hash": "310fc85a6f93383a1ec59e0cfe24e211",
     "semantic_hash": "310fc85a6f93383a1ec59e0cfe24e211"
   },
-  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/.codex/skills/openspec-propose/SKILL.md": {
+  ".codex/skills/openspec-propose/SKILL.md": {
     "mtime": 1781443655.5518618,
     "ast_hash": "5fe13ada44751b3ff94f56c22c383749",
     "semantic_hash": "5fe13ada44751b3ff94f56c22c383749"
   },
-  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/.codex/skills/openspec-sync-specs/SKILL.md": {
+  ".codex/skills/openspec-sync-specs/SKILL.md": {
     "mtime": 1781443655.5508847,
     "ast_hash": "211bc14ef7cb2d1e24b6b73e878d8509",
     "semantic_hash": "211bc14ef7cb2d1e24b6b73e878d8509"
   },
-  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/.codex/skills/openspec-verify-change/SKILL.md": {
+  ".codex/skills/openspec-verify-change/SKILL.md": {
     "mtime": 1781443655.5515432,
     "ast_hash": "2baab6b815515578795441106d2d5abd",
     "semantic_hash": "2baab6b815515578795441106d2d5abd"
   },
-  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/README.md": {
+  "README.md": {
     "mtime": 1781453861.7987041,
     "ast_hash": "2f3b97c705bb35efd3b8d52dbe6c43ce",
     "semantic_hash": "2f3b97c705bb35efd3b8d52dbe6c43ce"
   },
-  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/.pymarkdown.json": {
+  ".pymarkdown.json": {
     "mtime": 1781453728.8436131,
     "ast_hash": "84bd0192f8988ee9ea62be4e1b579473",
     "semantic_hash": "84bd0192f8988ee9ea62be4e1b579473"
   },
-  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/.github/ISSUE_TEMPLATE/bug.yml": {
+  ".github/ISSUE_TEMPLATE/bug.yml": {
     "mtime": 1781453862.6008718,
     "ast_hash": "ea97d88c7b82a9a23d40563124d701a2",
     "semantic_hash": "ea97d88c7b82a9a23d40563124d701a2"
   },
-  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/.github/ISSUE_TEMPLATE/config.yml": {
+  ".github/ISSUE_TEMPLATE/config.yml": {
     "mtime": 1781453862.883533,
     "ast_hash": "5c4e048c825b3e45bfccca593db01dfb",
     "semantic_hash": "5c4e048c825b3e45bfccca593db01dfb"
   },
-  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/.github/ISSUE_TEMPLATE/feature.yml": {
+  ".github/ISSUE_TEMPLATE/feature.yml": {
     "mtime": 1781453862.7359471,
     "ast_hash": "0237b1ea07cd54dd4af964283aceb3c4",
     "semantic_hash": "0237b1ea07cd54dd4af964283aceb3c4"
   },
-  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/.github/PULL_REQUEST_TEMPLATE.md": {
+  ".github/PULL_REQUEST_TEMPLATE.md": {
     "mtime": 1781453863.0347595,
     "ast_hash": "a354e3154da98d553ac56517858f6fb4",
     "semantic_hash": "a354e3154da98d553ac56517858f6fb4"
   },
-  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/.github/dependabot.yml": {
+  ".github/dependabot.yml": {
     "mtime": 1781453863.3114648,
     "ast_hash": "445fb12484cb04ad31ea430c39fcbc5c",
     "semantic_hash": "445fb12484cb04ad31ea430c39fcbc5c"
   },
-  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/.github/workflows/pages.yml": {
+  ".github/workflows/pages.yml": {
     "mtime": 1781453863.6767333,
     "ast_hash": "9ecfd76181d0b86c08de073335fd3503",
     "semantic_hash": "9ecfd76181d0b86c08de073335fd3503"
   },
-  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/.github/workflows/quality.yml": {
-    "mtime": 1781453863.5352316,
-    "ast_hash": "fcf36360227ff6e3c944566dd656bfad",
-    "semantic_hash": "fcf36360227ff6e3c944566dd656bfad"
+  ".github/workflows/quality.yml": {
+    "mtime": 1781456843.6630368,
+    "ast_hash": "4a36f160ca9f93af8da7815c636b9a8b",
+    "semantic_hash": ""
   },
-  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/.pre-commit-config.yaml": {
-    "mtime": 1781453728.6901672,
-    "ast_hash": "7c6568be78978a7aae6a307a53d4e8c2",
-    "semantic_hash": "7c6568be78978a7aae6a307a53d4e8c2"
+  ".pre-commit-config.yaml": {
+    "mtime": 1781455954.2799537,
+    "ast_hash": "2a76f4f21e3f4da2f3fe0565631e8c43",
+    "semantic_hash": ""
   },
-  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/.yamllint.yaml": {
+  ".yamllint.yaml": {
     "mtime": 1781453728.990231,
     "ast_hash": "9c591ff00ccff95c320eeb0c7fa977cb",
     "semantic_hash": "9c591ff00ccff95c320eeb0c7fa977cb"
   },
-  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/AGENTS.md": {
+  "AGENTS.md": {
     "mtime": 1781453862.3722663,
     "ast_hash": "b2529ebea2e08d51f954cb74b92b9f94",
     "semantic_hash": "b2529ebea2e08d51f954cb74b92b9f94"
   },
-  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/CONTRIBUTING.md": {
+  "CONTRIBUTING.md": {
     "mtime": 1781453861.9337835,
     "ast_hash": "6da6155e7cf84c435b5fbfe490887b6b",
     "semantic_hash": "6da6155e7cf84c435b5fbfe490887b6b"
   },
-  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/SECURITY.md": {
+  "SECURITY.md": {
     "mtime": 1781453862.1015384,
     "ast_hash": "1c7c32e746a513ef5947a8a3762ef2a2",
     "semantic_hash": "1c7c32e746a513ef5947a8a3762ef2a2"
   },
-  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/docs/adr/0001-documentation-and-governance.md": {
+  "docs/adr/0001-documentation-and-governance.md": {
     "mtime": 1781453729.9229014,
     "ast_hash": "8bbb5e186a5f49406a3e48b0cf3bc938",
     "semantic_hash": "8bbb5e186a5f49406a3e48b0cf3bc938"
   },
-  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/docs/adr/index.md": {
+  "docs/adr/index.md": {
     "mtime": 1781453729.638375,
     "ast_hash": "29c454b631b544bbe60980a483ac6030",
     "semantic_hash": "29c454b631b544bbe60980a483ac6030"
   },
-  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/docs/adr/template.md": {
+  "docs/adr/template.md": {
     "mtime": 1781453729.772339,
     "ast_hash": "7b175549489052e4c3551148641001a3",
     "semantic_hash": "7b175549489052e4c3551148641001a3"
   },
-  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/docs/architecture/technical-scope.md": {
+  "docs/architecture/technical-scope.md": {
     "mtime": 1781453730.2971263,
     "ast_hash": "74b281136e58def7c6e743056dc31062",
     "semantic_hash": "74b281136e58def7c6e743056dc31062"
   },
-  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/docs/development.md": {
+  "docs/development.md": {
     "mtime": 1781453729.40667,
     "ast_hash": "dc95d0bdd8f1fc67de74d8688ea8a8a2",
     "semantic_hash": "dc95d0bdd8f1fc67de74d8688ea8a8a2"
   },
-  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/docs/index.md": {
+  "docs/index.md": {
     "mtime": 1781453729.2702675,
     "ast_hash": "ae133aa7d0d654cb36f35406e50f85ce",
     "semantic_hash": "ae133aa7d0d654cb36f35406e50f85ce"
   },
-  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/mkdocs.yml": {
+  "mkdocs.yml": {
     "mtime": 1781453729.1336975,
     "ast_hash": "5eea3e601a9af59c47d2586bb93627b6",
     "semantic_hash": "5eea3e601a9af59c47d2586bb93627b6"
   },
-  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/openspec/changes/gh-1-bootstrap-governance/.openspec.yaml": {
+  "openspec/changes/archive/2026-06-14-gh-1-bootstrap-governance/.openspec.yaml": {
     "mtime": 1781453577.456864,
     "ast_hash": "d3f3cdfce511e197472e6dee42eaf5d8",
-    "semantic_hash": "d3f3cdfce511e197472e6dee42eaf5d8"
+    "semantic_hash": ""
   },
-  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/openspec/changes/gh-1-bootstrap-governance/design.md": {
+  "openspec/changes/archive/2026-06-14-gh-1-bootstrap-governance/design.md": {
     "mtime": 1781453639.1068754,
     "ast_hash": "d0ec159eefec7e0cc74fb5dd0fbab3df",
-    "semantic_hash": "d0ec159eefec7e0cc74fb5dd0fbab3df"
+    "semantic_hash": ""
   },
-  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/openspec/changes/gh-1-bootstrap-governance/proposal.md": {
+  "openspec/changes/archive/2026-06-14-gh-1-bootstrap-governance/proposal.md": {
     "mtime": 1781453593.5065496,
     "ast_hash": "c5286592002b665490e0149f455ab02f",
-    "semantic_hash": "c5286592002b665490e0149f455ab02f"
+    "semantic_hash": ""
   },
-  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/openspec/changes/gh-1-bootstrap-governance/specs/repository-governance/spec.md": {
+  "openspec/changes/archive/2026-06-14-gh-1-bootstrap-governance/specs/repository-governance/spec.md": {
     "mtime": 1781453639.338215,
     "ast_hash": "11ece2e2ba48f91938e3421f8382d9b1",
-    "semantic_hash": "11ece2e2ba48f91938e3421f8382d9b1"
+    "semantic_hash": ""
   },
-  "/Users/mahamadou/Documents/PERSONAL/REDACT_ALL_THE_THING/redact-all-the-things/openspec/changes/gh-1-bootstrap-governance/tasks.md": {
-    "mtime": 1781453895.8055463,
-    "ast_hash": "458cbb4d96d3dd50a7586ed6f7fb427f",
-    "semantic_hash": "458cbb4d96d3dd50a7586ed6f7fb427f"
+  "openspec/changes/archive/2026-06-14-gh-1-bootstrap-governance/tasks.md": {
+    "mtime": 1781460012.2009246,
+    "ast_hash": "5439ec090c98a27f690aec7c36c7af72",
+    "semantic_hash": ""
+  },
+  "openspec/specs/repository-governance/spec.md": {
+    "mtime": 1781460012.4289227,
+    "ast_hash": "2ee10de8bf89872834b5d54e3b820401",
+    "semantic_hash": ""
   }
 }

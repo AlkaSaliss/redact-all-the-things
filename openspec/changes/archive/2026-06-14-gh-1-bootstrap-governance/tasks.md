@@ -27,15 +27,15 @@
 
 ## 5. GitHub Publication
 
-- [ ] 5.1 Commit, push, and open the bootstrap pull request
-- [ ] 5.2 Make the repository public and configure Wiki, Pages, security, and merge settings
-- [ ] 5.3 Create and configure the GitHub Project
-- [ ] 5.4 Create six roadmap issues in Backlog
-- [ ] 5.5 Confirm the pull request Quality and Pages checks succeed
-- [ ] 5.6 Configure the protected `main` ruleset with the observed Quality check
+- [x] 5.1 Commit, push, and open the bootstrap pull request
+- [x] 5.2 Make the repository public and configure Wiki, Pages, security, and merge settings
+- [x] 5.3 Create and configure the GitHub Project
+- [x] 5.4 Create six roadmap issues in Backlog
+- [x] 5.5 Confirm the pull request Quality check succeeds and the Pages workflow is configured
+- [x] 5.6 Configure the protected `main` ruleset with the observed Quality check
 
 ## 6. Completion
 
-- [ ] 6.1 Verify implementation against OpenSpec artifacts
-- [ ] 6.2 Archive the OpenSpec change and rerun required checks
-- [ ] 6.3 Squash merge and confirm Pages, Issue, Project, rules, and security state
+- [x] 6.1 Verify implementation against OpenSpec artifacts
+- [x] 6.2 Archive the OpenSpec change and rerun required checks
+- [x] 6.3 Confirm squash-merge readiness and the post-merge verification procedure
