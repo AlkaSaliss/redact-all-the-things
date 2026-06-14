@@ -10,6 +10,6 @@ dev = [
   "mkdocs==1.6.1",
   "mkdocs-material==9.7.6",
   "pre-commit==4.6.0",
-  "pymarkdownlnt==0.9.35",
-  "yamllint==1.37.1",
+  "pymarkdownlnt==0.9.38",
+  "yamllint==1.38.0",
 ]
