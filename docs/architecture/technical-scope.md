@@ -1,4 +1,4 @@
-# Technical Scoping Document: Assisted File Redaction Application
+# Technical Scope: Assisted File Redaction Application
 
 ## 1. Objective
 

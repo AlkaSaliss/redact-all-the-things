@@ -1,0 +1,45 @@
+name: Quality
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    name: Quality
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version-file: .python-version
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b
+        with:
+          enable-cache: true
+
+      - name: Install locked tooling
+        run: uv sync --locked
+
+      - name: Run pre-commit
+        run: uv run pre-commit run --all-files
+
+      - name: Build documentation
+        run: uv run mkdocs build --strict
+
+      - name: Install OpenSpec
+        run: npm install --global @fission-ai/openspec@1.4.1
+
+      - name: Validate OpenSpec
+        run: openspec validate --all --strict --no-interactive

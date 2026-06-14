@@ -1,0 +1,15 @@
+[project]
+name = "redact-all-the-things-tooling"
+version = "0.1.0"
+description = "Repository tooling for Redact All The Things"
+requires-python = ">=3.12,<3.13"
+dependencies = []
+
+[dependency-groups]
+dev = [
+  "mkdocs==1.6.1",
+  "mkdocs-material==9.7.6",
+  "pre-commit==4.6.0",
+  "pymarkdownlnt==0.9.35",
+  "yamllint==1.37.1",
+]

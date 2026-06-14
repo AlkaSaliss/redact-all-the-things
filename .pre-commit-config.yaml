@@ -1,0 +1,30 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-added-large-files
+      - id: check-json
+        exclude: ^graphify-out/
+      - id: check-merge-conflict
+      - id: check-toml
+      - id: check-yaml
+      - id: detect-private-key
+      - id: end-of-file-fixer
+        exclude: ^graphify-out/
+      - id: mixed-line-ending
+      - id: trailing-whitespace
+        exclude: ^graphify-out/
+
+  - repo: local
+    hooks:
+      - id: pymarkdown
+        name: pymarkdown
+        entry: uv run pymarkdown --config .pymarkdown.json scan
+        language: system
+        files: ^(AGENTS\.md|README\.md|CONTRIBUTING\.md|SECURITY\.md|docs/)
+        types: [markdown]
+      - id: yamllint
+        name: yamllint
+        entry: uv run yamllint
+        language: system
+        files: \.(yaml|yml)$
