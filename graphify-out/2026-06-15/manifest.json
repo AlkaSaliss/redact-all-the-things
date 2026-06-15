@@ -245,8 +245,8 @@
     "semantic_hash": ""
   },
   "openspec/changes/gh-7-control-plane-api/tasks.md": {
-    "mtime": 1781554761.527787,
-    "ast_hash": "5723e50467a7255eb87ffb945b416e19",
+    "mtime": 1781554873.6565588,
+    "ast_hash": "1b702d473cac82b1e7fae144cf70516c",
     "semantic_hash": ""
   },
   "src/redact_api/__init__.py": {
