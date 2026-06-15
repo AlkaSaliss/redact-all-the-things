@@ -48,6 +48,8 @@ class ManifestConflictError(RuntimeError):
 
 
 class ControlPlaneService:
+    """Coordinate owner-scoped job workflows across persistent AWS services."""
+
     def __init__(
         self,
         jobs: DynamoJobRepository,
@@ -238,6 +240,8 @@ class ControlPlaneService:
         target: JobStatus,
         mode: WorkerMode,
     ) -> Job:
+        """Persist a transition and submit its corresponding worker request."""
+
         try:
             updated = transition_job(job, target, now=self._clock())
             self._jobs.save(updated, expected_version=job.version)

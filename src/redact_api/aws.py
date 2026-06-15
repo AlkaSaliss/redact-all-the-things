@@ -17,11 +17,15 @@ class PersistenceConflictError(RuntimeError):
 
 @dataclass(frozen=True)
 class StoredManifest:
+    """A manifest paired with the S3 ETag used for optimistic writes."""
+
     manifest: PageManifest
     etag: str
 
 
 class DynamoJobRepository:
+    """Persist validated job records with DynamoDB conditional writes."""
+
     def __init__(self, table: Any) -> None:
         self._table = table
 
@@ -76,6 +80,8 @@ class DynamoJobRepository:
 
 
 class S3ObjectRepository:
+    """Manage job objects, presigned URLs, and versioned page manifests."""
+
     def __init__(
         self,
         client: Any,
@@ -228,6 +234,8 @@ class S3ObjectRepository:
 
 
 class AwsBatchSubmitter:
+    """Submit worker contracts to an AWS Batch queue."""
+
     def __init__(
         self,
         client: Any,
@@ -261,6 +269,8 @@ class AwsBatchSubmitter:
 
 @dataclass
 class RecordingBatchSubmitter:
+    """Record one local submission per idempotency token."""
+
     submissions: dict[str, WorkerSubmission] = field(default_factory=dict)
 
     def submit(self, submission: WorkerSubmission) -> WorkerSubmission:

@@ -17,6 +17,8 @@ from redact_api.services import ControlPlaneService
 
 
 def build_service() -> ControlPlaneService:
+    """Construct the production service from Lambda environment settings."""
+
     region = environ.get("AWS_REGION", "eu-west-1")
     endpoint_url = environ.get("AWS_ENDPOINT_URL")
     client_options = {

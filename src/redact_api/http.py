@@ -18,6 +18,8 @@ from redact_api.services import (
 
 
 class ApiModel(BaseModel):
+    """Strict base model for public API payloads."""
+
     model_config = ConfigDict(extra="forbid")
 
 
@@ -69,6 +71,8 @@ def create_app(
     *,
     allow_test_identity_header: bool = False,
 ) -> FastAPI:
+    """Build the control-plane API around a configured application service."""
+
     app = FastAPI(title="Redact All The Things Control Plane", version="0.1.0")
     app.state.service = service
     app.state.allow_test_identity_header = allow_test_identity_header
@@ -108,6 +112,8 @@ def create_app(
         )
 
     def current_owner(request: Request) -> str:
+        """Resolve the owner from API Gateway claims or the test-only header."""
+
         event: dict[str, Any] = request.scope.get("aws.event", {})
         claims = (
             event.get("requestContext", {})

@@ -27,12 +27,16 @@ Identifier = Annotated[
 
 
 class SourceType(StrEnum):
+    """Supported source document formats."""
+
     PDF = "pdf"
     JPEG = "jpeg"
     PNG = "png"
 
 
 class JobStatus(StrEnum):
+    """Persistent states in the job lifecycle."""
+
     UPLOADING = "uploading"
     QUEUED = "queued"
     ANALYZING = "analyzing"
@@ -44,11 +48,15 @@ class JobStatus(StrEnum):
 
 
 class WorkerMode(StrEnum):
+    """Worker operations submitted by the control plane."""
+
     ANALYZE = "analyze"
     RENDER = "render"
 
 
 class FailureCode(StrEnum):
+    """Safe failure classifications that may be persisted and returned."""
+
     ANALYZE_TRANSIENT = "analyze_transient"
     ANALYZE_SPOT_INTERRUPTED = "analyze_spot_interrupted"
     RENDER_TRANSIENT = "render_transient"
@@ -59,6 +67,8 @@ class FailureCode(StrEnum):
 
 
 class RegionSource(StrEnum):
+    """Origin of a redaction region."""
+
     AUTOMATIC = "automatic"
     MANUAL = "manual"
 
@@ -68,6 +78,8 @@ class InvalidTransitionError(ValueError):
 
 
 class ContractModel(BaseModel):
+    """Immutable base model that rejects unknown contract fields."""
+
     model_config = ConfigDict(extra="forbid", frozen=True)
 
 
@@ -76,6 +88,8 @@ def _is_aware(value: datetime) -> bool:
 
 
 class Job(ContractModel):
+    """Persistent owner-scoped job record."""
+
     id: Identifier
     owner_id: Identifier
     source_type: SourceType
@@ -113,6 +127,8 @@ class Job(ContractModel):
 
 
 class WorkerSubmission(ContractModel):
+    """Idempotent request passed from the control plane to a worker."""
+
     job_id: Identifier
     owner_id: Identifier
     source_key: str = Field(min_length=1)
@@ -131,6 +147,8 @@ class WorkerSubmission(ContractModel):
 
 
 class RedactionRegion(ContractModel):
+    """Normalized page-space rectangle selected for redaction."""
+
     id: Identifier
     page_number: int = Field(ge=1, le=200)
     x: float = Field(ge=0, le=1)
@@ -157,6 +175,8 @@ class RedactionRegion(ContractModel):
 
 
 class PageManifest(ContractModel):
+    """Versioned per-page suggestions and current redaction selections."""
+
     job_id: Identifier
     page_number: int = Field(ge=1, le=200)
     suggestions: tuple[RedactionRegion, ...]
@@ -195,16 +215,22 @@ _RETRY_MODES: dict[FailureCode, WorkerMode] = {
 
 
 def is_expired(job: Job, now: datetime) -> bool:
+    """Return whether access to a job has expired at ``now``."""
+
     if not _is_aware(now):
         raise ValueError("now must be timezone-aware")
     return now >= job.expires_at
 
 
 def retry_mode(code: FailureCode) -> WorkerMode | None:
+    """Return the worker mode allowed for a retryable failure code."""
+
     return _RETRY_MODES.get(code)
 
 
 def submission_token(job: Job, target: JobStatus) -> str:
+    """Build the stable token for a specific persisted lifecycle transition."""
+
     return f"{job.id}:{target.value}:{job.version + 1}"
 
 
@@ -215,6 +241,8 @@ def transition_job(
     now: datetime,
     failure_code: FailureCode | None = None,
 ) -> Job:
+    """Validate and apply one lifecycle transition without persisting it."""
+
     if target is JobStatus.EXPIRED:
         if not is_expired(job, now):
             raise InvalidTransitionError("job has not expired")
@@ -256,6 +284,8 @@ def save_manifest(
     regions: tuple[RedactionRegion, ...],
     now: datetime,
 ) -> PageManifest:
+    """Create the next immutable version of a page manifest."""
+
     return PageManifest(
         job_id=manifest.job_id,
         page_number=manifest.page_number,
