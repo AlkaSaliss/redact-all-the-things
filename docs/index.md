@@ -4,9 +4,9 @@ Redact All The Things is an assisted file-redaction application for PDFs,
 JPEGs, and PNGs. It combines OCR and PII detection with a mandatory human
 review step before producing a permanently rasterized redacted output.
 
-The project is currently in repository bootstrap. Application and AWS runtime
-implementation will be delivered through separate GitHub Issues and OpenSpec
-changes.
+The project is implementing the roadmap incrementally through separate GitHub
+Issues and OpenSpec changes. The Python control-plane contracts are the first
+application milestone.
 
 ## Project principles
 
@@ -21,6 +21,7 @@ changes.
 
 - Follow the [implementation roadmap](roadmap.md).
 - Read the [technical scope](architecture/technical-scope.md).
+- Review the [control-plane API](architecture/control-plane-api.md).
 - Follow the [development workflow](development.md).
 - Review the [architecture decisions](adr/index.md).
 - Use the [GitHub repository](https://github.com/AlkaSaliss/redact-all-the-things)

@@ -1,0 +1,34 @@
+{
+  "job_id": "job-123",
+  "page_number": 1,
+  "suggestions": [
+    {
+      "id": "region-1",
+      "page_number": 1,
+      "x": 0.1,
+      "y": 0.2,
+      "width": 0.3,
+      "height": 0.1,
+      "source": "automatic",
+      "category": "EMAIL",
+      "confidence": 0.95,
+      "selected": true
+    }
+  ],
+  "regions": [
+    {
+      "id": "region-1",
+      "page_number": 1,
+      "x": 0.1,
+      "y": 0.2,
+      "width": 0.3,
+      "height": 0.1,
+      "source": "automatic",
+      "category": "EMAIL",
+      "confidence": 0.95,
+      "selected": true
+    }
+  ],
+  "version": 1,
+  "last_saved_at": "2026-06-15T12:30:00Z"
+}

@@ -37,7 +37,9 @@ nav:
   - Development: development.md
   - Architecture:
       - Technical scope: architecture/technical-scope.md
+      - Control-plane API: architecture/control-plane-api.md
       - Decisions:
           - Overview: adr/index.md
           - "0001: Documentation and governance": adr/0001-documentation-and-governance.md
+          - "0002: Control-plane boundaries": adr/0002-control-plane-boundaries.md
           - Template: adr/template.md

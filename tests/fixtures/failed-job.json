@@ -1,0 +1,15 @@
+{
+  "id": "job-123",
+  "owner_id": "user-456",
+  "source_type": "pdf",
+  "source_key": "users/user-456/jobs/job-123/source",
+  "output_key": "users/user-456/jobs/job-123/output",
+  "status": "failed",
+  "page_count": 1,
+  "completed_pages": 0,
+  "created_at": "2026-06-15T12:00:00Z",
+  "expires_at": "2026-06-16T12:00:00Z",
+  "model_versions": {},
+  "failure_code": "analyze_spot_interrupted",
+  "version": 3
+}

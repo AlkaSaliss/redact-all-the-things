@@ -1,0 +1,20 @@
+services:
+  localstack:
+    image: localstack/localstack:4.14.0
+    ports:
+      - "127.0.0.1:4566:4566"
+    environment:
+      AWS_DEFAULT_REGION: eu-west-1
+      DEBUG: "0"
+      SERVICES: batch,dynamodb,s3
+    healthcheck:
+      test:
+        - CMD
+        - curl
+        - --fail
+        - http://localhost:4566/_localstack/health
+      interval: 2s
+      timeout: 2s
+      retries: 30
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
