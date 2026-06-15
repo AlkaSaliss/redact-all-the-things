@@ -142,6 +142,7 @@ While implementing:
 Before finishing:
 
 - Run the relevant tests, static checks, and documentation build.
+- add docstring where it make sense. Don't over-engineer it. Just put your best judgement at work as a senior expert software developer and document the code where you judge it is necessary.
 - Review the diff for unrelated or generated files.
 - Verify implementation, tests, documentation, and ADRs remain consistent.
 - Report any checks that could not be run.
