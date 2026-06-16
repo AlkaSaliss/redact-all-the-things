@@ -25,4 +25,4 @@
 
 - [x] 5.1 Run pre-commit, strict MkDocs, and strict OpenSpec validation
 - [x] 5.2 Sync the repository-governance spec and archive the change
-- [ ] 5.3 Open the pull request and verify CI
+- [x] 5.3 Open the pull request and verify CI
