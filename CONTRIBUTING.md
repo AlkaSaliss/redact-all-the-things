@@ -13,6 +13,9 @@ Read:
 ## Workflow
 
 1. Create or select a GitHub Issue.
+   - Use an Epic issue for roadmap context and child issue tracking.
+   - Use an Implementation Slice issue for product or process work that will
+     be implemented and reviewed.
 2. Create a branch named `<type>/<issue-number>-<slug>`.
 3. For non-trivial work, create OpenSpec change
    `gh-<issue-number>-<slug>` and complete its artifacts.
@@ -23,6 +26,10 @@ Read:
 8. Open a pull request containing `Closes #<issue-number>`.
 9. Verify and archive the OpenSpec change before merge.
 10. Squash merge only after required checks pass.
+
+Parent epics are planning containers. Implementation slices are the normal
+unit for OpenSpec, branches, pull requests, tests, and review. For solo
+development, keep one child implementation issue active at a time.
 
 ## Local checks
 

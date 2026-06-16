@@ -1,8 +1,11 @@
 # Implementation roadmap
 
-This roadmap defines the dependency order for the six approved implementation
-milestones. GitHub issue numbers reflect creation order, not implementation
-order.
+This roadmap defines the dependency order for the approved product epics.
+GitHub issue numbers reflect creation order, not implementation order.
+
+The roadmap issues are parent epics. Implementation happens through child
+issues sized for one to two days of focused work. Each child implementation
+issue owns its own OpenSpec change, branch, pull request, tests, and review.
 
 ## Sequence
 
@@ -31,9 +34,14 @@ flowchart LR
 
 ## Delivery policy
 
-- For solo development, keep one implementation milestone in progress.
-- Move only the next dependency-satisfied milestone to `Ready`; keep later
-  milestones in `Backlog`.
+- For solo development, keep one child implementation issue in progress.
+- Parent epics track roadmap progress; child issues drive `Ready`,
+  `In Progress`, `In Review`, and `Done` implementation status.
+- Move only the next dependency-satisfied child issue to `Ready`; keep later
+  child issues in `Backlog`.
+- Full OpenSpec artifacts are required for child implementation issues.
+  Parent epics may skip implementation OpenSpec unless their scope or
+  governance changes.
 - After #7 is complete, #6 and #8 may proceed in parallel only when separate
   contributors are available. For solo development, complete #6 first because
   OCR quality, mapping, memory, model packaging, and cost are the highest-risk
@@ -41,15 +49,36 @@ flowchart LR
 - Security, privacy, cost, documentation, and tests are continuous
   requirements. Issue #3 performs final system verification; it does not defer
   those concerns from earlier milestones.
-- Each milestone uses its own GitHub Issue, OpenSpec change, branch, pull
+- Each child implementation issue uses its own OpenSpec change, branch, pull
   request, tests, documentation updates, required ADRs, and Graphify refresh.
+
+## Epic decomposition
+
+### #6 PDF and image analysis worker
+
+Issue #6 is decomposed into child issues for:
+
+- validating analysis inputs and safe failure handling;
+- rasterizing PDF and image sources into page artifacts;
+- extracting OCR text per page;
+- detecting PII and mapping spans to normalized redaction regions;
+- checkpointing and resuming interrupted analysis;
+- integrating worker results with control-plane manifests.
+
+### #8 React frontend and authentication shell
+
+Issue #8 starts with lightweight child issues for:
+
+- frontend API client and contract fixtures;
+- Cognito authentication shell;
+- upload and dashboard fixture flow.
 
 ## Contract ownership
 
-Issue #7 owns the initial shared data and lifecycle contracts. Later milestones
-must consume those contracts. Any later contract change requires an explicit
-OpenSpec update, compatibility analysis, and coordinated updates to affected
-producers and consumers.
+Issue #7 owns the initial shared data and lifecycle contracts. Later child
+implementation issues must consume those contracts. Any later contract change
+requires an explicit OpenSpec update, compatibility analysis, and coordinated
+updates to affected producers and consumers.
 
 Local development uses mocked AWS clients and containers through issue #5.
 Production AWS deployment begins only in issue #4 after application behavior

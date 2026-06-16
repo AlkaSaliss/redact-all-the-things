@@ -37,7 +37,16 @@ models, infrastructure, security, dependencies, or architecture. Typo-only and
 similarly mechanical documentation fixes may skip OpenSpec, but they still
 require an issue branch and pull request.
 
-For non-trivial work:
+Roadmap milestone issues are parent epics. They track goals, dependencies,
+child issues, and completion gates. They are not the default unit for
+implementation OpenSpec changes.
+
+Implementation-slice child issues are the default unit for non-trivial work.
+Aim for one to two days of focused implementation per child issue. Each
+non-trivial child issue gets its own OpenSpec change, branch, pull request,
+tests, documentation updates, and review.
+
+For non-trivial implementation-slice work:
 
 1. Create or link a GitHub Issue and ensure the work is represented in GitHub
    Projects.
@@ -55,6 +64,11 @@ For non-trivial work:
    OpenSpec change as the final content update in the pull request.
 9. Merge only after all required CI checks pass on the archived change, then
    move the issue to `Done`.
+
+Parent epics may skip implementation OpenSpec unless the epic's scope,
+roadmap policy, or governance changes. For solo development, keep only one
+dependency-satisfied child implementation issue in `Ready` or `In Progress`;
+later child issues should remain in `Backlog`.
 
 Do not bypass required checks. Solo maintainers may merge their own pull
 requests after all required checks pass.
