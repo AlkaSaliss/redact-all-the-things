@@ -1,0 +1,8 @@
+{
+  "job_id": "job-123",
+  "owner_id": "user-456",
+  "source_key": "users/user-456/jobs/job-123/source",
+  "output_key": "users/user-456/jobs/job-123/output",
+  "mode": "analyze",
+  "idempotency_token": "job-123:queued:2"
+}

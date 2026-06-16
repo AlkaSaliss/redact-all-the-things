@@ -8,6 +8,7 @@ and implementation tracking, and MkDocs for versioned documentation.
 - Git
 - Python 3.12
 - [uv](https://docs.astral.sh/uv/)
+- Docker with Compose
 - Node.js with OpenSpec `1.4.1`
 - Graphify when changing indexed source or architecture content
 
@@ -16,6 +17,7 @@ and implementation tracking, and MkDocs for versioned documentation.
 ```bash
 uv sync --locked
 uv run pre-commit install
+docker compose up -d localstack
 ```
 
 ## Change lifecycle
@@ -37,9 +39,14 @@ Run the same checks used by CI:
 ```bash
 uv sync --locked
 uv run pre-commit run --all-files
+uv run pytest
 uv run mkdocs build --strict
 openspec validate --all --strict --no-interactive
 ```
+
+The test suite uses pinned LocalStack services for DynamoDB and S3. See the
+[control-plane API documentation](architecture/control-plane-api.md) for the
+local AWS boundary and Batch testing limitation.
 
 Preview the documentation:
 

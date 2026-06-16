@@ -168,6 +168,11 @@ venv.bak/
 # mkdocs documentation
 /site
 
+# Project-generated knowledge graph cache
+graphify-out/cache/
+graphify-out/cost.json
+graphify-out/**/cost.json
+
 # mypy
 .mypy_cache/
 .dmypy.json

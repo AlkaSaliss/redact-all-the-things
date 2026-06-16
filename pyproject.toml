@@ -3,13 +3,27 @@ name = "redact-all-the-things-tooling"
 version = "0.1.0"
 description = "Repository tooling for Redact All The Things"
 requires-python = ">=3.12,<3.13"
-dependencies = []
+dependencies = [
+    "boto3==1.43.29",
+    "fastapi==0.137.1",
+    "mangum==0.21.0",
+    "pydantic==2.13.4",
+]
 
 [dependency-groups]
 dev = [
+  "httpx==0.28.1",
   "mkdocs==1.6.1",
   "mkdocs-material==9.7.6",
   "pre-commit==4.6.0",
   "pymarkdownlnt==0.9.35",
+  "pytest==9.1.0",
   "yamllint==1.37.1",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+markers = [
+  "localstack: requires the local LocalStack Docker service",
 ]

@@ -7,6 +7,7 @@ ADR and mark the previous record as superseded.
 ## Records
 
 - [ADR 0001: Adopt documentation-as-code and GitHub governance](0001-documentation-and-governance.md)
+- [ADR 0002: Define control-plane boundaries and persistence](0002-control-plane-boundaries.md)
 
 ## Creating a record
 
