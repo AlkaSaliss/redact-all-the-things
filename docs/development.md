@@ -20,9 +20,23 @@ uv run pre-commit install
 docker compose up -d localstack
 ```
 
+## Work item model
+
+Roadmap milestone issues are parent epics. They hold context, dependency gates,
+and child issue checklists. They are not the normal unit for implementation
+OpenSpec changes.
+
+Implementation-slice child issues are the delivery unit. A slice should fit in
+one to two days of focused work and produce one reviewable pull request.
+Non-trivial implementation slices require OpenSpec artifacts.
+
+For solo development, keep only one dependency-satisfied child issue in
+`Ready` or `In Progress`. Keep later child issues in `Backlog`.
+
 ## Change lifecycle
 
-1. Create or link a GitHub Issue.
+1. Create or link a GitHub Issue. For roadmap work, use an implementation-slice
+   child issue linked to its parent epic.
 2. Create a branch named `<type>/<issue-number>-<slug>`.
 3. Create an OpenSpec change named `gh-<issue-number>-<slug>`.
 4. Complete proposal, specs, design, and tasks before implementation.

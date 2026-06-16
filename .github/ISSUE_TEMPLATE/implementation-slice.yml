@@ -1,0 +1,57 @@
+name: Implementation Slice
+description: Define one reviewable implementation issue under a parent epic
+title: "[Slice]: "
+labels:
+  - enhancement
+body:
+  - type: input
+    id: parent
+    attributes:
+      label: Parent epic
+      description: Link the parent roadmap issue, for example "#6".
+      placeholder: "#6"
+    validations:
+      required: true
+  - type: input
+    id: openspec
+    attributes:
+      label: OpenSpec change
+      description: Planned change name in gh-<issue>-<slug> form.
+      placeholder: gh-123-worker-input-validation
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Outcome
+      description: What behavior or repository capability will this slice deliver?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Observable checks that prove the slice is complete.
+      placeholder: |
+        - ...
+        - ...
+    validations:
+      required: true
+  - type: textarea
+    id: test_plan
+    attributes:
+      label: Test plan
+      description: Tests, docs builds, or manual checks expected for this slice.
+    validations:
+      required: true
+  - type: checkboxes
+    id: review_size
+    attributes:
+      label: Review-size checks
+      options:
+        - label: This slice is expected to fit in one to two days of focused work.
+          required: true
+        - label: This slice can be reviewed independently of later slices.
+          required: true
+        - label: This slice has one OpenSpec change, one branch, and one PR.
+          required: true

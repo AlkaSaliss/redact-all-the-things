@@ -1,0 +1,48 @@
+name: Epic
+description: Track a roadmap milestone or multi-issue capability
+title: "[Epic]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What product or engineering outcome does this epic coordinate?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context and dependencies
+      description: Link prerequisite epics, specs, ADRs, or constraints.
+    validations:
+      required: true
+  - type: textarea
+    id: child_issues
+    attributes:
+      label: Child implementation issues
+      description: List child issues when known; keep this updated as slices are created.
+      placeholder: |
+        - [ ] #123 Validate inputs
+        - [ ] #124 Persist results
+    validations:
+      required: false
+  - type: textarea
+    id: completion_gate
+    attributes:
+      label: Completion gate
+      description: What must be true before this epic can move to Done?
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Workflow checks
+      options:
+        - label: This epic is a planning container, not a single implementation PR.
+          required: true
+        - label: Implementation work will be split into one- to two-day child issues.
+          required: true
+        - label: Child implementation issues will carry their own OpenSpec changes.
+          required: true
