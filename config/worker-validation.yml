@@ -1,0 +1,4 @@
+worker_validation:
+  max_file_size_bytes: 104857600
+  max_pdf_pages: 200
+  max_image_pixels: 50000000

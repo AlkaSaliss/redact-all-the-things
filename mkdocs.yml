@@ -38,6 +38,7 @@ nav:
   - Architecture:
       - Technical scope: architecture/technical-scope.md
       - Control-plane API: architecture/control-plane-api.md
+      - Analysis worker: architecture/analysis-worker.md
       - Decisions:
           - Overview: adr/index.md
           - "0001: Documentation and governance": adr/0001-documentation-and-governance.md

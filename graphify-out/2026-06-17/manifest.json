@@ -385,8 +385,8 @@
     "semantic_hash": ""
   },
   "openspec/specs/job-contracts/spec.md": {
-    "mtime": 1781726029.6182506,
-    "ast_hash": "9611849c64024f03c2d8854531f54ad8",
+    "mtime": 1781633416.8893368,
+    "ast_hash": "feee0a3ddc6835d939922633799694ba",
     "semantic_hash": ""
   },
   ".github/ISSUE_TEMPLATE/epic.yml": {
@@ -449,39 +449,34 @@
     "ast_hash": "ea663cbeef29f86ed81d7423ffde997a",
     "semantic_hash": ""
   },
-  "openspec/changes/archive/2026-06-17-gh-16-worker-input-validation/.openspec.yaml": {
+  "openspec/changes/gh-16-worker-input-validation/.openspec.yaml": {
     "mtime": 1781645673.2362835,
     "ast_hash": "b2b5f1d6d51f1aaa1d35b900f1889ae4",
     "semantic_hash": ""
   },
-  "openspec/changes/archive/2026-06-17-gh-16-worker-input-validation/design.md": {
+  "openspec/changes/gh-16-worker-input-validation/design.md": {
     "mtime": 1781725605.8858228,
     "ast_hash": "f9cdc85497eafa210159e1dcf9825d35",
     "semantic_hash": ""
   },
-  "openspec/changes/archive/2026-06-17-gh-16-worker-input-validation/proposal.md": {
+  "openspec/changes/gh-16-worker-input-validation/proposal.md": {
     "mtime": 1781646422.5879622,
     "ast_hash": "27f3de4da27ff204a1bfff564007545d",
     "semantic_hash": ""
   },
-  "openspec/changes/archive/2026-06-17-gh-16-worker-input-validation/specs/job-contracts/spec.md": {
+  "openspec/changes/gh-16-worker-input-validation/specs/job-contracts/spec.md": {
     "mtime": 1781646423.0558417,
     "ast_hash": "d106642d945fd2a976ff9a75122621b6",
     "semantic_hash": ""
   },
-  "openspec/changes/archive/2026-06-17-gh-16-worker-input-validation/specs/worker-input-validation/spec.md": {
+  "openspec/changes/gh-16-worker-input-validation/specs/worker-input-validation/spec.md": {
     "mtime": 1781723731.8851368,
     "ast_hash": "275bcd04be519e69f9669eafc664575e",
     "semantic_hash": ""
   },
-  "openspec/changes/archive/2026-06-17-gh-16-worker-input-validation/tasks.md": {
-    "mtime": 1781725873.2434967,
-    "ast_hash": "b6128ed6cefa72944d9c40eb8248e757",
-    "semantic_hash": ""
-  },
-  "openspec/specs/worker-input-validation/spec.md": {
-    "mtime": 1781726029.8201542,
-    "ast_hash": "73a146afe18757909874198b2cc42ef0",
+  "openspec/changes/gh-16-worker-input-validation/tasks.md": {
+    "mtime": 1781723903.6718943,
+    "ast_hash": "389d9105b23acb1b0debdae63dae9e81",
     "semantic_hash": ""
   }
 }
