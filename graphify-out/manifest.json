@@ -110,12 +110,12 @@
     "semantic_hash": "9c591ff00ccff95c320eeb0c7fa977cb"
   },
   "AGENTS.md": {
-    "mtime": 1781637955.8590028,
-    "ast_hash": "882ffefa77610b43c8457825e1398705",
+    "mtime": 1781725002.2775996,
+    "ast_hash": "616cb60613838d4b61a9afdcd3a649e0",
     "semantic_hash": ""
   },
   "CONTRIBUTING.md": {
-    "mtime": 1781637955.728846,
+    "mtime": 1781644816.4811935,
     "ast_hash": "ab56383deaedd1889cd31b54ba9490f5",
     "semantic_hash": ""
   },
@@ -145,7 +145,7 @@
     "semantic_hash": "74b281136e58def7c6e743056dc31062"
   },
   "docs/development.md": {
-    "mtime": 1781637955.5975695,
+    "mtime": 1781644816.4823766,
     "ast_hash": "162c0f84901755cd8c1a6d245f91ef4c",
     "semantic_hash": ""
   },
@@ -155,8 +155,8 @@
     "semantic_hash": ""
   },
   "mkdocs.yml": {
-    "mtime": 1781633416.8796082,
-    "ast_hash": "6ac1af32b5cc96eec1eb7bb40d37cef1",
+    "mtime": 1781723645.344684,
+    "ast_hash": "698355c799ec28c24e84a6bbe1bdfff1",
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-06-14-gh-1-bootstrap-governance/.openspec.yaml": {
@@ -185,12 +185,12 @@
     "semantic_hash": "5439ec090c98a27f690aec7c36c7af72"
   },
   "openspec/specs/repository-governance/spec.md": {
-    "mtime": 1781638787.998189,
+    "mtime": 1781644816.5025828,
     "ast_hash": "9b82c5e8bd6458035226f5d6bf9d1ec1",
     "semantic_hash": ""
   },
   "docs/roadmap.md": {
-    "mtime": 1781637955.47012,
+    "mtime": 1781644816.4826076,
     "ast_hash": "ed1898b1ed70193d3e6799d213653c5a",
     "semantic_hash": ""
   },
@@ -390,38 +390,93 @@
     "semantic_hash": ""
   },
   ".github/ISSUE_TEMPLATE/epic.yml": {
-    "mtime": 1781637979.5379531,
+    "mtime": 1781644816.48005,
     "ast_hash": "55f1ba67bcb01374d6f49033eb7fd3ea",
     "semantic_hash": ""
   },
   ".github/ISSUE_TEMPLATE/implementation-slice.yml": {
-    "mtime": 1781637979.6727395,
+    "mtime": 1781644816.4804182,
     "ast_hash": "1a830dffa36b758f7bead35e2e01d1c4",
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-06-16-gh-15-epic-slice-workflow/.openspec.yaml": {
-    "mtime": 1781637672.8497534,
+    "mtime": 1781644816.496917,
     "ast_hash": "b2b5f1d6d51f1aaa1d35b900f1889ae4",
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-06-16-gh-15-epic-slice-workflow/design.md": {
-    "mtime": 1781637912.3971605,
+    "mtime": 1781644816.4975698,
     "ast_hash": "469730de78bee50cf0f384bb5c1da7da",
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-06-16-gh-15-epic-slice-workflow/proposal.md": {
-    "mtime": 1781637912.2683609,
+    "mtime": 1781644816.499569,
     "ast_hash": "439d29fdbe1779b4a4376f34077b325a",
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-06-16-gh-15-epic-slice-workflow/specs/repository-governance/spec.md": {
-    "mtime": 1781637912.5274856,
+    "mtime": 1781644816.5009205,
     "ast_hash": "eb5f0a471448ef0e19bf64f42a401764",
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-06-16-gh-15-epic-slice-workflow/tasks.md": {
-    "mtime": 1781639120.4961584,
+    "mtime": 1781644816.5023453,
     "ast_hash": "106f1a03006ab12dd2735050e4b6c0d9",
+    "semantic_hash": ""
+  },
+  "src/redact_api/worker.py": {
+    "mtime": 1781725583.6791961,
+    "ast_hash": "d87609593002b949aa00dd602c9bf18e",
+    "semantic_hash": ""
+  },
+  "tests/worker/__init__.py": {
+    "mtime": 1781725797.5880737,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "tests/worker/test_validation.py": {
+    "mtime": 1781723731.4588273,
+    "ast_hash": "8c53eb4d97ca0222a0077ef8b4612e1a",
+    "semantic_hash": ""
+  },
+  "config/worker-validation.yml": {
+    "mtime": 1781723731.3255901,
+    "ast_hash": "cc9d4c9f7912249a40aa4b53a449459d",
+    "semantic_hash": ""
+  },
+  "docs/architecture/analysis-worker.md": {
+    "mtime": 1781725605.762677,
+    "ast_hash": "ea663cbeef29f86ed81d7423ffde997a",
+    "semantic_hash": ""
+  },
+  "openspec/changes/gh-16-worker-input-validation/.openspec.yaml": {
+    "mtime": 1781645673.2362835,
+    "ast_hash": "b2b5f1d6d51f1aaa1d35b900f1889ae4",
+    "semantic_hash": ""
+  },
+  "openspec/changes/gh-16-worker-input-validation/design.md": {
+    "mtime": 1781725605.8858228,
+    "ast_hash": "f9cdc85497eafa210159e1dcf9825d35",
+    "semantic_hash": ""
+  },
+  "openspec/changes/gh-16-worker-input-validation/proposal.md": {
+    "mtime": 1781646422.5879622,
+    "ast_hash": "27f3de4da27ff204a1bfff564007545d",
+    "semantic_hash": ""
+  },
+  "openspec/changes/gh-16-worker-input-validation/specs/job-contracts/spec.md": {
+    "mtime": 1781646423.0558417,
+    "ast_hash": "d106642d945fd2a976ff9a75122621b6",
+    "semantic_hash": ""
+  },
+  "openspec/changes/gh-16-worker-input-validation/specs/worker-input-validation/spec.md": {
+    "mtime": 1781723731.8851368,
+    "ast_hash": "275bcd04be519e69f9669eafc664575e",
+    "semantic_hash": ""
+  },
+  "openspec/changes/gh-16-worker-input-validation/tasks.md": {
+    "mtime": 1781723903.6718943,
+    "ast_hash": "389d9105b23acb1b0debdae63dae9e81",
     "semantic_hash": ""
   }
 }

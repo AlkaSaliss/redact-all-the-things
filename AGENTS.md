@@ -152,6 +152,7 @@ While implementing:
 - Preserve changes made by others.
 - Follow existing project patterns when they exist.
 - Update OpenSpec task checkboxes as each task is completed.
+- Don't over-engineer. Don't refactor logic in a function that is used only once or twice, and that is not complex enough to justify being extracted in its own function/class.
 
 Before finishing:
 
