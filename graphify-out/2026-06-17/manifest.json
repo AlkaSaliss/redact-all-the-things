@@ -110,7 +110,7 @@
     "semantic_hash": "9c591ff00ccff95c320eeb0c7fa977cb"
   },
   "AGENTS.md": {
-    "mtime": 1781725002.2775996,
+    "mtime": 1781726421.829927,
     "ast_hash": "616cb60613838d4b61a9afdcd3a649e0",
     "semantic_hash": ""
   },
@@ -155,7 +155,7 @@
     "semantic_hash": ""
   },
   "mkdocs.yml": {
-    "mtime": 1781723645.344684,
+    "mtime": 1781726421.8407087,
     "ast_hash": "698355c799ec28c24e84a6bbe1bdfff1",
     "semantic_hash": ""
   },
@@ -385,8 +385,8 @@
     "semantic_hash": ""
   },
   "openspec/specs/job-contracts/spec.md": {
-    "mtime": 1781633416.8893368,
-    "ast_hash": "feee0a3ddc6835d939922633799694ba",
+    "mtime": 1781726421.8475075,
+    "ast_hash": "9611849c64024f03c2d8854531f54ad8",
     "semantic_hash": ""
   },
   ".github/ISSUE_TEMPLATE/epic.yml": {
@@ -425,58 +425,88 @@
     "semantic_hash": ""
   },
   "src/redact_api/worker.py": {
-    "mtime": 1781725583.6791961,
+    "mtime": 1781726421.8496764,
     "ast_hash": "d87609593002b949aa00dd602c9bf18e",
     "semantic_hash": ""
   },
   "tests/worker/__init__.py": {
-    "mtime": 1781725797.5880737,
+    "mtime": 1781726421.8500206,
     "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
     "semantic_hash": ""
   },
   "tests/worker/test_validation.py": {
-    "mtime": 1781723731.4588273,
+    "mtime": 1781726421.8511436,
     "ast_hash": "8c53eb4d97ca0222a0077ef8b4612e1a",
     "semantic_hash": ""
   },
   "config/worker-validation.yml": {
-    "mtime": 1781723731.3255901,
+    "mtime": 1781726421.8308444,
     "ast_hash": "cc9d4c9f7912249a40aa4b53a449459d",
     "semantic_hash": ""
   },
   "docs/architecture/analysis-worker.md": {
-    "mtime": 1781725605.762677,
+    "mtime": 1781726421.8311925,
     "ast_hash": "ea663cbeef29f86ed81d7423ffde997a",
     "semantic_hash": ""
   },
-  "openspec/changes/gh-16-worker-input-validation/.openspec.yaml": {
-    "mtime": 1781645673.2362835,
+  "openspec/changes/archive/2026-06-17-gh-16-worker-input-validation/.openspec.yaml": {
+    "mtime": 1781726421.8424492,
     "ast_hash": "b2b5f1d6d51f1aaa1d35b900f1889ae4",
     "semantic_hash": ""
   },
-  "openspec/changes/gh-16-worker-input-validation/design.md": {
-    "mtime": 1781725605.8858228,
+  "openspec/changes/archive/2026-06-17-gh-16-worker-input-validation/design.md": {
+    "mtime": 1781726421.8439822,
     "ast_hash": "f9cdc85497eafa210159e1dcf9825d35",
     "semantic_hash": ""
   },
-  "openspec/changes/gh-16-worker-input-validation/proposal.md": {
-    "mtime": 1781646422.5879622,
+  "openspec/changes/archive/2026-06-17-gh-16-worker-input-validation/proposal.md": {
+    "mtime": 1781726421.8447003,
     "ast_hash": "27f3de4da27ff204a1bfff564007545d",
     "semantic_hash": ""
   },
-  "openspec/changes/gh-16-worker-input-validation/specs/job-contracts/spec.md": {
-    "mtime": 1781646423.0558417,
+  "openspec/changes/archive/2026-06-17-gh-16-worker-input-validation/specs/job-contracts/spec.md": {
+    "mtime": 1781726421.8450642,
     "ast_hash": "d106642d945fd2a976ff9a75122621b6",
     "semantic_hash": ""
   },
-  "openspec/changes/gh-16-worker-input-validation/specs/worker-input-validation/spec.md": {
-    "mtime": 1781723731.8851368,
+  "openspec/changes/archive/2026-06-17-gh-16-worker-input-validation/specs/worker-input-validation/spec.md": {
+    "mtime": 1781726421.8462913,
     "ast_hash": "275bcd04be519e69f9669eafc664575e",
     "semantic_hash": ""
   },
-  "openspec/changes/gh-16-worker-input-validation/tasks.md": {
-    "mtime": 1781723903.6718943,
-    "ast_hash": "389d9105b23acb1b0debdae63dae9e81",
+  "openspec/changes/archive/2026-06-17-gh-16-worker-input-validation/tasks.md": {
+    "mtime": 1781726421.846913,
+    "ast_hash": "b6128ed6cefa72944d9c40eb8248e757",
+    "semantic_hash": ""
+  },
+  "openspec/specs/worker-input-validation/spec.md": {
+    "mtime": 1781726421.8481967,
+    "ast_hash": "73a146afe18757909874198b2cc42ef0",
+    "semantic_hash": ""
+  },
+  "openspec/changes/gh-17-worker-rasterization/.openspec.yaml": {
+    "mtime": 1781727288.0935166,
+    "ast_hash": "bbc27e4b9d9d82db2a61a43236c8d23e",
+    "semantic_hash": ""
+  },
+  "openspec/changes/gh-17-worker-rasterization/design.md": {
+    "mtime": 1781727374.6184235,
+    "ast_hash": "79364c04163c021adf7cc309a9793e4c",
+    "semantic_hash": ""
+  },
+  "openspec/changes/gh-17-worker-rasterization/proposal.md": {
+    "mtime": 1781727327.3945427,
+    "ast_hash": "88f67cd7ecc1bf09384aab3835e39710",
+    "semantic_hash": ""
+  },
+  "openspec/changes/gh-17-worker-rasterization/specs/worker-rasterization/spec.md": {
+    "mtime": 1781727349.5175369,
+    "ast_hash": "a53ae8844be6173bde82eadc6d0d71e0",
+    "semantic_hash": ""
+  },
+  "openspec/changes/gh-17-worker-rasterization/tasks.md": {
+    "mtime": 1781727399.4167995,
+    "ast_hash": "1d9630b33f37a980de21484861ed04df",
     "semantic_hash": ""
   }
 }

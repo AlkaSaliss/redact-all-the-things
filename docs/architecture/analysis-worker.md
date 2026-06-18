@@ -4,9 +4,9 @@ The analysis worker consumes owner-scoped `analyze` submissions from the
 control plane and reuses the shared job, source-type, and failure-code
 contracts from `redact_api.domain`.
 
-This slice implements only the validation boundary before analysis work starts.
-Rasterization, OCR, PII detection, checkpoints, previews, page manifests, and
-rendering remain later worker slices.
+The worker currently implements source validation and page rasterization.
+OCR, PII detection, checkpoints, review page manifests, and render-mode export
+remain later worker slices.
 
 ## Source validation
 
@@ -43,9 +43,40 @@ Validation rejects:
 - PDFs above 200 pages;
 - JPEG or PNG images above 50,000,000 decoded pixels.
 
-The current implementation uses standard-library byte parsing for PDF and image
-content. No PDF or image parser dependency is required for this validation-only
-slice.
+The validation boundary uses standard-library byte parsing for PDF and image
+metadata so invalid content can fail before renderer or OCR work starts.
+
+## Rasterization
+
+After validation succeeds, rasterization converts every accepted source into
+PNG page artifacts under the owner/job namespace:
+
+```text
+users/{owner_id}/jobs/{job_id}/artifacts/pages/{page_number}.png
+users/{owner_id}/jobs/{job_id}/artifacts/pages/index.json
+```
+
+PDF sources are rendered with PDFium through `pypdfium2` at a fixed 150 DPI.
+JPEG and PNG sources are decoded with Pillow and re-encoded as the same
+one-page PNG artifact contract. Page numbering is 1-based and preserves source
+order.
+
+The page-artifact index contains one entry per artifact with:
+
+- page number;
+- raster image width;
+- raster image height;
+- format `png`;
+- owner/job-namespaced storage key.
+
+The index is not a review manifest. It does not contain OCR text, detected PII,
+suggestions, selected redaction regions, or user edits.
+
+Rasterization renders and writes one page at a time so multi-page PDFs do not
+require all page images to remain in memory at once. If validation succeeds but
+rasterization fails, the worker persists `processing_failed` as a safe permanent
+failure and does not write OCR output, detected PII, page manifests, or
+user-selected redaction regions.
 
 ## Safe failures
 
@@ -56,3 +87,7 @@ fails with `validation_failed`.
 Both failure codes are permanent and non-retryable. On validation failure the
 worker persists only the safe job failure state and does not write previews,
 OCR text, detected PII, analysis artifacts, or page manifests.
+
+Post-validation rasterization failures fail with `processing_failed`. That code
+is also permanent for this slice; retryable infrastructure and Spot interruption
+failures remain represented by the existing transient failure codes.
