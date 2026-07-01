@@ -1,4 +1,5 @@
 from datetime import UTC, datetime, timedelta
+from pathlib import Path
 
 import pytest
 
@@ -44,12 +45,33 @@ def make_job(**overrides: object) -> Job:
 
 
 def pdf_bytes(page_count: int = 1, *, encrypted: bool = False) -> bytes:
-    page_objects = "\n".join(
-        f"{number} 0 obj << /Type /Page >> endobj"
-        for number in range(1, page_count + 1)
+    objects = [
+        "1 0 obj\n<< /Type /Catalog /Pages 2 0 R >>\nendobj\n",
+        "2 0 obj\n<< /Type /Pages "
+        f"/Kids [{' '.join(f'{number} 0 R' for number in range(3, page_count + 3))}] "
+        f"/Count {page_count} >>\nendobj\n",
+    ]
+    objects.extend(
+        f"{number} 0 obj\n"
+        "<< /Type /Page /Parent 2 0 R /MediaBox [0 0 72 72] >>\n"
+        "endobj\n"
+        for number in range(3, page_count + 3)
     )
-    trailer = "trailer << /Encrypt <<>> >>" if encrypted else "trailer <<>>"
-    return f"%PDF-1.7\n{page_objects}\n{trailer}\n%%EOF\n".encode()
+    output = bytearray(b"%PDF-1.7\n")
+    offsets = [0]
+    for obj in objects:
+        offsets.append(len(output))
+        output.extend(obj.encode())
+    xref_offset = len(output)
+    output.extend(f"xref\n0 {len(offsets)}\n0000000000 65535 f \n".encode())
+    for offset in offsets[1:]:
+        output.extend(f"{offset:010d} 00000 n \n".encode())
+    encrypt_entry = " /Encrypt <<>>" if encrypted else ""
+    output.extend(
+        f"trailer << /Size {len(offsets)} /Root 1 0 R{encrypt_entry} >>\n"
+        f"startxref\n{xref_offset}\n%%EOF\n".encode()
+    )
+    return bytes(output)
 
 
 def png_bytes(width: int = 1, height: int = 1) -> bytes:
@@ -185,6 +207,21 @@ def test_validate_source_rejects_over_limit_pdf_page_count(tmp_path) -> None:
         validate_source(SourceType.PDF, pdf_bytes(3), config=config)
 
     assert error.value.failure_code is FailureCode.VALIDATION_FAILED
+
+
+def test_validate_source_counts_compressed_sample_pdf() -> None:
+    sample = (
+        Path(__file__).parents[1]
+        / "samples"
+        / "dlptest-name-dob-email.pdf"
+    )
+
+    result = validate_source(SourceType.PDF, sample.read_bytes())
+
+    assert result == ValidatedSource(
+        source_type=SourceType.PDF,
+        page_count=2,
+    )
 
 
 def test_validate_source_rejects_over_limit_image_pixel_count(tmp_path) -> None:

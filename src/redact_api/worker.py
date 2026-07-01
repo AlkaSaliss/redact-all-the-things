@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import io
 import json
-import re
+import tempfile
 from collections.abc import Callable, Iterable
 from dataclasses import dataclass
 from datetime import datetime
@@ -89,6 +89,40 @@ class PageArtifactIndex:
 
 
 @dataclass(frozen=True)
+class OcrLine:
+    """One raw OCR line using pixel-space page coordinates."""
+
+    text: str
+    confidence: float
+    polygon: tuple[tuple[float, float], ...]
+
+
+@dataclass(frozen=True)
+class OcrTextBlock:
+    """One normalized OCR text block in page text order."""
+
+    text: str
+    confidence: float
+    polygon: tuple[tuple[float, float], ...]
+    start: int
+    end: int
+
+
+@dataclass(frozen=True)
+class OcrPageText:
+    """OCR text and line geometry for one rasterized page."""
+
+    job_id: str
+    page_number: int
+    page_width: int
+    page_height: int
+    engine: str
+    model: str
+    page_text: str
+    blocks: tuple[OcrTextBlock, ...]
+
+
+@dataclass(frozen=True)
 class WorkerValidationConfig:
     """Tunable validation limits loaded from YAML."""
 
@@ -141,6 +175,26 @@ class PageArtifactWriter(Protocol):
         """Persist the JSON page-artifact index."""
 
 
+class OcrArtifactStore(Protocol):
+    """Persistence boundary for OCR input pages and output text artifacts."""
+
+    def get_page_artifact(self, key: str) -> bytes:
+        """Load one raster page artifact."""
+
+    def put_ocr_page_text(self, key: str, content: bytes) -> None:
+        """Persist one per-page OCR JSON artifact."""
+
+
+class OcrEngine(Protocol):
+    """OCR engine boundary used by production and deterministic tests."""
+
+    name: str
+    model: str
+
+    def recognize(self, page: PageArtifact, content: bytes) -> Iterable[OcrLine]:
+        """Return OCR lines for one raster page artifact."""
+
+
 class SourceValidationError(ValueError):
     """Raised when source validation maps to a safe failure code."""
 
@@ -151,6 +205,10 @@ class SourceValidationError(ValueError):
 
 class RasterizationError(RuntimeError):
     """Raised when accepted source content cannot be rasterized safely."""
+
+
+class OcrExtractionError(RuntimeError):
+    """Raised when accepted page artifacts cannot be OCR-processed safely."""
 
 
 def validate_source(
@@ -186,9 +244,12 @@ def analyze_source(
     now: datetime,
     config: WorkerValidationConfig | None = None,
     raster_writer: PageArtifactWriter | None = None,
+    ocr_store: OcrArtifactStore | None = None,
+    ocr_engine: OcrEngine | None = None,
+    render_pages: Callable[[], Iterable[RenderedPage]] | None = None,
     write_artifacts: Callable[[ValidatedSource], None] | None = None,
 ) -> Job:
-    """Validate and optionally rasterize an analyze request."""
+    """Validate and optionally rasterize/OCR an analyze request."""
 
     try:
         validated = validate_source(job.source_type, source, config=config)
@@ -201,10 +262,29 @@ def analyze_source(
         )
         jobs.save(failed, expected_version=job.version)
         return failed
+    page_index = None
     if raster_writer is not None:
         try:
-            rasterize_source(job, source, validated, writer=raster_writer)
+            page_index = rasterize_source(
+                job,
+                source,
+                validated,
+                writer=raster_writer,
+                render_pages=render_pages,
+            )
         except RasterizationError:
+            failed = transition_job(
+                job,
+                JobStatus.FAILED,
+                now=now,
+                failure_code=FailureCode.PROCESSING_FAILED,
+            )
+            jobs.save(failed, expected_version=job.version)
+            return failed
+    if page_index is not None and ocr_store is not None and ocr_engine is not None:
+        try:
+            extract_ocr_text(job, page_index, store=ocr_store, engine=ocr_engine)
+        except OcrExtractionError:
             failed = transition_job(
                 job,
                 JobStatus.FAILED,
@@ -289,6 +369,85 @@ def page_artifact_index_key(owner_id: str, job_id: str) -> str:
     return f"users/{owner_id}/jobs/{job_id}/artifacts/pages/index.json"
 
 
+def extract_ocr_text(
+    job: Job,
+    page_index: PageArtifactIndex,
+    *,
+    store: OcrArtifactStore,
+    engine: OcrEngine,
+) -> tuple[OcrPageText, ...]:
+    """Extract and persist OCR text for every raster page in an index."""
+
+    pages = []
+    try:
+        for page in page_index.pages:
+            content = store.get_page_artifact(page.key)
+            lines = tuple(engine.recognize(page, content))
+            page_text = _build_ocr_page_text(job, page, lines, engine=engine)
+            key = ocr_page_text_key(job.owner_id, job.id, page.page_number)
+            store.put_ocr_page_text(key, _serialize_ocr_page_text(page_text))
+            pages.append(page_text)
+        return tuple(pages)
+    except OcrExtractionError:
+        raise
+    except Exception as error:
+        raise OcrExtractionError("ocr extraction failed") from error
+
+
+def ocr_page_text_key(owner_id: str, job_id: str, page_number: int) -> str:
+    """Return the owner/job-namespaced key for one OCR page JSON artifact."""
+
+    return f"users/{owner_id}/jobs/{job_id}/artifacts/ocr/pages/{page_number}.json"
+
+
+class PaddleOcrEngine:
+    """Embedded PaddleOCR adapter for the worker image runtime."""
+
+    name = "paddleocr"
+    model = "PP-OCRv6_medium"
+
+    def __init__(self, *, device: str = "cpu") -> None:
+        try:
+            from paddleocr import PaddleOCR
+        except ImportError as error:
+            raise OcrExtractionError("paddleocr is not installed") from error
+        self._pipeline = PaddleOCR(
+            use_doc_orientation_classify=False,
+            use_doc_unwarping=False,
+            use_textline_orientation=True,
+            device=device,
+        )
+
+    def recognize(self, page: PageArtifact, content: bytes) -> tuple[OcrLine, ...]:
+        try:
+            with tempfile.NamedTemporaryFile(suffix=".png") as image:
+                image.write(content)
+                image.flush()
+                results = self._pipeline.predict(image.name)
+            lines: list[OcrLine] = []
+            for result in results:
+                payload = result.json.get("res", result.json)
+                texts = payload.get("rec_texts", ())
+                scores = payload.get("rec_scores", ())
+                polygons = payload.get("rec_polys", ())
+                for text, score, polygon in zip(texts, scores, polygons, strict=True):
+                    lines.append(
+                        OcrLine(
+                            text=str(text),
+                            confidence=float(score),
+                            polygon=tuple(
+                                (float(point[0]), float(point[1]))
+                                for point in polygon
+                            ),
+                        )
+                    )
+            return tuple(lines)
+        except OcrExtractionError:
+            raise
+        except Exception as error:
+            raise OcrExtractionError("paddleocr recognition failed") from error
+
+
 def _render_source_pages(
     source: bytes,
     validated: ValidatedSource,
@@ -356,12 +515,91 @@ def _serialize_page_artifact_index(index: PageArtifactIndex) -> bytes:
     return json.dumps(payload, separators=(",", ":"), sort_keys=True).encode()
 
 
+def _build_ocr_page_text(
+    job: Job,
+    page: PageArtifact,
+    lines: tuple[OcrLine, ...],
+    *,
+    engine: OcrEngine,
+) -> OcrPageText:
+    blocks = []
+    text_parts = []
+    offset = 0
+    for line in lines:
+        end = offset + len(line.text)
+        blocks.append(
+            OcrTextBlock(
+                text=line.text,
+                confidence=line.confidence,
+                polygon=_normalize_polygon(line.polygon, page),
+                start=offset,
+                end=end,
+            )
+        )
+        text_parts.append(line.text)
+        offset = end + 1
+    return OcrPageText(
+        job_id=job.id,
+        page_number=page.page_number,
+        page_width=page.width,
+        page_height=page.height,
+        engine=engine.name,
+        model=engine.model,
+        page_text="\n".join(text_parts),
+        blocks=tuple(blocks),
+    )
+
+
+def _normalize_polygon(
+    polygon: tuple[tuple[float, float], ...],
+    page: PageArtifact,
+) -> tuple[tuple[float, float], ...]:
+    if len(polygon) != 4:
+        raise OcrExtractionError("ocr line polygon must contain four points")
+    if page.width <= 0 or page.height <= 0:
+        raise OcrExtractionError("page dimensions must be positive")
+    normalized = tuple((x / page.width, y / page.height) for x, y in polygon)
+    if any(x < 0 or x > 1 or y < 0 or y > 1 for x, y in normalized):
+        raise OcrExtractionError("ocr line polygon is outside page bounds")
+    return normalized
+
+
+def _serialize_ocr_page_text(page_text: OcrPageText) -> bytes:
+    payload = {
+        "job_id": page_text.job_id,
+        "page_number": page_text.page_number,
+        "page_width": page_text.page_width,
+        "page_height": page_text.page_height,
+        "engine": page_text.engine,
+        "model": page_text.model,
+        "page_text": page_text.page_text,
+        "blocks": [
+            {
+                "text": block.text,
+                "confidence": block.confidence,
+                "polygon": [[x, y] for x, y in block.polygon],
+                "start": block.start,
+                "end": block.end,
+            }
+            for block in page_text.blocks
+        ],
+    }
+    return json.dumps(payload, separators=(",", ":"), sort_keys=True).encode()
+
+
 def _validate_pdf(source: bytes, *, max_pdf_pages: int) -> int:
     if not source.startswith(PDF_SIGNATURE):
         raise SourceValidationError(FailureCode.UNSUPPORTED_CONTENT)
     if b"/Encrypt" in source:
         raise SourceValidationError(FailureCode.VALIDATION_FAILED)
-    page_count = len(re.findall(rb"/Type\s*/Page(?!s)\b", source))
+    try:
+        document = pdfium.PdfDocument(source)
+        try:
+            page_count = len(document)
+        finally:
+            document.close()
+    except Exception as error:
+        raise SourceValidationError(FailureCode.VALIDATION_FAILED) from error
     if page_count < 1 or page_count > max_pdf_pages:
         raise SourceValidationError(FailureCode.VALIDATION_FAILED)
     if b"%%EOF" not in source:
