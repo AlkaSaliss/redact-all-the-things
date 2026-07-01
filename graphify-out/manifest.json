@@ -110,7 +110,7 @@
     "semantic_hash": "9c591ff00ccff95c320eeb0c7fa977cb"
   },
   "AGENTS.md": {
-    "mtime": 1782929987.7052343,
+    "mtime": 1782930139.4251006,
     "ast_hash": "095bfdcdda308cf0dba0ab6d5d81be6a",
     "semantic_hash": ""
   },
@@ -425,7 +425,7 @@
     "semantic_hash": ""
   },
   "src/redact_api/worker.py": {
-    "mtime": 1782926144.799006,
+    "mtime": 1782930139.4381135,
     "ast_hash": "1afe2f4bbe46fd0834133be1d68c83fa",
     "semantic_hash": ""
   },
@@ -435,7 +435,7 @@
     "semantic_hash": ""
   },
   "tests/worker/test_validation.py": {
-    "mtime": 1782925945.6678598,
+    "mtime": 1782930139.4391742,
     "ast_hash": "204073622e893bcc0fdd34569bd7383c",
     "semantic_hash": ""
   },
@@ -445,7 +445,7 @@
     "semantic_hash": ""
   },
   "docs/architecture/analysis-worker.md": {
-    "mtime": 1782926767.609113,
+    "mtime": 1782930139.4275253,
     "ast_hash": "547fece5f237f976aec4494d27a0338c",
     "semantic_hash": ""
   },
@@ -524,58 +524,53 @@
     "ast_hash": "d7bfb9ad0fde4ea82ab490f7e34004e7",
     "semantic_hash": ""
   },
-  "tests/fixtures/ocr-page-text.json": {
-    "mtime": 1782918643.163085,
-    "ast_hash": "975a68759f0ab24cf036db37836fb791",
-    "semantic_hash": ""
-  },
   "tests/worker/test_ocr.py": {
-    "mtime": 1782919636.1475375,
+    "mtime": 1782930139.4390166,
     "ast_hash": "02b34cb46d6c91ae4bd9100524f477b9",
     "semantic_hash": ""
   },
   "tests/samples/dlptest-name-dob-email.pdf": {
-    "mtime": 1782917226.5895352,
+    "mtime": 1782930139.4388812,
     "ast_hash": "7c5c3732a0080e5741d583f5db4a923a",
     "semantic_hash": ""
   },
   "tests/samples/Passport_of_Austria_(2024)_data_page.jpg": {
-    "mtime": 1782917234.495374,
+    "mtime": 1782930139.4387405,
     "ast_hash": "feacd51a998bc34ce219f3198b9efba5",
     "semantic_hash": ""
   },
   "tools/worker_ocr_smoke.py": {
-    "mtime": 1782929482.1064327,
+    "mtime": 1782930139.4392893,
     "ast_hash": "6a673ade94c2edf0fda882f3dafbd493",
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-07-01-gh-18-worker-ocr-extraction/.openspec.yaml": {
-    "mtime": 1782918494.2294567,
+    "mtime": 1782930139.4370925,
     "ast_hash": "bf78f855d6a0425db6bc305ffd968e0f",
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-07-01-gh-18-worker-ocr-extraction/design.md": {
-    "mtime": 1782918577.1268787,
+    "mtime": 1782930139.4372249,
     "ast_hash": "fa482fb49a4a9b098c32c7e76080371e",
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-07-01-gh-18-worker-ocr-extraction/proposal.md": {
-    "mtime": 1782918576.7622626,
+    "mtime": 1782930139.4373248,
     "ast_hash": "295d503726cd3885b6fcd0ab7cf632f1",
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-07-01-gh-18-worker-ocr-extraction/specs/worker-ocr-extraction/spec.md": {
-    "mtime": 1782918576.9592505,
+    "mtime": 1782930139.4375186,
     "ast_hash": "a46f3a0c6513a2b67b74b9ac289e0957",
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-07-01-gh-18-worker-ocr-extraction/tasks.md": {
-    "mtime": 1782918880.6309311,
+    "mtime": 1782930139.4376223,
     "ast_hash": "d0e463e129d595d295cd15eedb5b3c5f",
     "semantic_hash": ""
   },
   "openspec/specs/worker-ocr-extraction/spec.md": {
-    "mtime": 1782929601.1765742,
+    "mtime": 1782930139.4377716,
     "ast_hash": "86f4e6ac8f532fad9099509af9fd7fad",
     "semantic_hash": ""
   }

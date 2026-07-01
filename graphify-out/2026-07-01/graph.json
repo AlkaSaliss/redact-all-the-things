@@ -139,14 +139,14 @@
       "norm_label": "graphify"
     },
     {
-      "label": "Tooling:",
+      "label": "Tooling",
       "file_type": "document",
       "source_file": "AGENTS.md",
-      "source_location": "L179",
+      "source_location": "L178",
       "_origin": "ast",
       "id": "agents_tooling",
       "community": 43,
-      "norm_label": "tooling:"
+      "norm_label": "tooling"
     },
     {
       "label": "analysis-worker.md",
@@ -11951,9 +11951,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "redact_api_worker",
-      "target": "datetime",
-      "confidence_score": 1.0
+      "target": "datetime"
     },
     {
       "relation": "imports_from",
@@ -14839,9 +14839,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L201",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "redact_api_worker_sourcevalidationerror_init",
-      "target": "failurecode",
-      "confidence_score": 1.0
+      "target": "failurecode"
     },
     {
       "relation": "calls",
@@ -15466,9 +15466,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L239",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "redact_api_worker_analyze_source",
-      "target": "any",
-      "confidence_score": 1.0
+      "target": "any"
     },
     {
       "relation": "references",
@@ -15477,9 +15477,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L239",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "redact_api_worker_analyze_source",
-      "target": "datetime",
-      "confidence_score": 1.0
+      "target": "datetime"
     },
     {
       "relation": "calls",
@@ -15659,9 +15659,9 @@
       "source_file": "tools/worker_ocr_smoke.py",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tools_worker_ocr_smoke",
-      "target": "datetime",
-      "confidence_score": 1.0
+      "target": "datetime"
     },
     {
       "relation": "imports_from",
@@ -15670,9 +15670,9 @@
       "source_file": "tests/worker/test_ocr.py",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "worker_test_ocr",
-      "target": "datetime",
-      "confidence_score": 1.0
+      "target": "datetime"
     },
     {
       "relation": "imports_from",
@@ -15681,9 +15681,9 @@
       "source_file": "tests/worker/test_validation.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "worker_test_validation",
-      "target": "datetime",
-      "confidence_score": 1.0
+      "target": "datetime"
     },
     {
       "relation": "calls",
@@ -33739,5 +33739,5 @@
       "source_file": "AGENTS.md"
     }
   ],
-  "built_at_commit": "7c0bca7b83e9a694835bc10b9104bb30340d4877"
+  "built_at_commit": "4d8e91804578d42e38aef9dacfc36646e88ecd52"
 }

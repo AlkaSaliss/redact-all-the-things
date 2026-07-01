@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `7c0bca7b`
+- Built from commit: `4d8e9180`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -286,7 +286,7 @@ Nodes (6): Authentication, Control-plane API, Endpoints, Local development, Pers
 
 ### Community 43 - "Community 43"
 Cohesion: 0.17
-Nodes (11): Change Workflow, Collaboration Platform, Definition of Done, Engineering Guidance, Git Conventions, graphify, Project Working Agreement, Tooling: (+3 more)
+Nodes (11): Change Workflow, Collaboration Platform, Definition of Done, Engineering Guidance, Git Conventions, graphify, Project Working Agreement, Tooling (+3 more)
 
 ### Community 45 - "Community 45"
 Cohesion: 0.33
