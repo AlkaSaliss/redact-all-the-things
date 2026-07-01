@@ -1,0 +1,35 @@
+{
+  "blocks": [
+    {
+      "confidence": 0.98,
+      "end": 11,
+      "polygon": [
+        [
+          0.1,
+          0.2
+        ],
+        [
+          0.6,
+          0.2
+        ],
+        [
+          0.6,
+          0.3
+        ],
+        [
+          0.1,
+          0.3
+        ]
+      ],
+      "start": 0,
+      "text": "Jane Public"
+    }
+  ],
+  "engine": "paddleocr",
+  "job_id": "job-123",
+  "model": "PP-OCRv6_medium",
+  "page_number": 1,
+  "page_text": "Jane Public",
+  "page_width": 100,
+  "page_height": 50
+}
