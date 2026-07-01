@@ -4,8 +4,8 @@ The analysis worker consumes owner-scoped `analyze` submissions from the
 control plane and reuses the shared job, source-type, and failure-code
 contracts from `redact_api.domain`.
 
-The worker currently implements source validation, page rasterization, and OCR
-text extraction. PII detection, checkpoints, review page manifests, and
+The worker currently implements source validation, page rasterization, OCR text
+extraction, PII detection, and review page-manifest creation. Checkpoints and
 render-mode export remain later worker slices.
 
 ## Source validation
@@ -115,9 +115,50 @@ The files under `tests/samples/` are opt-in local smoke and benchmark inputs for
 the worker OCR path. Deterministic CI tests use synthetic fixtures and injected
 OCR results so they do not depend on OCR model inference.
 
-Use `make worker-ocr-smoke` to build the local worker image and run OCR over the
-sample PDF and JPEG. The Makefile builds and runs the image as `linux/amd64`,
-matching the supported Paddle CPU runtime used for this worker slice.
+Use `make worker-ocr-smoke` to build the local worker image and run OCR plus
+PII mapping over the sample PDF and JPEG. The Makefile builds and runs the
+image as `linux/amd64`, matching the supported Paddle CPU runtime used for this
+worker slice. The smoke output reports counts and safe category names, not OCR
+text or raw detected values.
+
+## PII detection and region mapping
+
+After OCR succeeds, PII detection runs once for each OCR page in page-number
+order. Production uses GLiNER2 with
+`fastino/gliner2-privacy-filter-PII-multi`, all 42 labels from the model card,
+and a confidence threshold of `0.5`. Deterministic tests inject detector results
+through the worker boundary instead of loading the model.
+
+The detector returns page-local character spans. The worker maps each accepted
+span back to OCR line blocks using the block `start` and `end` offsets. Because
+OCR artifacts currently contain line-level polygons rather than word boxes, the
+redaction rectangle is approximated with the span's character ratio within the
+line. The resulting axis-aligned rectangle is clamped to normalized page bounds
+before being validated as a `RedactionRegion`.
+
+Persisted regions contain safe metadata only:
+
+- region identifier;
+- page number;
+- normalized `x`, `y`, `width`, and `height`;
+- source `automatic`;
+- detector label category;
+- detector confidence;
+- selected state.
+
+Raw detected PII values are not stored in regions, job metadata, or logs. OCR
+text remains limited to the existing owner/job-namespaced OCR artifacts.
+
+For every OCR page, the worker creates a review manifest at:
+
+```text
+users/{owner_id}/jobs/{job_id}/manifests/pages/{page_number}.json
+```
+
+The initial manifest has version `1`, an aware save timestamp, immutable
+suggestions equal to the detected automatic regions, and selected regions equal
+to those suggestions. Pages with no accepted detections still receive a valid
+empty manifest so review can load every page consistently.
 
 ## Safe failures
 
@@ -136,3 +177,7 @@ failures remain represented by the existing transient failure codes.
 Post-rasterization OCR failures also fail with `processing_failed`. The worker
 does not write detected PII, page manifests, or user-selected redaction regions
 after an OCR failure.
+
+Post-OCR PII detection, geometry mapping, or manifest creation failures fail
+with `processing_failed`. The worker stops writing additional review manifests
+and does not call later downstream hooks after a PII mapping failure.

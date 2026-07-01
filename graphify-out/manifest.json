@@ -275,8 +275,8 @@
     "semantic_hash": ""
   },
   "tests/domain/test_fixtures.py": {
-    "mtime": 1781633416.8972461,
-    "ast_hash": "7b87d4bf224a873b0ffc3f4f04fbfa47",
+    "mtime": 1782938094.340027,
+    "ast_hash": "ec437b95cd1f9bac767496ec8f7f7b8e",
     "semantic_hash": ""
   },
   "tests/domain/test_jobs.py": {
@@ -425,8 +425,8 @@
     "semantic_hash": ""
   },
   "src/redact_api/worker.py": {
-    "mtime": 1782930139.4381135,
-    "ast_hash": "1afe2f4bbe46fd0834133be1d68c83fa",
+    "mtime": 1782943014.6301079,
+    "ast_hash": "ab00edfa45512ffeb0bf4a79d69d5438",
     "semantic_hash": ""
   },
   "tests/worker/__init__.py": {
@@ -445,8 +445,8 @@
     "semantic_hash": ""
   },
   "docs/architecture/analysis-worker.md": {
-    "mtime": 1782930139.4275253,
-    "ast_hash": "547fece5f237f976aec4494d27a0338c",
+    "mtime": 1782940992.4642615,
+    "ast_hash": "fa1e4f297325f6d7ecd92b92aca4d8e6",
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-06-17-gh-16-worker-input-validation/.openspec.yaml": {
@@ -540,8 +540,8 @@
     "semantic_hash": ""
   },
   "tools/worker_ocr_smoke.py": {
-    "mtime": 1782930139.4392893,
-    "ast_hash": "6a673ade94c2edf0fda882f3dafbd493",
+    "mtime": 1782943891.363338,
+    "ast_hash": "e4bf14b2d7c66483ce6b7f7e5f48e999",
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-07-01-gh-18-worker-ocr-extraction/.openspec.yaml": {
@@ -572,6 +572,46 @@
   "openspec/specs/worker-ocr-extraction/spec.md": {
     "mtime": 1782930139.4377716,
     "ast_hash": "86f4e6ac8f532fad9099509af9fd7fad",
+    "semantic_hash": ""
+  },
+  "tests/fixtures/pii-page-manifest.json": {
+    "mtime": 1782938094.2027593,
+    "ast_hash": "1cdabcf9a8b940e93bb073a6df0eb8fb",
+    "semantic_hash": ""
+  },
+  "tests/worker/test_pii_mapping.py": {
+    "mtime": 1782937953.8323104,
+    "ast_hash": "5abd2793cacd84acc50956d4e10b1cf5",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-07-02-gh-19-worker-pii-region-mapping/.openspec.yaml": {
+    "mtime": 1782937728.097905,
+    "ast_hash": "bf78f855d6a0425db6bc305ffd968e0f",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-07-02-gh-19-worker-pii-region-mapping/design.md": {
+    "mtime": 1782937803.1304963,
+    "ast_hash": "5e52cb39445d7b56573f32ad2ca09214",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-07-02-gh-19-worker-pii-region-mapping/proposal.md": {
+    "mtime": 1782937803.0065079,
+    "ast_hash": "5067fa9952f94a9dea2eb3e0fe733f3b",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-07-02-gh-19-worker-pii-region-mapping/specs/worker-pii-region-mapping/spec.md": {
+    "mtime": 1782938140.3730626,
+    "ast_hash": "1de38c94525d8c1f31c3a7f3ef5b4ce0",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-07-02-gh-19-worker-pii-region-mapping/tasks.md": {
+    "mtime": 1782944319.0317802,
+    "ast_hash": "977010db70e9c6b6b989763c9f53efb9",
+    "semantic_hash": ""
+  },
+  "openspec/specs/worker-pii-region-mapping/spec.md": {
+    "mtime": 1782944350.1729016,
+    "ast_hash": "00db6c4c6870c2d2e81c40444e1f2762",
     "semantic_hash": ""
   }
 }

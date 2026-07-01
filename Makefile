@@ -23,10 +23,10 @@ docs: ## Build project documentation in strict mode.
 openspec-validate: ## Validate all OpenSpec artifacts in strict mode.
 	openspec validate --all --strict --no-interactive
 
-worker-image: ## Build the local OCR worker image.
+worker-image: ## Build the local analysis worker image.
 	docker build --platform linux/amd64 -f Dockerfile.worker -t redact-worker-ocr:test .
 
-worker-ocr-smoke: worker-image ## Run OCR worker smoke test against tests/samples.
+worker-ocr-smoke: worker-image ## Run OCR and PII worker smoke test against tests/samples.
 	docker run --rm --platform linux/amd64 -v "$(CURDIR)":/workspace -w /workspace redact-worker-ocr:test python tools/worker_ocr_smoke.py tests/samples/dlptest-name-dob-email.pdf tests/samples/Passport_of_Austria_\(2024\)_data_page.jpg
 
 pre-commit:

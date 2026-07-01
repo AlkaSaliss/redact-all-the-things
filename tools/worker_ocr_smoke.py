@@ -1,4 +1,4 @@
-"""Run a local OCR smoke test over sample files without printing OCR text."""
+"""Run a local analysis smoke test over sample files without printing OCR text."""
 
 from __future__ import annotations
 
@@ -8,12 +8,14 @@ from dataclasses import dataclass
 from datetime import UTC, datetime, timedelta
 from pathlib import Path
 
-from redact_api.domain import Job, JobStatus, SourceType
+from redact_api.domain import Job, JobStatus, PageManifest, SourceType
 from redact_api.worker import (
+    Gliner2PiiDetector,
     OcrPageText,
     PageArtifactIndex,
     PaddleOcrEngine,
     WorkerValidationConfig,
+    create_pii_manifests,
     validate_source,
     rasterize_source,
     extract_ocr_text,
@@ -26,6 +28,7 @@ NOW = datetime(2026, 7, 1, 12, 0, tzinfo=UTC)
 @dataclass
 class MemoryArtifactStore:
     objects: dict[str, bytes]
+    manifests: list[PageManifest]
 
     def put_page_artifact(self, key: str, content: bytes) -> None:
         self.objects[key] = content
@@ -39,19 +42,29 @@ class MemoryArtifactStore:
     def put_ocr_page_text(self, key: str, content: bytes) -> None:
         self.objects[key] = content
 
+    def create_manifest(self, owner_id: str, manifest: PageManifest) -> PageManifest:
+        key = (
+            f"users/{owner_id}/jobs/{manifest.job_id}/manifests/pages/"
+            f"{manifest.page_number}.json"
+        )
+        self.objects[key] = manifest.model_dump_json().encode()
+        self.manifests.append(manifest)
+        return manifest
+
 
 def main(paths: list[str]) -> int:
     if not paths:
         print("usage: worker_ocr_smoke.py <sample-file> [<sample-file> ...]", file=sys.stderr)
         return 2
 
-    engine = PaddleOcrEngine()
+    ocr_engine = PaddleOcrEngine()
+    pii_detector = Gliner2PiiDetector()
     for index, raw_path in enumerate(paths, start=1):
         path = Path(raw_path)
         source_type = source_type_for(path)
         source = path.read_bytes()
         job = make_job(f"smoke-{index}", source_type)
-        store = MemoryArtifactStore({})
+        store = MemoryArtifactStore({}, [])
 
         validated = validate_source(
             source_type,
@@ -59,9 +72,16 @@ def main(paths: list[str]) -> int:
             config=WorkerValidationConfig(),
         )
         page_index = rasterize_source(job, source, validated, writer=store)
-        pages = extract_ocr_text(job, page_index, store=store, engine=engine)
+        pages = extract_ocr_text(job, page_index, store=store, engine=ocr_engine)
+        manifests = create_pii_manifests(
+            job,
+            pages,
+            detector=pii_detector,
+            writer=store,
+            now=NOW,
+        )
 
-        print(summary(path, page_index, pages))
+        print(summary(path, page_index, pages, manifests))
     return 0
 
 
@@ -93,12 +113,27 @@ def make_job(job_id: str, source_type: SourceType) -> Job:
     )
 
 
-def summary(path: Path, page_index: PageArtifactIndex, pages: tuple[OcrPageText, ...]) -> str:
+def summary(
+    path: Path,
+    page_index: PageArtifactIndex,
+    pages: tuple[OcrPageText, ...],
+    manifests: tuple[PageManifest, ...],
+) -> str:
+    categories = sorted(
+        {
+            region.category
+            for manifest in manifests
+            for region in manifest.suggestions
+        }
+    )
     payload = {
         "file": str(path),
         "pages": len(page_index.pages),
         "ocr_blocks": [len(page.blocks) for page in pages],
         "ocr_text_lengths": [len(page.page_text) for page in pages],
+        "manifest_pages": len(manifests),
+        "pii_categories": categories,
+        "pii_regions": [len(manifest.suggestions) for manifest in manifests],
     }
     return json.dumps(payload, sort_keys=True)
 
