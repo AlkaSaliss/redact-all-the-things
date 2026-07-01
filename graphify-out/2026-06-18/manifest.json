@@ -425,8 +425,8 @@
     "semantic_hash": ""
   },
   "src/redact_api/worker.py": {
-    "mtime": 1781726421.8496764,
-    "ast_hash": "d87609593002b949aa00dd602c9bf18e",
+    "mtime": 1781773242.393349,
+    "ast_hash": "30c3e7480d2907dbaa6e4613c0524d41",
     "semantic_hash": ""
   },
   "tests/worker/__init__.py": {
@@ -445,8 +445,8 @@
     "semantic_hash": ""
   },
   "docs/architecture/analysis-worker.md": {
-    "mtime": 1781726421.8311925,
-    "ast_hash": "ea663cbeef29f86ed81d7423ffde997a",
+    "mtime": 1781731715.7421248,
+    "ast_hash": "ef404568fe353b418cad52cd2c67d067",
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-06-17-gh-16-worker-input-validation/.openspec.yaml": {
@@ -505,8 +505,13 @@
     "semantic_hash": ""
   },
   "openspec/changes/gh-17-worker-rasterization/tasks.md": {
-    "mtime": 1781727399.4167995,
-    "ast_hash": "1d9630b33f37a980de21484861ed04df",
+    "mtime": 1781731907.5965412,
+    "ast_hash": "42fd0933bfe8887e2dcc4c3401d2f183",
+    "semantic_hash": ""
+  },
+  "tests/worker/test_rasterization.py": {
+    "mtime": 1781731692.543587,
+    "ast_hash": "0ab83a211df4332a4e7dcc2ce86bae13",
     "semantic_hash": ""
   }
 }
