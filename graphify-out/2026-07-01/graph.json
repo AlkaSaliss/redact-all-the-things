@@ -49,64 +49,14 @@
   },
   "nodes": [
     {
-      "label": "strip_notebook_outputs.py",
-      "file_type": "code",
-      "source_file": "tools/strip_notebook_outputs.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "tools_strip_notebook_outputs",
-      "community": 5,
-      "norm_label": "strip_notebook_outputs.py"
-    },
-    {
-      "label": "strip_notebook()",
-      "file_type": "code",
-      "source_file": "tools/strip_notebook_outputs.py",
-      "source_location": "L10",
-      "_origin": "ast",
-      "id": "tools_strip_notebook_outputs_strip_notebook",
-      "community": 5,
-      "norm_label": "strip_notebook()"
-    },
-    {
-      "label": "Path",
-      "file_type": "code",
-      "source_file": "tools/strip_notebook_outputs.py",
-      "source_location": "L10",
-      "_origin": "ast",
-      "id": "path",
-      "community": 5,
-      "norm_label": "path"
-    },
-    {
-      "label": "main()",
-      "file_type": "code",
-      "source_file": "tools/strip_notebook_outputs.py",
-      "source_location": "L31",
-      "_origin": "ast",
-      "id": "tools_strip_notebook_outputs_main",
-      "community": 5,
-      "norm_label": "main()"
-    },
-    {
-      "label": "Strip execution output from Jupyter notebooks before commit.",
-      "file_type": "rationale",
-      "source_file": "tools/strip_notebook_outputs.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "tools_strip_notebook_outputs_rationale_1",
-      "community": 5,
-      "norm_label": "strip execution output from jupyter notebooks before commit."
-    },
-    {
       "label": "analysis-worker.md",
       "file_type": "document",
       "source_file": "docs/architecture/analysis-worker.md",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "architecture_analysis_worker",
       "community": 58,
-      "norm_label": "analysis-worker.md",
-      "id": "architecture_analysis_worker"
+      "norm_label": "analysis-worker.md"
     },
     {
       "label": "Analysis worker",
@@ -114,9 +64,9 @@
       "source_file": "docs/architecture/analysis-worker.md",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "architecture_analysis_worker_analysis_worker",
       "community": 58,
-      "norm_label": "analysis worker",
-      "id": "architecture_analysis_worker_analysis_worker"
+      "norm_label": "analysis worker"
     },
     {
       "label": "Source validation",
@@ -124,9 +74,9 @@
       "source_file": "docs/architecture/analysis-worker.md",
       "source_location": "L11",
       "_origin": "ast",
+      "id": "architecture_analysis_worker_source_validation",
       "community": 58,
-      "norm_label": "source validation",
-      "id": "architecture_analysis_worker_source_validation"
+      "norm_label": "source validation"
     },
     {
       "label": "Rasterization",
@@ -134,9 +84,9 @@
       "source_file": "docs/architecture/analysis-worker.md",
       "source_location": "L49",
       "_origin": "ast",
+      "id": "architecture_analysis_worker_rasterization",
       "community": 58,
-      "norm_label": "rasterization",
-      "id": "architecture_analysis_worker_rasterization"
+      "norm_label": "rasterization"
     },
     {
       "label": "Safe failures",
@@ -144,9 +94,9 @@
       "source_file": "docs/architecture/analysis-worker.md",
       "source_location": "L81",
       "_origin": "ast",
+      "id": "architecture_analysis_worker_safe_failures",
       "community": 58,
-      "norm_label": "safe failures",
-      "id": "architecture_analysis_worker_safe_failures"
+      "norm_label": "safe failures"
     },
     {
       "label": "tasks.md",
@@ -154,9 +104,9 @@
       "source_file": "openspec/changes/gh-17-worker-rasterization/tasks.md",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "gh_17_worker_rasterization_tasks",
       "community": 71,
-      "norm_label": "tasks.md",
-      "id": "gh_17_worker_rasterization_tasks"
+      "norm_label": "tasks.md"
     },
     {
       "label": "1. Test Fixtures",
@@ -164,9 +114,9 @@
       "source_file": "openspec/changes/gh-17-worker-rasterization/tasks.md",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "gh_17_worker_rasterization_tasks_1_test_fixtures",
       "community": 71,
-      "norm_label": "1. test fixtures",
-      "id": "gh_17_worker_rasterization_tasks_1_test_fixtures"
+      "norm_label": "1. test fixtures"
     },
     {
       "label": "2. Worker Rasterization Tests",
@@ -174,9 +124,9 @@
       "source_file": "openspec/changes/gh-17-worker-rasterization/tasks.md",
       "source_location": "L7",
       "_origin": "ast",
+      "id": "gh_17_worker_rasterization_tasks_2_worker_rasterization_tests",
       "community": 71,
-      "norm_label": "2. worker rasterization tests",
-      "id": "gh_17_worker_rasterization_tasks_2_worker_rasterization_tests"
+      "norm_label": "2. worker rasterization tests"
     },
     {
       "label": "3. Worker Rasterization Implementation",
@@ -184,9 +134,9 @@
       "source_file": "openspec/changes/gh-17-worker-rasterization/tasks.md",
       "source_location": "L15",
       "_origin": "ast",
+      "id": "gh_17_worker_rasterization_tasks_3_worker_rasterization_implementation",
       "community": 71,
-      "norm_label": "3. worker rasterization implementation",
-      "id": "gh_17_worker_rasterization_tasks_3_worker_rasterization_implementation"
+      "norm_label": "3. worker rasterization implementation"
     },
     {
       "label": "4. Documentation Updates",
@@ -194,9 +144,9 @@
       "source_file": "openspec/changes/gh-17-worker-rasterization/tasks.md",
       "source_location": "L25",
       "_origin": "ast",
+      "id": "gh_17_worker_rasterization_tasks_4_documentation_updates",
       "community": 71,
-      "norm_label": "4. documentation updates",
-      "id": "gh_17_worker_rasterization_tasks_4_documentation_updates"
+      "norm_label": "4. documentation updates"
     },
     {
       "label": "5. Verification",
@@ -204,9 +154,9 @@
       "source_file": "openspec/changes/gh-17-worker-rasterization/tasks.md",
       "source_location": "L31",
       "_origin": "ast",
+      "id": "gh_17_worker_rasterization_tasks_5_verification",
       "community": 71,
-      "norm_label": "5. verification",
-      "id": "gh_17_worker_rasterization_tasks_5_verification"
+      "norm_label": "5. verification"
     },
     {
       "label": "worker.py",
@@ -214,9 +164,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "redact_api_worker",
       "community": 5,
-      "norm_label": "worker.py",
-      "id": "redact_api_worker"
+      "norm_label": "worker.py"
     },
     {
       "label": "ValidatedSource",
@@ -224,9 +174,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L54",
       "_origin": "ast",
+      "id": "redact_api_worker_validatedsource",
       "community": 5,
-      "norm_label": "validatedsource",
-      "id": "redact_api_worker_validatedsource"
+      "norm_label": "validatedsource"
     },
     {
       "label": "RenderedPage",
@@ -234,9 +184,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L62",
       "_origin": "ast",
+      "id": "redact_api_worker_renderedpage",
       "community": 5,
-      "norm_label": "renderedpage",
-      "id": "redact_api_worker_renderedpage"
+      "norm_label": "renderedpage"
     },
     {
       "label": "PageArtifact",
@@ -244,9 +194,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L72",
       "_origin": "ast",
+      "id": "redact_api_worker_pageartifact",
       "community": 5,
-      "norm_label": "pageartifact",
-      "id": "redact_api_worker_pageartifact"
+      "norm_label": "pageartifact"
     },
     {
       "label": "PageArtifactIndex",
@@ -254,9 +204,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L83",
       "_origin": "ast",
+      "id": "redact_api_worker_pageartifactindex",
       "community": 5,
-      "norm_label": "pageartifactindex",
-      "id": "redact_api_worker_pageartifactindex"
+      "norm_label": "pageartifactindex"
     },
     {
       "label": "WorkerValidationConfig",
@@ -264,9 +214,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L92",
       "_origin": "ast",
+      "id": "redact_api_worker_workervalidationconfig",
       "community": 5,
-      "norm_label": "workervalidationconfig",
-      "id": "redact_api_worker_workervalidationconfig"
+      "norm_label": "workervalidationconfig"
     },
     {
       "label": ".from_yaml()",
@@ -274,9 +224,19 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L100",
       "_origin": "ast",
+      "id": "redact_api_worker_workervalidationconfig_from_yaml",
       "community": 5,
-      "norm_label": ".from_yaml()",
-      "id": "redact_api_worker_workervalidationconfig_from_yaml"
+      "norm_label": ".from_yaml()"
+    },
+    {
+      "label": "Path",
+      "file_type": "code",
+      "source_file": "src/redact_api/worker.py",
+      "source_location": "L100",
+      "_origin": "ast",
+      "id": "path",
+      "community": 1,
+      "norm_label": "path"
     },
     {
       "label": "WorkerRasterizationConfig",
@@ -284,9 +244,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L124",
       "_origin": "ast",
+      "id": "redact_api_worker_workerrasterizationconfig",
       "community": 5,
-      "norm_label": "workerrasterizationconfig",
-      "id": "redact_api_worker_workerrasterizationconfig"
+      "norm_label": "workerrasterizationconfig"
     },
     {
       "label": ".scale()",
@@ -294,9 +254,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L130",
       "_origin": "ast",
+      "id": "redact_api_worker_workerrasterizationconfig_scale",
       "community": 5,
-      "norm_label": ".scale()",
-      "id": "redact_api_worker_workerrasterizationconfig_scale"
+      "norm_label": ".scale()"
     },
     {
       "label": "PageArtifactWriter",
@@ -304,9 +264,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L134",
       "_origin": "ast",
+      "id": "redact_api_worker_pageartifactwriter",
       "community": 5,
-      "norm_label": "pageartifactwriter",
-      "id": "redact_api_worker_pageartifactwriter"
+      "norm_label": "pageartifactwriter"
     },
     {
       "label": "Protocol",
@@ -314,9 +274,9 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
+      "id": "protocol",
       "community": 5,
-      "norm_label": "protocol",
-      "id": "protocol"
+      "norm_label": "protocol"
     },
     {
       "label": ".put_page_artifact()",
@@ -324,9 +284,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L137",
       "_origin": "ast",
+      "id": "redact_api_worker_pageartifactwriter_put_page_artifact",
       "community": 5,
-      "norm_label": ".put_page_artifact()",
-      "id": "redact_api_worker_pageartifactwriter_put_page_artifact"
+      "norm_label": ".put_page_artifact()"
     },
     {
       "label": ".put_page_artifact_index()",
@@ -334,9 +294,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L140",
       "_origin": "ast",
+      "id": "redact_api_worker_pageartifactwriter_put_page_artifact_index",
       "community": 5,
-      "norm_label": ".put_page_artifact_index()",
-      "id": "redact_api_worker_pageartifactwriter_put_page_artifact_index"
+      "norm_label": ".put_page_artifact_index()"
     },
     {
       "label": "SourceValidationError",
@@ -344,9 +304,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L144",
       "_origin": "ast",
+      "id": "redact_api_worker_sourcevalidationerror",
       "community": 5,
-      "norm_label": "sourcevalidationerror",
-      "id": "redact_api_worker_sourcevalidationerror"
+      "norm_label": "sourcevalidationerror"
     },
     {
       "label": "ValueError",
@@ -354,9 +314,9 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
+      "id": "valueerror",
       "community": 6,
-      "norm_label": "valueerror",
-      "id": "valueerror"
+      "norm_label": "valueerror"
     },
     {
       "label": ".__init__()",
@@ -364,9 +324,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L147",
       "_origin": "ast",
+      "id": "redact_api_worker_sourcevalidationerror_init",
       "community": 5,
-      "norm_label": ".__init__()",
-      "id": "redact_api_worker_sourcevalidationerror_init"
+      "norm_label": ".__init__()"
     },
     {
       "label": "FailureCode",
@@ -374,9 +334,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L147",
       "_origin": "ast",
+      "id": "failurecode",
       "community": 5,
-      "norm_label": "failurecode",
-      "id": "failurecode"
+      "norm_label": "failurecode"
     },
     {
       "label": "RasterizationError",
@@ -384,9 +344,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L152",
       "_origin": "ast",
+      "id": "redact_api_worker_rasterizationerror",
       "community": 5,
-      "norm_label": "rasterizationerror",
-      "id": "redact_api_worker_rasterizationerror"
+      "norm_label": "rasterizationerror"
     },
     {
       "label": "RuntimeError",
@@ -394,9 +354,9 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 3,
-      "norm_label": "runtimeerror",
-      "id": "runtimeerror"
+      "id": "runtimeerror",
+      "community": 1,
+      "norm_label": "runtimeerror"
     },
     {
       "label": "validate_source()",
@@ -404,9 +364,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L156",
       "_origin": "ast",
+      "id": "redact_api_worker_validate_source",
       "community": 5,
-      "norm_label": "validate_source()",
-      "id": "redact_api_worker_validate_source"
+      "norm_label": "validate_source()"
     },
     {
       "label": "SourceType",
@@ -414,9 +374,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L156",
       "_origin": "ast",
+      "id": "src_redact_api_worker_py_sourcetype",
       "community": 1,
-      "norm_label": "sourcetype",
-      "id": "src_redact_api_worker_py_sourcetype"
+      "norm_label": "sourcetype"
     },
     {
       "label": "analyze_source()",
@@ -424,9 +384,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L181",
       "_origin": "ast",
+      "id": "redact_api_worker_analyze_source",
       "community": 5,
-      "norm_label": "analyze_source()",
-      "id": "redact_api_worker_analyze_source"
+      "norm_label": "analyze_source()"
     },
     {
       "label": "Job",
@@ -434,9 +394,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L181",
       "_origin": "ast",
-      "community": 1,
-      "norm_label": "job",
-      "id": "src_redact_api_worker_py_job"
+      "id": "src_redact_api_worker_py_job",
+      "community": 5,
+      "norm_label": "job"
     },
     {
       "label": "Any",
@@ -444,9 +404,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L181",
       "_origin": "ast",
+      "id": "any",
       "community": 5,
-      "norm_label": "any",
-      "id": "any"
+      "norm_label": "any"
     },
     {
       "label": "datetime",
@@ -454,9 +414,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L181",
       "_origin": "ast",
+      "id": "datetime",
       "community": 5,
-      "norm_label": "datetime",
-      "id": "datetime"
+      "norm_label": "datetime"
     },
     {
       "label": "rasterize_source()",
@@ -464,9 +424,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L221",
       "_origin": "ast",
+      "id": "redact_api_worker_rasterize_source",
       "community": 5,
-      "norm_label": "rasterize_source()",
-      "id": "redact_api_worker_rasterize_source"
+      "norm_label": "rasterize_source()"
     },
     {
       "label": "page_artifact_key()",
@@ -474,9 +434,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L280",
       "_origin": "ast",
+      "id": "redact_api_worker_page_artifact_key",
       "community": 5,
-      "norm_label": "page_artifact_key()",
-      "id": "redact_api_worker_page_artifact_key"
+      "norm_label": "page_artifact_key()"
     },
     {
       "label": "page_artifact_index_key()",
@@ -484,9 +444,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L286",
       "_origin": "ast",
+      "id": "redact_api_worker_page_artifact_index_key",
       "community": 5,
-      "norm_label": "page_artifact_index_key()",
-      "id": "redact_api_worker_page_artifact_index_key"
+      "norm_label": "page_artifact_index_key()"
     },
     {
       "label": "_render_source_pages()",
@@ -494,9 +454,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L292",
       "_origin": "ast",
+      "id": "redact_api_worker_render_source_pages",
       "community": 5,
-      "norm_label": "_render_source_pages()",
-      "id": "redact_api_worker_render_source_pages"
+      "norm_label": "_render_source_pages()"
     },
     {
       "label": "_render_pdf_pages()",
@@ -504,9 +464,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L304",
       "_origin": "ast",
+      "id": "redact_api_worker_render_pdf_pages",
       "community": 5,
-      "norm_label": "_render_pdf_pages()",
-      "id": "redact_api_worker_render_pdf_pages"
+      "norm_label": "_render_pdf_pages()"
     },
     {
       "label": "_render_image_page()",
@@ -514,9 +474,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L322",
       "_origin": "ast",
+      "id": "redact_api_worker_render_image_page",
       "community": 5,
-      "norm_label": "_render_image_page()",
-      "id": "redact_api_worker_render_image_page"
+      "norm_label": "_render_image_page()"
     },
     {
       "label": "_image_to_rendered_page()",
@@ -524,9 +484,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L330",
       "_origin": "ast",
+      "id": "redact_api_worker_image_to_rendered_page",
       "community": 5,
-      "norm_label": "_image_to_rendered_page()",
-      "id": "redact_api_worker_image_to_rendered_page"
+      "norm_label": "_image_to_rendered_page()"
     },
     {
       "label": "Image",
@@ -534,9 +494,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L330",
       "_origin": "ast",
+      "id": "image",
       "community": 1,
-      "norm_label": "image",
-      "id": "image"
+      "norm_label": "image"
     },
     {
       "label": "_serialize_page_artifact_index()",
@@ -544,9 +504,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L342",
       "_origin": "ast",
+      "id": "redact_api_worker_serialize_page_artifact_index",
       "community": 5,
-      "norm_label": "_serialize_page_artifact_index()",
-      "id": "redact_api_worker_serialize_page_artifact_index"
+      "norm_label": "_serialize_page_artifact_index()"
     },
     {
       "label": "_validate_pdf()",
@@ -554,9 +514,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L359",
       "_origin": "ast",
+      "id": "redact_api_worker_validate_pdf",
       "community": 5,
-      "norm_label": "_validate_pdf()",
-      "id": "redact_api_worker_validate_pdf"
+      "norm_label": "_validate_pdf()"
     },
     {
       "label": "_validate_png()",
@@ -564,9 +524,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L372",
       "_origin": "ast",
+      "id": "redact_api_worker_validate_png",
       "community": 5,
-      "norm_label": "_validate_png()",
-      "id": "redact_api_worker_validate_png"
+      "norm_label": "_validate_png()"
     },
     {
       "label": "_validate_jpeg()",
@@ -574,9 +534,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L389",
       "_origin": "ast",
+      "id": "redact_api_worker_validate_jpeg",
       "community": 5,
-      "norm_label": "_validate_jpeg()",
-      "id": "redact_api_worker_validate_jpeg"
+      "norm_label": "_validate_jpeg()"
     },
     {
       "label": "Analysis worker validation and rasterization boundaries.",
@@ -584,9 +544,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "redact_api_worker_rationale_1",
       "community": 5,
-      "norm_label": "analysis worker validation and rasterization boundaries.",
-      "id": "redact_api_worker_rationale_1"
+      "norm_label": "analysis worker validation and rasterization boundaries."
     },
     {
       "label": "Source metadata safe for later analysis stages.",
@@ -594,9 +554,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L55",
       "_origin": "ast",
+      "id": "redact_api_worker_rationale_55",
       "community": 5,
-      "norm_label": "source metadata safe for later analysis stages.",
-      "id": "redact_api_worker_rationale_55"
+      "norm_label": "source metadata safe for later analysis stages."
     },
     {
       "label": "PNG bytes for one rendered source page.",
@@ -604,9 +564,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L63",
       "_origin": "ast",
+      "id": "redact_api_worker_rationale_63",
       "community": 5,
-      "norm_label": "png bytes for one rendered source page.",
-      "id": "redact_api_worker_rationale_63"
+      "norm_label": "png bytes for one rendered source page."
     },
     {
       "label": "Metadata for one persisted raster page artifact.",
@@ -614,9 +574,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L73",
       "_origin": "ast",
+      "id": "redact_api_worker_rationale_73",
       "community": 5,
-      "norm_label": "metadata for one persisted raster page artifact.",
-      "id": "redact_api_worker_rationale_73"
+      "norm_label": "metadata for one persisted raster page artifact."
     },
     {
       "label": "Ordered metadata for page artifacts produced by rasterization.",
@@ -624,9 +584,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L84",
       "_origin": "ast",
+      "id": "redact_api_worker_rationale_84",
       "community": 5,
-      "norm_label": "ordered metadata for page artifacts produced by rasterization.",
-      "id": "redact_api_worker_rationale_84"
+      "norm_label": "ordered metadata for page artifacts produced by rasterization."
     },
     {
       "label": "Tunable validation limits loaded from YAML.",
@@ -634,9 +594,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L93",
       "_origin": "ast",
+      "id": "redact_api_worker_rationale_93",
       "community": 5,
-      "norm_label": "tunable validation limits loaded from yaml.",
-      "id": "redact_api_worker_rationale_93"
+      "norm_label": "tunable validation limits loaded from yaml."
     },
     {
       "label": "Tunable rasterization settings.",
@@ -644,9 +604,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L125",
       "_origin": "ast",
+      "id": "redact_api_worker_rationale_125",
       "community": 5,
-      "norm_label": "tunable rasterization settings.",
-      "id": "redact_api_worker_rationale_125"
+      "norm_label": "tunable rasterization settings."
     },
     {
       "label": "Persistence boundary for raster page artifacts.",
@@ -654,9 +614,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L135",
       "_origin": "ast",
+      "id": "redact_api_worker_rationale_135",
       "community": 5,
-      "norm_label": "persistence boundary for raster page artifacts.",
-      "id": "redact_api_worker_rationale_135"
+      "norm_label": "persistence boundary for raster page artifacts."
     },
     {
       "label": "Persist one PNG page artifact.",
@@ -664,9 +624,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L138",
       "_origin": "ast",
+      "id": "redact_api_worker_rationale_138",
       "community": 5,
-      "norm_label": "persist one png page artifact.",
-      "id": "redact_api_worker_rationale_138"
+      "norm_label": "persist one png page artifact."
     },
     {
       "label": "Persist the JSON page-artifact index.",
@@ -674,9 +634,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L141",
       "_origin": "ast",
+      "id": "redact_api_worker_rationale_141",
       "community": 5,
-      "norm_label": "persist the json page-artifact index.",
-      "id": "redact_api_worker_rationale_141"
+      "norm_label": "persist the json page-artifact index."
     },
     {
       "label": "Raised when source validation maps to a safe failure code.",
@@ -684,9 +644,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L145",
       "_origin": "ast",
+      "id": "redact_api_worker_rationale_145",
       "community": 5,
-      "norm_label": "raised when source validation maps to a safe failure code.",
-      "id": "redact_api_worker_rationale_145"
+      "norm_label": "raised when source validation maps to a safe failure code."
     },
     {
       "label": "Raised when accepted source content cannot be rasterized safely.",
@@ -694,9 +654,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L153",
       "_origin": "ast",
+      "id": "redact_api_worker_rationale_153",
       "community": 5,
-      "norm_label": "raised when accepted source content cannot be rasterized safely.",
-      "id": "redact_api_worker_rationale_153"
+      "norm_label": "raised when accepted source content cannot be rasterized safely."
     },
     {
       "label": "Validate source bytes before any analysis artifact can be created.",
@@ -704,9 +664,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L162",
       "_origin": "ast",
+      "id": "redact_api_worker_rationale_162",
       "community": 5,
-      "norm_label": "validate source bytes before any analysis artifact can be created.",
-      "id": "redact_api_worker_rationale_162"
+      "norm_label": "validate source bytes before any analysis artifact can be created."
     },
     {
       "label": "Validate and optionally rasterize an analyze request.",
@@ -714,9 +674,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L191",
       "_origin": "ast",
+      "id": "redact_api_worker_rationale_191",
       "community": 5,
-      "norm_label": "validate and optionally rasterize an analyze request.",
-      "id": "redact_api_worker_rationale_191"
+      "norm_label": "validate and optionally rasterize an analyze request."
     },
     {
       "label": "Rasterize a validated source into PNG page artifacts and an index.",
@@ -724,9 +684,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L230",
       "_origin": "ast",
+      "id": "redact_api_worker_rationale_230",
       "community": 5,
-      "norm_label": "rasterize a validated source into png page artifacts and an index.",
-      "id": "redact_api_worker_rationale_230"
+      "norm_label": "rasterize a validated source into png page artifacts and an index."
     },
     {
       "label": "Return the owner/job-namespaced key for a raster page PNG.",
@@ -734,9 +694,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L281",
       "_origin": "ast",
+      "id": "redact_api_worker_rationale_281",
       "community": 5,
-      "norm_label": "return the owner/job-namespaced key for a raster page png.",
-      "id": "redact_api_worker_rationale_281"
+      "norm_label": "return the owner/job-namespaced key for a raster page png."
     },
     {
       "label": "Return the owner/job-namespaced key for the raster page index.",
@@ -744,9 +704,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L287",
       "_origin": "ast",
+      "id": "redact_api_worker_rationale_287",
       "community": 5,
-      "norm_label": "return the owner/job-namespaced key for the raster page index.",
-      "id": "redact_api_worker_rationale_287"
+      "norm_label": "return the owner/job-namespaced key for the raster page index."
     },
     {
       "label": "test_rasterization.py",
@@ -754,9 +714,9 @@
       "source_file": "tests/worker/test_rasterization.py",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "worker_test_rasterization",
       "community": 5,
-      "norm_label": "test_rasterization.py",
-      "id": "worker_test_rasterization"
+      "norm_label": "test_rasterization.py"
     },
     {
       "label": "RecordingJobs",
@@ -764,9 +724,9 @@
       "source_file": "tests/worker/test_rasterization.py",
       "source_location": "L26",
       "_origin": "ast",
+      "id": "worker_test_rasterization_recordingjobs",
       "community": 5,
-      "norm_label": "recordingjobs",
-      "id": "worker_test_rasterization_recordingjobs"
+      "norm_label": "recordingjobs"
     },
     {
       "label": ".__init__()",
@@ -774,9 +734,9 @@
       "source_file": "tests/worker/test_rasterization.py",
       "source_location": "L27",
       "_origin": "ast",
+      "id": "worker_test_rasterization_recordingjobs_init",
       "community": 5,
-      "norm_label": ".__init__()",
-      "id": "worker_test_rasterization_recordingjobs_init"
+      "norm_label": ".__init__()"
     },
     {
       "label": ".save()",
@@ -784,9 +744,9 @@
       "source_file": "tests/worker/test_rasterization.py",
       "source_location": "L30",
       "_origin": "ast",
+      "id": "worker_test_rasterization_recordingjobs_save",
       "community": 5,
-      "norm_label": ".save()",
-      "id": "worker_test_rasterization_recordingjobs_save"
+      "norm_label": ".save()"
     },
     {
       "label": "Job",
@@ -794,9 +754,9 @@
       "source_file": "tests/worker/test_rasterization.py",
       "source_location": "L30",
       "_origin": "ast",
+      "id": "tests_worker_test_rasterization_py_job",
       "community": 5,
-      "norm_label": "job",
-      "id": "tests_worker_test_rasterization_py_job"
+      "norm_label": "job"
     },
     {
       "label": "RecordingArtifactWriter",
@@ -804,9 +764,9 @@
       "source_file": "tests/worker/test_rasterization.py",
       "source_location": "L34",
       "_origin": "ast",
+      "id": "worker_test_rasterization_recordingartifactwriter",
       "community": 5,
-      "norm_label": "recordingartifactwriter",
-      "id": "worker_test_rasterization_recordingartifactwriter"
+      "norm_label": "recordingartifactwriter"
     },
     {
       "label": ".__init__()",
@@ -814,9 +774,9 @@
       "source_file": "tests/worker/test_rasterization.py",
       "source_location": "L35",
       "_origin": "ast",
+      "id": "worker_test_rasterization_recordingartifactwriter_init",
       "community": 5,
-      "norm_label": ".__init__()",
-      "id": "worker_test_rasterization_recordingartifactwriter_init"
+      "norm_label": ".__init__()"
     },
     {
       "label": ".put_page_artifact()",
@@ -824,9 +784,9 @@
       "source_file": "tests/worker/test_rasterization.py",
       "source_location": "L39",
       "_origin": "ast",
+      "id": "worker_test_rasterization_recordingartifactwriter_put_page_artifact",
       "community": 5,
-      "norm_label": ".put_page_artifact()",
-      "id": "worker_test_rasterization_recordingartifactwriter_put_page_artifact"
+      "norm_label": ".put_page_artifact()"
     },
     {
       "label": ".put_page_artifact_index()",
@@ -834,9 +794,9 @@
       "source_file": "tests/worker/test_rasterization.py",
       "source_location": "L43",
       "_origin": "ast",
+      "id": "worker_test_rasterization_recordingartifactwriter_put_page_artifact_index",
       "community": 5,
-      "norm_label": ".put_page_artifact_index()",
-      "id": "worker_test_rasterization_recordingartifactwriter_put_page_artifact_index"
+      "norm_label": ".put_page_artifact_index()"
     },
     {
       "label": "make_job()",
@@ -844,9 +804,9 @@
       "source_file": "tests/worker/test_rasterization.py",
       "source_location": "L48",
       "_origin": "ast",
+      "id": "worker_test_rasterization_make_job",
       "community": 5,
-      "norm_label": "make_job()",
-      "id": "worker_test_rasterization_make_job"
+      "norm_label": "make_job()"
     },
     {
       "label": "pdf_bytes()",
@@ -854,9 +814,9 @@
       "source_file": "tests/worker/test_rasterization.py",
       "source_location": "L68",
       "_origin": "ast",
+      "id": "worker_test_rasterization_pdf_bytes",
       "community": 5,
-      "norm_label": "pdf_bytes()",
-      "id": "worker_test_rasterization_pdf_bytes"
+      "norm_label": "pdf_bytes()"
     },
     {
       "label": "image_bytes()",
@@ -864,9 +824,9 @@
       "source_file": "tests/worker/test_rasterization.py",
       "source_location": "L78",
       "_origin": "ast",
+      "id": "worker_test_rasterization_image_bytes",
       "community": 5,
-      "norm_label": "image_bytes()",
-      "id": "worker_test_rasterization_image_bytes"
+      "norm_label": "image_bytes()"
     },
     {
       "label": "SourceType",
@@ -874,9 +834,9 @@
       "source_file": "tests/worker/test_rasterization.py",
       "source_location": "L78",
       "_origin": "ast",
+      "id": "tests_worker_test_rasterization_py_sourcetype",
       "community": 5,
-      "norm_label": "sourcetype",
-      "id": "tests_worker_test_rasterization_py_sourcetype"
+      "norm_label": "sourcetype"
     },
     {
       "label": "assert_png()",
@@ -884,9 +844,9 @@
       "source_file": "tests/worker/test_rasterization.py",
       "source_location": "L90",
       "_origin": "ast",
+      "id": "worker_test_rasterization_assert_png",
       "community": 5,
-      "norm_label": "assert_png()",
-      "id": "worker_test_rasterization_assert_png"
+      "norm_label": "assert_png()"
     },
     {
       "label": "test_rasterize_pdf_pages_in_source_order()",
@@ -894,9 +854,9 @@
       "source_file": "tests/worker/test_rasterization.py",
       "source_location": "L94",
       "_origin": "ast",
+      "id": "worker_test_rasterization_test_rasterize_pdf_pages_in_source_order",
       "community": 5,
-      "norm_label": "test_rasterize_pdf_pages_in_source_order()",
-      "id": "worker_test_rasterization_test_rasterize_pdf_pages_in_source_order"
+      "norm_label": "test_rasterize_pdf_pages_in_source_order()"
     },
     {
       "label": "test_rasterize_image_source_as_one_png_page()",
@@ -904,9 +864,9 @@
       "source_file": "tests/worker/test_rasterization.py",
       "source_location": "L120",
       "_origin": "ast",
+      "id": "worker_test_rasterization_test_rasterize_image_source_as_one_png_page",
       "community": 5,
-      "norm_label": "test_rasterize_image_source_as_one_png_page()",
-      "id": "worker_test_rasterization_test_rasterize_image_source_as_one_png_page"
+      "norm_label": "test_rasterize_image_source_as_one_png_page()"
     },
     {
       "label": "test_page_artifact_index_records_ordered_metadata()",
@@ -914,9 +874,9 @@
       "source_file": "tests/worker/test_rasterization.py",
       "source_location": "L141",
       "_origin": "ast",
+      "id": "worker_test_rasterization_test_page_artifact_index_records_ordered_metadata",
       "community": 5,
-      "norm_label": "test_page_artifact_index_records_ordered_metadata()",
-      "id": "worker_test_rasterization_test_page_artifact_index_records_ordered_metadata"
+      "norm_label": "test_page_artifact_index_records_ordered_metadata()"
     },
     {
       "label": "test_rasterization_writes_each_page_before_rendering_next()",
@@ -924,9 +884,9 @@
       "source_file": "tests/worker/test_rasterization.py",
       "source_location": "L170",
       "_origin": "ast",
+      "id": "worker_test_rasterization_test_rasterization_writes_each_page_before_rendering_next",
       "community": 5,
-      "norm_label": "test_rasterization_writes_each_page_before_rendering_next()",
-      "id": "worker_test_rasterization_test_rasterization_writes_each_page_before_rendering_next"
+      "norm_label": "test_rasterization_writes_each_page_before_rendering_next()"
     },
     {
       "label": "test_analyze_source_persists_processing_failed_on_rasterization_error()",
@@ -934,9 +894,9 @@
       "source_file": "tests/worker/test_rasterization.py",
       "source_location": "L195",
       "_origin": "ast",
+      "id": "worker_test_rasterization_test_analyze_source_persists_processing_failed_on_rasterization_error",
       "community": 5,
-      "norm_label": "test_analyze_source_persists_processing_failed_on_rasterization_error()",
-      "id": "worker_test_rasterization_test_analyze_source_persists_processing_failed_on_rasterization_error"
+      "norm_label": "test_analyze_source_persists_processing_failed_on_rasterization_error()"
     },
     {
       "label": "__init__.py",
@@ -1024,7 +984,7 @@
       "source_file": "src/redact_api/aws.py",
       "source_location": "L32",
       "_origin": "ast",
-      "community": 1,
+      "community": 70,
       "norm_label": ".create()",
       "id": "redact_api_aws_dynamojobrepository_create"
     },
@@ -1034,7 +994,7 @@
       "source_file": "src/redact_api/aws.py",
       "source_location": "L32",
       "_origin": "ast",
-      "community": 1,
+      "community": 70,
       "norm_label": "job",
       "id": "src_redact_api_aws_py_job"
     },
@@ -1044,7 +1004,7 @@
       "source_file": "src/redact_api/aws.py",
       "source_location": "L38",
       "_origin": "ast",
-      "community": 1,
+      "community": 70,
       "norm_label": ".get()",
       "id": "redact_api_aws_dynamojobrepository_get"
     },
@@ -1054,7 +1014,7 @@
       "source_file": "src/redact_api/aws.py",
       "source_location": "L46",
       "_origin": "ast",
-      "community": 1,
+      "community": 70,
       "norm_label": ".list_owner()",
       "id": "redact_api_aws_dynamojobrepository_list_owner"
     },
@@ -1064,7 +1024,7 @@
       "source_file": "src/redact_api/aws.py",
       "source_location": "L54",
       "_origin": "ast",
-      "community": 1,
+      "community": 70,
       "norm_label": ".save()",
       "id": "redact_api_aws_dynamojobrepository_save"
     },
@@ -1074,7 +1034,7 @@
       "source_file": "src/redact_api/aws.py",
       "source_location": "L68",
       "_origin": "ast",
-      "community": 1,
+      "community": 70,
       "norm_label": "._serialize()",
       "id": "redact_api_aws_dynamojobrepository_serialize"
     },
@@ -1084,7 +1044,7 @@
       "source_file": "src/redact_api/aws.py",
       "source_location": "L75",
       "_origin": "ast",
-      "community": 1,
+      "community": 70,
       "norm_label": "._deserialize()",
       "id": "redact_api_aws_dynamojobrepository_deserialize"
     },
@@ -1354,7 +1314,7 @@
       "source_file": "src/redact_api/domain.py",
       "source_location": "L29",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "sourcetype",
       "id": "redact_api_domain_sourcetype"
     },
@@ -1434,7 +1394,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "basemodel",
       "id": "basemodel"
     },
@@ -1504,7 +1464,7 @@
       "source_file": "src/redact_api/domain.py",
       "source_location": "L149",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "redactionregion",
       "id": "redact_api_domain_redactionregion"
     },
@@ -1604,7 +1564,7 @@
       "source_file": "src/redact_api/domain.py",
       "source_location": "L30",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "supported source document formats.",
       "id": "redact_api_domain_rationale_30"
     },
@@ -1694,7 +1654,7 @@
       "source_file": "src/redact_api/domain.py",
       "source_location": "L150",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "normalized page-space rectangle selected for redaction.",
       "id": "redact_api_domain_rationale_150"
     },
@@ -1764,7 +1724,7 @@
       "source_file": "src/redact_api/http.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "http.py",
       "id": "redact_api_http"
     },
@@ -1774,7 +1734,7 @@
       "source_file": "src/redact_api/http.py",
       "source_location": "L20",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "apimodel",
       "id": "redact_api_http_apimodel"
     },
@@ -1784,7 +1744,7 @@
       "source_file": "src/redact_api/http.py",
       "source_location": "L26",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "createjobrequest",
       "id": "redact_api_http_createjobrequest"
     },
@@ -1794,7 +1754,7 @@
       "source_file": "src/redact_api/http.py",
       "source_location": "L31",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "uploadpartauthorization",
       "id": "redact_api_http_uploadpartauthorization"
     },
@@ -1804,7 +1764,7 @@
       "source_file": "src/redact_api/http.py",
       "source_location": "L36",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "createjobresponse",
       "id": "redact_api_http_createjobresponse"
     },
@@ -1814,7 +1774,7 @@
       "source_file": "src/redact_api/http.py",
       "source_location": "L42",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "completeduploadpart",
       "id": "redact_api_http_completeduploadpart"
     },
@@ -1824,7 +1784,7 @@
       "source_file": "src/redact_api/http.py",
       "source_location": "L47",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "completeuploadrequest",
       "id": "redact_api_http_completeuploadrequest"
     },
@@ -1834,7 +1794,7 @@
       "source_file": "src/redact_api/http.py",
       "source_location": "L52",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "savemanifestrequest",
       "id": "redact_api_http_savemanifestrequest"
     },
@@ -1844,7 +1804,7 @@
       "source_file": "src/redact_api/http.py",
       "source_location": "L57",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "exportrequest",
       "id": "redact_api_http_exportrequest"
     },
@@ -1854,7 +1814,7 @@
       "source_file": "src/redact_api/http.py",
       "source_location": "L61",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "downloadresponse",
       "id": "redact_api_http_downloadresponse"
     },
@@ -1864,7 +1824,7 @@
       "source_file": "src/redact_api/http.py",
       "source_location": "L65",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "authenticationerror",
       "id": "redact_api_http_authenticationerror"
     },
@@ -1874,7 +1834,7 @@
       "source_file": "src/redact_api/http.py",
       "source_location": "L69",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "create_app()",
       "id": "redact_api_http_create_app"
     },
@@ -1884,7 +1844,7 @@
       "source_file": "src/redact_api/http.py",
       "source_location": "L69",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "controlplaneservice",
       "id": "src_redact_api_http_py_controlplaneservice"
     },
@@ -1894,7 +1854,7 @@
       "source_file": "src/redact_api/http.py",
       "source_location": "L69",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "fastapi",
       "id": "fastapi"
     },
@@ -1904,7 +1864,7 @@
       "source_file": "src/redact_api/http.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "fastapi control-plane boundary.",
       "id": "redact_api_http_rationale_1"
     },
@@ -1914,7 +1874,7 @@
       "source_file": "src/redact_api/http.py",
       "source_location": "L21",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "strict base model for public api payloads.",
       "id": "redact_api_http_rationale_21"
     },
@@ -1924,7 +1884,7 @@
       "source_file": "src/redact_api/http.py",
       "source_location": "L66",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "raised when api gateway did not supply a cognito subject.",
       "id": "redact_api_http_rationale_66"
     },
@@ -1934,7 +1894,7 @@
       "source_file": "src/redact_api/http.py",
       "source_location": "L74",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "build the control-plane api around a configured application service.",
       "id": "redact_api_http_rationale_74"
     },
@@ -1944,7 +1904,7 @@
       "source_file": "src/redact_api/lambda_handler.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "lambda_handler.py",
       "id": "redact_api_lambda_handler"
     },
@@ -1954,7 +1914,7 @@
       "source_file": "src/redact_api/lambda_handler.py",
       "source_location": "L19",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "build_service()",
       "id": "redact_api_lambda_handler_build_service"
     },
@@ -1974,7 +1934,7 @@
       "source_file": "src/redact_api/lambda_handler.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "aws lambda entry point.",
       "id": "redact_api_lambda_handler_rationale_1"
     },
@@ -1984,7 +1944,7 @@
       "source_file": "src/redact_api/lambda_handler.py",
       "source_location": "L20",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "construct the production service from lambda environment settings.",
       "id": "redact_api_lambda_handler_rationale_20"
     },
@@ -1994,7 +1954,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "services.py",
       "id": "redact_api_services"
     },
@@ -2004,7 +1964,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L38",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "jobnotfounderror",
       "id": "redact_api_services_jobnotfounderror"
     },
@@ -2014,7 +1974,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "lookuperror",
       "id": "lookuperror"
     },
@@ -2024,7 +1984,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L42",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "invalidrequesterror",
       "id": "redact_api_services_invalidrequesterror"
     },
@@ -2034,7 +1994,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L46",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "manifestconflicterror",
       "id": "redact_api_services_manifestconflicterror"
     },
@@ -2044,7 +2004,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L50",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "controlplaneservice",
       "id": "redact_api_services_controlplaneservice"
     },
@@ -2114,7 +2074,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L68",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": ".create_job()",
       "id": "redact_api_services_controlplaneservice_create_job"
     },
@@ -2134,7 +2094,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L68",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "job",
       "id": "src_redact_api_services_py_job"
     },
@@ -2144,7 +2104,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L110",
       "_origin": "ast",
-      "community": 3,
+      "community": 6,
       "norm_label": ".list_jobs()",
       "id": "redact_api_services_controlplaneservice_list_jobs"
     },
@@ -2154,7 +2114,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L118",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": ".get_job()",
       "id": "redact_api_services_controlplaneservice_get_job"
     },
@@ -2164,7 +2124,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L128",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": ".complete_upload()",
       "id": "redact_api_services_controlplaneservice_complete_upload"
     },
@@ -2174,7 +2134,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L152",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": ".confirm_export()",
       "id": "redact_api_services_controlplaneservice_confirm_export"
     },
@@ -2184,7 +2144,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L172",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": ".retry()",
       "id": "redact_api_services_controlplaneservice_retry"
     },
@@ -2194,7 +2154,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L186",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": ".get_manifest()",
       "id": "redact_api_services_controlplaneservice_get_manifest"
     },
@@ -2214,7 +2174,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L199",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": ".save_manifest()",
       "id": "redact_api_services_controlplaneservice_save_manifest"
     },
@@ -2234,7 +2194,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L229",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": ".authorize_download()",
       "id": "redact_api_services_controlplaneservice_authorize_download"
     },
@@ -2244,7 +2204,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L237",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "._transition_and_submit()",
       "id": "redact_api_services_controlplaneservice_transition_and_submit"
     },
@@ -2274,7 +2234,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L277",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "._require_manifest_status()",
       "id": "redact_api_services_controlplaneservice_require_manifest_status"
     },
@@ -2284,7 +2244,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "application services for owner-scoped job workflows.",
       "id": "redact_api_services_rationale_1"
     },
@@ -2294,7 +2254,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L39",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "used for missing, foreign-owned, and expired jobs.",
       "id": "redact_api_services_rationale_39"
     },
@@ -2304,7 +2264,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L43",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "raised when an operation is invalid for the current job.",
       "id": "redact_api_services_rationale_43"
     },
@@ -2314,7 +2274,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L47",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "raised when a page manifest has changed concurrently.",
       "id": "redact_api_services_rationale_47"
     },
@@ -2324,7 +2284,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L51",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "coordinate owner-scoped job workflows across persistent aws services.",
       "id": "redact_api_services_rationale_51"
     },
@@ -2334,7 +2294,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L243",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "persist a transition and submit its corresponding worker request.",
       "id": "redact_api_services_rationale_243"
     },
@@ -2994,7 +2954,7 @@
       "source_file": "tests/integration/test_aws.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 51,
       "norm_label": "test_aws.py",
       "id": "integration_test_aws"
     },
@@ -3004,7 +2964,7 @@
       "source_file": "tests/integration/test_aws.py",
       "source_location": "L22",
       "_origin": "ast",
-      "community": 1,
+      "community": 51,
       "norm_label": "make_job()",
       "id": "integration_test_aws_make_job"
     },
@@ -3024,7 +2984,7 @@
       "source_file": "tests/integration/test_aws.py",
       "source_location": "L40",
       "_origin": "ast",
-      "community": 1,
+      "community": 51,
       "norm_label": "make_manifest()",
       "id": "integration_test_aws_make_manifest"
     },
@@ -3044,7 +3004,7 @@
       "source_file": "tests/integration/test_aws.py",
       "source_location": "L63",
       "_origin": "ast",
-      "community": 1,
+      "community": 51,
       "norm_label": "test_dynamodb_round_trip_listing_ttl_and_conflict()",
       "id": "integration_test_aws_test_dynamodb_round_trip_listing_ttl_and_conflict"
     },
@@ -3054,7 +3014,7 @@
       "source_file": "tests/integration/test_aws.py",
       "source_location": "L91",
       "_origin": "ast",
-      "community": 1,
+      "community": 51,
       "norm_label": "test_s3_presigning_objects_and_manifest_conflicts()",
       "id": "integration_test_aws_test_s3_presigning_objects_and_manifest_conflicts"
     },
@@ -3064,7 +3024,7 @@
       "source_file": "tests/integration/test_aws.py",
       "source_location": "L131",
       "_origin": "ast",
-      "community": 1,
+      "community": 51,
       "norm_label": "test_recording_batch_fake_is_idempotent()",
       "id": "integration_test_aws_test_recording_batch_fake_is_idempotent"
     },
@@ -3174,7 +3134,7 @@
       "source_file": "tests/services/test_control_plane.py",
       "source_location": "L60",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "jobstatus",
       "id": "tests_services_test_control_plane_py_jobstatus"
     },
@@ -3184,7 +3144,7 @@
       "source_file": "tests/services/test_control_plane.py",
       "source_location": "L60",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "failurecode",
       "id": "tests_services_test_control_plane_py_failurecode"
     },
@@ -3204,7 +3164,7 @@
       "source_file": "tests/services/test_control_plane.py",
       "source_location": "L80",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "pagemanifest",
       "id": "tests_services_test_control_plane_py_pagemanifest"
     },
@@ -9777,120 +9737,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "tools/strip_notebook_outputs.py",
-      "source_location": "L31",
-      "weight": 1.0,
-      "source": "tools_strip_notebook_outputs",
-      "target": "tools_strip_notebook_outputs_main",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tools/strip_notebook_outputs.py",
-      "source_location": "L10",
-      "weight": 1.0,
-      "source": "tools_strip_notebook_outputs",
-      "target": "tools_strip_notebook_outputs_strip_notebook",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "tools/strip_notebook_outputs.py",
-      "source_location": "L1",
-      "weight": 1.0,
-      "source": "tools_strip_notebook_outputs_rationale_1",
-      "target": "tools_strip_notebook_outputs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "tools/strip_notebook_outputs.py",
-      "source_location": "L38",
-      "weight": 1.0,
-      "source": "tools_strip_notebook_outputs_main",
-      "target": "tools_strip_notebook_outputs_strip_notebook",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "tools/strip_notebook_outputs.py",
-      "source_location": "L10",
-      "weight": 1.0,
-      "source": "tools_strip_notebook_outputs_strip_notebook",
-      "target": "path",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "uses",
-      "confidence": "INFERRED",
-      "source_file": "src/redact_api/worker.py",
-      "source_location": "L14",
-      "weight": 0.8,
-      "confidence_score": 0.5,
-      "source": "path",
-      "target": "redact_api_domain_failurecode"
-    },
-    {
-      "relation": "uses",
-      "confidence": "INFERRED",
-      "source_file": "src/redact_api/worker.py",
-      "source_location": "L14",
-      "weight": 0.8,
-      "confidence_score": 0.5,
-      "source": "path",
-      "target": "redact_api_domain_job"
-    },
-    {
-      "relation": "uses",
-      "confidence": "INFERRED",
-      "source_file": "src/redact_api/worker.py",
-      "source_location": "L14",
-      "weight": 0.8,
-      "confidence_score": 0.5,
-      "source": "path",
-      "target": "redact_api_domain_jobstatus"
-    },
-    {
-      "relation": "uses",
-      "confidence": "INFERRED",
-      "source_file": "src/redact_api/worker.py",
-      "source_location": "L14",
-      "weight": 0.8,
-      "confidence_score": 0.5,
-      "source": "path",
-      "target": "redact_api_domain_sourcetype"
-    },
-    {
-      "relation": "references",
-      "context": "parameter_type",
-      "confidence": "EXTRACTED",
-      "source_file": "src/redact_api/worker.py",
-      "source_location": "L66",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "redact_api_worker_workervalidationconfig_from_yaml",
-      "target": "path"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "tools/strip_notebook_outputs.py",
-      "source_location": "L36",
-      "weight": 1.0,
-      "source": "tools_strip_notebook_outputs_main",
-      "target": "path",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "docs/architecture/analysis-worker.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -9985,9 +9831,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L10",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "redact_api_worker",
-      "target": "datetime"
+      "target": "datetime",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -10912,6 +10758,17 @@
       "target": "redact_api_worker_workervalidationconfig_from_yaml"
     },
     {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/redact_api/worker.py",
+      "source_location": "L66",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "redact_api_worker_workervalidationconfig_from_yaml",
+      "target": "path"
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -10921,6 +10778,46 @@
       "confidence_score": 1.0,
       "source": "redact_api_worker_workervalidationconfig_from_yaml",
       "target": "valueerror"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/redact_api/worker.py",
+      "source_location": "L14",
+      "weight": 0.8,
+      "confidence_score": 0.5,
+      "source": "path",
+      "target": "redact_api_domain_failurecode"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/redact_api/worker.py",
+      "source_location": "L14",
+      "weight": 0.8,
+      "confidence_score": 0.5,
+      "source": "path",
+      "target": "redact_api_domain_job"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/redact_api/worker.py",
+      "source_location": "L14",
+      "weight": 0.8,
+      "confidence_score": 0.5,
+      "source": "path",
+      "target": "redact_api_domain_jobstatus"
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/redact_api/worker.py",
+      "source_location": "L14",
+      "weight": 0.8,
+      "confidence_score": 0.5,
+      "source": "path",
+      "target": "redact_api_domain_sourcetype"
     },
     {
       "relation": "references",
@@ -11446,9 +11343,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L147",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "redact_api_worker_sourcevalidationerror_init",
-      "target": "failurecode"
+      "target": "failurecode",
+      "confidence_score": 1.0
     },
     {
       "relation": "uses",
@@ -11835,9 +11732,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L181",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "redact_api_worker_analyze_source",
-      "target": "any"
+      "target": "any",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -11846,9 +11743,9 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L181",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "redact_api_worker_analyze_source",
-      "target": "datetime"
+      "target": "datetime",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -11973,9 +11870,9 @@
       "source_file": "tests/worker/test_rasterization.py",
       "source_location": "L4",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "worker_test_rasterization",
-      "target": "datetime"
+      "target": "datetime",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -28220,5 +28117,5 @@
       "source_file": "AGENTS.md"
     }
   ],
-  "built_at_commit": "731b6c323acdc01e3fc10730640973bc283fc2b0"
+  "built_at_commit": "1a6fb1a4e6d5d201971b0b0c5dc15775fc2e823b"
 }
