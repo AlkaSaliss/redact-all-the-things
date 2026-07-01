@@ -100,8 +100,8 @@
     "semantic_hash": "4a36f160ca9f93af8da7815c636b9a8b"
   },
   ".pre-commit-config.yaml": {
-    "mtime": 1781473854.3650477,
-    "ast_hash": "b90366739d43e994bd2b9547b14739a4",
+    "mtime": 1782912946.3752952,
+    "ast_hash": "f8e44bc3ab4816d64b04e3b76c8e3bc4",
     "semantic_hash": ""
   },
   ".yamllint.yaml": {
@@ -512,6 +512,11 @@
   "tests/worker/test_rasterization.py": {
     "mtime": 1781731692.543587,
     "ast_hash": "0ab83a211df4332a4e7dcc2ce86bae13",
+    "semantic_hash": ""
+  },
+  "tools/strip_notebook_outputs.py": {
+    "mtime": 1782912951.660164,
+    "ast_hash": "bb28e17f024b0710e58184f7d5b0edba",
     "semantic_hash": ""
   }
 }

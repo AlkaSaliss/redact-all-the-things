@@ -484,31 +484,6 @@
     "ast_hash": "73a146afe18757909874198b2cc42ef0",
     "semantic_hash": ""
   },
-  "openspec/changes/gh-17-worker-rasterization/.openspec.yaml": {
-    "mtime": 1781727288.0935166,
-    "ast_hash": "bbc27e4b9d9d82db2a61a43236c8d23e",
-    "semantic_hash": ""
-  },
-  "openspec/changes/gh-17-worker-rasterization/design.md": {
-    "mtime": 1781727374.6184235,
-    "ast_hash": "79364c04163c021adf7cc309a9793e4c",
-    "semantic_hash": ""
-  },
-  "openspec/changes/gh-17-worker-rasterization/proposal.md": {
-    "mtime": 1781727327.3945427,
-    "ast_hash": "88f67cd7ecc1bf09384aab3835e39710",
-    "semantic_hash": ""
-  },
-  "openspec/changes/gh-17-worker-rasterization/specs/worker-rasterization/spec.md": {
-    "mtime": 1781727349.5175369,
-    "ast_hash": "a53ae8844be6173bde82eadc6d0d71e0",
-    "semantic_hash": ""
-  },
-  "openspec/changes/gh-17-worker-rasterization/tasks.md": {
-    "mtime": 1781731907.5965412,
-    "ast_hash": "42fd0933bfe8887e2dcc4c3401d2f183",
-    "semantic_hash": ""
-  },
   "tests/worker/test_rasterization.py": {
     "mtime": 1781731692.543587,
     "ast_hash": "0ab83a211df4332a4e7dcc2ce86bae13",
@@ -517,6 +492,36 @@
   "tools/strip_notebook_outputs.py": {
     "mtime": 1782912951.660164,
     "ast_hash": "bb28e17f024b0710e58184f7d5b0edba",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/.openspec.yaml": {
+    "mtime": 1781727288.0935166,
+    "ast_hash": "bbc27e4b9d9d82db2a61a43236c8d23e",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/design.md": {
+    "mtime": 1781727374.6184235,
+    "ast_hash": "79364c04163c021adf7cc309a9793e4c",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/proposal.md": {
+    "mtime": 1781727327.3945427,
+    "ast_hash": "88f67cd7ecc1bf09384aab3835e39710",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/specs/worker-rasterization/spec.md": {
+    "mtime": 1781727349.5175369,
+    "ast_hash": "a53ae8844be6173bde82eadc6d0d71e0",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/tasks.md": {
+    "mtime": 1781731907.5965412,
+    "ast_hash": "42fd0933bfe8887e2dcc4c3401d2f183",
+    "semantic_hash": ""
+  },
+  "openspec/specs/worker-rasterization/spec.md": {
+    "mtime": 1782913511.7288678,
+    "ast_hash": "d7bfb9ad0fde4ea82ab490f7e34004e7",
     "semantic_hash": ""
   }
 }

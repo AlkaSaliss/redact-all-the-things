@@ -49,14 +49,534 @@
   },
   "nodes": [
     {
+      "label": "design.md",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/design.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "2026_07_01_gh_17_worker_rasterization_design",
+      "community": 51,
+      "norm_label": "design.md"
+    },
+    {
+      "label": "Context",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/design.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "2026_07_01_gh_17_worker_rasterization_design_context",
+      "community": 51,
+      "norm_label": "context"
+    },
+    {
+      "label": "Goals / Non-Goals",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/design.md",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "2026_07_01_gh_17_worker_rasterization_design_goals_non_goals",
+      "community": 51,
+      "norm_label": "goals / non-goals"
+    },
+    {
+      "label": "Decisions",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/design.md",
+      "source_location": "L34",
+      "_origin": "ast",
+      "id": "2026_07_01_gh_17_worker_rasterization_design_decisions",
+      "community": 51,
+      "norm_label": "decisions"
+    },
+    {
+      "label": "Use PDFium through pypdfium2 for PDF rasterization",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/design.md",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "2026_07_01_gh_17_worker_rasterization_design_use_pdfium_through_pypdfium2_for_pdf_rasterization",
+      "community": 51,
+      "norm_label": "use pdfium through pypdfium2 for pdf rasterization"
+    },
+    {
+      "label": "Normalize all page artifacts to PNG",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/design.md",
+      "source_location": "L46",
+      "_origin": "ast",
+      "id": "2026_07_01_gh_17_worker_rasterization_design_normalize_all_page_artifacts_to_png",
+      "community": 51,
+      "norm_label": "normalize all page artifacts to png"
+    },
+    {
+      "label": "Store an explicit page-artifact index",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/design.md",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "2026_07_01_gh_17_worker_rasterization_design_store_an_explicit_page_artifact_index",
+      "community": 51,
+      "norm_label": "store an explicit page-artifact index"
+    },
+    {
+      "label": "Keep processing sequential and writer-driven",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/design.md",
+      "source_location": "L68",
+      "_origin": "ast",
+      "id": "2026_07_01_gh_17_worker_rasterization_design_keep_processing_sequential_and_writer_driven",
+      "community": 51,
+      "norm_label": "keep processing sequential and writer-driven"
+    },
+    {
+      "label": "Treat renderer failures as permanent processing failures",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/design.md",
+      "source_location": "L79",
+      "_origin": "ast",
+      "id": "2026_07_01_gh_17_worker_rasterization_design_treat_renderer_failures_as_permanent_processing_failures",
+      "community": 51,
+      "norm_label": "treat renderer failures as permanent processing failures"
+    },
+    {
+      "label": "Risks / Trade-offs",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/design.md",
+      "source_location": "L92",
+      "_origin": "ast",
+      "id": "2026_07_01_gh_17_worker_rasterization_design_risks_trade_offs",
+      "community": 51,
+      "norm_label": "risks / trade-offs"
+    },
+    {
+      "label": "Migration Plan",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/design.md",
+      "source_location": "L106",
+      "_origin": "ast",
+      "id": "2026_07_01_gh_17_worker_rasterization_design_migration_plan",
+      "community": 51,
+      "norm_label": "migration plan"
+    },
+    {
+      "label": "Open Questions",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/design.md",
+      "source_location": "L124",
+      "_origin": "ast",
+      "id": "2026_07_01_gh_17_worker_rasterization_design_open_questions",
+      "community": 51,
+      "norm_label": "open questions"
+    },
+    {
+      "label": "proposal.md",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/proposal.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "2026_07_01_gh_17_worker_rasterization_proposal",
+      "community": 72,
+      "norm_label": "proposal.md"
+    },
+    {
+      "label": "Why",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/proposal.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "2026_07_01_gh_17_worker_rasterization_proposal_why",
+      "community": 72,
+      "norm_label": "why"
+    },
+    {
+      "label": "What Changes",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/proposal.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "2026_07_01_gh_17_worker_rasterization_proposal_what_changes",
+      "community": 72,
+      "norm_label": "what changes"
+    },
+    {
+      "label": "Capabilities",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/proposal.md",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "2026_07_01_gh_17_worker_rasterization_proposal_capabilities",
+      "community": 72,
+      "norm_label": "capabilities"
+    },
+    {
+      "label": "New Capabilities",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/proposal.md",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "2026_07_01_gh_17_worker_rasterization_proposal_new_capabilities",
+      "community": 72,
+      "norm_label": "new capabilities"
+    },
+    {
+      "label": "Modified Capabilities",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/proposal.md",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "2026_07_01_gh_17_worker_rasterization_proposal_modified_capabilities",
+      "community": 72,
+      "norm_label": "modified capabilities"
+    },
+    {
+      "label": "Impact",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/proposal.md",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "2026_07_01_gh_17_worker_rasterization_proposal_impact",
+      "community": 72,
+      "norm_label": "impact"
+    },
+    {
+      "label": "spec.md",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/specs/worker-rasterization/spec.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_07_01_gh_17_worker_rasterization_specs_worker_rasterization_spec_md_worker_rasterization_spec",
+      "community": 67,
+      "norm_label": "spec.md"
+    },
+    {
+      "label": "ADDED Requirements",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/specs/worker-rasterization/spec.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "worker_rasterization_spec_added_requirements",
+      "community": 67,
+      "norm_label": "added requirements"
+    },
+    {
+      "label": "Requirement: Worker rasterizes accepted sources into page artifacts",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/specs/worker-rasterization/spec.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_07_01_gh_17_worker_rasterization_specs_worker_rasterization_spec_md_worker_rasterization_spec_requirement_worker_rasterizes_accepted_sources_into_page_artifacts",
+      "community": 67,
+      "norm_label": "requirement: worker rasterizes accepted sources into page artifacts"
+    },
+    {
+      "label": "Scenario: Rasterize PDF pages in order",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/specs/worker-rasterization/spec.md",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_07_01_gh_17_worker_rasterization_specs_worker_rasterization_spec_md_worker_rasterization_spec_scenario_rasterize_pdf_pages_in_order",
+      "community": 67,
+      "norm_label": "scenario: rasterize pdf pages in order"
+    },
+    {
+      "label": "Scenario: Rasterize uploaded image as one page",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/specs/worker-rasterization/spec.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_07_01_gh_17_worker_rasterization_specs_worker_rasterization_spec_md_worker_rasterization_spec_scenario_rasterize_uploaded_image_as_one_page",
+      "community": 67,
+      "norm_label": "scenario: rasterize uploaded image as one page"
+    },
+    {
+      "label": "Requirement: Page artifact metadata preserves downstream ordering",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/specs/worker-rasterization/spec.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_07_01_gh_17_worker_rasterization_specs_worker_rasterization_spec_md_worker_rasterization_spec_requirement_page_artifact_metadata_preserves_downstream_ordering",
+      "community": 67,
+      "norm_label": "requirement: page artifact metadata preserves downstream ordering"
+    },
+    {
+      "label": "Scenario: Record page artifact metadata",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/specs/worker-rasterization/spec.md",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_07_01_gh_17_worker_rasterization_specs_worker_rasterization_spec_md_worker_rasterization_spec_scenario_record_page_artifact_metadata",
+      "community": 67,
+      "norm_label": "scenario: record page artifact metadata"
+    },
+    {
+      "label": "Scenario: Keep rasterization metadata separate from review manifests",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/specs/worker-rasterization/spec.md",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_07_01_gh_17_worker_rasterization_specs_worker_rasterization_spec_md_worker_rasterization_spec_scenario_keep_rasterization_metadata_separate_from_review_manifests",
+      "community": 67,
+      "norm_label": "scenario: keep rasterization metadata separate from review manifests"
+    },
+    {
+      "label": "Requirement: Rasterization remains memory bounded",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/specs/worker-rasterization/spec.md",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_07_01_gh_17_worker_rasterization_specs_worker_rasterization_spec_md_worker_rasterization_spec_requirement_rasterization_remains_memory_bounded",
+      "community": 67,
+      "norm_label": "requirement: rasterization remains memory bounded"
+    },
+    {
+      "label": "Scenario: Process PDF pages sequentially",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/specs/worker-rasterization/spec.md",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_07_01_gh_17_worker_rasterization_specs_worker_rasterization_spec_md_worker_rasterization_spec_scenario_process_pdf_pages_sequentially",
+      "community": 67,
+      "norm_label": "scenario: process pdf pages sequentially"
+    },
+    {
+      "label": "Requirement: Rasterization failures are safe permanent failures",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/specs/worker-rasterization/spec.md",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_07_01_gh_17_worker_rasterization_specs_worker_rasterization_spec_md_worker_rasterization_spec_requirement_rasterization_failures_are_safe_permanent_failures",
+      "community": 67,
+      "norm_label": "requirement: rasterization failures are safe permanent failures"
+    },
+    {
+      "label": "Scenario: Persist safe failure on rasterization error",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/specs/worker-rasterization/spec.md",
+      "source_location": "L41",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_07_01_gh_17_worker_rasterization_specs_worker_rasterization_spec_md_worker_rasterization_spec_scenario_persist_safe_failure_on_rasterization_error",
+      "community": 67,
+      "norm_label": "scenario: persist safe failure on rasterization error"
+    },
+    {
+      "label": "Scenario: Avoid downstream artifacts after rasterization failure",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/specs/worker-rasterization/spec.md",
+      "source_location": "L45",
+      "_origin": "ast",
+      "id": "openspec_changes_archive_2026_07_01_gh_17_worker_rasterization_specs_worker_rasterization_spec_md_worker_rasterization_spec_scenario_avoid_downstream_artifacts_after_rasterization_failure",
+      "community": 67,
+      "norm_label": "scenario: avoid downstream artifacts after rasterization failure"
+    },
+    {
+      "label": "tasks.md",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/tasks.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "2026_07_01_gh_17_worker_rasterization_tasks",
+      "community": 73,
+      "norm_label": "tasks.md"
+    },
+    {
+      "label": "1. Test Fixtures",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/tasks.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "2026_07_01_gh_17_worker_rasterization_tasks_1_test_fixtures",
+      "community": 73,
+      "norm_label": "1. test fixtures"
+    },
+    {
+      "label": "2. Worker Rasterization Tests",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/tasks.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "2026_07_01_gh_17_worker_rasterization_tasks_2_worker_rasterization_tests",
+      "community": 73,
+      "norm_label": "2. worker rasterization tests"
+    },
+    {
+      "label": "3. Worker Rasterization Implementation",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/tasks.md",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "2026_07_01_gh_17_worker_rasterization_tasks_3_worker_rasterization_implementation",
+      "community": 73,
+      "norm_label": "3. worker rasterization implementation"
+    },
+    {
+      "label": "4. Documentation Updates",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/tasks.md",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "2026_07_01_gh_17_worker_rasterization_tasks_4_documentation_updates",
+      "community": 73,
+      "norm_label": "4. documentation updates"
+    },
+    {
+      "label": "5. Verification",
+      "file_type": "document",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/tasks.md",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "2026_07_01_gh_17_worker_rasterization_tasks_5_verification",
+      "community": 73,
+      "norm_label": "5. verification"
+    },
+    {
+      "label": "spec.md",
+      "file_type": "document",
+      "source_file": "openspec/specs/worker-rasterization/spec.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "openspec_specs_worker_rasterization_spec_md_worker_rasterization_spec",
+      "community": 49,
+      "norm_label": "spec.md"
+    },
+    {
+      "label": "Purpose",
+      "file_type": "document",
+      "source_file": "openspec/specs/worker-rasterization/spec.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "worker_rasterization_spec_purpose",
+      "community": 49,
+      "norm_label": "purpose"
+    },
+    {
+      "label": "Requirements",
+      "file_type": "document",
+      "source_file": "openspec/specs/worker-rasterization/spec.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "worker_rasterization_spec_requirements",
+      "community": 49,
+      "norm_label": "requirements"
+    },
+    {
+      "label": "Requirement: Worker rasterizes accepted sources into page artifacts",
+      "file_type": "document",
+      "source_file": "openspec/specs/worker-rasterization/spec.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "openspec_specs_worker_rasterization_spec_md_worker_rasterization_spec_requirement_worker_rasterizes_accepted_sources_into_page_artifacts",
+      "community": 49,
+      "norm_label": "requirement: worker rasterizes accepted sources into page artifacts"
+    },
+    {
+      "label": "Scenario: Rasterize PDF pages in order",
+      "file_type": "document",
+      "source_file": "openspec/specs/worker-rasterization/spec.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "openspec_specs_worker_rasterization_spec_md_worker_rasterization_spec_scenario_rasterize_pdf_pages_in_order",
+      "community": 49,
+      "norm_label": "scenario: rasterize pdf pages in order"
+    },
+    {
+      "label": "Scenario: Rasterize uploaded image as one page",
+      "file_type": "document",
+      "source_file": "openspec/specs/worker-rasterization/spec.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "openspec_specs_worker_rasterization_spec_md_worker_rasterization_spec_scenario_rasterize_uploaded_image_as_one_page",
+      "community": 49,
+      "norm_label": "scenario: rasterize uploaded image as one page"
+    },
+    {
+      "label": "Requirement: Page artifact metadata preserves downstream ordering",
+      "file_type": "document",
+      "source_file": "openspec/specs/worker-rasterization/spec.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "openspec_specs_worker_rasterization_spec_md_worker_rasterization_spec_requirement_page_artifact_metadata_preserves_downstream_ordering",
+      "community": 49,
+      "norm_label": "requirement: page artifact metadata preserves downstream ordering"
+    },
+    {
+      "label": "Scenario: Record page artifact metadata",
+      "file_type": "document",
+      "source_file": "openspec/specs/worker-rasterization/spec.md",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "openspec_specs_worker_rasterization_spec_md_worker_rasterization_spec_scenario_record_page_artifact_metadata",
+      "community": 49,
+      "norm_label": "scenario: record page artifact metadata"
+    },
+    {
+      "label": "Scenario: Keep rasterization metadata separate from review manifests",
+      "file_type": "document",
+      "source_file": "openspec/specs/worker-rasterization/spec.md",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "openspec_specs_worker_rasterization_spec_md_worker_rasterization_spec_scenario_keep_rasterization_metadata_separate_from_review_manifests",
+      "community": 49,
+      "norm_label": "scenario: keep rasterization metadata separate from review manifests"
+    },
+    {
+      "label": "Requirement: Rasterization remains memory bounded",
+      "file_type": "document",
+      "source_file": "openspec/specs/worker-rasterization/spec.md",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "openspec_specs_worker_rasterization_spec_md_worker_rasterization_spec_requirement_rasterization_remains_memory_bounded",
+      "community": 49,
+      "norm_label": "requirement: rasterization remains memory bounded"
+    },
+    {
+      "label": "Scenario: Process PDF pages sequentially",
+      "file_type": "document",
+      "source_file": "openspec/specs/worker-rasterization/spec.md",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "openspec_specs_worker_rasterization_spec_md_worker_rasterization_spec_scenario_process_pdf_pages_sequentially",
+      "community": 49,
+      "norm_label": "scenario: process pdf pages sequentially"
+    },
+    {
+      "label": "Requirement: Rasterization failures are safe permanent failures",
+      "file_type": "document",
+      "source_file": "openspec/specs/worker-rasterization/spec.md",
+      "source_location": "L41",
+      "_origin": "ast",
+      "id": "openspec_specs_worker_rasterization_spec_md_worker_rasterization_spec_requirement_rasterization_failures_are_safe_permanent_failures",
+      "community": 49,
+      "norm_label": "requirement: rasterization failures are safe permanent failures"
+    },
+    {
+      "label": "Scenario: Persist safe failure on rasterization error",
+      "file_type": "document",
+      "source_file": "openspec/specs/worker-rasterization/spec.md",
+      "source_location": "L45",
+      "_origin": "ast",
+      "id": "openspec_specs_worker_rasterization_spec_md_worker_rasterization_spec_scenario_persist_safe_failure_on_rasterization_error",
+      "community": 49,
+      "norm_label": "scenario: persist safe failure on rasterization error"
+    },
+    {
+      "label": "Scenario: Avoid downstream artifacts after rasterization failure",
+      "file_type": "document",
+      "source_file": "openspec/specs/worker-rasterization/spec.md",
+      "source_location": "L49",
+      "_origin": "ast",
+      "id": "openspec_specs_worker_rasterization_spec_md_worker_rasterization_spec_scenario_avoid_downstream_artifacts_after_rasterization_failure",
+      "community": 49,
+      "norm_label": "scenario: avoid downstream artifacts after rasterization failure"
+    },
+    {
       "label": "strip_notebook_outputs.py",
       "file_type": "code",
       "source_file": "tools/strip_notebook_outputs.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "tools_strip_notebook_outputs",
-      "community": 5,
-      "norm_label": "strip_notebook_outputs.py"
+      "community": 44,
+      "norm_label": "strip_notebook_outputs.py",
+      "id": "tools_strip_notebook_outputs"
     },
     {
       "label": "strip_notebook()",
@@ -64,9 +584,9 @@
       "source_file": "tools/strip_notebook_outputs.py",
       "source_location": "L10",
       "_origin": "ast",
-      "id": "tools_strip_notebook_outputs_strip_notebook",
-      "community": 5,
-      "norm_label": "strip_notebook()"
+      "community": 44,
+      "norm_label": "strip_notebook()",
+      "id": "tools_strip_notebook_outputs_strip_notebook"
     },
     {
       "label": "Path",
@@ -74,9 +594,9 @@
       "source_file": "tools/strip_notebook_outputs.py",
       "source_location": "L10",
       "_origin": "ast",
-      "id": "path",
-      "community": 5,
-      "norm_label": "path"
+      "community": 44,
+      "norm_label": "path",
+      "id": "path"
     },
     {
       "label": "main()",
@@ -84,9 +604,9 @@
       "source_file": "tools/strip_notebook_outputs.py",
       "source_location": "L31",
       "_origin": "ast",
-      "id": "tools_strip_notebook_outputs_main",
-      "community": 5,
-      "norm_label": "main()"
+      "community": 44,
+      "norm_label": "main()",
+      "id": "tools_strip_notebook_outputs_main"
     },
     {
       "label": "Strip execution output from Jupyter notebooks before commit.",
@@ -94,9 +614,9 @@
       "source_file": "tools/strip_notebook_outputs.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "tools_strip_notebook_outputs_rationale_1",
-      "community": 5,
-      "norm_label": "strip execution output from jupyter notebooks before commit."
+      "community": 44,
+      "norm_label": "strip execution output from jupyter notebooks before commit.",
+      "id": "tools_strip_notebook_outputs_rationale_1"
     },
     {
       "label": "analysis-worker.md",
@@ -264,7 +784,7 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L92",
       "_origin": "ast",
-      "community": 5,
+      "community": 44,
       "norm_label": "workervalidationconfig",
       "id": "redact_api_worker_workervalidationconfig"
     },
@@ -274,7 +794,7 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L100",
       "_origin": "ast",
-      "community": 5,
+      "community": 44,
       "norm_label": ".from_yaml()",
       "id": "redact_api_worker_workervalidationconfig_from_yaml"
     },
@@ -344,7 +864,7 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L144",
       "_origin": "ast",
-      "community": 5,
+      "community": 44,
       "norm_label": "sourcevalidationerror",
       "id": "redact_api_worker_sourcevalidationerror"
     },
@@ -354,7 +874,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 6,
+      "community": 44,
       "norm_label": "valueerror",
       "id": "valueerror"
     },
@@ -364,7 +884,7 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L147",
       "_origin": "ast",
-      "community": 5,
+      "community": 44,
       "norm_label": ".__init__()",
       "id": "redact_api_worker_sourcevalidationerror_init"
     },
@@ -374,7 +894,7 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L147",
       "_origin": "ast",
-      "community": 5,
+      "community": 44,
       "norm_label": "failurecode",
       "id": "failurecode"
     },
@@ -394,7 +914,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "runtimeerror",
       "id": "runtimeerror"
     },
@@ -404,7 +924,7 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L156",
       "_origin": "ast",
-      "community": 5,
+      "community": 44,
       "norm_label": "validate_source()",
       "id": "redact_api_worker_validate_source"
     },
@@ -554,7 +1074,7 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L359",
       "_origin": "ast",
-      "community": 5,
+      "community": 44,
       "norm_label": "_validate_pdf()",
       "id": "redact_api_worker_validate_pdf"
     },
@@ -564,7 +1084,7 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L372",
       "_origin": "ast",
-      "community": 5,
+      "community": 44,
       "norm_label": "_validate_png()",
       "id": "redact_api_worker_validate_png"
     },
@@ -574,7 +1094,7 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L389",
       "_origin": "ast",
-      "community": 5,
+      "community": 44,
       "norm_label": "_validate_jpeg()",
       "id": "redact_api_worker_validate_jpeg"
     },
@@ -634,7 +1154,7 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L93",
       "_origin": "ast",
-      "community": 5,
+      "community": 44,
       "norm_label": "tunable validation limits loaded from yaml.",
       "id": "redact_api_worker_rationale_93"
     },
@@ -684,7 +1204,7 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L145",
       "_origin": "ast",
-      "community": 5,
+      "community": 44,
       "norm_label": "raised when source validation maps to a safe failure code.",
       "id": "redact_api_worker_rationale_145"
     },
@@ -704,7 +1224,7 @@
       "source_file": "src/redact_api/worker.py",
       "source_location": "L162",
       "_origin": "ast",
-      "community": 5,
+      "community": 44,
       "norm_label": "validate source bytes before any analysis artifact can be created.",
       "id": "redact_api_worker_rationale_162"
     },
@@ -1004,7 +1524,7 @@
       "source_file": "src/redact_api/aws.py",
       "source_location": "L29",
       "_origin": "ast",
-      "community": 1,
+      "community": 70,
       "norm_label": ".__init__()",
       "id": "redact_api_aws_dynamojobrepository_init"
     },
@@ -1014,7 +1534,7 @@
       "source_file": "src/redact_api/aws.py",
       "source_location": "L29",
       "_origin": "ast",
-      "community": 1,
+      "community": 70,
       "norm_label": "any",
       "id": "src_redact_api_aws_py_any"
     },
@@ -1024,7 +1544,7 @@
       "source_file": "src/redact_api/aws.py",
       "source_location": "L32",
       "_origin": "ast",
-      "community": 1,
+      "community": 70,
       "norm_label": ".create()",
       "id": "redact_api_aws_dynamojobrepository_create"
     },
@@ -1034,7 +1554,7 @@
       "source_file": "src/redact_api/aws.py",
       "source_location": "L32",
       "_origin": "ast",
-      "community": 1,
+      "community": 70,
       "norm_label": "job",
       "id": "src_redact_api_aws_py_job"
     },
@@ -1044,7 +1564,7 @@
       "source_file": "src/redact_api/aws.py",
       "source_location": "L38",
       "_origin": "ast",
-      "community": 1,
+      "community": 70,
       "norm_label": ".get()",
       "id": "redact_api_aws_dynamojobrepository_get"
     },
@@ -1054,7 +1574,7 @@
       "source_file": "src/redact_api/aws.py",
       "source_location": "L46",
       "_origin": "ast",
-      "community": 1,
+      "community": 70,
       "norm_label": ".list_owner()",
       "id": "redact_api_aws_dynamojobrepository_list_owner"
     },
@@ -1064,7 +1584,7 @@
       "source_file": "src/redact_api/aws.py",
       "source_location": "L54",
       "_origin": "ast",
-      "community": 1,
+      "community": 70,
       "norm_label": ".save()",
       "id": "redact_api_aws_dynamojobrepository_save"
     },
@@ -1074,7 +1594,7 @@
       "source_file": "src/redact_api/aws.py",
       "source_location": "L68",
       "_origin": "ast",
-      "community": 1,
+      "community": 70,
       "norm_label": "._serialize()",
       "id": "redact_api_aws_dynamojobrepository_serialize"
     },
@@ -1084,7 +1604,7 @@
       "source_file": "src/redact_api/aws.py",
       "source_location": "L75",
       "_origin": "ast",
-      "community": 1,
+      "community": 70,
       "norm_label": "._deserialize()",
       "id": "redact_api_aws_dynamojobrepository_deserialize"
     },
@@ -1104,7 +1624,7 @@
       "source_file": "src/redact_api/aws.py",
       "source_location": "L85",
       "_origin": "ast",
-      "community": 1,
+      "community": 70,
       "norm_label": ".__init__()",
       "id": "redact_api_aws_s3objectrepository_init"
     },
@@ -1144,7 +1664,7 @@
       "source_file": "src/redact_api/aws.py",
       "source_location": "L132",
       "_origin": "ast",
-      "community": 1,
+      "community": 70,
       "norm_label": ".complete_multipart_upload()",
       "id": "redact_api_aws_s3objectrepository_complete_multipart_upload"
     },
@@ -1224,7 +1744,7 @@
       "source_file": "src/redact_api/aws.py",
       "source_location": "L239",
       "_origin": "ast",
-      "community": 1,
+      "community": 70,
       "norm_label": ".__init__()",
       "id": "redact_api_aws_awsbatchsubmitter_init"
     },
@@ -1354,7 +1874,7 @@
       "source_file": "src/redact_api/domain.py",
       "source_location": "L29",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "sourcetype",
       "id": "redact_api_domain_sourcetype"
     },
@@ -1434,7 +1954,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "basemodel",
       "id": "basemodel"
     },
@@ -1444,7 +1964,7 @@
       "source_file": "src/redact_api/domain.py",
       "source_location": "L86",
       "_origin": "ast",
-      "community": 6,
+      "community": 44,
       "norm_label": "_is_aware()",
       "id": "redact_api_domain_is_aware"
     },
@@ -1474,7 +1994,7 @@
       "source_file": "src/redact_api/domain.py",
       "source_location": "L108",
       "_origin": "ast",
-      "community": 6,
+      "community": 44,
       "norm_label": ".validate_contract()",
       "id": "redact_api_domain_job_validate_contract"
     },
@@ -1494,7 +2014,7 @@
       "source_file": "src/redact_api/domain.py",
       "source_location": "L140",
       "_origin": "ast",
-      "community": 6,
+      "community": 44,
       "norm_label": ".validate_keys()",
       "id": "redact_api_domain_workersubmission_validate_keys"
     },
@@ -1504,7 +2024,7 @@
       "source_file": "src/redact_api/domain.py",
       "source_location": "L149",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "redactionregion",
       "id": "redact_api_domain_redactionregion"
     },
@@ -1514,7 +2034,7 @@
       "source_file": "src/redact_api/domain.py",
       "source_location": "L164",
       "_origin": "ast",
-      "community": 6,
+      "community": 44,
       "norm_label": ".validate_geometry()",
       "id": "redact_api_domain_redactionregion_validate_geometry"
     },
@@ -1534,7 +2054,7 @@
       "source_file": "src/redact_api/domain.py",
       "source_location": "L188",
       "_origin": "ast",
-      "community": 6,
+      "community": 44,
       "norm_label": ".validate_contract()",
       "id": "redact_api_domain_pagemanifest_validate_contract"
     },
@@ -1544,7 +2064,7 @@
       "source_file": "src/redact_api/domain.py",
       "source_location": "L217",
       "_origin": "ast",
-      "community": 6,
+      "community": 1,
       "norm_label": "is_expired()",
       "id": "redact_api_domain_is_expired"
     },
@@ -1574,7 +2094,7 @@
       "source_file": "src/redact_api/domain.py",
       "source_location": "L237",
       "_origin": "ast",
-      "community": 6,
+      "community": 54,
       "norm_label": "transition_job()",
       "id": "redact_api_domain_transition_job"
     },
@@ -1604,7 +2124,7 @@
       "source_file": "src/redact_api/domain.py",
       "source_location": "L30",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "supported source document formats.",
       "id": "redact_api_domain_rationale_30"
     },
@@ -1694,7 +2214,7 @@
       "source_file": "src/redact_api/domain.py",
       "source_location": "L150",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "normalized page-space rectangle selected for redaction.",
       "id": "redact_api_domain_rationale_150"
     },
@@ -1714,7 +2234,7 @@
       "source_file": "src/redact_api/domain.py",
       "source_location": "L218",
       "_origin": "ast",
-      "community": 6,
+      "community": 1,
       "norm_label": "return whether access to a job has expired at ``now``.",
       "id": "redact_api_domain_rationale_218"
     },
@@ -1744,7 +2264,7 @@
       "source_file": "src/redact_api/domain.py",
       "source_location": "L244",
       "_origin": "ast",
-      "community": 6,
+      "community": 54,
       "norm_label": "validate and apply one lifecycle transition without persisting it.",
       "id": "redact_api_domain_rationale_244"
     },
@@ -1764,7 +2284,7 @@
       "source_file": "src/redact_api/http.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "http.py",
       "id": "redact_api_http"
     },
@@ -1774,7 +2294,7 @@
       "source_file": "src/redact_api/http.py",
       "source_location": "L20",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "apimodel",
       "id": "redact_api_http_apimodel"
     },
@@ -1784,7 +2304,7 @@
       "source_file": "src/redact_api/http.py",
       "source_location": "L26",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "createjobrequest",
       "id": "redact_api_http_createjobrequest"
     },
@@ -1794,7 +2314,7 @@
       "source_file": "src/redact_api/http.py",
       "source_location": "L31",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "uploadpartauthorization",
       "id": "redact_api_http_uploadpartauthorization"
     },
@@ -1804,7 +2324,7 @@
       "source_file": "src/redact_api/http.py",
       "source_location": "L36",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "createjobresponse",
       "id": "redact_api_http_createjobresponse"
     },
@@ -1814,7 +2334,7 @@
       "source_file": "src/redact_api/http.py",
       "source_location": "L42",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "completeduploadpart",
       "id": "redact_api_http_completeduploadpart"
     },
@@ -1824,7 +2344,7 @@
       "source_file": "src/redact_api/http.py",
       "source_location": "L47",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "completeuploadrequest",
       "id": "redact_api_http_completeuploadrequest"
     },
@@ -1834,7 +2354,7 @@
       "source_file": "src/redact_api/http.py",
       "source_location": "L52",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "savemanifestrequest",
       "id": "redact_api_http_savemanifestrequest"
     },
@@ -1844,7 +2364,7 @@
       "source_file": "src/redact_api/http.py",
       "source_location": "L57",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "exportrequest",
       "id": "redact_api_http_exportrequest"
     },
@@ -1854,7 +2374,7 @@
       "source_file": "src/redact_api/http.py",
       "source_location": "L61",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "downloadresponse",
       "id": "redact_api_http_downloadresponse"
     },
@@ -1864,7 +2384,7 @@
       "source_file": "src/redact_api/http.py",
       "source_location": "L65",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "authenticationerror",
       "id": "redact_api_http_authenticationerror"
     },
@@ -1874,7 +2394,7 @@
       "source_file": "src/redact_api/http.py",
       "source_location": "L69",
       "_origin": "ast",
-      "community": 3,
+      "community": 28,
       "norm_label": "create_app()",
       "id": "redact_api_http_create_app"
     },
@@ -1884,7 +2404,7 @@
       "source_file": "src/redact_api/http.py",
       "source_location": "L69",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "controlplaneservice",
       "id": "src_redact_api_http_py_controlplaneservice"
     },
@@ -1894,7 +2414,7 @@
       "source_file": "src/redact_api/http.py",
       "source_location": "L69",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "fastapi",
       "id": "fastapi"
     },
@@ -1904,7 +2424,7 @@
       "source_file": "src/redact_api/http.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "fastapi control-plane boundary.",
       "id": "redact_api_http_rationale_1"
     },
@@ -1914,7 +2434,7 @@
       "source_file": "src/redact_api/http.py",
       "source_location": "L21",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "strict base model for public api payloads.",
       "id": "redact_api_http_rationale_21"
     },
@@ -1924,7 +2444,7 @@
       "source_file": "src/redact_api/http.py",
       "source_location": "L66",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "raised when api gateway did not supply a cognito subject.",
       "id": "redact_api_http_rationale_66"
     },
@@ -1934,7 +2454,7 @@
       "source_file": "src/redact_api/http.py",
       "source_location": "L74",
       "_origin": "ast",
-      "community": 3,
+      "community": 28,
       "norm_label": "build the control-plane api around a configured application service.",
       "id": "redact_api_http_rationale_74"
     },
@@ -1944,7 +2464,7 @@
       "source_file": "src/redact_api/lambda_handler.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "lambda_handler.py",
       "id": "redact_api_lambda_handler"
     },
@@ -1954,7 +2474,7 @@
       "source_file": "src/redact_api/lambda_handler.py",
       "source_location": "L19",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "build_service()",
       "id": "redact_api_lambda_handler_build_service"
     },
@@ -1974,7 +2494,7 @@
       "source_file": "src/redact_api/lambda_handler.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "aws lambda entry point.",
       "id": "redact_api_lambda_handler_rationale_1"
     },
@@ -1984,7 +2504,7 @@
       "source_file": "src/redact_api/lambda_handler.py",
       "source_location": "L20",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "construct the production service from lambda environment settings.",
       "id": "redact_api_lambda_handler_rationale_20"
     },
@@ -1994,7 +2514,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "services.py",
       "id": "redact_api_services"
     },
@@ -2004,7 +2524,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L38",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "jobnotfounderror",
       "id": "redact_api_services_jobnotfounderror"
     },
@@ -2014,7 +2534,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "lookuperror",
       "id": "lookuperror"
     },
@@ -2024,7 +2544,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L42",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "invalidrequesterror",
       "id": "redact_api_services_invalidrequesterror"
     },
@@ -2034,7 +2554,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L46",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "manifestconflicterror",
       "id": "redact_api_services_manifestconflicterror"
     },
@@ -2044,7 +2564,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L50",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "controlplaneservice",
       "id": "redact_api_services_controlplaneservice"
     },
@@ -2114,7 +2634,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L68",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": ".create_job()",
       "id": "redact_api_services_controlplaneservice_create_job"
     },
@@ -2134,7 +2654,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L68",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "job",
       "id": "src_redact_api_services_py_job"
     },
@@ -2144,7 +2664,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L110",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": ".list_jobs()",
       "id": "redact_api_services_controlplaneservice_list_jobs"
     },
@@ -2154,7 +2674,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L118",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": ".get_job()",
       "id": "redact_api_services_controlplaneservice_get_job"
     },
@@ -2164,7 +2684,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L128",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": ".complete_upload()",
       "id": "redact_api_services_controlplaneservice_complete_upload"
     },
@@ -2174,7 +2694,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L152",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": ".confirm_export()",
       "id": "redact_api_services_controlplaneservice_confirm_export"
     },
@@ -2184,7 +2704,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L172",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": ".retry()",
       "id": "redact_api_services_controlplaneservice_retry"
     },
@@ -2194,7 +2714,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L186",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": ".get_manifest()",
       "id": "redact_api_services_controlplaneservice_get_manifest"
     },
@@ -2214,7 +2734,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L199",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": ".save_manifest()",
       "id": "redact_api_services_controlplaneservice_save_manifest"
     },
@@ -2234,7 +2754,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L229",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": ".authorize_download()",
       "id": "redact_api_services_controlplaneservice_authorize_download"
     },
@@ -2244,7 +2764,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L237",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "._transition_and_submit()",
       "id": "redact_api_services_controlplaneservice_transition_and_submit"
     },
@@ -2274,7 +2794,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L277",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "._require_manifest_status()",
       "id": "redact_api_services_controlplaneservice_require_manifest_status"
     },
@@ -2284,7 +2804,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "application services for owner-scoped job workflows.",
       "id": "redact_api_services_rationale_1"
     },
@@ -2294,7 +2814,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L39",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "used for missing, foreign-owned, and expired jobs.",
       "id": "redact_api_services_rationale_39"
     },
@@ -2304,7 +2824,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L43",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "raised when an operation is invalid for the current job.",
       "id": "redact_api_services_rationale_43"
     },
@@ -2314,7 +2834,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L47",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "raised when a page manifest has changed concurrently.",
       "id": "redact_api_services_rationale_47"
     },
@@ -2324,7 +2844,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L51",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "coordinate owner-scoped job workflows across persistent aws services.",
       "id": "redact_api_services_rationale_51"
     },
@@ -2334,7 +2854,7 @@
       "source_file": "src/redact_api/services.py",
       "source_location": "L243",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "persist a transition and submit its corresponding worker request.",
       "id": "redact_api_services_rationale_243"
     },
@@ -2414,7 +2934,7 @@
       "source_file": "tests/api/test_http.py",
       "source_location": "L44",
       "_origin": "ast",
-      "community": 1,
+      "community": 28,
       "norm_label": "set_status()",
       "id": "api_test_http_set_status"
     },
@@ -2714,7 +3234,7 @@
       "source_file": "tests/domain/test_lifecycle.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 6,
+      "community": 54,
       "norm_label": "test_lifecycle.py",
       "id": "domain_test_lifecycle"
     },
@@ -2724,7 +3244,7 @@
       "source_file": "tests/domain/test_lifecycle.py",
       "source_location": "L22",
       "_origin": "ast",
-      "community": 6,
+      "community": 54,
       "norm_label": "make_job()",
       "id": "domain_test_lifecycle_make_job"
     },
@@ -2734,7 +3254,7 @@
       "source_file": "tests/domain/test_lifecycle.py",
       "source_location": "L22",
       "_origin": "ast",
-      "community": 6,
+      "community": 54,
       "norm_label": "jobstatus",
       "id": "tests_domain_test_lifecycle_py_jobstatus"
     },
@@ -2754,7 +3274,7 @@
       "source_file": "tests/domain/test_lifecycle.py",
       "source_location": "L52",
       "_origin": "ast",
-      "community": 6,
+      "community": 54,
       "norm_label": "test_normal_transitions_increment_version()",
       "id": "domain_test_lifecycle_test_normal_transitions_increment_version"
     },
@@ -2764,7 +3284,7 @@
       "source_file": "tests/domain/test_lifecycle.py",
       "source_location": "L65",
       "_origin": "ast",
-      "community": 6,
+      "community": 54,
       "norm_label": "test_processing_can_fail()",
       "id": "domain_test_lifecycle_test_processing_can_fail"
     },
@@ -2774,7 +3294,7 @@
       "source_file": "tests/domain/test_lifecycle.py",
       "source_location": "L80",
       "_origin": "ast",
-      "community": 6,
+      "community": 54,
       "norm_label": "test_invalid_transition_is_rejected()",
       "id": "domain_test_lifecycle_test_invalid_transition_is_rejected"
     },
@@ -2824,7 +3344,7 @@
       "source_file": "tests/domain/test_lifecycle.py",
       "source_location": "L112",
       "_origin": "ast",
-      "community": 6,
+      "community": 54,
       "norm_label": "test_retry_transition_clears_failure_code()",
       "id": "domain_test_lifecycle_test_retry_transition_clears_failure_code"
     },
@@ -2834,7 +3354,7 @@
       "source_file": "tests/domain/test_lifecycle.py",
       "source_location": "L123",
       "_origin": "ast",
-      "community": 6,
+      "community": 54,
       "norm_label": "test_expiry_is_exact_at_the_deadline()",
       "id": "domain_test_lifecycle_test_expiry_is_exact_at_the_deadline"
     },
@@ -2844,7 +3364,7 @@
       "source_file": "tests/domain/test_lifecycle.py",
       "source_location": "L130",
       "_origin": "ast",
-      "community": 6,
+      "community": 54,
       "norm_label": "test_only_expired_jobs_can_transition_to_expired()",
       "id": "domain_test_lifecycle_test_only_expired_jobs_can_transition_to_expired"
     },
@@ -2854,7 +3374,7 @@
       "source_file": "tests/domain/test_lifecycle.py",
       "source_location": "L140",
       "_origin": "ast",
-      "community": 6,
+      "community": 54,
       "norm_label": "test_submission_token_is_stable_for_the_transition_version()",
       "id": "domain_test_lifecycle_test_submission_token_is_stable_for_the_transition_version"
     },
@@ -2994,7 +3514,7 @@
       "source_file": "tests/integration/test_aws.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 74,
       "norm_label": "test_aws.py",
       "id": "integration_test_aws"
     },
@@ -3004,7 +3524,7 @@
       "source_file": "tests/integration/test_aws.py",
       "source_location": "L22",
       "_origin": "ast",
-      "community": 1,
+      "community": 74,
       "norm_label": "make_job()",
       "id": "integration_test_aws_make_job"
     },
@@ -3024,7 +3544,7 @@
       "source_file": "tests/integration/test_aws.py",
       "source_location": "L40",
       "_origin": "ast",
-      "community": 1,
+      "community": 74,
       "norm_label": "make_manifest()",
       "id": "integration_test_aws_make_manifest"
     },
@@ -3044,7 +3564,7 @@
       "source_file": "tests/integration/test_aws.py",
       "source_location": "L63",
       "_origin": "ast",
-      "community": 1,
+      "community": 74,
       "norm_label": "test_dynamodb_round_trip_listing_ttl_and_conflict()",
       "id": "integration_test_aws_test_dynamodb_round_trip_listing_ttl_and_conflict"
     },
@@ -3054,7 +3574,7 @@
       "source_file": "tests/integration/test_aws.py",
       "source_location": "L91",
       "_origin": "ast",
-      "community": 1,
+      "community": 74,
       "norm_label": "test_s3_presigning_objects_and_manifest_conflicts()",
       "id": "integration_test_aws_test_s3_presigning_objects_and_manifest_conflicts"
     },
@@ -3064,7 +3584,7 @@
       "source_file": "tests/integration/test_aws.py",
       "source_location": "L131",
       "_origin": "ast",
-      "community": 1,
+      "community": 74,
       "norm_label": "test_recording_batch_fake_is_idempotent()",
       "id": "integration_test_aws_test_recording_batch_fake_is_idempotent"
     },
@@ -3174,7 +3694,7 @@
       "source_file": "tests/services/test_control_plane.py",
       "source_location": "L60",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "jobstatus",
       "id": "tests_services_test_control_plane_py_jobstatus"
     },
@@ -3184,7 +3704,7 @@
       "source_file": "tests/services/test_control_plane.py",
       "source_location": "L60",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "failurecode",
       "id": "tests_services_test_control_plane_py_failurecode"
     },
@@ -3204,7 +3724,7 @@
       "source_file": "tests/services/test_control_plane.py",
       "source_location": "L80",
       "_origin": "ast",
-      "community": 3,
+      "community": 1,
       "norm_label": "pagemanifest",
       "id": "tests_services_test_control_plane_py_pagemanifest"
     },
@@ -3314,7 +3834,7 @@
       "source_file": "tests/worker/test_validation.py",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 5,
+      "community": 44,
       "norm_label": "test_validation.py",
       "id": "worker_test_validation"
     },
@@ -3324,7 +3844,7 @@
       "source_file": "tests/worker/test_validation.py",
       "source_location": "L18",
       "_origin": "ast",
-      "community": 5,
+      "community": 44,
       "norm_label": "recordingjobs",
       "id": "worker_test_validation_recordingjobs"
     },
@@ -3334,7 +3854,7 @@
       "source_file": "tests/worker/test_validation.py",
       "source_location": "L19",
       "_origin": "ast",
-      "community": 5,
+      "community": 44,
       "norm_label": ".__init__()",
       "id": "worker_test_validation_recordingjobs_init"
     },
@@ -3344,7 +3864,7 @@
       "source_file": "tests/worker/test_validation.py",
       "source_location": "L22",
       "_origin": "ast",
-      "community": 5,
+      "community": 44,
       "norm_label": ".save()",
       "id": "worker_test_validation_recordingjobs_save"
     },
@@ -3354,7 +3874,7 @@
       "source_file": "tests/worker/test_validation.py",
       "source_location": "L22",
       "_origin": "ast",
-      "community": 5,
+      "community": 44,
       "norm_label": "job",
       "id": "tests_worker_test_validation_py_job"
     },
@@ -3364,7 +3884,7 @@
       "source_file": "tests/worker/test_validation.py",
       "source_location": "L26",
       "_origin": "ast",
-      "community": 5,
+      "community": 44,
       "norm_label": "make_job()",
       "id": "worker_test_validation_make_job"
     },
@@ -3374,7 +3894,7 @@
       "source_file": "tests/worker/test_validation.py",
       "source_location": "L46",
       "_origin": "ast",
-      "community": 5,
+      "community": 44,
       "norm_label": "pdf_bytes()",
       "id": "worker_test_validation_pdf_bytes"
     },
@@ -3384,7 +3904,7 @@
       "source_file": "tests/worker/test_validation.py",
       "source_location": "L55",
       "_origin": "ast",
-      "community": 5,
+      "community": 44,
       "norm_label": "png_bytes()",
       "id": "worker_test_validation_png_bytes"
     },
@@ -3394,7 +3914,7 @@
       "source_file": "tests/worker/test_validation.py",
       "source_location": "L70",
       "_origin": "ast",
-      "community": 5,
+      "community": 44,
       "norm_label": "jpeg_bytes()",
       "id": "worker_test_validation_jpeg_bytes"
     },
@@ -3404,7 +3924,7 @@
       "source_file": "tests/worker/test_validation.py",
       "source_location": "L85",
       "_origin": "ast",
-      "community": 5,
+      "community": 44,
       "norm_label": "write_config()",
       "id": "worker_test_validation_write_config"
     },
@@ -3414,7 +3934,7 @@
       "source_file": "tests/worker/test_validation.py",
       "source_location": "L85",
       "_origin": "ast",
-      "community": 5,
+      "community": 44,
       "norm_label": "workervalidationconfig",
       "id": "workervalidationconfig"
     },
@@ -3424,7 +3944,7 @@
       "source_file": "tests/worker/test_validation.py",
       "source_location": "L116",
       "_origin": "ast",
-      "community": 5,
+      "community": 44,
       "norm_label": "test_validate_source_accepts_supported_content()",
       "id": "worker_test_validation_test_validate_source_accepts_supported_content"
     },
@@ -3434,7 +3954,7 @@
       "source_file": "tests/worker/test_validation.py",
       "source_location": "L116",
       "_origin": "ast",
-      "community": 5,
+      "community": 44,
       "norm_label": "sourcetype",
       "id": "tests_worker_test_validation_py_sourcetype"
     },
@@ -3444,7 +3964,7 @@
       "source_file": "tests/worker/test_validation.py",
       "source_location": "L137",
       "_origin": "ast",
-      "community": 5,
+      "community": 44,
       "norm_label": "test_validate_source_rejects_signature_mismatch()",
       "id": "worker_test_validation_test_validate_source_rejects_signature_mismatch"
     },
@@ -3454,7 +3974,7 @@
       "source_file": "tests/worker/test_validation.py",
       "source_location": "L155",
       "_origin": "ast",
-      "community": 5,
+      "community": 44,
       "norm_label": "test_validate_source_rejects_malformed_supported_content()",
       "id": "worker_test_validation_test_validate_source_rejects_malformed_supported_content"
     },
@@ -3464,7 +3984,7 @@
       "source_file": "tests/worker/test_validation.py",
       "source_location": "L165",
       "_origin": "ast",
-      "community": 5,
+      "community": 44,
       "norm_label": "test_validate_source_rejects_encrypted_pdf()",
       "id": "worker_test_validation_test_validate_source_rejects_encrypted_pdf"
     },
@@ -3474,7 +3994,7 @@
       "source_file": "tests/worker/test_validation.py",
       "source_location": "L172",
       "_origin": "ast",
-      "community": 5,
+      "community": 44,
       "norm_label": "test_validate_source_rejects_oversized_source()",
       "id": "worker_test_validation_test_validate_source_rejects_oversized_source"
     },
@@ -3484,7 +4004,7 @@
       "source_file": "tests/worker/test_validation.py",
       "source_location": "L181",
       "_origin": "ast",
-      "community": 5,
+      "community": 44,
       "norm_label": "test_validate_source_rejects_over_limit_pdf_page_count()",
       "id": "worker_test_validation_test_validate_source_rejects_over_limit_pdf_page_count"
     },
@@ -3494,7 +4014,7 @@
       "source_file": "tests/worker/test_validation.py",
       "source_location": "L190",
       "_origin": "ast",
-      "community": 5,
+      "community": 44,
       "norm_label": "test_validate_source_rejects_over_limit_image_pixel_count()",
       "id": "worker_test_validation_test_validate_source_rejects_over_limit_image_pixel_count"
     },
@@ -3504,7 +4024,7 @@
       "source_file": "tests/worker/test_validation.py",
       "source_location": "L203",
       "_origin": "ast",
-      "community": 5,
+      "community": 44,
       "norm_label": "test_analyze_source_persists_safe_failure_without_artifacts()",
       "id": "worker_test_validation_test_analyze_source_persists_safe_failure_without_artifacts"
     },
@@ -7399,16 +7919,6 @@
       "id": "worker_rasterization_spec"
     },
     {
-      "label": "ADDED Requirements",
-      "file_type": "document",
-      "source_file": "openspec/changes/gh-17-worker-rasterization/specs/worker-rasterization/spec.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 67,
-      "norm_label": "added requirements",
-      "id": "worker_rasterization_spec_added_requirements"
-    },
-    {
       "label": "Requirement: Worker rasterizes accepted sources into page artifacts",
       "file_type": "document",
       "source_file": "openspec/changes/gh-17-worker-rasterization/specs/worker-rasterization/spec.md",
@@ -9777,12 +10287,532 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/design.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "2026_07_01_gh_17_worker_rasterization_design",
+      "target": "2026_07_01_gh_17_worker_rasterization_design_context",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/design.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "2026_07_01_gh_17_worker_rasterization_design",
+      "target": "2026_07_01_gh_17_worker_rasterization_design_decisions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/design.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "2026_07_01_gh_17_worker_rasterization_design",
+      "target": "2026_07_01_gh_17_worker_rasterization_design_goals_non_goals",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/design.md",
+      "source_location": "L106",
+      "weight": 1.0,
+      "source": "2026_07_01_gh_17_worker_rasterization_design",
+      "target": "2026_07_01_gh_17_worker_rasterization_design_migration_plan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/design.md",
+      "source_location": "L124",
+      "weight": 1.0,
+      "source": "2026_07_01_gh_17_worker_rasterization_design",
+      "target": "2026_07_01_gh_17_worker_rasterization_design_open_questions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/design.md",
+      "source_location": "L92",
+      "weight": 1.0,
+      "source": "2026_07_01_gh_17_worker_rasterization_design",
+      "target": "2026_07_01_gh_17_worker_rasterization_design_risks_trade_offs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/design.md",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "2026_07_01_gh_17_worker_rasterization_design_decisions",
+      "target": "2026_07_01_gh_17_worker_rasterization_design_keep_processing_sequential_and_writer_driven",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/design.md",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "2026_07_01_gh_17_worker_rasterization_design_decisions",
+      "target": "2026_07_01_gh_17_worker_rasterization_design_normalize_all_page_artifacts_to_png",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/design.md",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "2026_07_01_gh_17_worker_rasterization_design_decisions",
+      "target": "2026_07_01_gh_17_worker_rasterization_design_store_an_explicit_page_artifact_index",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/design.md",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "2026_07_01_gh_17_worker_rasterization_design_decisions",
+      "target": "2026_07_01_gh_17_worker_rasterization_design_treat_renderer_failures_as_permanent_processing_failures",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/design.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "2026_07_01_gh_17_worker_rasterization_design_decisions",
+      "target": "2026_07_01_gh_17_worker_rasterization_design_use_pdfium_through_pypdfium2_for_pdf_rasterization",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/proposal.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "2026_07_01_gh_17_worker_rasterization_proposal",
+      "target": "2026_07_01_gh_17_worker_rasterization_proposal_capabilities",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/proposal.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "2026_07_01_gh_17_worker_rasterization_proposal",
+      "target": "2026_07_01_gh_17_worker_rasterization_proposal_impact",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/proposal.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "2026_07_01_gh_17_worker_rasterization_proposal",
+      "target": "2026_07_01_gh_17_worker_rasterization_proposal_what_changes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/proposal.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "2026_07_01_gh_17_worker_rasterization_proposal",
+      "target": "2026_07_01_gh_17_worker_rasterization_proposal_why",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/proposal.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "2026_07_01_gh_17_worker_rasterization_proposal_capabilities",
+      "target": "2026_07_01_gh_17_worker_rasterization_proposal_modified_capabilities",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/proposal.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "2026_07_01_gh_17_worker_rasterization_proposal_capabilities",
+      "target": "2026_07_01_gh_17_worker_rasterization_proposal_new_capabilities",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/specs/worker-rasterization/spec.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_07_01_gh_17_worker_rasterization_specs_worker_rasterization_spec_md_worker_rasterization_spec",
+      "target": "worker_rasterization_spec_added_requirements",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/gh-17-worker-rasterization/specs/worker-rasterization/spec.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "worker_rasterization_spec",
+      "target": "worker_rasterization_spec_added_requirements"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/specs/worker-rasterization/spec.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "worker_rasterization_spec_added_requirements",
+      "target": "openspec_changes_archive_2026_07_01_gh_17_worker_rasterization_specs_worker_rasterization_spec_md_worker_rasterization_spec_requirement_page_artifact_metadata_preserves_downstream_ordering",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/specs/worker-rasterization/spec.md",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "worker_rasterization_spec_added_requirements",
+      "target": "openspec_changes_archive_2026_07_01_gh_17_worker_rasterization_specs_worker_rasterization_spec_md_worker_rasterization_spec_requirement_rasterization_failures_are_safe_permanent_failures",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/specs/worker-rasterization/spec.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "worker_rasterization_spec_added_requirements",
+      "target": "openspec_changes_archive_2026_07_01_gh_17_worker_rasterization_specs_worker_rasterization_spec_md_worker_rasterization_spec_requirement_rasterization_remains_memory_bounded",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/specs/worker-rasterization/spec.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "worker_rasterization_spec_added_requirements",
+      "target": "openspec_changes_archive_2026_07_01_gh_17_worker_rasterization_specs_worker_rasterization_spec_md_worker_rasterization_spec_requirement_worker_rasterizes_accepted_sources_into_page_artifacts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/gh-17-worker-rasterization/specs/worker-rasterization/spec.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "worker_rasterization_spec_added_requirements",
+      "target": "worker_rasterization_spec_requirement_page_artifact_metadata_preserves_downstream_ordering"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/gh-17-worker-rasterization/specs/worker-rasterization/spec.md",
+      "source_location": "L37",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "worker_rasterization_spec_added_requirements",
+      "target": "worker_rasterization_spec_requirement_rasterization_failures_are_safe_permanent_failures"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/gh-17-worker-rasterization/specs/worker-rasterization/spec.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "worker_rasterization_spec_added_requirements",
+      "target": "worker_rasterization_spec_requirement_rasterization_remains_memory_bounded"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/gh-17-worker-rasterization/specs/worker-rasterization/spec.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "worker_rasterization_spec_added_requirements",
+      "target": "worker_rasterization_spec_requirement_worker_rasterizes_accepted_sources_into_page_artifacts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/specs/worker-rasterization/spec.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_07_01_gh_17_worker_rasterization_specs_worker_rasterization_spec_md_worker_rasterization_spec_requirement_worker_rasterizes_accepted_sources_into_page_artifacts",
+      "target": "openspec_changes_archive_2026_07_01_gh_17_worker_rasterization_specs_worker_rasterization_spec_md_worker_rasterization_spec_scenario_rasterize_pdf_pages_in_order",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/specs/worker-rasterization/spec.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_07_01_gh_17_worker_rasterization_specs_worker_rasterization_spec_md_worker_rasterization_spec_requirement_worker_rasterizes_accepted_sources_into_page_artifacts",
+      "target": "openspec_changes_archive_2026_07_01_gh_17_worker_rasterization_specs_worker_rasterization_spec_md_worker_rasterization_spec_scenario_rasterize_uploaded_image_as_one_page",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/specs/worker-rasterization/spec.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_07_01_gh_17_worker_rasterization_specs_worker_rasterization_spec_md_worker_rasterization_spec_requirement_page_artifact_metadata_preserves_downstream_ordering",
+      "target": "openspec_changes_archive_2026_07_01_gh_17_worker_rasterization_specs_worker_rasterization_spec_md_worker_rasterization_spec_scenario_keep_rasterization_metadata_separate_from_review_manifests",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/specs/worker-rasterization/spec.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_07_01_gh_17_worker_rasterization_specs_worker_rasterization_spec_md_worker_rasterization_spec_requirement_page_artifact_metadata_preserves_downstream_ordering",
+      "target": "openspec_changes_archive_2026_07_01_gh_17_worker_rasterization_specs_worker_rasterization_spec_md_worker_rasterization_spec_scenario_record_page_artifact_metadata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/specs/worker-rasterization/spec.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_07_01_gh_17_worker_rasterization_specs_worker_rasterization_spec_md_worker_rasterization_spec_requirement_rasterization_remains_memory_bounded",
+      "target": "openspec_changes_archive_2026_07_01_gh_17_worker_rasterization_specs_worker_rasterization_spec_md_worker_rasterization_spec_scenario_process_pdf_pages_sequentially",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/specs/worker-rasterization/spec.md",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_07_01_gh_17_worker_rasterization_specs_worker_rasterization_spec_md_worker_rasterization_spec_requirement_rasterization_failures_are_safe_permanent_failures",
+      "target": "openspec_changes_archive_2026_07_01_gh_17_worker_rasterization_specs_worker_rasterization_spec_md_worker_rasterization_spec_scenario_avoid_downstream_artifacts_after_rasterization_failure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/specs/worker-rasterization/spec.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "openspec_changes_archive_2026_07_01_gh_17_worker_rasterization_specs_worker_rasterization_spec_md_worker_rasterization_spec_requirement_rasterization_failures_are_safe_permanent_failures",
+      "target": "openspec_changes_archive_2026_07_01_gh_17_worker_rasterization_specs_worker_rasterization_spec_md_worker_rasterization_spec_scenario_persist_safe_failure_on_rasterization_error",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/tasks.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "2026_07_01_gh_17_worker_rasterization_tasks",
+      "target": "2026_07_01_gh_17_worker_rasterization_tasks_1_test_fixtures",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/tasks.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "2026_07_01_gh_17_worker_rasterization_tasks",
+      "target": "2026_07_01_gh_17_worker_rasterization_tasks_2_worker_rasterization_tests",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/tasks.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "2026_07_01_gh_17_worker_rasterization_tasks",
+      "target": "2026_07_01_gh_17_worker_rasterization_tasks_3_worker_rasterization_implementation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/tasks.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "2026_07_01_gh_17_worker_rasterization_tasks",
+      "target": "2026_07_01_gh_17_worker_rasterization_tasks_4_documentation_updates",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/changes/archive/2026-07-01-gh-17-worker-rasterization/tasks.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "2026_07_01_gh_17_worker_rasterization_tasks",
+      "target": "2026_07_01_gh_17_worker_rasterization_tasks_5_verification",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/worker-rasterization/spec.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "openspec_specs_worker_rasterization_spec_md_worker_rasterization_spec",
+      "target": "worker_rasterization_spec_purpose",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/worker-rasterization/spec.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "openspec_specs_worker_rasterization_spec_md_worker_rasterization_spec",
+      "target": "worker_rasterization_spec_requirements",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/worker-rasterization/spec.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "worker_rasterization_spec_requirements",
+      "target": "openspec_specs_worker_rasterization_spec_md_worker_rasterization_spec_requirement_page_artifact_metadata_preserves_downstream_ordering",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/worker-rasterization/spec.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "worker_rasterization_spec_requirements",
+      "target": "openspec_specs_worker_rasterization_spec_md_worker_rasterization_spec_requirement_rasterization_failures_are_safe_permanent_failures",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/worker-rasterization/spec.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "worker_rasterization_spec_requirements",
+      "target": "openspec_specs_worker_rasterization_spec_md_worker_rasterization_spec_requirement_rasterization_remains_memory_bounded",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/worker-rasterization/spec.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "worker_rasterization_spec_requirements",
+      "target": "openspec_specs_worker_rasterization_spec_md_worker_rasterization_spec_requirement_worker_rasterizes_accepted_sources_into_page_artifacts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/worker-rasterization/spec.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "openspec_specs_worker_rasterization_spec_md_worker_rasterization_spec_requirement_worker_rasterizes_accepted_sources_into_page_artifacts",
+      "target": "openspec_specs_worker_rasterization_spec_md_worker_rasterization_spec_scenario_rasterize_pdf_pages_in_order",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/worker-rasterization/spec.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "openspec_specs_worker_rasterization_spec_md_worker_rasterization_spec_requirement_worker_rasterizes_accepted_sources_into_page_artifacts",
+      "target": "openspec_specs_worker_rasterization_spec_md_worker_rasterization_spec_scenario_rasterize_uploaded_image_as_one_page",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/worker-rasterization/spec.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "openspec_specs_worker_rasterization_spec_md_worker_rasterization_spec_requirement_page_artifact_metadata_preserves_downstream_ordering",
+      "target": "openspec_specs_worker_rasterization_spec_md_worker_rasterization_spec_scenario_keep_rasterization_metadata_separate_from_review_manifests",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/worker-rasterization/spec.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "openspec_specs_worker_rasterization_spec_md_worker_rasterization_spec_requirement_page_artifact_metadata_preserves_downstream_ordering",
+      "target": "openspec_specs_worker_rasterization_spec_md_worker_rasterization_spec_scenario_record_page_artifact_metadata",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/worker-rasterization/spec.md",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "openspec_specs_worker_rasterization_spec_md_worker_rasterization_spec_requirement_rasterization_remains_memory_bounded",
+      "target": "openspec_specs_worker_rasterization_spec_md_worker_rasterization_spec_scenario_process_pdf_pages_sequentially",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/worker-rasterization/spec.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "openspec_specs_worker_rasterization_spec_md_worker_rasterization_spec_requirement_rasterization_failures_are_safe_permanent_failures",
+      "target": "openspec_specs_worker_rasterization_spec_md_worker_rasterization_spec_scenario_avoid_downstream_artifacts_after_rasterization_failure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/worker-rasterization/spec.md",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "openspec_specs_worker_rasterization_spec_md_worker_rasterization_spec_requirement_rasterization_failures_are_safe_permanent_failures",
+      "target": "openspec_specs_worker_rasterization_spec_md_worker_rasterization_spec_scenario_persist_safe_failure_on_rasterization_error",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "tools/strip_notebook_outputs.py",
       "source_location": "L31",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tools_strip_notebook_outputs",
-      "target": "tools_strip_notebook_outputs_main",
-      "confidence_score": 1.0
+      "target": "tools_strip_notebook_outputs_main"
     },
     {
       "relation": "contains",
@@ -9790,9 +10820,9 @@
       "source_file": "tools/strip_notebook_outputs.py",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tools_strip_notebook_outputs",
-      "target": "tools_strip_notebook_outputs_strip_notebook",
-      "confidence_score": 1.0
+      "target": "tools_strip_notebook_outputs_strip_notebook"
     },
     {
       "relation": "rationale_for",
@@ -9800,9 +10830,9 @@
       "source_file": "tools/strip_notebook_outputs.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tools_strip_notebook_outputs_rationale_1",
-      "target": "tools_strip_notebook_outputs",
-      "confidence_score": 1.0
+      "target": "tools_strip_notebook_outputs"
     },
     {
       "relation": "calls",
@@ -9811,9 +10841,9 @@
       "source_file": "tools/strip_notebook_outputs.py",
       "source_location": "L38",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tools_strip_notebook_outputs_main",
-      "target": "tools_strip_notebook_outputs_strip_notebook",
-      "confidence_score": 1.0
+      "target": "tools_strip_notebook_outputs_strip_notebook"
     },
     {
       "relation": "references",
@@ -9822,9 +10852,9 @@
       "source_file": "tools/strip_notebook_outputs.py",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tools_strip_notebook_outputs_strip_notebook",
-      "target": "path",
-      "confidence_score": 1.0
+      "target": "path"
     },
     {
       "relation": "uses",
@@ -9884,9 +10914,9 @@
       "source_file": "tools/strip_notebook_outputs.py",
       "source_location": "L36",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tools_strip_notebook_outputs_main",
-      "target": "path",
-      "confidence_score": 1.0
+      "target": "path"
     },
     {
       "relation": "contains",
@@ -26069,56 +27099,6 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "openspec/changes/gh-17-worker-rasterization/specs/worker-rasterization/spec.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "worker_rasterization_spec",
-      "target": "worker_rasterization_spec_added_requirements"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-17-worker-rasterization/specs/worker-rasterization/spec.md",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "worker_rasterization_spec_added_requirements",
-      "target": "worker_rasterization_spec_requirement_page_artifact_metadata_preserves_downstream_ordering"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-17-worker-rasterization/specs/worker-rasterization/spec.md",
-      "source_location": "L37",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "worker_rasterization_spec_added_requirements",
-      "target": "worker_rasterization_spec_requirement_rasterization_failures_are_safe_permanent_failures"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-17-worker-rasterization/specs/worker-rasterization/spec.md",
-      "source_location": "L29",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "worker_rasterization_spec_added_requirements",
-      "target": "worker_rasterization_spec_requirement_rasterization_remains_memory_bounded"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-17-worker-rasterization/specs/worker-rasterization/spec.md",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "worker_rasterization_spec_added_requirements",
-      "target": "worker_rasterization_spec_requirement_worker_rasterizes_accepted_sources_into_page_artifacts"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-17-worker-rasterization/specs/worker-rasterization/spec.md",
       "source_location": "L8",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -28220,5 +29200,5 @@
       "source_file": "AGENTS.md"
     }
   ],
-  "built_at_commit": "731b6c323acdc01e3fc10730640973bc283fc2b0"
+  "built_at_commit": "f02ebedc23c87a9d7468446cfe219263f3087a27"
 }

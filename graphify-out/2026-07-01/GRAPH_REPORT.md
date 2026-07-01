@@ -1,16 +1,16 @@
-# Graph Report - redact-all-the-things  (2026-06-18)
+# Graph Report - redact-all-the-things  (2026-07-01)
 
 ## Corpus Check
-- 73 files · ~29,835 words
+- 74 files · ~29,992 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 943 nodes · 1799 edges · 72 communities (62 shown, 10 thin omitted)
+- 947 nodes · 1805 edges · 70 communities (61 shown, 9 thin omitted)
 - Extraction: 66% EXTRACTED · 34% INFERRED · 0% AMBIGUOUS · INFERRED: 606 edges (avg confidence: 0.51)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `1a6fb1a4`
+- Built from commit: `731b6c32`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -64,7 +64,6 @@
 - [[_COMMUNITY_Community 47|Community 47]]
 - [[_COMMUNITY_Community 48|Community 48]]
 - [[_COMMUNITY_Community 50|Community 50]]
-- [[_COMMUNITY_Community 51|Community 51]]
 - [[_COMMUNITY_Community 52|Community 52]]
 - [[_COMMUNITY_Community 53|Community 53]]
 - [[_COMMUNITY_Community 55|Community 55]]
@@ -80,7 +79,6 @@
 - [[_COMMUNITY_Community 67|Community 67]]
 - [[_COMMUNITY_Community 68|Community 68]]
 - [[_COMMUNITY_Community 69|Community 69]]
-- [[_COMMUNITY_Community 70|Community 70]]
 - [[_COMMUNITY_Community 71|Community 71]]
 - [[_COMMUNITY_Community 92|Community 92]]
 - [[_COMMUNITY_Community 93|Community 93]]
@@ -103,12 +101,12 @@
   .github/PULL_REQUEST_TEMPLATE.md → AGENTS.md
 - `Sensitive data exclusion` --semantically_similar_to--> `Synthetic or sanitized bug fixtures`  [INFERRED] [semantically similar]
   SECURITY.md → .github/ISSUE_TEMPLATE/bug.yml
-- `RecordingJobs` --uses--> `FailureCode`  [INFERRED]
-  tests/worker/test_rasterization.py → src/redact_api/domain.py
-- `RecordingJobs` --uses--> `Job`  [INFERRED]
-  tests/worker/test_rasterization.py → src/redact_api/domain.py
-- `RecordingJobs` --uses--> `JobStatus`  [INFERRED]
-  tests/worker/test_rasterization.py → src/redact_api/domain.py
+- `Path` --uses--> `FailureCode`  [INFERRED]
+  tools/strip_notebook_outputs.py → src/redact_api/domain.py
+- `Path` --uses--> `Job`  [INFERRED]
+  tools/strip_notebook_outputs.py → src/redact_api/domain.py
+- `Path` --uses--> `JobStatus`  [INFERRED]
+  tools/strip_notebook_outputs.py → src/redact_api/domain.py
 
 ## Import Cycles
 - 1-file cycle: `src/redact_api/worker.py -> src/redact_api/worker.py`
@@ -122,7 +120,7 @@
 - **Versioned documentation delivery** — agents_documentation_as_code, repository_governance_spec_published_documentation, workflows_pages_strict_mkdocs_build, workflows_pages_github_pages_deployment [INFERRED 0.95]
 - **Tracked knowledge asset lifecycle** — agents_tracked_knowledge_assets, agents_graphify_workflow, repository_governance_spec_tracked_assets, 2026_06_14_gh_1_bootstrap_governance_tasks_completed_bootstrap [INFERRED 0.85]
 
-## Communities (72 total, 10 thin omitted)
+## Communities (70 total, 9 thin omitted)
 
 ### Community 0 - "Project Architecture"
 Cohesion: 0.22
@@ -130,26 +128,26 @@ Nodes (11): 24-hour job retention, Assisted File Redaction technical scope, Offi
 
 ### Community 1 - "Technical Scope"
 Cohesion: 0.07
-Nodes (109): set_status(), AwsBatchSubmitter, BaseModel, test_permanent_failures_are_not_retryable(), test_retryable_failures_select_the_worker_mode(), DynamoJobRepository, FastAPI, Image (+101 more)
+Nodes (74): set_status(), AwsBatchSubmitter, test_permanent_failures_are_not_retryable(), test_retryable_failures_select_the_worker_mode(), DynamoJobRepository, Image, make_job(), make_manifest() (+66 more)
 
 ### Community 2 - "Working Agreement"
 Cohesion: 0.17
 Nodes (16): Repository governance proposal, Repository governance capability, Completed governance bootstrap tasks, Archived repository governance requirements, Automated pull request quality requirement, Protected main workflow requirement, Published documentation requirement, Tracked agent knowledge assets requirement (+8 more)
 
 ### Community 3 - "Governance Specification"
-Cohesion: 0.27
-Nodes (16): clock(), create_ready_manifest(), service(), set_status(), test_create_list_get_ownership_and_exact_expiry(), test_create_rejects_invalid_sizes(), test_download_requires_complete_existing_output(), test_export_requires_acknowledgement_and_is_idempotent() (+8 more)
+Cohesion: 0.10
+Nodes (57): BaseModel, FastAPI, LookupError, Normalized page-space rectangle selected for redaction., Supported source document formats., RedactionRegion, SourceType, ApiModel (+49 more)
 
 ### Community 4 - "OpenSpec Change Lifecycle"
 Cohesion: 0.12
 Nodes (22): OpenSpec Apply Change, Task-Driven Implementation, Archive Validation, OpenSpec Archive Change, OpenSpec Bulk Archive Change, Spec Conflict Resolution, Artifact Dependency Order, OpenSpec Continue Change (+14 more)
 
 ### Community 5 - "Archived Governance Requirements"
-Cohesion: 0.06
-Nodes (73): Any, datetime, FailureCode, Protocol, analyze_source(), _image_to_rendered_page(), page_artifact_index_key(), page_artifact_key() (+65 more)
+Cohesion: 0.05
+Nodes (76): Any, datetime, FailureCode, Path, Protocol, analyze_source(), _image_to_rendered_page(), page_artifact_index_key() (+68 more)
 
 ### Community 6 - "Community 6"
-Cohesion: 0.10
+Cohesion: 0.11
 Nodes (28): make_job(), test_expiry_is_exact_at_the_deadline(), test_invalid_transition_is_rejected(), test_normal_transitions_increment_version(), test_only_expired_jobs_can_transition_to_expired(), test_processing_can_fail(), test_retry_transition_clears_failure_code(), test_submission_token_is_stable_for_the_transition_version() (+20 more)
 
 ### Community 7 - "OpenSpec Onboarding"
@@ -304,10 +302,6 @@ Nodes (5): Before starting, Contributing, Local checks, Pull requests, Workflow
 Cohesion: 0.33
 Nodes (5): Documentation and architecture, OpenSpec, Security and privacy, Summary, Validation
 
-### Community 51 - "Community 51"
-Cohesion: 0.47
-Nodes (5): make_job(), make_manifest(), test_dynamodb_round_trip_listing_ttl_and_conflict(), test_recording_batch_fake_is_idempotent(), test_s3_presigning_objects_and_manifest_conflicts()
-
 ### Community 52 - "Community 52"
 Cohesion: 0.33
 Nodes (5): ADDED Requirements, Requirement: Permanent worker validation failures, Scenario: Persist unsupported content safely, Scenario: Persist validation failure safely, Scenario: Reject retry for permanent validation failures
@@ -367,17 +361,17 @@ Nodes (5): Privacy-preserving logging, Bug report issue template, Reproducible b
 ## Knowledge Gaps
 - **397 isolated node(s):** `Source validation`, `Rasterization`, `Safe failures`, `1. Test Fixtures`, `2. Worker Rasterization Tests` (+392 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Job` connect `Technical Scope` to `Community 70`, `Archived Governance Requirements`, `Community 6`?**
+- **Why does `Job` connect `Technical Scope` to `Governance Specification`, `Archived Governance Requirements`, `Community 6`?**
   _High betweenness centrality (0.022) - this node is a cross-community bridge._
 - **Why does `JobStatus` connect `Technical Scope` to `Governance Specification`, `Community 28`, `Archived Governance Requirements`, `Community 6`?**
-  _High betweenness centrality (0.009) - this node is a cross-community bridge._
-- **Why does `SourceType` connect `Technical Scope` to `Governance Specification`, `Archived Governance Requirements`, `Community 6`?**
-  _High betweenness centrality (0.009) - this node is a cross-community bridge._
+  _High betweenness centrality (0.010) - this node is a cross-community bridge._
+- **Why does `SourceType` connect `Governance Specification` to `Technical Scope`, `Archived Governance Requirements`, `Community 6`?**
+  _High betweenness centrality (0.010) - this node is a cross-community bridge._
 - **Are the 66 inferred relationships involving `Job` (e.g. with `AwsBatchSubmitter` and `DynamoJobRepository`) actually correct?**
   _`Job` has 66 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 61 inferred relationships involving `SourceType` (e.g. with `AwsBatchSubmitter` and `DynamoJobRepository`) actually correct?**
