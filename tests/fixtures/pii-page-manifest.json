@@ -1,0 +1,58 @@
+{
+  "job_id": "job-123",
+  "page_number": 1,
+  "suggestions": [
+    {
+      "id": "pii-1-1-1",
+      "page_number": 1,
+      "x": 0.1,
+      "y": 0.1,
+      "width": 0.2,
+      "height": 0.05,
+      "source": "automatic",
+      "category": "email",
+      "confidence": 0.95,
+      "selected": true
+    },
+    {
+      "id": "pii-1-2-1",
+      "page_number": 1,
+      "x": 0.4,
+      "y": 0.2,
+      "width": 0.2,
+      "height": 0.05,
+      "source": "automatic",
+      "category": "api_key",
+      "confidence": 0.92,
+      "selected": true
+    }
+  ],
+  "regions": [
+    {
+      "id": "pii-1-1-1",
+      "page_number": 1,
+      "x": 0.1,
+      "y": 0.1,
+      "width": 0.2,
+      "height": 0.05,
+      "source": "automatic",
+      "category": "email",
+      "confidence": 0.95,
+      "selected": true
+    },
+    {
+      "id": "pii-1-2-1",
+      "page_number": 1,
+      "x": 0.4,
+      "y": 0.2,
+      "width": 0.2,
+      "height": 0.05,
+      "source": "automatic",
+      "category": "api_key",
+      "confidence": 0.92,
+      "selected": true
+    }
+  ],
+  "version": 1,
+  "last_saved_at": "2026-06-19T12:00:00Z"
+}

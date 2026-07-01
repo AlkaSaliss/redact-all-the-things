@@ -19,6 +19,9 @@ from redact_api.domain import (
     FailureCode,
     Job,
     JobStatus,
+    PageManifest,
+    RedactionRegion,
+    RegionSource,
     SourceType,
     transition_job,
 )
@@ -48,6 +51,52 @@ JPEG_SOF_MARKERS = {
     0xCE,
     0xCF,
 }
+GLINER2_PII_MODEL = "fastino/gliner2-privacy-filter-PII-multi"
+PII_CONFIDENCE_THRESHOLD = 0.5
+GLINER2_PII_LABELS = (
+    "person",
+    "full_name",
+    "first_name",
+    "middle_name",
+    "last_name",
+    "date_of_birth",
+    "email",
+    "phone_number",
+    "address",
+    "street_address",
+    "city",
+    "state_or_region",
+    "postal_code",
+    "country",
+    "government_id",
+    "national_id_number",
+    "passport_number",
+    "drivers_license_number",
+    "license_number",
+    "tax_id",
+    "tax_number",
+    "bank_account",
+    "account_number",
+    "routing_number",
+    "iban",
+    "payment_card",
+    "card_number",
+    "card_expiry",
+    "card_cvv",
+    "username",
+    "ip_address",
+    "account_id",
+    "sensitive_account_id",
+    "password",
+    "secret",
+    "api_key",
+    "access_token",
+    "recovery_code",
+    "sensitive_date",
+    "document_date",
+    "expiration_date",
+    "transaction_date",
+)
 
 
 @dataclass(frozen=True)
@@ -123,6 +172,16 @@ class OcrPageText:
 
 
 @dataclass(frozen=True)
+class PiiEntity:
+    """One detected PII span in OCR page text."""
+
+    label: str
+    start: int
+    end: int
+    confidence: float
+
+
+@dataclass(frozen=True)
 class WorkerValidationConfig:
     """Tunable validation limits loaded from YAML."""
 
@@ -195,6 +254,23 @@ class OcrEngine(Protocol):
         """Return OCR lines for one raster page artifact."""
 
 
+class PiiDetector(Protocol):
+    """PII detector boundary used by production and deterministic tests."""
+
+    name: str
+    model: str
+
+    def detect(self, page: OcrPageText) -> Iterable[PiiEntity]:
+        """Return detected PII spans for one OCR page."""
+
+
+class PageManifestWriter(Protocol):
+    """Persistence boundary for worker-created review manifests."""
+
+    def create_manifest(self, owner_id: str, manifest: PageManifest) -> object:
+        """Persist a new page manifest."""
+
+
 class SourceValidationError(ValueError):
     """Raised when source validation maps to a safe failure code."""
 
@@ -209,6 +285,10 @@ class RasterizationError(RuntimeError):
 
 class OcrExtractionError(RuntimeError):
     """Raised when accepted page artifacts cannot be OCR-processed safely."""
+
+
+class PiiMappingError(RuntimeError):
+    """Raised when OCR text cannot be converted into review manifests."""
 
 
 def validate_source(
@@ -246,6 +326,8 @@ def analyze_source(
     raster_writer: PageArtifactWriter | None = None,
     ocr_store: OcrArtifactStore | None = None,
     ocr_engine: OcrEngine | None = None,
+    pii_detector: PiiDetector | None = None,
+    manifest_writer: PageManifestWriter | None = None,
     render_pages: Callable[[], Iterable[RenderedPage]] | None = None,
     write_artifacts: Callable[[ValidatedSource], None] | None = None,
 ) -> Job:
@@ -281,10 +363,38 @@ def analyze_source(
             )
             jobs.save(failed, expected_version=job.version)
             return failed
+    ocr_pages = None
     if page_index is not None and ocr_store is not None and ocr_engine is not None:
         try:
-            extract_ocr_text(job, page_index, store=ocr_store, engine=ocr_engine)
+            ocr_pages = extract_ocr_text(
+                job,
+                page_index,
+                store=ocr_store,
+                engine=ocr_engine,
+            )
         except OcrExtractionError:
+            failed = transition_job(
+                job,
+                JobStatus.FAILED,
+                now=now,
+                failure_code=FailureCode.PROCESSING_FAILED,
+            )
+            jobs.save(failed, expected_version=job.version)
+            return failed
+    if (
+        ocr_pages is not None
+        and pii_detector is not None
+        and manifest_writer is not None
+    ):
+        try:
+            create_pii_manifests(
+                job,
+                ocr_pages,
+                detector=pii_detector,
+                writer=manifest_writer,
+                now=now,
+            )
+        except PiiMappingError:
             failed = transition_job(
                 job,
                 JobStatus.FAILED,
@@ -398,6 +508,130 @@ def ocr_page_text_key(owner_id: str, job_id: str, page_number: int) -> str:
     """Return the owner/job-namespaced key for one OCR page JSON artifact."""
 
     return f"users/{owner_id}/jobs/{job_id}/artifacts/ocr/pages/{page_number}.json"
+
+
+def create_pii_manifests(
+    job: Job,
+    pages: Iterable[OcrPageText],
+    *,
+    detector: PiiDetector,
+    writer: PageManifestWriter,
+    now: datetime,
+) -> tuple[PageManifest, ...]:
+    """Detect PII on OCR pages and persist initial review manifests."""
+
+    manifests = []
+    try:
+        for page in pages:
+            regions = map_pii_regions(page, detector.detect(page))
+            manifest = PageManifest(
+                job_id=job.id,
+                page_number=page.page_number,
+                suggestions=regions,
+                regions=regions,
+                version=1,
+                last_saved_at=now,
+            )
+            writer.create_manifest(job.owner_id, manifest)
+            manifests.append(manifest)
+        return tuple(manifests)
+    except PiiMappingError:
+        raise
+    except Exception as error:
+        raise PiiMappingError("pii manifest creation failed") from error
+
+
+def map_pii_regions(
+    page: OcrPageText,
+    entities: Iterable[PiiEntity],
+) -> tuple[RedactionRegion, ...]:
+    """Map accepted PII spans to normalized page-space redaction regions."""
+
+    regions = []
+    ordered_entities = sorted(
+        (
+            entity
+            for entity in entities
+            if entity.confidence >= PII_CONFIDENCE_THRESHOLD
+        ),
+        key=lambda entity: (entity.start, entity.end, entity.label),
+    )
+    for entity_index, entity in enumerate(ordered_entities, start=1):
+        if (
+            entity.start < 0
+            or entity.end > len(page.page_text)
+            or entity.start >= entity.end
+        ):
+            raise PiiMappingError("pii span is outside page text")
+        region_index = 1
+        for block in page.blocks:
+            overlap_start = max(entity.start, block.start)
+            overlap_end = min(entity.end, block.end)
+            if overlap_start >= overlap_end:
+                continue
+            geometry = _region_geometry_for_overlap(
+                block,
+                overlap_start - block.start,
+                overlap_end - block.start,
+            )
+            if geometry is None:
+                continue
+            x, y, width, height = geometry
+            regions.append(
+                RedactionRegion(
+                    id=(
+                        f"pii-{page.page_number}-"
+                        f"{entity_index}-{region_index}"
+                    ),
+                    page_number=page.page_number,
+                    x=x,
+                    y=y,
+                    width=width,
+                    height=height,
+                    source=RegionSource.AUTOMATIC,
+                    category=entity.label,
+                    confidence=entity.confidence,
+                    selected=True,
+                )
+            )
+            region_index += 1
+    return tuple(regions)
+
+
+class Gliner2PiiDetector:
+    """GLiNER2 adapter for the worker image runtime."""
+
+    name = "gliner2"
+    model = GLINER2_PII_MODEL
+
+    def __init__(
+        self,
+        *,
+        model_name: str = GLINER2_PII_MODEL,
+        labels: tuple[str, ...] = GLINER2_PII_LABELS,
+        threshold: float = PII_CONFIDENCE_THRESHOLD,
+    ) -> None:
+        try:
+            from gliner2 import GLiNER2
+        except ImportError as error:
+            raise PiiMappingError("gliner2 is not installed") from error
+        self._model_name = model_name
+        self._labels = labels
+        self._threshold = threshold
+        self._model = GLiNER2.from_pretrained(model_name)
+
+    def detect(self, page: OcrPageText) -> tuple[PiiEntity, ...]:
+        try:
+            result = self._model.extract_entities(
+                page.page_text,
+                list(self._labels),
+                threshold=self._threshold,
+                include_confidence=True,
+                include_spans=True,
+            )
+        except Exception as error:
+            raise PiiMappingError("gliner2 pii detection failed") from error
+        return _parse_gliner2_entities(result)
 
 
 class PaddleOcrEngine:
@@ -585,6 +819,96 @@ def _serialize_ocr_page_text(page_text: OcrPageText) -> bytes:
         ],
     }
     return json.dumps(payload, separators=(",", ":"), sort_keys=True).encode()
+
+
+def _region_geometry_for_overlap(
+    block: OcrTextBlock,
+    start: int,
+    end: int,
+) -> tuple[float, float, float, float] | None:
+    if start < 0 or end > len(block.text) or start >= end:
+        raise PiiMappingError("pii span does not overlap ocr block")
+    if not block.text:
+        return None
+    min_x = min(point[0] for point in block.polygon)
+    max_x = max(point[0] for point in block.polygon)
+    min_y = min(point[1] for point in block.polygon)
+    max_y = max(point[1] for point in block.polygon)
+    block_width = max_x - min_x
+    block_height = max_y - min_y
+    if block_width <= 0 or block_height <= 0:
+        raise PiiMappingError("ocr block geometry is invalid")
+    text_length = len(block.text)
+    x = min_x + block_width * (start / text_length)
+    width = block_width * ((end - start) / text_length)
+    return _clamp_region(x, min_y, width, block_height)
+
+
+def _clamp_region(
+    x: float,
+    y: float,
+    width: float,
+    height: float,
+) -> tuple[float, float, float, float]:
+    left = min(max(x, 0), 1)
+    top = min(max(y, 0), 1)
+    right = min(max(x + width, 0), 1)
+    bottom = min(max(y + height, 0), 1)
+    clamped_width = right - left
+    clamped_height = bottom - top
+    if clamped_width <= 0 or clamped_height <= 0:
+        raise PiiMappingError("mapped pii region is outside page bounds")
+    return (left, top, clamped_width, clamped_height)
+
+
+def _parse_gliner2_entities(result: object) -> tuple[PiiEntity, ...]:
+    raw_entities = result.get("entities", []) if isinstance(result, dict) else result
+    entities = []
+    if isinstance(raw_entities, dict):
+        for label, values in raw_entities.items():
+            for value in values:
+                parsed = _parse_gliner2_entity(value, default_label=str(label))
+                if parsed is not None:
+                    entities.append(parsed)
+    else:
+        for value in raw_entities:
+            parsed = _parse_gliner2_entity(value)
+            if parsed is not None:
+                entities.append(parsed)
+    return tuple(entities)
+
+
+def _parse_gliner2_entity(
+    value: object,
+    *,
+    default_label: str | None = None,
+) -> PiiEntity | None:
+    if not isinstance(value, dict):
+        return None
+    label = str(
+        value.get("label")
+        or value.get("entity")
+        or value.get("entity_type")
+        or default_label
+        or ""
+    )
+    if not label:
+        return None
+    try:
+        start = int(value.get("start"))
+        end = int(value.get("end"))
+    except (TypeError, ValueError):
+        return None
+    confidence_value = (
+        value.get("score")
+        if "score" in value
+        else value.get("confidence", PII_CONFIDENCE_THRESHOLD)
+    )
+    try:
+        confidence = float(confidence_value)
+    except (TypeError, ValueError):
+        confidence = PII_CONFIDENCE_THRESHOLD
+    return PiiEntity(label=label, start=start, end=end, confidence=confidence)
 
 
 def _validate_pdf(source: bytes, *, max_pdf_pages: int) -> int:

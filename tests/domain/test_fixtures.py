@@ -18,6 +18,7 @@ def test_shared_job_fixtures_match_the_contract() -> None:
 
 def test_shared_manifest_and_worker_fixtures_match_the_contract() -> None:
     assert PageManifest.model_validate(load("page-manifest.json")).version == 1
+    assert PageManifest.model_validate(load("pii-page-manifest.json")).version == 1
     assert (
         WorkerSubmission.model_validate(load("worker-request.json")).mode.value
         == "analyze"
