@@ -45,7 +45,11 @@ floci-check: ## Verify FLOCI_ENDPOINT_URL points at a reachable endpoint.
 
 terragrunt-validate: ## Validate Terraform modules and Terragrunt HCL.
 	$(TERRAFORM) -chdir=infra/modules/foundation fmt -check
+	$(TERRAFORM) -chdir=infra/modules/app-edge-auth-api fmt -check
+	$(TERRAFORM) -chdir=infra/modules/foundation init -backend=false
 	$(TERRAFORM) -chdir=infra/modules/foundation validate
+	$(TERRAFORM) -chdir=infra/modules/app-edge-auth-api init -backend=false
+	$(TERRAFORM) -chdir=infra/modules/app-edge-auth-api validate
 	$(TERRAGRUNT) hcl format --check $(FLOCI_ENV_DIR)/terragrunt.hcl
 
 terragrunt-plan-floci: floci-check ## Generate a Terragrunt plan against Floci.

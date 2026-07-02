@@ -44,3 +44,10 @@ running Terragrunt validation, plan, apply, and smoke entrypoints.
 - **GIVEN** `FLOCI_ENDPOINT_URL` is not set
 - **WHEN** the developer runs a Floci check, plan, apply, or smoke target
 - **THEN** the command fails with setup guidance before invoking Terragrunt.
+
+#### Scenario: Validate app-edge smoke boundary
+
+- **GIVEN** `FLOCI_ENDPOINT_URL` is set
+- **WHEN** the developer runs the Floci smoke target
+- **THEN** the command checks endpoint reachability and reports that unsupported
+  app-edge/auth/API services remain covered by static Terraform validation.
