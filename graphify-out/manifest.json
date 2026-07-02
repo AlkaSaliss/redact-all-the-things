@@ -145,8 +145,8 @@
     "semantic_hash": "74b281136e58def7c6e743056dc31062"
   },
   "docs/development.md": {
-    "mtime": 1782981736.1567423,
-    "ast_hash": "7398a99c8a7d70ce8206e2ca9b8d2e0b",
+    "mtime": 1783017668.4271157,
+    "ast_hash": "8f3f04e349da77a66a7fe83629988d13",
     "semantic_hash": ""
   },
   "docs/index.md": {
@@ -260,13 +260,13 @@
     "semantic_hash": ""
   },
   "tests/api/test_http.py": {
-    "mtime": 1781633416.8961577,
-    "ast_hash": "c2d231e5684567c49cd0066c87bdc9d2",
+    "mtime": 1783016935.878531,
+    "ast_hash": "7de34954ef581d46a6bccd2acd631547",
     "semantic_hash": ""
   },
   "tests/conftest.py": {
-    "mtime": 1781633416.896715,
-    "ast_hash": "cca60f673364f19a622dc9dd6663634a",
+    "mtime": 1783016934.046071,
+    "ast_hash": "572295d2de46a653a908ec0241255be6",
     "semantic_hash": ""
   },
   "tests/domain/__init__.py": {
@@ -315,13 +315,13 @@
     "semantic_hash": ""
   },
   "tests/integration/__init__.py": {
-    "mtime": 1781633416.8991427,
-    "ast_hash": "4da07b8893c20c772d8f6f0743e93a9a",
+    "mtime": 1783016934.4273179,
+    "ast_hash": "b554e206d169a7e3a0737fce999632b0",
     "semantic_hash": ""
   },
   "tests/integration/test_aws.py": {
-    "mtime": 1781633416.8993962,
-    "ast_hash": "8b457d9fa1fe347ece7441a0d5932edd",
+    "mtime": 1783016934.9784641,
+    "ast_hash": "76683daa7b40c2babfd9ff2fe41397a7",
     "semantic_hash": ""
   },
   "tests/services/__init__.py": {
@@ -330,23 +330,23 @@
     "semantic_hash": ""
   },
   "tests/services/test_control_plane.py": {
-    "mtime": 1781633416.8998137,
-    "ast_hash": "84126a72fd781587c02c4794a710ddee",
+    "mtime": 1783016935.4817154,
+    "ast_hash": "7a2a705d905a4558953a5a81a5ad2ba4",
     "semantic_hash": ""
   },
   "compose.yaml": {
-    "mtime": 1781633416.865304,
-    "ast_hash": "4c99093693a3418457102534601bb8f8",
+    "mtime": 1783016920.9785888,
+    "ast_hash": "c4e4d338f991c7861c2c014e80614042",
     "semantic_hash": ""
   },
   "docs/adr/0002-control-plane-boundaries.md": {
-    "mtime": 1781633416.8670425,
-    "ast_hash": "544586c6d8e0af6198ca845a382c4db8",
+    "mtime": 1783017637.7950826,
+    "ast_hash": "bc557dd7e1022f760531718e35713cda",
     "semantic_hash": ""
   },
   "docs/architecture/control-plane-api.md": {
-    "mtime": 1781633416.8685937,
-    "ast_hash": "3ca0f8415d00ca140e240ebac45f1850",
+    "mtime": 1783017636.3419595,
+    "ast_hash": "a374540a3f93ffe5873362703c24c56f",
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-06-15-gh-7-control-plane-api/.openspec.yaml": {
@@ -355,18 +355,18 @@
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-06-15-gh-7-control-plane-api/design.md": {
-    "mtime": 1781633416.8816254,
-    "ast_hash": "b33d8ed129ca7eb4634702e14b2bacb3",
+    "mtime": 1783017640.5680125,
+    "ast_hash": "09440550339e40e218265e12d11b59c9",
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-06-15-gh-7-control-plane-api/proposal.md": {
-    "mtime": 1781633416.8830366,
-    "ast_hash": "81324d188b489f058f5d3141f9a19ac5",
+    "mtime": 1783016988.5483477,
+    "ast_hash": "c60b7cdad6cebe966b4156721f71e691",
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-06-15-gh-7-control-plane-api/specs/control-plane-api/spec.md": {
-    "mtime": 1781633416.8856986,
-    "ast_hash": "b9e82c71536abc618644ea042bfd7b11",
+    "mtime": 1783017671.5404258,
+    "ast_hash": "189b4fc589200e449e42815b568e4b19",
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-06-15-gh-7-control-plane-api/specs/job-contracts/spec.md": {
@@ -375,13 +375,13 @@
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-06-15-gh-7-control-plane-api/tasks.md": {
-    "mtime": 1781633416.887902,
-    "ast_hash": "1b702d473cac82b1e7fae144cf70516c",
+    "mtime": 1783017016.42277,
+    "ast_hash": "245054b10c9d9446b4064bea71ab109c",
     "semantic_hash": ""
   },
   "openspec/specs/control-plane-api/spec.md": {
-    "mtime": 1781633416.8890958,
-    "ast_hash": "e681620ec8b533d26a7b6273514cc164",
+    "mtime": 1783017670.44341,
+    "ast_hash": "a863380b3c320591e1dcbd704740282b",
     "semantic_hash": ""
   },
   "openspec/specs/job-contracts/spec.md": {
@@ -615,8 +615,8 @@
     "semantic_hash": ""
   },
   "infra/live/floci/terragrunt.hcl": {
-    "mtime": 1782982545.0735283,
-    "ast_hash": "446ee16a01a766ad3de8abb1677fb4bf",
+    "mtime": 1783016266.7295983,
+    "ast_hash": "df9ac14984c0fda4e514dde83942c5cd",
     "semantic_hash": ""
   },
   "infra/modules/foundation/main.tf": {
@@ -645,13 +645,13 @@
     "semantic_hash": ""
   },
   "tools/infra_smoke_floci.sh": {
-    "mtime": 1782982545.0772345,
-    "ast_hash": "9ba291dc1b0f0a57096e289d56568b4b",
+    "mtime": 1782982751.620035,
+    "ast_hash": "0494037ba33b630c773712cf61fd7070",
     "semantic_hash": ""
   },
   "docs/architecture/infrastructure.md": {
-    "mtime": 1782982545.0666063,
-    "ast_hash": "c1d11dd050482de40162fc5c88ad6d70",
+    "mtime": 1782982955.943379,
+    "ast_hash": "c947fcf555d70fcd7da941881c3b6ae7",
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-07-02-gh-34-infra-floci-foundation/.openspec.yaml": {
@@ -665,8 +665,8 @@
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-07-02-gh-34-infra-floci-foundation/proposal.md": {
-    "mtime": 1782981736.172126,
-    "ast_hash": "2f91be8561207f1338e6900a4b92d16c",
+    "mtime": 1783017017.6203947,
+    "ast_hash": "4f567d070226ad2c12cde4ce9ef1e3a1",
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-07-02-gh-34-infra-floci-foundation/specs/infrastructure-foundation/spec.md": {
@@ -690,113 +690,53 @@
     "semantic_hash": ""
   },
   "infra/live/floci/.terraform.lock.hcl": {
-    "mtime": 1782982545.0733705,
-    "ast_hash": "132076afa71cf0b49800db6bc5451b3a",
-    "semantic_hash": ""
-  },
-  "infra/live/floci/.terragrunt-cache/ti9CGBC7_dAS8waaq7mW9O-E1HI/egJMsUJ_Fi-Ex5HIB3Ig-IbMSQU/.terraform.lock.hcl": {
-    "mtime": 1782982063.3326821,
-    "ast_hash": "132076afa71cf0b49800db6bc5451b3a",
-    "semantic_hash": ""
-  },
-  "infra/live/floci/.terragrunt-cache/ti9CGBC7_dAS8waaq7mW9O-E1HI/egJMsUJ_Fi-Ex5HIB3Ig-IbMSQU/main.tf": {
-    "mtime": 1782982063.332989,
-    "ast_hash": "c8d788c36c3ed84a703d2a408162f2c7",
-    "semantic_hash": ""
-  },
-  "infra/live/floci/.terragrunt-cache/ti9CGBC7_dAS8waaq7mW9O-E1HI/egJMsUJ_Fi-Ex5HIB3Ig-IbMSQU/outputs.tf": {
-    "mtime": 1782982063.3331175,
-    "ast_hash": "ddb72feb77365b8a461113e9d3a894b8",
-    "semantic_hash": ""
-  },
-  "infra/live/floci/.terragrunt-cache/ti9CGBC7_dAS8waaq7mW9O-E1HI/egJMsUJ_Fi-Ex5HIB3Ig-IbMSQU/provider.tf": {
-    "mtime": 1782982063.3353512,
-    "ast_hash": "58eee9e7f33027301e77b4cc142dac5e",
-    "semantic_hash": ""
-  },
-  "infra/live/floci/.terragrunt-cache/ti9CGBC7_dAS8waaq7mW9O-E1HI/egJMsUJ_Fi-Ex5HIB3Ig-IbMSQU/stubs/lambda_handler.py": {
-    "mtime": 1782982063.3336132,
-    "ast_hash": "53ca0fe835a89ea991f6e3f411efdc2d",
-    "semantic_hash": ""
-  },
-  "infra/live/floci/.terragrunt-cache/ti9CGBC7_dAS8waaq7mW9O-E1HI/egJMsUJ_Fi-Ex5HIB3Ig-IbMSQU/terragrunt.hcl": {
-    "mtime": 1782982063.3348424,
-    "ast_hash": "5b21e5e7f8af2f8b31ccb3cb2fc0e6cc",
-    "semantic_hash": ""
-  },
-  "infra/live/floci/.terragrunt-cache/ti9CGBC7_dAS8waaq7mW9O-E1HI/egJMsUJ_Fi-Ex5HIB3Ig-IbMSQU/variables.tf": {
-    "mtime": 1782982063.3337414,
-    "ast_hash": "58c6b1880eb4abf7734447ad76b0b5a5",
-    "semantic_hash": ""
-  },
-  "infra/live/floci/.terragrunt-cache/ti9CGBC7_dAS8waaq7mW9O-E1HI/egJMsUJ_Fi-Ex5HIB3Ig-IbMSQU/versions.tf": {
-    "mtime": 1782982063.3338757,
-    "ast_hash": "87cac494d3a204949d693b3cd35c0601",
-    "semantic_hash": ""
-  },
-  "infra/live/floci/.terragrunt-cache/ti9CGBC7_dAS8waaq7mW9O-E1HI/ydJuPepCPq6yewwDRNZxNScbotQ/app-edge-auth-api/.terraform.lock.hcl": {
-    "mtime": 1782982138.5246131,
+    "mtime": 1783015689.9390497,
     "ast_hash": "132076afa71cf0b49800db6bc5451b3a",
     "semantic_hash": ""
   },
   "infra/live/floci/.terragrunt-cache/ti9CGBC7_dAS8waaq7mW9O-E1HI/ydJuPepCPq6yewwDRNZxNScbotQ/app-edge-auth-api/main.tf": {
-    "mtime": 1782982138.5222752,
+    "mtime": 1783015683.017664,
     "ast_hash": "c8d788c36c3ed84a703d2a408162f2c7",
     "semantic_hash": ""
   },
   "infra/live/floci/.terragrunt-cache/ti9CGBC7_dAS8waaq7mW9O-E1HI/ydJuPepCPq6yewwDRNZxNScbotQ/app-edge-auth-api/outputs.tf": {
-    "mtime": 1782982138.522551,
-    "ast_hash": "ddb72feb77365b8a461113e9d3a894b8",
-    "semantic_hash": ""
-  },
-  "infra/live/floci/.terragrunt-cache/ti9CGBC7_dAS8waaq7mW9O-E1HI/ydJuPepCPq6yewwDRNZxNScbotQ/app-edge-auth-api/provider.tf": {
-    "mtime": 1782982138.5252666,
-    "ast_hash": "0c11ef8655c0ae5f369b45d011b37cda",
+    "mtime": 1783015683.017959,
+    "ast_hash": "c9d044b8bd9b2678e7315b34b9c88755",
     "semantic_hash": ""
   },
   "infra/live/floci/.terragrunt-cache/ti9CGBC7_dAS8waaq7mW9O-E1HI/ydJuPepCPq6yewwDRNZxNScbotQ/app-edge-auth-api/stubs/lambda_handler.py": {
-    "mtime": 1782982138.5228233,
+    "mtime": 1783015683.01866,
     "ast_hash": "53ca0fe835a89ea991f6e3f411efdc2d",
     "semantic_hash": ""
   },
-  "infra/live/floci/.terragrunt-cache/ti9CGBC7_dAS8waaq7mW9O-E1HI/ydJuPepCPq6yewwDRNZxNScbotQ/app-edge-auth-api/terragrunt.hcl": {
-    "mtime": 1782982138.5247195,
-    "ast_hash": "446ee16a01a766ad3de8abb1677fb4bf",
-    "semantic_hash": ""
-  },
   "infra/live/floci/.terragrunt-cache/ti9CGBC7_dAS8waaq7mW9O-E1HI/ydJuPepCPq6yewwDRNZxNScbotQ/app-edge-auth-api/variables.tf": {
-    "mtime": 1782982138.5229156,
+    "mtime": 1783015683.0189698,
     "ast_hash": "58c6b1880eb4abf7734447ad76b0b5a5",
     "semantic_hash": ""
   },
   "infra/live/floci/.terragrunt-cache/ti9CGBC7_dAS8waaq7mW9O-E1HI/ydJuPepCPq6yewwDRNZxNScbotQ/app-edge-auth-api/versions.tf": {
-    "mtime": 1782982138.5229988,
+    "mtime": 1783015683.0194454,
     "ast_hash": "87cac494d3a204949d693b3cd35c0601",
     "semantic_hash": ""
   },
   "infra/live/floci/.terragrunt-cache/ti9CGBC7_dAS8waaq7mW9O-E1HI/ydJuPepCPq6yewwDRNZxNScbotQ/foundation/main.tf": {
-    "mtime": 1782982138.5231755,
+    "mtime": 1783015683.0198388,
     "ast_hash": "c371ca8008422f9ebab2e9d8f94fe09d",
     "semantic_hash": ""
   },
   "infra/live/floci/.terragrunt-cache/ti9CGBC7_dAS8waaq7mW9O-E1HI/ydJuPepCPq6yewwDRNZxNScbotQ/foundation/outputs.tf": {
-    "mtime": 1782982138.5232778,
+    "mtime": 1783015683.0200276,
     "ast_hash": "3527a67423fbb34f4463d74132165952",
     "semantic_hash": ""
   },
   "infra/live/floci/.terragrunt-cache/ti9CGBC7_dAS8waaq7mW9O-E1HI/ydJuPepCPq6yewwDRNZxNScbotQ/foundation/variables.tf": {
-    "mtime": 1782982138.5233836,
+    "mtime": 1783015683.0206528,
     "ast_hash": "b4eb5f98e09d7bd618f62f3706e73917",
     "semantic_hash": ""
   },
   "infra/live/floci/.terragrunt-cache/ti9CGBC7_dAS8waaq7mW9O-E1HI/ydJuPepCPq6yewwDRNZxNScbotQ/foundation/versions.tf": {
-    "mtime": 1782982138.5234811,
+    "mtime": 1783015683.020958,
     "ast_hash": "b3920b057cd56728edd109d33b59ce50",
-    "semantic_hash": ""
-  },
-  "infra/modules/app-edge-auth-api/.terraform.lock.hcl": {
-    "mtime": 1782982545.0736291,
-    "ast_hash": "132076afa71cf0b49800db6bc5451b3a",
     "semantic_hash": ""
   },
   "infra/modules/app-edge-auth-api/main.tf": {
@@ -805,8 +745,8 @@
     "semantic_hash": ""
   },
   "infra/modules/app-edge-auth-api/outputs.tf": {
-    "mtime": 1782982545.0738182,
-    "ast_hash": "ddb72feb77365b8a461113e9d3a894b8",
+    "mtime": 1782982751.3801093,
+    "ast_hash": "c9d044b8bd9b2678e7315b34b9c88755",
     "semantic_hash": ""
   },
   "infra/modules/app-edge-auth-api/stubs/lambda_handler.py": {
@@ -824,13 +764,8 @@
     "ast_hash": "87cac494d3a204949d693b3cd35c0601",
     "semantic_hash": ""
   },
-  "infra/live/floci/.terragrunt-cache/ti9CGBC7_dAS8waaq7mW9O-E1HI/egJMsUJ_Fi-Ex5HIB3Ig-IbMSQU/stubs/frontend-index.html": {
-    "mtime": 1782982063.3334332,
-    "ast_hash": "7ac05faee7ffd57230a207738ff7b353",
-    "semantic_hash": ""
-  },
   "infra/live/floci/.terragrunt-cache/ti9CGBC7_dAS8waaq7mW9O-E1HI/ydJuPepCPq6yewwDRNZxNScbotQ/app-edge-auth-api/stubs/frontend-index.html": {
-    "mtime": 1782982138.522726,
+    "mtime": 1783015683.0184405,
     "ast_hash": "7ac05faee7ffd57230a207738ff7b353",
     "semantic_hash": ""
   },
@@ -872,6 +807,386 @@
   "openspec/specs/infrastructure-app-edge-auth-api/spec.md": {
     "mtime": 1782982545.0766623,
     "ast_hash": "17cee9b7aae6ce851387d4bf332e1de3",
+    "semantic_hash": ""
+  },
+  "infra/live/floci/.terragrunt-cache/ti9CGBC7_dAS8waaq7mW9O-E1HI/ydJuPepCPq6yewwDRNZxNScbotQ/worker-compute-artifacts/.terraform.lock.hcl": {
+    "mtime": 1783016622.285977,
+    "ast_hash": "132076afa71cf0b49800db6bc5451b3a",
+    "semantic_hash": ""
+  },
+  "infra/live/floci/.terragrunt-cache/ti9CGBC7_dAS8waaq7mW9O-E1HI/ydJuPepCPq6yewwDRNZxNScbotQ/worker-compute-artifacts/main.tf": {
+    "mtime": 1783015683.021254,
+    "ast_hash": "a0d5a95838ea1f406af58bc9d265cdf2",
+    "semantic_hash": ""
+  },
+  "infra/live/floci/.terragrunt-cache/ti9CGBC7_dAS8waaq7mW9O-E1HI/ydJuPepCPq6yewwDRNZxNScbotQ/worker-compute-artifacts/outputs.tf": {
+    "mtime": 1783015683.0213723,
+    "ast_hash": "d0a6e65e84c99e667469d2647b710d86",
+    "semantic_hash": ""
+  },
+  "infra/live/floci/.terragrunt-cache/ti9CGBC7_dAS8waaq7mW9O-E1HI/ydJuPepCPq6yewwDRNZxNScbotQ/worker-compute-artifacts/provider.tf": {
+    "mtime": 1783016622.2873054,
+    "ast_hash": "bf83dd5ebca6aa482920577432751273",
+    "semantic_hash": ""
+  },
+  "infra/live/floci/.terragrunt-cache/ti9CGBC7_dAS8waaq7mW9O-E1HI/ydJuPepCPq6yewwDRNZxNScbotQ/worker-compute-artifacts/terragrunt.hcl": {
+    "mtime": 1783016622.2861283,
+    "ast_hash": "df9ac14984c0fda4e514dde83942c5cd",
+    "semantic_hash": ""
+  },
+  "infra/live/floci/.terragrunt-cache/ti9CGBC7_dAS8waaq7mW9O-E1HI/ydJuPepCPq6yewwDRNZxNScbotQ/worker-compute-artifacts/variables.tf": {
+    "mtime": 1783015683.0214763,
+    "ast_hash": "58c6b1880eb4abf7734447ad76b0b5a5",
+    "semantic_hash": ""
+  },
+  "infra/live/floci/.terragrunt-cache/ti9CGBC7_dAS8waaq7mW9O-E1HI/ydJuPepCPq6yewwDRNZxNScbotQ/worker-compute-artifacts/versions.tf": {
+    "mtime": 1783015683.0215743,
+    "ast_hash": "59150b9fe161f68f576dd0cb3bd92853",
+    "semantic_hash": ""
+  },
+  "infra/modules/worker-compute-artifacts/main.tf": {
+    "mtime": 1782983080.747833,
+    "ast_hash": "a0d5a95838ea1f406af58bc9d265cdf2",
+    "semantic_hash": ""
+  },
+  "infra/modules/worker-compute-artifacts/outputs.tf": {
+    "mtime": 1782982811.7463818,
+    "ast_hash": "d0a6e65e84c99e667469d2647b710d86",
+    "semantic_hash": ""
+  },
+  "infra/modules/worker-compute-artifacts/variables.tf": {
+    "mtime": 1782982811.8624978,
+    "ast_hash": "58c6b1880eb4abf7734447ad76b0b5a5",
+    "semantic_hash": ""
+  },
+  "infra/modules/worker-compute-artifacts/versions.tf": {
+    "mtime": 1782982811.9787652,
+    "ast_hash": "59150b9fe161f68f576dd0cb3bd92853",
+    "semantic_hash": ""
+  },
+  "infra/stubs/worker/worker_stub.py": {
+    "mtime": 1782982812.3024945,
+    "ast_hash": "2ffec4f5006c83ce1ffe256bfad3598d",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/apigateway-account.json": {
+    "mtime": 1783016583.328977,
+    "ast_hash": "67c1890df55a3fda9bfa59ed880bdd0c",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/apigateway-apikeys.json": {
+    "mtime": 1783016583.3268187,
+    "ast_hash": "67c1890df55a3fda9bfa59ed880bdd0c",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/apigateway-apis.json": {
+    "mtime": 1783016583.3247855,
+    "ast_hash": "67c1890df55a3fda9bfa59ed880bdd0c",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/apigateway-authorizers.json": {
+    "mtime": 1783016583.3262267,
+    "ast_hash": "67c1890df55a3fda9bfa59ed880bdd0c",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/apigateway-deployments.json": {
+    "mtime": 1783016583.3254964,
+    "ast_hash": "67c1890df55a3fda9bfa59ed880bdd0c",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/apigateway-domains.json": {
+    "mtime": 1783016583.3293335,
+    "ast_hash": "67c1890df55a3fda9bfa59ed880bdd0c",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/apigateway-mappings.json": {
+    "mtime": 1783016583.3297226,
+    "ast_hash": "67c1890df55a3fda9bfa59ed880bdd0c",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/apigateway-models.json": {
+    "mtime": 1783016583.328655,
+    "ast_hash": "67c1890df55a3fda9bfa59ed880bdd0c",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/apigateway-resources.json": {
+    "mtime": 1783016583.3251429,
+    "ast_hash": "67c1890df55a3fda9bfa59ed880bdd0c",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/apigateway-stages.json": {
+    "mtime": 1783016583.3258379,
+    "ast_hash": "67c1890df55a3fda9bfa59ed880bdd0c",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/apigateway-usageplankeys.json": {
+    "mtime": 1783016583.327659,
+    "ast_hash": "67c1890df55a3fda9bfa59ed880bdd0c",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/apigateway-usageplans.json": {
+    "mtime": 1783016583.3271945,
+    "ast_hash": "67c1890df55a3fda9bfa59ed880bdd0c",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/apigateway-validators.json": {
+    "mtime": 1783016583.3280592,
+    "ast_hash": "67c1890df55a3fda9bfa59ed880bdd0c",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/apigatewayv2-apis.json": {
+    "mtime": 1783016634.04112,
+    "ast_hash": "864020b0d763fd896f5f7ea8e02fb01d",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/apigatewayv2-integrations.json": {
+    "mtime": 1783016645.0750277,
+    "ast_hash": "2cdb5f62126b08bb496fb6b395da5d33",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/apigatewayv2-stages.json": {
+    "mtime": 1783016634.106857,
+    "ast_hash": "a4fe86c0e5811e86d9c82d9cbeb0f6e6",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/autoscaling-activities.json": {
+    "mtime": 1783016583.3317943,
+    "ast_hash": "67c1890df55a3fda9bfa59ed880bdd0c",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/autoscaling-groups.json": {
+    "mtime": 1783016583.330623,
+    "ast_hash": "67c1890df55a3fda9bfa59ed880bdd0c",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/autoscaling-instance-refreshes.json": {
+    "mtime": 1783016583.33214,
+    "ast_hash": "67c1890df55a3fda9bfa59ed880bdd0c",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/autoscaling-launch-configurations.json": {
+    "mtime": 1783016583.3301368,
+    "ast_hash": "67c1890df55a3fda9bfa59ed880bdd0c",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/autoscaling-lifecycle-hooks.json": {
+    "mtime": 1783016583.3309822,
+    "ast_hash": "67c1890df55a3fda9bfa59ed880bdd0c",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/autoscaling-policies.json": {
+    "mtime": 1783016583.3314111,
+    "ast_hash": "67c1890df55a3fda9bfa59ed880bdd0c",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/batch-job-definitions.json": {
+    "mtime": 1783016640.0357308,
+    "ast_hash": "aeb79249f494599d827af3c171cdca75",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/cognito-clients.json": {
+    "mtime": 1783016635.2832394,
+    "ast_hash": "3dd869647d4c25ca7e80616d051cb353",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/cognito-pools.json": {
+    "mtime": 1783016635.2655504,
+    "ast_hash": "f785c59ec9fb2f471178c8c62d83d925",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/cwlogs-events.json": {
+    "mtime": 1783017018.9003701,
+    "ast_hash": "254cf7f5c15998ffd52504d62d1dbfaf",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/cwlogs-groups.json": {
+    "mtime": 1783016670.9860916,
+    "ast_hash": "fb8af36dece8bfd96bbcc0c2f7ffea9e",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/cwlogs-streams.json": {
+    "mtime": 1783017018.901495,
+    "ast_hash": "c1e815a91c9a40b53c7130a377113dd7",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/dynamodb-tables.json": {
+    "mtime": 1783016639.9962683,
+    "ast_hash": "70e50087e58e28b69d3629215a9de445",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/ec2-internet-gateways.json": {
+    "mtime": 1783016634.047374,
+    "ast_hash": "b452adc38a15cdb16f066a82f1c71d54",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/ec2-network-acls.json": {
+    "mtime": 1783016634.1188254,
+    "ast_hash": "7fc161e2ab210abdde4a9b65dd523bed",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/ec2-route-tables.json": {
+    "mtime": 1783016634.0550675,
+    "ast_hash": "c3d5df8e95683f62dbe56d1217d48d80",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/ec2-security-group-rules.json": {
+    "mtime": 1783016634.3221798,
+    "ast_hash": "4a66967c465d20de48f0346d826b6916",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/ec2-security-groups.json": {
+    "mtime": 1783016634.3225553,
+    "ast_hash": "716bfb288a0b391e5f2e1adfcb79196d",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/ec2-subnets.json": {
+    "mtime": 1783016634.1179714,
+    "ast_hash": "32996721a377ef2bc7482f807887fa1d",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/ec2-vpcs.json": {
+    "mtime": 1783016634.0614297,
+    "ast_hash": "280c33c0b9c52c1024ff7abc15b80fa9",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/iam-access-keys.json": {
+    "mtime": 1783016583.3234324,
+    "ast_hash": "67c1890df55a3fda9bfa59ed880bdd0c",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/iam-groups.json": {
+    "mtime": 1783016583.321263,
+    "ast_hash": "67c1890df55a3fda9bfa59ed880bdd0c",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/iam-instance-profiles.json": {
+    "mtime": 1783016583.323797,
+    "ast_hash": "67c1890df55a3fda9bfa59ed880bdd0c",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/iam-policies.json": {
+    "mtime": 1783016583.322921,
+    "ast_hash": "127b4687397141c5550377c2cb453044",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/iam-roles.json": {
+    "mtime": 1783016640.023489,
+    "ast_hash": "c4460e0ecb4213e41d827b824226f89a",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/iam-sessions.json": {
+    "mtime": 1783016583.3242137,
+    "ast_hash": "67c1890df55a3fda9bfa59ed880bdd0c",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/iam-users.json": {
+    "mtime": 1783016583.3208542,
+    "ast_hash": "67c1890df55a3fda9bfa59ed880bdd0c",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/lambda-code/redact-all-the-things-floci-api/lambda_handler.py": {
+    "mtime": 1783016640.0482793,
+    "ast_hash": "53ca0fe835a89ea991f6e3f411efdc2d",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/lambda-esm.json": {
+    "mtime": 1783016583.3184032,
+    "ast_hash": "67c1890df55a3fda9bfa59ed880bdd0c",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/lambda-functions.json": {
+    "mtime": 1783016645.0734577,
+    "ast_hash": "42f71b051aa09b635656e1c7e029e322",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/pipes.json": {
+    "mtime": 1783016583.3188145,
+    "ast_hash": "67c1890df55a3fda9bfa59ed880bdd0c",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/rds-cluster-parameter-groups.json": {
+    "mtime": 1783016583.3202193,
+    "ast_hash": "67c1890df55a3fda9bfa59ed880bdd0c",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/rds-clusters.json": {
+    "mtime": 1783016583.3195465,
+    "ast_hash": "67c1890df55a3fda9bfa59ed880bdd0c",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/rds-instances.json": {
+    "mtime": 1783016583.3191855,
+    "ast_hash": "67c1890df55a3fda9bfa59ed880bdd0c",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/rds-parameter-groups.json": {
+    "mtime": 1783016583.3198824,
+    "ast_hash": "67c1890df55a3fda9bfa59ed880bdd0c",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/rds-subnet-groups.json": {
+    "mtime": 1783016583.3205345,
+    "ast_hash": "67c1890df55a3fda9bfa59ed880bdd0c",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/repositories.json": {
+    "mtime": 1783016638.1673324,
+    "ast_hash": "9e1a088f57e228e48dba87ae745c1e9a",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/s3-buckets.json": {
+    "mtime": 1783016634.133663,
+    "ast_hash": "e921910d572470f908102e7bb90ec12d",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/s3-objects.json": {
+    "mtime": 1783016634.095567,
+    "ast_hash": "3a508c8d02d1d68f0374857058af8b42",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/scheduler-groups.json": {
+    "mtime": 1783016583.3325717,
+    "ast_hash": "67c1890df55a3fda9bfa59ed880bdd0c",
+    "semantic_hash": ""
+  },
+  "local-data/floci-state/scheduler-schedules.json": {
+    "mtime": 1783016583.3329167,
+    "ast_hash": "67c1890df55a3fda9bfa59ed880bdd0c",
+    "semantic_hash": ""
+  },
+  "openspec/changes/gh-36-infra-worker-compute-artifacts/.openspec.yaml": {
+    "mtime": 1782982581.903303,
+    "ast_hash": "7f48377552c3f516e4e868cb6ea8d4f2",
+    "semantic_hash": ""
+  },
+  "openspec/changes/gh-36-infra-worker-compute-artifacts/design.md": {
+    "mtime": 1783017641.2264545,
+    "ast_hash": "982b621e4a68c62d751c5d195d7f66f1",
+    "semantic_hash": ""
+  },
+  "openspec/changes/gh-36-infra-worker-compute-artifacts/proposal.md": {
+    "mtime": 1782982635.558706,
+    "ast_hash": "28959beb90fd7aae256ad035999bd945",
+    "semantic_hash": ""
+  },
+  "openspec/changes/gh-36-infra-worker-compute-artifacts/specs/infrastructure-app-edge-auth-api/spec.md": {
+    "mtime": 1782982636.0895236,
+    "ast_hash": "a8be28dd5e9aa27fd8dbe95c69dfd95d",
+    "semantic_hash": ""
+  },
+  "openspec/changes/gh-36-infra-worker-compute-artifacts/specs/infrastructure-foundation/spec.md": {
+    "mtime": 1782982636.2869048,
+    "ast_hash": "b98742d9820950f6095d5eba6d942e78",
+    "semantic_hash": ""
+  },
+  "openspec/changes/gh-36-infra-worker-compute-artifacts/specs/infrastructure-worker-compute-artifacts/spec.md": {
+    "mtime": 1782982635.8914804,
+    "ast_hash": "36d4c219c8aec8f5fd942fa7f188b39f",
+    "semantic_hash": ""
+  },
+  "openspec/changes/gh-36-infra-worker-compute-artifacts/tasks.md": {
+    "mtime": 1782983211.3053477,
+    "ast_hash": "8aa693e579f99a4475bbc0f7ca725c0f",
     "semantic_hash": ""
   }
 }
