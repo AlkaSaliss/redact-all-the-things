@@ -5,12 +5,11 @@
 The repository SHALL provide Make targets for starting/checking Floci and for
 running Terragrunt validation, plan, apply, and smoke entrypoints.
 
-#### Scenario: Start Floci through a developer-provided command
+#### Scenario: Start Floci through the repository command
 
-- **GIVEN** `FLOCI_START_CMD` is set
 - **WHEN** the developer runs the Floci startup target
-- **THEN** the command is executed without hard-coding a Floci image or CLI in
-  the repository.
+- **THEN** the local Floci AWS emulator is started with repository-local
+  persistent state.
 
 #### Scenario: Require an explicit Floci endpoint
 
@@ -32,3 +31,10 @@ running Terragrunt validation, plan, apply, and smoke entrypoints.
 - **THEN** the command reports that Batch, Fargate, ECR, and worker networking
   support depends on the configured emulator and remains covered by static
   Terraform validation when unsupported.
+
+#### Scenario: Select infrastructure deployment target
+
+- **GIVEN** `INFRA_TARGET` is set to `floci` or `aws`
+- **WHEN** the developer runs a generic Terragrunt plan or apply target
+- **THEN** the command selects the matching live stack and uses that stack's
+  deployment mode.

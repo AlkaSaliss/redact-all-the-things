@@ -1,6 +1,7 @@
 module "foundation" {
   source = "../foundation"
 
+  deployment_mode    = var.deployment_mode
   aws_region         = var.aws_region
   environment        = var.environment
   floci_endpoint_url = var.floci_endpoint_url
@@ -8,9 +9,10 @@ module "foundation" {
 }
 
 locals {
-  name_prefix          = module.foundation.name_prefix
-  artifact_expiry_days = 1
-  lambda_source_hash   = filesha256("${path.module}/stubs/lambda_handler.py")
+  create_cloudfront_distribution = var.deployment_mode == "aws"
+  name_prefix                    = module.foundation.name_prefix
+  artifact_expiry_days           = 1
+  lambda_source_hash             = filesha256("${path.module}/stubs/lambda_handler.py")
 }
 
 data "archive_file" "lambda_stub" {
@@ -153,6 +155,19 @@ resource "aws_cognito_user_pool_client" "web" {
   ]
 
   generate_secret = false
+
+  dynamic "analytics_configuration" {
+    for_each = var.deployment_mode == "floci" ? [1] : []
+
+    content {
+      application_arn = "arn:aws:mobiletargeting:${var.aws_region}:000000000000:apps/floci"
+    }
+  }
+
+  refresh_token_rotation {
+    feature                    = "DISABLED"
+    retry_grace_period_seconds = 0
+  }
 }
 
 resource "aws_cloudwatch_log_group" "api" {
@@ -297,6 +312,8 @@ resource "aws_lambda_permission" "api_gateway" {
 }
 
 resource "aws_cloudfront_origin_access_control" "frontend" {
+  count = local.create_cloudfront_distribution ? 1 : 0
+
   name                              = "${local.name_prefix}-frontend"
   description                       = "Origin access control for the Floci frontend bucket."
   origin_access_control_origin_type = "s3"
@@ -305,13 +322,15 @@ resource "aws_cloudfront_origin_access_control" "frontend" {
 }
 
 resource "aws_cloudfront_distribution" "frontend" {
+  count = local.create_cloudfront_distribution ? 1 : 0
+
   enabled             = true
   default_root_object = "index.html"
 
   origin {
     domain_name              = aws_s3_bucket.frontend.bucket_regional_domain_name
     origin_id                = "frontend"
-    origin_access_control_id = aws_cloudfront_origin_access_control.frontend.id
+    origin_access_control_id = aws_cloudfront_origin_access_control.frontend[0].id
   }
 
   default_cache_behavior {

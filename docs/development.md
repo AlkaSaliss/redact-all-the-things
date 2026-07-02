@@ -71,12 +71,18 @@ smoke targets:
 export FLOCI_ENDPOINT_URL=http://127.0.0.1:4566
 make floci-check
 make terragrunt-validate
-make terragrunt-plan-floci
+make terragrunt-plan-local
 ```
 
-`make floci-up` runs `FLOCI_START_CMD` when that environment variable is set.
+`make floci-up` starts the local Floci AWS emulator with persistent state.
 Terraform state remains local during the emulator phase; real AWS remote state
 is deferred to the real-AWS swap ticket.
+
+The `Infrastructure` GitHub Actions workflow runs `make terragrunt-validate`
+for infrastructure pull requests. Manual workflow dispatch can run an AWS plan
+or apply against `infra/live/aws` after configuring the `AWS_ROLE_TO_ASSUME`
+secret, optional `AWS_REGION` variable, and `aws-production` environment
+approval gate.
 
 Preview the documentation:
 

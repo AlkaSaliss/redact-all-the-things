@@ -2,14 +2,16 @@ module "app" {
   source = "../app-edge-auth-api"
 
   aws_region         = var.aws_region
+  deployment_mode    = var.deployment_mode
   environment        = var.environment
   floci_endpoint_url = var.floci_endpoint_url
   project_name       = var.project_name
 }
 
 locals {
-  name_prefix  = module.app.name_prefix
-  worker_image = "${aws_ecr_repository.worker.repository_url}:stub"
+  use_floci_compatibility = var.deployment_mode == "floci"
+  name_prefix             = module.app.name_prefix
+  worker_image            = "${aws_ecr_repository.worker.repository_url}:stub"
 }
 
 resource "aws_ecr_repository" "worker" {
@@ -80,7 +82,33 @@ resource "aws_iam_role" "batch_service" {
   })
 }
 
+resource "aws_iam_role_policy" "batch_service" {
+  count = local.use_floci_compatibility ? 1 : 0
+
+  name = "${local.name_prefix}-batch-service"
+  role = aws_iam_role.batch_service.id
+
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Effect = "Allow"
+        Action = [
+          "batch:*",
+          "ec2:*",
+          "ecs:*",
+          "iam:PassRole",
+          "logs:*",
+        ]
+        Resource = "*"
+      },
+    ]
+  })
+}
+
 resource "aws_iam_role_policy_attachment" "batch_service" {
+  count = local.use_floci_compatibility ? 0 : 1
+
   role       = aws_iam_role.batch_service.name
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSBatchServiceRole"
 }
@@ -196,7 +224,10 @@ resource "aws_batch_compute_environment" "worker" {
     type               = "FARGATE_SPOT"
   }
 
-  depends_on = [aws_iam_role_policy_attachment.batch_service]
+  depends_on = [
+    aws_iam_role_policy.batch_service,
+    aws_iam_role_policy_attachment.batch_service,
+  ]
 }
 
 resource "aws_batch_job_queue" "worker" {

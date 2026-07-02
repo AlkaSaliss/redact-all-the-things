@@ -26,6 +26,16 @@ ingress. This avoids depending on a default VPC and keeps the no-inbound-worker
 boundary visible. Egress remains open for emulator/static modeling and can be
 tightened when real AWS networking endpoints are finalized.
 
+### Keep local apply inside Floci-supported behavior
+
+Keep CloudFront resources in the reusable app module, but allow the Floci live
+stack to disable CloudFront creation. Floci's CloudFront apply response caused
+the AWS provider to crash during distribution readback, so the local apply path
+should deploy the supported subset while static validation keeps the real AWS
+resource shape visible. Use a module-defined Batch service-role policy instead
+of attaching AWS-managed service policies because Floci does not preload those
+managed policy ARNs.
+
 ### Keep worker stubs separate from product worker code
 
 Add a minimal worker Dockerfile and script under `infra/stubs/worker`. Terraform

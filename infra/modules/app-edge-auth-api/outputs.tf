@@ -15,7 +15,7 @@ output "artifact_bucket_arn" {
 
 output "cloudfront_domain_name" {
   description = "CloudFront generated domain for the frontend placeholder."
-  value       = aws_cloudfront_distribution.frontend.domain_name
+  value       = local.create_cloudfront_distribution ? aws_cloudfront_distribution.frontend[0].domain_name : null
 }
 
 output "frontend_bucket" {

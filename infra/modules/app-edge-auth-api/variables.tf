@@ -13,7 +13,19 @@ variable "environment" {
 variable "floci_endpoint_url" {
   description = "AWS-compatible endpoint exposed by the local Floci emulator."
   type        = string
-  nullable    = false
+  default     = null
+  nullable    = true
+}
+
+variable "deployment_mode" {
+  description = "Infrastructure deployment mode: floci for emulator-compatible local resources or aws for the full AWS graph."
+  type        = string
+  default     = "aws"
+
+  validation {
+    condition     = contains(["floci", "aws"], var.deployment_mode)
+    error_message = "deployment_mode must be either floci or aws."
+  }
 }
 
 variable "project_name" {

@@ -10,6 +10,10 @@
 - [x] 2.3 Add minimal worker stubs for infrastructure wiring only.
 - [x] 2.4 Point the Floci Terragrunt live config at the worker compute module.
 - [x] 2.5 Extend infrastructure validation targets to cover the worker module.
+- [x] 2.6 Make local Floci apply compatible with unsupported CloudFront apply
+  responses and missing AWS-managed Batch service policies.
+- [x] 2.7 Add deployment-mode based live stacks so Floci uses emulator
+  compatibility and AWS uses the full production-shaped graph.
 
 ## 3. Documentation and Smoke
 
@@ -24,7 +28,7 @@
 - [x] 4.2 Run `openspec validate --all --strict --no-interactive`.
 - [x] 4.3 Run `uv run mkdocs build --strict`.
 - [x] 4.4 Run `make terragrunt-validate`.
-- [x] 4.5 Run `FLOCI_ENDPOINT_URL=http://127.0.0.1:4566 make terragrunt-plan-floci`.
-- [ ] 4.6 Run `FLOCI_ENDPOINT_URL=http://127.0.0.1:4566 make infra-smoke-floci`.
+- [x] 4.5 Run `make terragrunt-plan-local`.
+- [x] 4.6 Run `make infra-smoke-floci`.
 - [x] 4.7 Run `uv run pytest`.
-- [ ] 4.8 Refresh Graphify after infrastructure and architecture changes.
+- [x] 4.8 Refresh Graphify after infrastructure and architecture changes.

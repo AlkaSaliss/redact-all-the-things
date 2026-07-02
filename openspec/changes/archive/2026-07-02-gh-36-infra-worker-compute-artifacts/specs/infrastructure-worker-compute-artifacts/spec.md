@@ -29,6 +29,20 @@ Spot compute resources for analysis and render workers.
 - **THEN** it defines seven-day worker log retention and IAM roles that allow
   only required artifact, job metadata, ECR pull, and log operations.
 
+#### Scenario: Avoid emulator dependency on AWS-managed IAM policies
+
+- **GIVEN** `deployment_mode` is `floci`
+- **WHEN** the worker compute Terraform module is applied
+- **THEN** the Batch service role uses a module-defined policy instead of
+  requiring the emulator to preload AWS-managed service-role policies.
+
+#### Scenario: Use production Batch service policy in AWS mode
+
+- **GIVEN** `deployment_mode` is `aws`
+- **WHEN** the worker compute Terraform module is planned
+- **THEN** the Batch service role uses the AWS-managed
+  `AWSBatchServiceRole` policy attachment.
+
 #### Scenario: Model worker network isolation
 
 - **WHEN** the worker compute Terraform module is validated

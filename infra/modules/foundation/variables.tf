@@ -15,19 +15,37 @@ variable "environment" {
   default     = "floci"
 
   validation {
-    condition     = var.environment == "floci"
-    error_message = "This foundation slice only supports the floci environment."
+    condition     = can(regex("^[a-z0-9-]+$", var.environment))
+    error_message = "Environment must use lowercase letters, numbers, and hyphens."
   }
 }
 
 variable "floci_endpoint_url" {
   description = "AWS-compatible endpoint exposed by the local Floci emulator."
   type        = string
-  nullable    = false
+  default     = null
+  nullable    = true
 
   validation {
-    condition     = startswith(var.floci_endpoint_url, "http://") || startswith(var.floci_endpoint_url, "https://")
-    error_message = "FLOCI_ENDPOINT_URL must be an http:// or https:// URL."
+    condition = (
+      var.deployment_mode != "floci" ||
+      (
+        var.floci_endpoint_url != null &&
+        (startswith(var.floci_endpoint_url, "http://") || startswith(var.floci_endpoint_url, "https://"))
+      )
+    )
+    error_message = "FLOCI_ENDPOINT_URL must be an http:// or https:// URL when deployment_mode is floci."
+  }
+}
+
+variable "deployment_mode" {
+  description = "Infrastructure deployment mode: floci for emulator-compatible local resources or aws for the full AWS graph."
+  type        = string
+  default     = "aws"
+
+  validation {
+    condition     = contains(["floci", "aws"], var.deployment_mode)
+    error_message = "deployment_mode must be either floci or aws."
   }
 }
 

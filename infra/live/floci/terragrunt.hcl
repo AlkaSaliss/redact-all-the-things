@@ -45,6 +45,7 @@ EOF
 
 inputs = {
   aws_region         = local.aws_region
+  deployment_mode    = "floci"
   environment        = "floci"
   floci_endpoint_url = local.floci_endpoint_url
   project_name       = "redact-all-the-things"

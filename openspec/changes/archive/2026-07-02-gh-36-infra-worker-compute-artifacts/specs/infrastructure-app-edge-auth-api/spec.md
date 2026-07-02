@@ -31,6 +31,22 @@ control-plane, and persistence resources required by the technical scope.
 - **THEN** it defines a CloudFront distribution using origin access control for
   the frontend S3 origin.
 
+#### Scenario: Keep local apply compatible with Floci edge coverage
+
+- **GIVEN** `deployment_mode` is `floci`
+- **WHEN** the configured emulator does not provide CloudFront-compatible apply
+  responses
+- **THEN** the live stack can disable CloudFront creation while retaining the
+  CloudFront resources in the reusable module for static validation and later
+  real AWS deployment.
+
+#### Scenario: Activate edge delivery in AWS mode
+
+- **GIVEN** `deployment_mode` is `aws`
+- **WHEN** the AWS live stack is planned
+- **THEN** CloudFront distribution creation is enabled for the production-shaped
+  resource graph.
+
 #### Scenario: Model least-privilege Lambda access
 
 - **WHEN** the Floci Terraform module is validated

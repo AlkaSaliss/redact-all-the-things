@@ -1,16 +1,16 @@
 # Graph Report - redact-all-the-things  (2026-07-02)
 
 ## Corpus Check
-- 199 files · ~66,671 words
+- 228 files · ~110,885 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1609 nodes · 3231 edges · 138 communities (119 shown, 19 thin omitted)
-- Extraction: 67% EXTRACTED · 33% INFERRED · 0% AMBIGUOUS · INFERRED: 1061 edges (avg confidence: 0.5)
+- 1761 nodes · 3475 edges · 162 communities (136 shown, 26 thin omitted)
+- Extraction: 68% EXTRACTED · 32% INFERRED · 0% AMBIGUOUS · INFERRED: 1100 edges (avg confidence: 0.5)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a6793796`
+- Built from commit: `2e8af550`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -102,7 +102,6 @@
 - [[_COMMUNITY_Community 86|Community 86]]
 - [[_COMMUNITY_Community 87|Community 87]]
 - [[_COMMUNITY_Community 88|Community 88]]
-- [[_COMMUNITY_Community 89|Community 89]]
 - [[_COMMUNITY_Community 90|Community 90]]
 - [[_COMMUNITY_Community 91|Community 91]]
 - [[_COMMUNITY_Community 92|Community 92]]
@@ -132,85 +131,106 @@
 - [[_COMMUNITY_Community 116|Community 116]]
 - [[_COMMUNITY_Community 117|Community 117]]
 - [[_COMMUNITY_Community 118|Community 118]]
-- [[_COMMUNITY_Community 119|Community 119]]
-- [[_COMMUNITY_Community 120|Community 120]]
+- [[_COMMUNITY_Community 121|Community 121]]
 - [[_COMMUNITY_Community 123|Community 123]]
 - [[_COMMUNITY_Community 125|Community 125]]
+- [[_COMMUNITY_Community 126|Community 126]]
 - [[_COMMUNITY_Community 131|Community 131]]
 - [[_COMMUNITY_Community 132|Community 132]]
 - [[_COMMUNITY_Community 133|Community 133]]
-- [[_COMMUNITY_Community 134|Community 134]]
 - [[_COMMUNITY_Community 135|Community 135]]
+- [[_COMMUNITY_Community 137|Community 137]]
+- [[_COMMUNITY_Community 138|Community 138]]
+- [[_COMMUNITY_Community 139|Community 139]]
+- [[_COMMUNITY_Community 140|Community 140]]
+- [[_COMMUNITY_Community 141|Community 141]]
+- [[_COMMUNITY_Community 142|Community 142]]
+- [[_COMMUNITY_Community 143|Community 143]]
+- [[_COMMUNITY_Community 144|Community 144]]
+- [[_COMMUNITY_Community 146|Community 146]]
+- [[_COMMUNITY_Community 147|Community 147]]
+- [[_COMMUNITY_Community 148|Community 148]]
+- [[_COMMUNITY_Community 149|Community 149]]
+- [[_COMMUNITY_Community 150|Community 150]]
+- [[_COMMUNITY_Community 151|Community 151]]
+- [[_COMMUNITY_Community 152|Community 152]]
+- [[_COMMUNITY_Community 153|Community 153]]
+- [[_COMMUNITY_Community 155|Community 155]]
+- [[_COMMUNITY_Community 156|Community 156]]
+- [[_COMMUNITY_Community 157|Community 157]]
+- [[_COMMUNITY_Community 164|Community 164]]
+- [[_COMMUNITY_Community 165|Community 165]]
+- [[_COMMUNITY_Community 166|Community 166]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `Job` - 117 edges
-2. `SourceType` - 106 edges
-3. `PageManifest` - 102 edges
-4. `JobStatus` - 100 edges
-5. `FailureCode` - 92 edges
-6. `RedactionRegion` - 73 edges
-7. `RegionSource` - 56 edges
-8. `ControlPlaneService` - 48 edges
+1. `Job` - 119 edges
+2. `SourceType` - 110 edges
+3. `PageManifest` - 106 edges
+4. `JobStatus` - 104 edges
+5. `FailureCode` - 94 edges
+6. `RedactionRegion` - 77 edges
+7. `RegionSource` - 60 edges
+8. `ControlPlaneService` - 50 edges
 9. `ValidatedSource` - 46 edges
-10. `RenderedPage` - 41 edges
+10. `InvalidRequestError` - 41 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Pull request definition of done` --semantically_similar_to--> `Project Working Agreement`  [INFERRED] [semantically similar]
   .github/PULL_REQUEST_TEMPLATE.md → AGENTS.md
 - `Sensitive data exclusion` --semantically_similar_to--> `Synthetic or sanitized bug fixtures`  [INFERRED] [semantically similar]
   SECURITY.md → .github/ISSUE_TEMPLATE/bug.yml
-- `TestClient` --uses--> `FailureCode`  [INFERRED]
-  tests/api/test_http.py → src/redact_api/domain.py
-- `TestClient` --uses--> `JobStatus`  [INFERRED]
-  tests/api/test_http.py → src/redact_api/domain.py
-- `TestClient` --uses--> `PageManifest`  [INFERRED]
-  tests/api/test_http.py → src/redact_api/domain.py
+- `Job` --uses--> `PersistenceConflictError`  [INFERRED]
+  tests/integration/test_aws.py → src/redact_api/aws.py
+- `PiiEntity` --uses--> `SourceType`  [INFERRED]
+  tests/worker/test_pii_mapping.py → src/redact_api/domain.py
+- `Job` --uses--> `SourceType`  [INFERRED]
+  tests/domain/test_jobs.py → src/redact_api/domain.py
 
 ## Import Cycles
-- 1-file cycle: `tests/services/test_control_plane.py -> tests/services/test_control_plane.py`
 - 1-file cycle: `src/redact_api/domain.py -> src/redact_api/domain.py`
-- 1-file cycle: `src/redact_api/http.py -> src/redact_api/http.py`
 - 1-file cycle: `src/redact_api/services.py -> src/redact_api/services.py`
+- 1-file cycle: `src/redact_api/http.py -> src/redact_api/http.py`
 - 1-file cycle: `src/redact_api/worker.py -> src/redact_api/worker.py`
+- 1-file cycle: `tests/services/test_control_plane.py -> tests/services/test_control_plane.py`
 
 ## Hyperedges (group relationships)
 - **Repository quality enforcement** — agents_definition_of_done, repository_governance_spec_automated_quality, workflows_quality_quality_workflow, pre_commit_config_pre_commit_checks [INFERRED 0.95]
 - **Versioned documentation delivery** — agents_documentation_as_code, repository_governance_spec_published_documentation, workflows_pages_strict_mkdocs_build, workflows_pages_github_pages_deployment [INFERRED 0.95]
 - **Tracked knowledge asset lifecycle** — agents_tracked_knowledge_assets, agents_graphify_workflow, repository_governance_spec_tracked_assets, 2026_06_14_gh_1_bootstrap_governance_tasks_completed_bootstrap [INFERRED 0.85]
 
-## Communities (138 total, 19 thin omitted)
+## Communities (162 total, 26 thin omitted)
 
 ### Community 0 - "Project Architecture"
 Cohesion: 0.22
 Nodes (11): 24-hour job retention, Assisted File Redaction technical scope, Official AWS ECS regional price index, Mandatory human review, Normalized redaction regions, Optimistic page-manifest versioning, Assisted redaction application, GLiNER2 (+3 more)
 
 ### Community 1 - "Technical Scope"
-Cohesion: 0.11
-Nodes (40): aws_apigatewayv2_api.http, aws_apigatewayv2_authorizer.cognito, aws_apigatewayv2_integration.lambda, aws_apigatewayv2_route.default, aws_apigatewayv2_stage.default, aws_cloudfront_distribution.frontend, aws_cloudfront_origin_access_control.frontend, aws_cloudwatch_log_group.api (+32 more)
+Cohesion: 0.17
+Nodes (29): aws_apigatewayv2_api.http, aws_apigatewayv2_authorizer.cognito, aws_apigatewayv2_integration.lambda, aws_apigatewayv2_route.default, aws_apigatewayv2_stage.default, aws_cloudfront_distribution.frontend, aws_cloudfront_origin_access_control.frontend, aws_cloudwatch_log_group.api (+21 more)
 
 ### Community 2 - "Working Agreement"
 Cohesion: 0.17
 Nodes (16): Repository governance proposal, Repository governance capability, Completed governance bootstrap tasks, Archived repository governance requirements, Automated pull request quality requirement, Protected main workflow requirement, Published documentation requirement, Tracked agent knowledge assets requirement (+8 more)
 
 ### Community 3 - "Governance Specification"
-Cohesion: 0.09
-Nodes (40): Protocol, analyze_source(), _build_ocr_page_text(), extract_ocr_text(), _normalize_polygon(), OcrArtifactStore, OcrEngine, OcrExtractionError (+32 more)
+Cohesion: 0.12
+Nodes (20): extract_ocr_text(), OcrExtractionError, Load one raster page artifact., Persist one per-page OCR JSON artifact., Raised when accepted page artifacts cannot be OCR-processed safely., Extract and persist OCR text for every raster page in an index., PageArtifact, FailingOcrEngine (+12 more)
 
 ### Community 4 - "OpenSpec Change Lifecycle"
 Cohesion: 0.12
 Nodes (22): OpenSpec Apply Change, Task-Driven Implementation, Archive Validation, OpenSpec Archive Change, OpenSpec Bulk Archive Change, Spec Conflict Resolution, Artifact Dependency Order, OpenSpec Continue Change (+14 more)
 
 ### Community 5 - "Archived Governance Requirements"
-Cohesion: 0.10
-Nodes (29): ocr_page_text_key(), page_artifact_index_key(), page_artifact_key(), PageArtifactWriter, rasterize_source(), Analysis worker validation and rasterization boundaries., Source metadata safe for later analysis stages., Persistence boundary for raster page artifacts. (+21 more)
+Cohesion: 0.13
+Nodes (25): Validate source bytes before any analysis artifact can be created., validate_source(), assert_png(), image_bytes(), make_job(), pdf_bytes(), RecordingArtifactWriter, test_analyze_source_persists_processing_failed_on_rasterization_error() (+17 more)
 
 ### Community 6 - "Community 6"
 Cohesion: 0.05
 Nodes (38): 10. Acceptance Criteria, 11. Principal Risks, 12. References, 1. Objective, 2. Scope, 3. Functional Requirements, 4. System Architecture, 5. Core Data Model (+30 more)
 
 ### Community 7 - "OpenSpec Onboarding"
-Cohesion: 0.29
-Nodes (10): assert_png(), image_bytes(), make_job(), pdf_bytes(), RecordingArtifactWriter, test_analyze_source_persists_processing_failed_on_rasterization_error(), test_page_artifact_index_records_ordered_metadata(), test_rasterization_writes_each_page_before_rendering_next() (+2 more)
+Cohesion: 0.09
+Nodes (31): _image_to_rendered_page(), ocr_page_text_key(), page_artifact_index_key(), page_artifact_key(), RasterizationError, rasterize_source(), Analysis worker validation and rasterization boundaries., PNG bytes for one rendered source page. (+23 more)
 
 ### Community 8 - "Bootstrap Execution"
 Cohesion: 0.05
@@ -222,7 +242,7 @@ Nodes (34): Control-Plane API Specification, Purpose, Requirements, Requirement:
 
 ### Community 10 - "Governance Design"
 Cohesion: 0.08
-Nodes (37): load(), test_shared_job_fixtures_match_the_contract(), test_shared_manifest_and_worker_fixtures_match_the_contract(), make_job(), test_expiry_is_exact_at_the_deadline(), test_invalid_transition_is_rejected(), test_normal_transitions_increment_version(), test_only_expired_jobs_can_transition_to_expired() (+29 more)
+Nodes (40): load(), test_shared_job_fixtures_match_the_contract(), test_shared_manifest_and_worker_fixtures_match_the_contract(), make_job(), test_expiry_is_exact_at_the_deadline(), test_invalid_transition_is_rejected(), test_normal_transitions_increment_version(), test_only_expired_jobs_can_transition_to_expired() (+32 more)
 
 ### Community 11 - "OpenSpec Exploration"
 Cohesion: 0.06
@@ -261,8 +281,8 @@ Cohesion: 0.12
 Nodes (15): Requirement: OCR artifacts preserve page text and geometry, Requirement: OCR failures are safe permanent failures, Requirement: OCR runtime is packaged for offline worker execution, Requirement: Worker extracts OCR text from page artifacts, Scenario: Avoid downstream artifacts after OCR failure, Scenario: Extract OCR for each page artifact, Scenario: Keep deployment infrastructure out of OCR extraction, Scenario: Keep OCR after rasterization (+7 more)
 
 ### Community 21 - "Documentation Home"
-Cohesion: 0.11
-Nodes (32): client(), create_job(), create_manifest(), set_status(), test_create_list_retrieve_and_non_disclosing_not_found(), test_identity_validation_and_request_validation(), test_openapi_contains_the_public_contract(), test_upload_complete_export_retry_manifest_and_download_routes() (+24 more)
+Cohesion: 0.21
+Nodes (21): Supported source document formats., SourceType, _build_ocr_page_text(), _normalize_polygon(), OcrLine, PageArtifact, Source metadata safe for later analysis stages., Metadata for one persisted raster page artifact. (+13 more)
 
 ### Community 22 - "Feature Requests"
 Cohesion: 0.67
@@ -325,8 +345,8 @@ Cohesion: 0.33
 Nodes (10): make_job(), test_failed_job_requires_a_safe_failure_code(), test_job_accepts_the_persistent_contract(), test_job_rejects_foreign_object_namespaces(), test_job_rejects_invalid_limits(), test_job_rejects_progress_beyond_page_count(), test_job_rejects_unknown_fields(), test_job_rejects_unsupported_source_types() (+2 more)
 
 ### Community 40 - "Community 40"
-Cohesion: 0.18
-Nodes (28): aws_apigatewayv2_api.http, aws_apigatewayv2_authorizer.cognito, aws_apigatewayv2_integration.lambda, aws_apigatewayv2_route.default, aws_apigatewayv2_stage.default, aws_cloudfront_distribution.frontend, aws_cloudfront_origin_access_control.frontend, aws_cloudwatch_log_group.api (+20 more)
+Cohesion: 0.17
+Nodes (29): aws_apigatewayv2_api.http, aws_apigatewayv2_authorizer.cognito, aws_apigatewayv2_integration.lambda, aws_apigatewayv2_route.default, aws_apigatewayv2_stage.default, aws_cloudfront_distribution.frontend, aws_cloudfront_origin_access_control.frontend, aws_cloudwatch_log_group.api (+21 more)
 
 ### Community 41 - "Community 41"
 Cohesion: 0.20
@@ -433,8 +453,8 @@ Cohesion: 0.33
 Nodes (5): Documentation and architecture, OpenSpec, Security and privacy, Summary, Validation
 
 ### Community 67 - "Community 67"
-Cohesion: 0.18
-Nodes (28): aws_apigatewayv2_api.http, aws_apigatewayv2_authorizer.cognito, aws_apigatewayv2_integration.lambda, aws_apigatewayv2_route.default, aws_apigatewayv2_stage.default, aws_cloudfront_distribution.frontend, aws_cloudfront_origin_access_control.frontend, aws_cloudwatch_log_group.api (+20 more)
+Cohesion: 0.17
+Nodes (29): aws_apigatewayv2_api.http, aws_apigatewayv2_authorizer.cognito, aws_apigatewayv2_integration.lambda, aws_apigatewayv2_route.default, aws_apigatewayv2_stage.default, aws_cloudfront_distribution.frontend, aws_cloudfront_origin_access_control.frontend, aws_cloudwatch_log_group.api (+21 more)
 
 ### Community 68 - "Community 68"
 Cohesion: 0.33
@@ -469,28 +489,24 @@ Cohesion: 0.18
 Nodes (10): ADDED Requirements, Requirement: App-facing infrastructure resources, Requirement: Temporary app stubs, Scenario: Model authenticated HTTP API, Scenario: Model control-plane persistence, Scenario: Model edge delivery, Scenario: Model frontend and artifact storage, Scenario: Model least-privilege Lambda access (+2 more)
 
 ### Community 83 - "Community 83"
-Cohesion: 0.40
-Nodes (4): Floci phase, Infrastructure, Real AWS migration, Validation boundary
+Cohesion: 0.33
+Nodes (5): Floci phase, GitHub Actions deployment, Infrastructure, Real AWS migration, Validation boundary
 
 ### Community 84 - "Community 84"
-Cohesion: 0.17
-Nodes (28): aws_batch_compute_environment.worker, aws_batch_job_definition.analyze, aws_batch_job_definition.render, aws_batch_job_queue.worker, aws_cloudwatch_log_group.worker, aws_ecr_repository.worker, aws_iam_role.batch_service, aws_iam_role_policy_attachment.batch_service (+20 more)
+Cohesion: 0.28
+Nodes (21): aws_batch_compute_environment.worker, aws_batch_job_definition.analyze, aws_batch_job_definition.render, aws_batch_job_queue.worker, aws_cloudwatch_log_group.worker, aws_ecr_repository.worker, aws_iam_role.batch_service, aws_iam_role_policy_attachment.batch_service (+13 more)
 
 ### Community 85 - "Community 85"
-Cohesion: 0.06
-Nodes (76): AwsBatchSubmitter, BaseModel, DynamoJobRepository, FastAPI, LookupError, RecordingBatchSubmitter, AwsBatchSubmitter, DynamoJobRepository (+68 more)
+Cohesion: 0.05
+Nodes (99): AwsBatchSubmitter, BaseModel, DynamoJobRepository, FastAPI, make_job(), make_manifest(), test_dynamodb_round_trip_listing_ttl_and_conflict(), test_recording_batch_fake_is_idempotent() (+91 more)
 
 ### Community 86 - "Community 86"
 Cohesion: 0.40
 Nodes (4): local.aws_access_key, local.aws_region, local.aws_secret_key, local.floci_endpoint_url
 
-### Community 89 - "Community 89"
-Cohesion: 0.24
-Nodes (15): FailureCode, Safe failure classifications that may be persisted and returned., _image_to_rendered_page(), RasterizationError, PNG bytes for one rendered source page., Tunable rasterization settings., Raised when accepted source content cannot be rasterized safely., _render_image_page() (+7 more)
-
 ### Community 90 - "Community 90"
-Cohesion: 0.17
-Nodes (11): infrastructure-foundation Specification, Purpose, Requirements, Requirement: Floci developer commands, Requirement: Floci infrastructure foundation, Scenario: Configure the Floci endpoint from the environment, Scenario: Keep emulator state local, Scenario: Require an explicit Floci endpoint (+3 more)
+Cohesion: 0.11
+Nodes (17): infrastructure-foundation Specification, Purpose, Requirement: Infrastructure deployment workflow, Requirements, Scenario: Apply AWS infrastructure after approval, Scenario: Plan AWS infrastructure manually, Scenario: Validate infrastructure changes in CI, Requirement: Floci developer commands (+9 more)
 
 ### Community 91 - "Community 91"
 Cohesion: 0.22
@@ -517,48 +533,48 @@ Cohesion: 0.40
 Nodes (4): 1. OpenSpec and Governance, 2. Infrastructure Foundation, 3. Developer Commands, 4. Verification
 
 ### Community 97 - "Community 97"
+Cohesion: 0.28
+Nodes (21): aws_batch_compute_environment.worker, aws_batch_job_definition.analyze, aws_batch_job_definition.render, aws_batch_job_queue.worker, aws_cloudwatch_log_group.worker, aws_ecr_repository.worker, aws_iam_role.batch_service, aws_iam_role_policy_attachment.batch_service (+13 more)
+
+### Community 98 - "Community 98"
 Cohesion: 0.17
 Nodes (11): output.api_endpoint, output.artifact_bucket, output.artifact_bucket_arn, output.cloudfront_domain_name, output.frontend_bucket, output.jobs_table, output.jobs_table_arn, output.lambda_function_name (+3 more)
 
-### Community 98 - "Community 98"
-Cohesion: 0.22
-Nodes (8): output.api_endpoint, output.artifact_bucket, output.cloudfront_domain_name, output.frontend_bucket, output.jobs_table, output.lambda_function_name, output.user_pool_id, output.web_client_id
-
 ### Community 99 - "Community 99"
-Cohesion: 0.22
-Nodes (9): create_pii_manifests(), PageManifestWriter, PiiDetector, PII detector boundary used by production and deterministic tests., Return detected PII spans for one OCR page., Persistence boundary for worker-created review manifests., Persist a new page manifest., Detect PII on OCR pages and persist initial review manifests. (+1 more)
+Cohesion: 0.14
+Nodes (40): Image, Protocol, FailureCode, JobStatus, PageManifest, Versioned per-page suggestions and current redaction selections., Persistent states in the job lifecycle., Safe failure classifications that may be persisted and returned. (+32 more)
 
 ### Community 100 - "Community 100"
-Cohesion: 0.11
-Nodes (38): PiiEntity, _clamp_region(), map_pii_regions(), OcrPageText, OcrTextBlock, _parse_gliner2_entities(), _parse_gliner2_entity(), PiiEntity (+30 more)
+Cohesion: 0.10
+Nodes (32): PiiEntity, _clamp_region(), map_pii_regions(), OcrTextBlock, _parse_gliner2_entities(), _parse_gliner2_entity(), PiiEntity, PiiMappingError (+24 more)
 
 ### Community 101 - "Community 101"
-Cohesion: 0.33
-Nodes (9): make_job(), pdf_bytes(), png_bytes(), test_analyze_source_persists_safe_failure_without_artifacts(), test_validate_source_rejects_encrypted_pdf(), test_validate_source_rejects_over_limit_image_pixel_count(), test_validate_source_rejects_over_limit_pdf_page_count(), test_validate_source_rejects_oversized_source() (+1 more)
+Cohesion: 0.28
+Nodes (21): aws_batch_compute_environment.worker, aws_batch_job_definition.analyze, aws_batch_job_definition.render, aws_batch_job_queue.worker, aws_cloudwatch_log_group.worker, aws_ecr_repository.worker, aws_iam_role.batch_service, aws_iam_role_policy_attachment.batch_service (+13 more)
 
 ### Community 102 - "Community 102"
-Cohesion: 0.11
-Nodes (48): Image, Job, JobStatus, PageManifest, Versioned per-page suggestions and current redaction selections., Supported source document formats., Persistent states in the job lifecycle., Origin of a redaction region. (+40 more)
+Cohesion: 0.16
+Nodes (26): Job, Persistent owner-scoped job record., Gliner2PiiDetector, OcrPageText, PaddleOcrEngine, PageArtifactIndex, Ordered metadata for page artifacts produced by rasterization., OCR text and line geometry for one rasterized page. (+18 more)
 
 ### Community 103 - "Community 103"
-Cohesion: 0.15
-Nodes (12): infrastructure-app-edge-auth-api Specification, Purpose, Requirements, Requirement: App-facing infrastructure resources, Requirement: Temporary app stubs, Scenario: Model authenticated HTTP API, Scenario: Model control-plane persistence, Scenario: Model edge delivery (+4 more)
+Cohesion: 0.12
+Nodes (15): infrastructure-app-edge-auth-api Specification, Purpose, Requirements, Requirement: App-facing infrastructure resources, Requirement: Temporary app stubs, Scenario: Activate edge delivery in AWS mode, Scenario: Expose worker policy inputs, Scenario: Keep local apply compatible with Floci edge coverage (+7 more)
 
 ### Community 104 - "Community 104"
-Cohesion: 0.17
-Nodes (10): MODIFIED Requirements, Requirement: Floci developer commands, Scenario: Require an explicit Floci endpoint, Scenario: Start Floci through a developer-provided command, Scenario: Validate app-edge smoke boundary, Scenario: Validate worker-compute smoke boundary, Requirement: Floci developer commands, Scenario: Require an explicit Floci endpoint (+2 more)
+Cohesion: 0.33
+Nodes (5): MODIFIED Requirements, Requirement: Floci developer commands, Scenario: Require an explicit Floci endpoint, Scenario: Start Floci through a developer-provided command, Scenario: Validate app-edge smoke boundary
 
 ### Community 105 - "Community 105"
-Cohesion: 0.40
-Nodes (4): local.aws_access_key, local.aws_region, local.aws_secret_key, local.floci_endpoint_url
+Cohesion: 0.17
+Nodes (11): output.api_endpoint, output.artifact_bucket, output.artifact_bucket_arn, output.cloudfront_domain_name, output.frontend_bucket, output.jobs_table, output.jobs_table_arn, output.lambda_function_name (+3 more)
 
 ### Community 106 - "Community 106"
 Cohesion: 0.22
 Nodes (8): Compose the existing foundation module, Context, Decisions, Keep emulator smoke honest, Keep stubs visibly temporary, Model full app-facing AWS resources, Risks, Rollout
 
 ### Community 107 - "Community 107"
-Cohesion: 0.40
-Nodes (4): var.aws_region, var.environment, var.floci_endpoint_url, var.project_name
+Cohesion: 0.33
+Nodes (5): var.aws_region, var.deployment_mode, var.environment, var.floci_endpoint_url, var.project_name
 
 ### Community 108 - "Community 108"
 Cohesion: 0.40
@@ -566,11 +582,11 @@ Nodes (4): output.aws_region, output.environment, output.floci_endpoint_url, out
 
 ### Community 109 - "Community 109"
 Cohesion: 0.40
-Nodes (4): var.aws_region, var.environment, var.floci_endpoint_url, var.project_name
+Nodes (5): var.aws_region, var.deployment_mode, var.environment, var.floci_endpoint_url, var.project_name
 
 ### Community 110 - "Community 110"
-Cohesion: 0.40
-Nodes (4): var.aws_region, var.environment, var.floci_endpoint_url, var.project_name
+Cohesion: 0.33
+Nodes (5): var.aws_region, var.deployment_mode, var.environment, var.floci_endpoint_url, var.project_name
 
 ### Community 111 - "Community 111"
 Cohesion: 0.40
@@ -578,55 +594,111 @@ Nodes (4): output.aws_region, output.environment, output.floci_endpoint_url, out
 
 ### Community 112 - "Community 112"
 Cohesion: 0.40
-Nodes (4): var.aws_region, var.environment, var.floci_endpoint_url, var.project_name
+Nodes (5): var.aws_region, var.deployment_mode, var.environment, var.floci_endpoint_url, var.project_name
 
 ### Community 113 - "Community 113"
 Cohesion: 0.29
 Nodes (6): Capabilities, Impact, Modified Capabilities, New Capabilities, What Changes, Why
 
+### Community 114 - "Community 114"
+Cohesion: 0.17
+Nodes (11): output.api_endpoint, output.artifact_bucket, output.artifact_bucket_arn, output.cloudfront_domain_name, output.frontend_bucket, output.jobs_table, output.jobs_table_arn, output.lambda_function_name (+3 more)
+
+### Community 115 - "Community 115"
+Cohesion: 0.40
+Nodes (9): client(), create_job(), create_manifest(), set_status(), test_create_list_retrieve_and_non_disclosing_not_found(), test_identity_validation_and_request_validation(), test_openapi_contains_the_public_contract(), test_upload_complete_export_retry_manifest_and_download_routes() (+1 more)
+
 ### Community 118 - "Community 118"
-Cohesion: 0.20
-Nodes (9): ADDED Requirements, Requirement: Temporary worker stub, Requirement: Worker image and compute resources, Scenario: Keep worker stub separate, Scenario: Model analyze and render jobs, Scenario: Model one-worker Batch capacity, Scenario: Model worker image repository, Scenario: Model worker logs and IAM (+1 more)
+Cohesion: 0.17
+Nodes (11): ADDED Requirements, Requirement: Temporary worker stub, Requirement: Worker image and compute resources, Scenario: Avoid emulator dependency on AWS-managed IAM policies, Scenario: Keep worker stub separate, Scenario: Model analyze and render jobs, Scenario: Model one-worker Batch capacity, Scenario: Model worker image repository (+3 more)
+
+### Community 121 - "Community 121"
+Cohesion: 0.33
+Nodes (5): var.aws_region, var.deployment_mode, var.environment, var.floci_endpoint_url, var.project_name
+
+### Community 126 - "Community 126"
+Cohesion: 0.40
+Nodes (5): var.aws_region, var.deployment_mode, var.environment, var.floci_endpoint_url, var.project_name
 
 ### Community 131 - "Community 131"
 Cohesion: 0.40
 Nodes (4): 1. OpenSpec, 2. Terraform and Terragrunt, 3. Commands and Documentation, 4. Verification
 
 ### Community 132 - "Community 132"
-Cohesion: 0.22
-Nodes (8): Compose the app edge/auth/API module, Context, Decisions, Include minimal worker networking, Keep worker stubs separate from product worker code, Model Batch/Fargate Spot with one-worker capacity, Risks, Rollout
+Cohesion: 0.14
+Nodes (13): infrastructure-worker-compute-artifacts Specification, Purpose, Requirements, Requirement: Temporary worker stub, Requirement: Worker image and compute resources, Scenario: Avoid emulator dependency on AWS-managed IAM policies, Scenario: Keep worker stub separate, Scenario: Model analyze and render jobs (+5 more)
 
 ### Community 133 - "Community 133"
-Cohesion: 0.22
-Nodes (8): MODIFIED Requirements, Requirement: App-facing infrastructure resources, Scenario: Expose worker policy inputs, Scenario: Model authenticated HTTP API, Scenario: Model control-plane persistence, Scenario: Model edge delivery, Scenario: Model frontend and artifact storage, Scenario: Model least-privilege Lambda access
+Cohesion: 0.18
+Nodes (10): MODIFIED Requirements, Requirement: App-facing infrastructure resources, Scenario: Activate edge delivery in AWS mode, Scenario: Expose worker policy inputs, Scenario: Keep local apply compatible with Floci edge coverage, Scenario: Model authenticated HTTP API, Scenario: Model control-plane persistence, Scenario: Model edge delivery (+2 more)
 
-### Community 134 - "Community 134"
+### Community 135 - "Community 135"
+Cohesion: 0.20
+Nodes (9): Compose the app edge/auth/API module, Context, Decisions, Include minimal worker networking, Keep local apply inside Floci-supported behavior, Keep worker stubs separate from product worker code, Model Batch/Fargate Spot with one-worker capacity, Risks (+1 more)
+
+### Community 137 - "Community 137"
+Cohesion: 0.33
+Nodes (5): output.analyze_job_definition, output.render_job_definition, output.worker_image_repository, output.worker_job_queue, output.worker_log_group
+
+### Community 138 - "Community 138"
+Cohesion: 0.33
+Nodes (5): var.aws_region, var.deployment_mode, var.environment, var.floci_endpoint_url, var.project_name
+
+### Community 139 - "Community 139"
+Cohesion: 0.33
+Nodes (5): output.analyze_job_definition, output.render_job_definition, output.worker_image_repository, output.worker_job_queue, output.worker_log_group
+
+### Community 140 - "Community 140"
+Cohesion: 0.33
+Nodes (5): var.aws_region, var.deployment_mode, var.environment, var.floci_endpoint_url, var.project_name
+
+### Community 141 - "Community 141"
+Cohesion: 0.33
+Nodes (5): output.analyze_job_definition, output.render_job_definition, output.worker_image_repository, output.worker_job_queue, output.worker_log_group
+
+### Community 142 - "Community 142"
+Cohesion: 0.33
+Nodes (5): var.aws_region, var.deployment_mode, var.environment, var.floci_endpoint_url, var.project_name
+
+### Community 143 - "Community 143"
+Cohesion: 0.40
+Nodes (4): output.aws_region, output.environment, output.floci_endpoint_url, output.name_prefix
+
+### Community 144 - "Community 144"
+Cohesion: 0.40
+Nodes (4): local.aws_region, local.aws_access_key, local.aws_secret_key, local.floci_endpoint_url
+
+### Community 164 - "Community 164"
+Cohesion: 0.25
+Nodes (7): MODIFIED Requirements, Requirement: Floci developer commands, Scenario: Require an explicit Floci endpoint, Scenario: Select infrastructure deployment target, Scenario: Start Floci through the repository command, Scenario: Validate app-edge smoke boundary, Scenario: Validate worker-compute smoke boundary
+
+### Community 165 - "Community 165"
 Cohesion: 0.29
 Nodes (6): Capabilities, Impact, Modified Capabilities, New Capabilities, What Changes, Why
 
-### Community 135 - "Community 135"
+### Community 166 - "Community 166"
 Cohesion: 0.40
 Nodes (4): 1. OpenSpec, 2. Terraform and Terragrunt, 3. Documentation and Smoke, 4. Verification
 
 ## Knowledge Gaps
-- **660 isolated node(s):** `Context`, `Decision`, `Consequences`, `Considered alternatives`, `References` (+655 more)
+- **751 isolated node(s):** `provider.registry.terraform.io/hashicorp/archive`, `provider.registry.terraform.io/hashicorp/aws`, `provider.registry.terraform.io/hashicorp/archive`, `provider.registry.terraform.io/hashicorp/aws`, `output.api_endpoint` (+746 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **19 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **26 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Job` connect `Community 102` to `Governance Specification`, `Community 100`, `Archived Governance Requirements`, `Community 99`, `OpenSpec Onboarding`, `Governance Design`, `Community 85`, `Community 89`?**
-  _High betweenness centrality (0.013) - this node is a cross-community bridge._
-- **Why does `SourceType` connect `Community 102` to `Governance Specification`, `Community 100`, `Archived Governance Requirements`, `Community 99`, `OpenSpec Onboarding`, `Governance Design`, `Community 85`, `Community 89`?**
+- **Why does `Job` connect `Community 102` to `Governance Specification`, `Community 99`, `Community 100`, `Archived Governance Requirements`, `OpenSpec Onboarding`, `Governance Design`, `Community 85`, `Documentation Home`?**
+  _High betweenness centrality (0.011) - this node is a cross-community bridge._
+- **Why does `SourceType` connect `Documentation Home` to `Community 99`, `Community 100`, `Governance Specification`, `Community 102`, `OpenSpec Onboarding`, `Archived Governance Requirements`, `Governance Design`, `Community 85`?**
   _High betweenness centrality (0.007) - this node is a cross-community bridge._
-- **Why does `PageManifest` connect `Community 102` to `Governance Specification`, `Community 100`, `Archived Governance Requirements`, `Community 99`, `Governance Design`, `Community 85`, `Documentation Home`, `Community 89`?**
-  _High betweenness centrality (0.006) - this node is a cross-community bridge._
-- **Are the 110 inferred relationships involving `Job` (e.g. with `AwsBatchSubmitter` and `DynamoJobRepository`) actually correct?**
-  _`Job` has 110 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 103 inferred relationships involving `SourceType` (e.g. with `AwsBatchSubmitter` and `DynamoJobRepository`) actually correct?**
-  _`SourceType` has 103 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 97 inferred relationships involving `PageManifest` (e.g. with `AwsBatchSubmitter` and `DynamoJobRepository`) actually correct?**
-  _`PageManifest` has 97 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 95 inferred relationships involving `JobStatus` (e.g. with `AwsBatchSubmitter` and `DynamoJobRepository`) actually correct?**
-  _`JobStatus` has 95 INFERRED edges - model-reasoned connections that need verification._
+- **Why does `PageManifest` connect `Community 99` to `Governance Specification`, `Community 100`, `Community 102`, `OpenSpec Onboarding`, `Governance Design`, `Community 115`, `Community 85`, `Documentation Home`?**
+  _High betweenness centrality (0.007) - this node is a cross-community bridge._
+- **Are the 112 inferred relationships involving `Job` (e.g. with `AwsBatchSubmitter` and `DynamoJobRepository`) actually correct?**
+  _`Job` has 112 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 107 inferred relationships involving `SourceType` (e.g. with `AwsBatchSubmitter` and `DynamoJobRepository`) actually correct?**
+  _`SourceType` has 107 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 101 inferred relationships involving `PageManifest` (e.g. with `AwsBatchSubmitter` and `DynamoJobRepository`) actually correct?**
+  _`PageManifest` has 101 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 99 inferred relationships involving `JobStatus` (e.g. with `AwsBatchSubmitter` and `DynamoJobRepository`) actually correct?**
+  _`JobStatus` has 99 INFERRED edges - model-reasoned connections that need verification._
