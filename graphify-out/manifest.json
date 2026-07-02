@@ -100,8 +100,8 @@
     "semantic_hash": "4a36f160ca9f93af8da7815c636b9a8b"
   },
   ".pre-commit-config.yaml": {
-    "mtime": 1782913667.3498948,
-    "ast_hash": "f8e44bc3ab4816d64b04e3b76c8e3bc4",
+    "mtime": 1783017929.8960903,
+    "ast_hash": "1712201e76d3fa171879fbf2b5a0a474",
     "semantic_hash": ""
   },
   ".yamllint.yaml": {
@@ -995,8 +995,8 @@
     "semantic_hash": ""
   },
   "local-data/floci-state/cwlogs-events.json": {
-    "mtime": 1783017018.9003701,
-    "ast_hash": "254cf7f5c15998ffd52504d62d1dbfaf",
+    "mtime": 1783017836.122886,
+    "ast_hash": "e994560e0be3cdf1c9031adc008cda58",
     "semantic_hash": ""
   },
   "local-data/floci-state/cwlogs-groups.json": {
@@ -1005,8 +1005,8 @@
     "semantic_hash": ""
   },
   "local-data/floci-state/cwlogs-streams.json": {
-    "mtime": 1783017018.901495,
-    "ast_hash": "c1e815a91c9a40b53c7130a377113dd7",
+    "mtime": 1783017836.124187,
+    "ast_hash": "7296fc29e6bd17180130f8443cae42c9",
     "semantic_hash": ""
   },
   "local-data/floci-state/dynamodb-tables.json": {
