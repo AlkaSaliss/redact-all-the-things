@@ -168,6 +168,18 @@ venv.bak/
 # mkdocs documentation
 /site
 
+# Terraform local working directories
+**/.terraform/*
+**/.terragrunt-cache/*
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
 # Project-generated knowledge graph cache
 graphify-out/cache/
 graphify-out/cost.json

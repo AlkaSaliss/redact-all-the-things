@@ -2,8 +2,9 @@
 
 The infrastructure milestone is delivered through issue #4 child slices. The
 first slice establishes a Terragrunt and Terraform foundation that targets
-Floci as an AWS-compatible emulator. Service-specific AWS resources are added
-by later slices.
+Floci as an AWS-compatible emulator. The app edge/auth/API slice adds the
+browser edge, authentication boundary, control-plane Lambda, and persistence
+resources. Worker compute and deployment automation are added by later slices.
 
 ## Floci phase
 
@@ -39,6 +40,21 @@ Floci smoke checks verify only the services that the local emulator supports.
 Later slices keep unsupported services in Terraform so the intended AWS graph is
 reviewable, but their emulator coverage is documented separately from static
 validation.
+
+The app edge/auth/API module models:
+
+- private S3 frontend and artifact buckets;
+- 24-hour artifact lifecycle cleanup;
+- DynamoDB job metadata with TTL;
+- Cognito invited-user authentication resources;
+- API Gateway HTTP API with a Cognito JWT authorizer;
+- Lambda control-plane stub wiring and least-privilege IAM;
+- CloudFront frontend distribution with origin access control;
+- seven-day CloudWatch log retention.
+
+The frontend and Lambda artifacts are placeholders. They exist only so the
+infrastructure graph has deployable references before the frontend and
+control-plane deployment slices provide real artifacts.
 
 ## Real AWS migration
 

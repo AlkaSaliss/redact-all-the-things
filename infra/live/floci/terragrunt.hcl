@@ -1,31 +1,22 @@
 locals {
+  aws_access_key     = get_env("AWS_ACCESS_KEY_ID", "floci")
   aws_region         = get_env("AWS_REGION", "eu-west-1")
+  aws_secret_key     = get_env("AWS_SECRET_ACCESS_KEY", "floci")
   floci_endpoint_url = get_env("FLOCI_ENDPOINT_URL", "")
 }
 
 terraform {
-  source = "../../modules/foundation"
+  source = "../../modules//app-edge-auth-api"
 }
 
 generate "provider" {
   path      = "provider.tf"
   if_exists = "overwrite_terragrunt"
   contents  = <<EOF
-terraform {
-  required_version = ">= 1.13.0, < 1.14.0"
-
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 6.0"
-    }
-  }
-}
-
 provider "aws" {
   region                      = "${local.aws_region}"
-  access_key                  = get_env("AWS_ACCESS_KEY_ID", "floci")
-  secret_key                  = get_env("AWS_SECRET_ACCESS_KEY", "floci")
+  access_key                  = "${local.aws_access_key}"
+  secret_key                  = "${local.aws_secret_key}"
   skip_credentials_validation = true
   skip_metadata_api_check     = true
   skip_requesting_account_id  = true
