@@ -37,4 +37,4 @@ infrastructure validation.
 - Extends the Makefile with infrastructure targets.
 - Updates architecture, roadmap, and development documentation.
 - Does not change runtime application APIs, worker behavior, production AWS
-  deployment, or existing LocalStack-backed tests.
+  deployment, or existing Floci-backed tests.

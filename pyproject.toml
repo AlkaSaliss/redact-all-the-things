@@ -29,5 +29,5 @@ dev = [
 pythonpath = ["src"]
 testpaths = ["tests"]
 markers = [
-  "localstack: requires the local LocalStack Docker service",
+  "floci: requires the local Floci emulator",
 ]

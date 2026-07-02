@@ -1,0 +1,149 @@
+name: Infrastructure
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/infra.yml"
+      - "Makefile"
+      - "infra/**"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/infra.yml"
+      - "Makefile"
+      - "infra/**"
+  workflow_dispatch:
+    inputs:
+      action:
+        description: "AWS infrastructure action to run."
+        required: true
+        type: choice
+        default: plan
+        options:
+          - plan
+          - apply
+      aws_environment:
+        description: "Value passed to AWS_ENVIRONMENT for the live stack."
+        required: true
+        type: choice
+        default: prod
+        options:
+          - prod
+
+permissions:
+  contents: read
+
+concurrency:
+  group: infra-${{ github.event_name == 'workflow_dispatch' && inputs.aws_environment || github.ref }}
+  cancel-in-progress: false
+
+env:
+  TERRAFORM_VERSION: 1.13.3
+  TERRAGRUNT_VERSION: 0.87.6
+
+jobs:
+  validate:
+    name: Validate infrastructure
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: ${{ env.TERRAFORM_VERSION }}
+          terraform_wrapper: false
+
+      - name: Set up Terragrunt
+        run: |
+          curl --fail --location --silent --show-error \
+            --output terragrunt \
+            "https://github.com/gruntwork-io/terragrunt/releases/download/v${TERRAGRUNT_VERSION}/terragrunt_linux_amd64"
+          chmod +x terragrunt
+          sudo mv terragrunt /usr/local/bin/terragrunt
+
+      - name: Validate Terraform and Terragrunt
+        run: make terragrunt-validate
+
+  aws-plan:
+    name: Plan AWS infrastructure
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    needs: validate
+    permissions:
+      contents: read
+      id-token: write
+    env:
+      AWS_ENVIRONMENT: ${{ inputs.aws_environment }}
+      AWS_REGION: ${{ vars.AWS_REGION || 'eu-west-1' }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: ${{ env.TERRAFORM_VERSION }}
+          terraform_wrapper: false
+
+      - name: Set up Terragrunt
+        run: |
+          curl --fail --location --silent --show-error \
+            --output terragrunt \
+            "https://github.com/gruntwork-io/terragrunt/releases/download/v${TERRAGRUNT_VERSION}/terragrunt_linux_amd64"
+          chmod +x terragrunt
+          sudo mv terragrunt /usr/local/bin/terragrunt
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v5
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Plan AWS live stack
+        working-directory: infra/live/aws
+        run: terragrunt plan -input=false
+
+  aws-apply:
+    name: Apply AWS infrastructure
+    if: github.event_name == 'workflow_dispatch' && inputs.action == 'apply'
+    runs-on: ubuntu-latest
+    needs: aws-plan
+    environment: aws-production
+    permissions:
+      contents: read
+      id-token: write
+    env:
+      AWS_ENVIRONMENT: ${{ inputs.aws_environment }}
+      AWS_REGION: ${{ vars.AWS_REGION || 'eu-west-1' }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: ${{ env.TERRAFORM_VERSION }}
+          terraform_wrapper: false
+
+      - name: Set up Terragrunt
+        run: |
+          curl --fail --location --silent --show-error \
+            --output terragrunt \
+            "https://github.com/gruntwork-io/terragrunt/releases/download/v${TERRAGRUNT_VERSION}/terragrunt_linux_amd64"
+          chmod +x terragrunt
+          sudo mv terragrunt /usr/local/bin/terragrunt
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v5
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Apply AWS live stack
+        working-directory: infra/live/aws
+        run: terragrunt apply -auto-approve -input=false

@@ -12,8 +12,11 @@ technical scope requires a Python Lambda API, DynamoDB job metadata, S3
 document and manifest storage, and AWS Batch processing while prohibiting OCR
 text and PII values in DynamoDB.
 
-Local validation must not require an AWS account. LocalStack Community supports
-the required DynamoDB and S3 behavior but does not include AWS Batch.
+Local validation must not require an AWS account. Floci supports
+the required DynamoDB and S3 behavior. Local tests deliberately use a
+minimal recording Batch fake so the worker-submission suite stays fast
+and focused on the request contract rather than on Batch/Fargate
+scheduling.
 
 ## Decision
 
@@ -26,7 +29,7 @@ the required DynamoDB and S3 behavior but does not include AWS Batch.
 - Store page manifests and file artifacts under owner/job-namespaced S3 keys.
 - Enforce job versions through DynamoDB conditions and manifest versions
   through S3 ETag conditions.
-- Validate DynamoDB and S3 integration against pinned LocalStack `4.14.0`.
+- Validate DynamoDB and S3 integration against the pinned Floci emulator.
 - Use a minimal recording Batch fake only in local tests; use the real boto3
   Batch client in the Lambda runtime.
 
@@ -47,9 +50,11 @@ the required DynamoDB and S3 behavior but does not include AWS Batch.
   detected PII categories and can grow beyond suitable item sizes.
 - **Implement in-memory and mocked AWS adapters:** Rejected because they add
   test-only implementations and miss endpoint-level behavior covered by
-  LocalStack.
-- **Require paid LocalStack Batch support:** Rejected because local validation
-  should not require a commercial emulator license.
+  Floci.
+- **Submit to a real Batch client in local tests:** Rejected because keeping
+  Batch out of the local scope lets the worker-submission suite stay fast
+  and focused on the request contract rather than on Batch/Fargate
+  scheduling and execution.
 - **Place lifecycle rules in Lambda handlers:** Rejected because the worker and
   API would risk implementing incompatible transitions.
 

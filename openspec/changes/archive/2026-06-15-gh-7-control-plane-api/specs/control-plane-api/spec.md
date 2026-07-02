@@ -120,10 +120,10 @@ owner-scoped, and excluded from application logs and persisted job records.
 
 ### Requirement: Locally testable service boundaries
 The control-plane SHALL configure DynamoDB and S3 clients for a pinned
-LocalStack environment and SHALL use a minimal recording Batch fake locally so
-integrated behavior can be tested without an AWS account or paid emulator
-features.
+Floci environment and SHALL use a minimal recording Batch fake locally
+so the worker-submission suite stays fast and focused on the request
+contract.
 
 #### Scenario: Validate AWS integration locally
-- **WHEN** the opt-in integration suite runs against the pinned LocalStack services
-- **THEN** DynamoDB and S3 behavior is validated against LocalStack and Batch submission contracts are validated with the recording fake
+- **WHEN** the opt-in integration suite runs against the pinned Floci services
+- **THEN** DynamoDB and S3 behavior is validated against Floci and Batch submission contracts are validated with the recording fake

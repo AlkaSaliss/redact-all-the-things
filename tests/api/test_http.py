@@ -14,7 +14,7 @@ from redact_api.http import create_app
 from redact_api.services import ControlPlaneService
 
 
-pytestmark = pytest.mark.localstack
+pytestmark = pytest.mark.floci
 NOW = datetime(2026, 6, 15, 12, 0, tzinfo=UTC)
 HEADERS = {"x-test-cognito-sub": "user-456"}
 

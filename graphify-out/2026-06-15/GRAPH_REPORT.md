@@ -453,7 +453,7 @@ Cohesion: 0.67
 Nodes (3): Requirement: Privacy-preserving persistence, Scenario: Persist sensitive analysis output, Scenario: Serialize a safe job record
 
 ## Knowledge Gaps
-- **356 isolated node(s):** `Context`, `Goals / Non-Goals`, `Separate domain contracts, application services, and AWS integration`, `Validate persistence with LocalStack and use a minimal Batch fake`, `Use FastAPI with Pydantic models and a Lambda adapter` (+351 more)
+- **356 isolated node(s):** `Context`, `Goals / Non-Goals`, `Separate domain contracts, application services, and AWS integration`, `Validate persistence with Floci and use a minimal Batch fake`, `Use FastAPI with Pydantic models and a Lambda adapter` (+351 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 

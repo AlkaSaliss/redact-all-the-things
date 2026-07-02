@@ -21,7 +21,7 @@ this milestone uses mocked AWS boundaries rather than deployed infrastructure.
 - Implement authenticated job lifecycle and object-authorization operations.
 - Enforce ownership, expiry, state transitions, and optimistic concurrency in
   one application service layer.
-- Provide DynamoDB, S3, and Batch integration validated against LocalStack.
+- Provide DynamoDB, S3, and Batch integration validated against Floci.
 - Produce stable fixtures and contracts for issues #6 and #8.
 
 **Non-Goals:**
@@ -44,25 +44,25 @@ expiry, persistence, presigning, and worker submission through concrete AWS
 repositories configured with injected boto3 clients. HTTP handlers translate
 at the outer boundary.
 
-This keeps domain tests fast, lets service and API tests use LocalStack, and
+This keeps domain tests fast, lets service and API tests use Floci, and
 allows later worker code to import the same contracts. A separate hierarchy of
 port protocols plus in-memory and mocked adapters was rejected as unnecessary
 for this single AWS deployment target.
 
-### Validate persistence with LocalStack and use a minimal Batch fake
+### Validate persistence with Floci and use a minimal Batch fake
 
 Service, API, and persistence tests will run against a Docker Compose service
-pinned to `localstack/localstack:4.14.0`. Boto3 DynamoDB and S3 clients receive
-the LocalStack endpoint and test credentials through application settings.
+running the Floci emulator. Boto3 DynamoDB and S3 clients receive
+the Floci endpoint and test credentials through application settings.
 Pure domain contract tests remain independent of external services.
 
-LocalStack Community does not provide Batch in this pinned release. Local
-worker-submission tests will therefore use one minimal fake that records
-`WorkerSubmission` contracts and de-duplicates them by idempotency token. It
-will not emulate queues, scheduling, or worker execution.
+Local worker-submission tests deliberately use one minimal fake so the
+suite stays fast and focused on the request contract. The fake records
+`WorkerSubmission` contracts and de-duplicates them by idempotency token.
+It does not emulate queues, scheduling, or worker execution.
 
 Mocked SDK clients and custom DynamoDB/S3 in-memory adapters were rejected
-because LocalStack exercises endpoint-level serialization and conditional
+because Floci exercises endpoint-level serialization and conditional
 behavior with less test-only implementation.
 
 ### Use FastAPI with Pydantic models and a Lambda adapter
@@ -143,10 +143,10 @@ than a public user endpoint in this milestone.
 - **Batch submission can fail after a status update** -> Persist the transition
   and stable idempotency token, report a safe failure, and allow reconciliation
   or an eligible retry without generating duplicate logical work.
-- **S3 conditional-write support can differ between LocalStack and AWS** -> Run
-  LocalStack integration tests now and defer deployed AWS smoke tests to the
+- **S3 conditional-write support can differ between Floci and AWS** -> Run
+  Floci integration tests now and defer deployed AWS smoke tests to the
   infrastructure milestone.
-- **LocalStack behavior can differ from AWS** -> Use it for local integration
+- **Floci behavior can differ from AWS** -> Use it for local integration
   confidence while keeping mocked request assertions and deferring deployed
   AWS smoke tests to the infrastructure milestone.
 - **The Batch fake cannot validate AWS request compatibility** -> Keep it
@@ -165,11 +165,11 @@ than a public user endpoint in this milestone.
 
 ## Migration Plan
 
-1. Add the application package, dependencies, LocalStack service, and strict
+1. Add the application package, dependencies, Floci service, and strict
    domain models.
-2. Add DynamoDB and S3 integration, provision test resources in LocalStack,
+2. Add DynamoDB and S3 integration, provision test resources in Floci,
    and add the minimal recording Batch fake.
-3. Add application services and FastAPI operations with LocalStack-backed
+3. Add application services and FastAPI operations with Floci-backed
    tests and an injected authenticated identity.
 5. Add documentation and representative fixtures for worker and frontend
    consumers.

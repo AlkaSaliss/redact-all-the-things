@@ -10,4 +10,8 @@ App edge/auth/API resources are modeled in Terraform. Floci smoke coverage is
 limited to services supported by the local emulator; CloudFront, Cognito, API
 Gateway, and Lambda compatibility must be treated as static validation unless
 the configured Floci endpoint supports those services.
+
+Worker compute resources are also modeled in Terraform. Batch, Fargate, ECR,
+and worker networking compatibility depends on the configured emulator and is
+covered by static validation when unsupported.
 EOF

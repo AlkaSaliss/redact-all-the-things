@@ -3,7 +3,7 @@
 - [x] 1.1 Create the issue branch `feat/7-control-plane-api` and move GitHub issue #7 to `In Progress`
 - [x] 1.2 Add pinned runtime and test dependencies for FastAPI, Pydantic, the Lambda adapter, AWS SDK access, and pytest to `pyproject.toml` and refresh `uv.lock`
 - [x] 1.3 Create the Python package structure for domain contracts, application services, HTTP handlers, and AWS integration
-- [x] 1.4 Add a pinned LocalStack Docker Compose service and pytest integration-test marker
+- [x] 1.4 Add a pinned Floci Docker Compose service and pytest integration-test marker
 
 ## 2. Domain Contracts
 
@@ -16,14 +16,14 @@
 
 ## 3. Application Services
 
-- [x] 3.1 Add LocalStack resource fixtures, concrete DynamoDB/S3 repositories, and the minimal recording Batch fake
-- [x] 3.2 Write failing LocalStack-backed service tests for job creation, owner-scoped listing and retrieval, exact expiry, and non-disclosing access denial
+- [x] 3.1 Add Floci resource fixtures, concrete DynamoDB/S3 repositories, and the minimal recording Batch fake
+- [x] 3.2 Write failing Floci-backed service tests for job creation, owner-scoped listing and retrieval, exact expiry, and non-disclosing access denial
 - [x] 3.3 Implement job creation, listing, retrieval, ownership enforcement, and exact 24-hour expiry
-- [x] 3.4 Write failing LocalStack-backed service tests for upload completion, export confirmation, eligible retry, invalid transitions, and idempotent submissions
+- [x] 3.4 Write failing Floci-backed service tests for upload completion, export confirmation, eligible retry, invalid transitions, and idempotent submissions
 - [x] 3.5 Implement upload completion, export confirmation, retry, compare-and-set transitions, and worker orchestration
-- [x] 3.6 Write failing LocalStack-backed service tests for manifest reads, valid saves, immutable suggestions, and stale-version conflicts
+- [x] 3.6 Write failing Floci-backed service tests for manifest reads, valid saves, immutable suggestions, and stale-version conflicts
 - [x] 3.7 Implement owner-authorized manifest retrieval and optimistic S3-backed manifest updates
-- [x] 3.8 Write failing LocalStack-backed service tests for completed-download authorization and unavailable output rejection
+- [x] 3.8 Write failing Floci-backed service tests for completed-download authorization and unavailable output rejection
 - [x] 3.9 Implement short-lived, object-specific upload and download authorization rules
 
 ## 4. HTTP API
@@ -36,12 +36,12 @@
 
 ## 5. AWS Persistence Integration
 
-- [x] 5.1 Add LocalStack tests for DynamoDB serialization, owner-index listing, TTL fields, authoritative reads, and conditional version updates
+- [x] 5.1 Add Floci tests for DynamoDB serialization, owner-index listing, TTL fields, authoritative reads, and conditional version updates
 - [x] 5.2 Implement the DynamoDB job repository without persisting filenames, OCR text, PII values, manifests, file contents, or presigned URLs
-- [x] 5.3 Add LocalStack tests for namespaced S3 keys, multipart upload authorization, object existence, manifest reads, conditional writes, and downloads
+- [x] 5.3 Add Floci tests for namespaced S3 keys, multipart upload authorization, object existence, manifest reads, conditional writes, and downloads
 - [x] 5.4 Implement the S3 object and page-manifest repository with short-lived presigning and optimistic write conflicts
 - [x] 5.5 Add tests for the minimal Batch fake covering `analyze` and `render` submissions, stable idempotency tokens, and retry modes
-- [x] 5.6 Implement the recording Batch fake and run the complete LocalStack-backed integration suite
+- [x] 5.6 Implement the recording Batch fake and run the complete Floci-backed integration suite
 
 ## 6. Documentation and Verification
 

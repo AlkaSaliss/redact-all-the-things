@@ -18,7 +18,7 @@ and implementation tracking, and MkDocs for versioned documentation.
 ```bash
 uv sync --locked
 uv run pre-commit install
-docker compose up -d localstack
+docker compose up -d floci
 ```
 
 ## Work item model
@@ -59,9 +59,9 @@ uv run mkdocs build --strict
 openspec validate --all --strict --no-interactive
 ```
 
-The test suite uses pinned LocalStack services for DynamoDB and S3. See the
+The test suite uses pinned Floci services for DynamoDB and S3. See the
 [control-plane API documentation](architecture/control-plane-api.md) for the
-local AWS boundary and Batch testing limitation.
+local AWS boundary and the rationale for using a recording Batch fake.
 
 Infrastructure work uses Floci as an AWS-compatible emulator during issue #4
 child slices. Set `FLOCI_ENDPOINT_URL` before running Floci plan, apply, or
@@ -71,12 +71,18 @@ smoke targets:
 export FLOCI_ENDPOINT_URL=http://127.0.0.1:4566
 make floci-check
 make terragrunt-validate
-make terragrunt-plan-floci
+make terragrunt-plan-local
 ```
 
-`make floci-up` runs `FLOCI_START_CMD` when that environment variable is set.
+`make floci-up` starts the local Floci AWS emulator with persistent state.
 Terraform state remains local during the emulator phase; real AWS remote state
 is deferred to the real-AWS swap ticket.
+
+The `Infrastructure` GitHub Actions workflow runs `make terragrunt-validate`
+for infrastructure pull requests. Manual workflow dispatch can run an AWS plan
+or apply against `infra/live/aws` after configuring the `AWS_ROLE_TO_ASSUME`
+secret, optional `AWS_REGION` variable, and `aws-production` environment
+approval gate.
 
 Preview the documentation:
 
