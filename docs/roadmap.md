@@ -7,6 +7,15 @@ The roadmap issues are parent epics. Implementation happens through child
 issues sized for one to two days of focused work. Each child implementation
 issue owns its own OpenSpec change, branch, pull request, tests, and review.
 
+## Issue #4 Infrastructure Exception
+
+The issue #4 infrastructure work has an approved exception to start through
+child slices before all original prerequisite epics are complete. The early
+slices target Floci as an AWS-compatible emulator, keep Terraform state local,
+and do not deploy to a real AWS account. The later real-AWS swap ticket owns
+remote state, production endpoint removal, GitHub Actions OIDC apply, and
+production smoke tests.
+
 ## Sequence
 
 | Order | Milestone | Entry criteria | Completion gate |
@@ -72,6 +81,16 @@ Issue #8 starts with lightweight child issues for:
 - frontend API client and contract fixtures;
 - Cognito authentication shell;
 - upload and dashboard fixture flow.
+
+### #4 AWS infrastructure
+
+Issue #4 is decomposed into child issues for:
+
+- Terragrunt and Floci infrastructure foundation;
+- application edge, authentication, and control-plane resources;
+- worker compute and artifact resources;
+- infrastructure CI, smoke checks, and documentation;
+- swapping the Floci emulator deployment path for a real AWS account.
 
 ## Contract ownership
 
