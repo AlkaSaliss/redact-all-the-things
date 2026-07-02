@@ -145,8 +145,8 @@
     "semantic_hash": "74b281136e58def7c6e743056dc31062"
   },
   "docs/development.md": {
-    "mtime": 1781644816.4823766,
-    "ast_hash": "162c0f84901755cd8c1a6d245f91ef4c",
+    "mtime": 1782980168.3644176,
+    "ast_hash": "7398a99c8a7d70ce8206e2ca9b8d2e0b",
     "semantic_hash": ""
   },
   "docs/index.md": {
@@ -155,8 +155,8 @@
     "semantic_hash": ""
   },
   "mkdocs.yml": {
-    "mtime": 1781726421.8407087,
-    "ast_hash": "698355c799ec28c24e84a6bbe1bdfff1",
+    "mtime": 1782980168.245426,
+    "ast_hash": "b0eed69b1d7ca534ec3ca09035253ecc",
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-06-14-gh-1-bootstrap-governance/.openspec.yaml": {
@@ -185,13 +185,13 @@
     "semantic_hash": "5439ec090c98a27f690aec7c36c7af72"
   },
   "openspec/specs/repository-governance/spec.md": {
-    "mtime": 1781644816.5025828,
-    "ast_hash": "9b82c5e8bd6458035226f5d6bf9d1ec1",
+    "mtime": 1782980833.921575,
+    "ast_hash": "c6218213aadbf23ba3e53133546306b8",
     "semantic_hash": ""
   },
   "docs/roadmap.md": {
-    "mtime": 1781644816.4826076,
-    "ast_hash": "ed1898b1ed70193d3e6799d213653c5a",
+    "mtime": 1782980861.9001002,
+    "ast_hash": "70ce44c1bebbb0c31794892d7e8b8dd4",
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-06-14-gh-12-roadmap-order/.openspec.yaml": {
@@ -275,7 +275,7 @@
     "semantic_hash": ""
   },
   "tests/domain/test_fixtures.py": {
-    "mtime": 1782938094.340027,
+    "mtime": 1782979916.2482812,
     "ast_hash": "ec437b95cd1f9bac767496ec8f7f7b8e",
     "semantic_hash": ""
   },
@@ -425,7 +425,7 @@
     "semantic_hash": ""
   },
   "src/redact_api/worker.py": {
-    "mtime": 1782943014.6301079,
+    "mtime": 1782979916.2480142,
     "ast_hash": "ab00edfa45512ffeb0bf4a79d69d5438",
     "semantic_hash": ""
   },
@@ -445,7 +445,7 @@
     "semantic_hash": ""
   },
   "docs/architecture/analysis-worker.md": {
-    "mtime": 1782940992.4642615,
+    "mtime": 1782979916.2392817,
     "ast_hash": "fa1e4f297325f6d7ecd92b92aca4d8e6",
     "semantic_hash": ""
   },
@@ -540,7 +540,7 @@
     "semantic_hash": ""
   },
   "tools/worker_ocr_smoke.py": {
-    "mtime": 1782943891.363338,
+    "mtime": 1782979916.2492952,
     "ast_hash": "e4bf14b2d7c66483ce6b7f7e5f48e999",
     "semantic_hash": ""
   },
@@ -575,43 +575,118 @@
     "semantic_hash": ""
   },
   "tests/fixtures/pii-page-manifest.json": {
-    "mtime": 1782938094.2027593,
+    "mtime": 1782979916.2486122,
     "ast_hash": "1cdabcf9a8b940e93bb073a6df0eb8fb",
     "semantic_hash": ""
   },
   "tests/worker/test_pii_mapping.py": {
-    "mtime": 1782937953.8323104,
+    "mtime": 1782979916.2489316,
     "ast_hash": "5abd2793cacd84acc50956d4e10b1cf5",
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-07-02-gh-19-worker-pii-region-mapping/.openspec.yaml": {
-    "mtime": 1782937728.097905,
+    "mtime": 1782979916.244933,
     "ast_hash": "bf78f855d6a0425db6bc305ffd968e0f",
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-07-02-gh-19-worker-pii-region-mapping/design.md": {
-    "mtime": 1782937803.1304963,
+    "mtime": 1782979916.2463465,
     "ast_hash": "5e52cb39445d7b56573f32ad2ca09214",
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-07-02-gh-19-worker-pii-region-mapping/proposal.md": {
-    "mtime": 1782937803.0065079,
+    "mtime": 1782979916.2466745,
     "ast_hash": "5067fa9952f94a9dea2eb3e0fe733f3b",
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-07-02-gh-19-worker-pii-region-mapping/specs/worker-pii-region-mapping/spec.md": {
-    "mtime": 1782938140.3730626,
+    "mtime": 1782979916.2469878,
     "ast_hash": "1de38c94525d8c1f31c3a7f3ef5b4ce0",
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-07-02-gh-19-worker-pii-region-mapping/tasks.md": {
-    "mtime": 1782944319.0317802,
+    "mtime": 1782979916.2472043,
     "ast_hash": "977010db70e9c6b6b989763c9f53efb9",
     "semantic_hash": ""
   },
   "openspec/specs/worker-pii-region-mapping/spec.md": {
-    "mtime": 1782944350.1729016,
+    "mtime": 1782979916.2473712,
     "ast_hash": "00db6c4c6870c2d2e81c40444e1f2762",
+    "semantic_hash": ""
+  },
+  "infra/live/floci/terragrunt.hcl": {
+    "mtime": 1782980167.0909214,
+    "ast_hash": "43742605142538d4c301473d04aea799",
+    "semantic_hash": ""
+  },
+  "infra/modules/foundation/main.tf": {
+    "mtime": 1782980167.2686548,
+    "ast_hash": "c371ca8008422f9ebab2e9d8f94fe09d",
+    "semantic_hash": ""
+  },
+  "infra/modules/foundation/outputs.tf": {
+    "mtime": 1782980167.376555,
+    "ast_hash": "3527a67423fbb34f4463d74132165952",
+    "semantic_hash": ""
+  },
+  "infra/modules/foundation/variables.tf": {
+    "mtime": 1782980167.4851692,
+    "ast_hash": "b4eb5f98e09d7bd618f62f3706e73917",
+    "semantic_hash": ""
+  },
+  "infra/modules/foundation/versions.tf": {
+    "mtime": 1782980167.6037023,
+    "ast_hash": "b3920b057cd56728edd109d33b59ce50",
+    "semantic_hash": ""
+  },
+  "tools/check_floci.sh": {
+    "mtime": 1782980167.7106736,
+    "ast_hash": "3c36758b420af45516a79948d79d888a",
+    "semantic_hash": ""
+  },
+  "tools/infra_smoke_floci.sh": {
+    "mtime": 1782980167.8190322,
+    "ast_hash": "3dd0fa3302ed566cbcc7e517e9490b86",
+    "semantic_hash": ""
+  },
+  "docs/architecture/infrastructure.md": {
+    "mtime": 1782980168.066815,
+    "ast_hash": "e45d8bf3b3ecf295c15d7f1191abad92",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-07-02-gh-34-infra-floci-foundation/.openspec.yaml": {
+    "mtime": 1782979934.0138817,
+    "ast_hash": "7f48377552c3f516e4e868cb6ea8d4f2",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-07-02-gh-34-infra-floci-foundation/design.md": {
+    "mtime": 1782980006.1161895,
+    "ast_hash": "6c0bf0684889ddfb419b543e38444baa",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-07-02-gh-34-infra-floci-foundation/proposal.md": {
+    "mtime": 1782980006.0101414,
+    "ast_hash": "2f91be8561207f1338e6900a4b92d16c",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-07-02-gh-34-infra-floci-foundation/specs/infrastructure-foundation/spec.md": {
+    "mtime": 1782980006.3203337,
+    "ast_hash": "74bbe5f8b96c1c857edbc35ecb56932c",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-07-02-gh-34-infra-floci-foundation/specs/repository-governance/spec.md": {
+    "mtime": 1782980758.143541,
+    "ast_hash": "639e670f0c2a83cb7286600d7f67b3a3",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-07-02-gh-34-infra-floci-foundation/tasks.md": {
+    "mtime": 1782980261.2407541,
+    "ast_hash": "d90e8e43535f521eeeed50a283ca39ff",
+    "semantic_hash": ""
+  },
+  "openspec/specs/infrastructure-foundation/spec.md": {
+    "mtime": 1782980833.9236774,
+    "ast_hash": "493aed234cc204d7dd98a1f36335172d",
     "semantic_hash": ""
   }
 }

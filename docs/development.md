@@ -10,6 +10,7 @@ and implementation tracking, and MkDocs for versioned documentation.
 - [uv](https://docs.astral.sh/uv/)
 - Docker with Compose
 - Node.js with OpenSpec `1.4.1`
+- Terraform `1.13.3` and Terragrunt `0.87.6` for infrastructure work
 - Graphify when changing indexed source or architecture content
 
 ## Install tooling
@@ -61,6 +62,21 @@ openspec validate --all --strict --no-interactive
 The test suite uses pinned LocalStack services for DynamoDB and S3. See the
 [control-plane API documentation](architecture/control-plane-api.md) for the
 local AWS boundary and Batch testing limitation.
+
+Infrastructure work uses Floci as an AWS-compatible emulator during issue #4
+child slices. Set `FLOCI_ENDPOINT_URL` before running Floci plan, apply, or
+smoke targets:
+
+```bash
+export FLOCI_ENDPOINT_URL=http://127.0.0.1:4566
+make floci-check
+make terragrunt-validate
+make terragrunt-plan-floci
+```
+
+`make floci-up` runs `FLOCI_START_CMD` when that environment variable is set.
+Terraform state remains local during the emulator phase; real AWS remote state
+is deferred to the real-AWS swap ticket.
 
 Preview the documentation:
 
