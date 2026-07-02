@@ -1,12 +1,12 @@
 locals {
-  aws_access_key     = get_env("AWS_ACCESS_KEY_ID", "floci")
+  aws_access_key     = get_env("AWS_ACCESS_KEY_ID", "test")
   aws_region         = get_env("AWS_REGION", "eu-west-1")
-  aws_secret_key     = get_env("AWS_SECRET_ACCESS_KEY", "floci")
+  aws_secret_key     = get_env("AWS_SECRET_ACCESS_KEY", "test")
   floci_endpoint_url = get_env("FLOCI_ENDPOINT_URL", "")
 }
 
 terraform {
-  source = "../../modules//app-edge-auth-api"
+  source = "../../modules//worker-compute-artifacts"
 }
 
 generate "provider" {
@@ -30,6 +30,8 @@ provider "aws" {
     cloudfront   = "${local.floci_endpoint_url}"
     cognitoidp   = "${local.floci_endpoint_url}"
     dynamodb     = "${local.floci_endpoint_url}"
+    ec2          = "${local.floci_endpoint_url}"
+    ecs          = "${local.floci_endpoint_url}"
     ecr          = "${local.floci_endpoint_url}"
     iam          = "${local.floci_endpoint_url}"
     lambda       = "${local.floci_endpoint_url}"

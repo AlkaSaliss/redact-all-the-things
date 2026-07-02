@@ -18,7 +18,7 @@ and implementation tracking, and MkDocs for versioned documentation.
 ```bash
 uv sync --locked
 uv run pre-commit install
-docker compose up -d localstack
+docker compose up -d floci
 ```
 
 ## Work item model
@@ -59,9 +59,9 @@ uv run mkdocs build --strict
 openspec validate --all --strict --no-interactive
 ```
 
-The test suite uses pinned LocalStack services for DynamoDB and S3. See the
+The test suite uses pinned Floci services for DynamoDB and S3. See the
 [control-plane API documentation](architecture/control-plane-api.md) for the
-local AWS boundary and Batch testing limitation.
+local AWS boundary and the rationale for using a recording Batch fake.
 
 Infrastructure work uses Floci as an AWS-compatible emulator during issue #4
 child slices. Set `FLOCI_ENDPOINT_URL` before running Floci plan, apply, or

@@ -15,7 +15,7 @@ from redact_api.domain import (
 )
 
 
-pytestmark = pytest.mark.localstack
+pytestmark = pytest.mark.floci
 NOW = datetime(2026, 6, 15, 12, 0, tzinfo=UTC)
 
 

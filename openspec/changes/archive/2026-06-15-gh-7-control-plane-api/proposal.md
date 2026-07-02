@@ -14,7 +14,7 @@ inventing incompatible API and storage behavior.
 - Add optimistic page-manifest updates and explicit version-conflict behavior.
 - Add ownership and exact 24-hour access-expiry enforcement to every job
   operation.
-- Add LocalStack-backed DynamoDB and S3 integration plus a minimal recording
+- Add Floci-backed DynamoDB and S3 integration plus a minimal recording
   Batch fake so lifecycle, retry, and worker-submission behavior can be tested
   locally.
 - Exclude OCR processing, review-editor UI, export rendering, and production
@@ -37,7 +37,7 @@ None.
 ## Impact
 
 - Introduces the Python application package and its HTTP/API boundary.
-- Adds DynamoDB and S3 integration configured for LocalStack validation during
+- Adds DynamoDB and S3 integration configured for Floci validation during
   local development and CI, with a minimal recording fake for Batch submission.
 - Adds API and contract tests consumed by the later worker and frontend
   milestones.

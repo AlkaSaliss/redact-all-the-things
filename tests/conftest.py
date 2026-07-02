@@ -11,7 +11,7 @@ from redact_api.aws import (
 )
 
 
-LOCALSTACK_URL = "http://localhost:4566"
+FLOCI_URL = "http://localhost:4566"
 REGION = "eu-west-1"
 TABLE_NAME = "redact-jobs"
 BUCKET_NAME = "redact-files"
@@ -20,7 +20,7 @@ BUCKET_NAME = "redact-files"
 @pytest.fixture
 def aws_clients() -> dict[str, object]:
     common = {
-        "endpoint_url": LOCALSTACK_URL,
+        "endpoint_url": FLOCI_URL,
         "region_name": REGION,
         "aws_access_key_id": "test",
         "aws_secret_access_key": "test",

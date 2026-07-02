@@ -5119,14 +5119,14 @@
       "norm_label": "__init__.py"
     },
     {
-      "label": "LocalStack integration tests.",
+      "label": "Floci integration tests.",
       "file_type": "rationale",
       "source_file": "tests/integration/__init__.py",
       "source_location": "L1",
       "_origin": "ast",
       "id": "integration_init_rationale_1",
       "community": 76,
-      "norm_label": "localstack integration tests."
+      "norm_label": "floci integration tests."
     },
     {
       "label": "test_aws.py",
@@ -9035,14 +9035,14 @@
       "norm_label": "separate domain contracts, application services, and aws integration"
     },
     {
-      "label": "Validate persistence with LocalStack and use a minimal Batch fake",
+      "label": "Validate persistence with Floci and use a minimal Batch fake",
       "file_type": "document",
       "source_file": "openspec/changes/archive/2026-06-15-gh-7-control-plane-api/design.md",
       "source_location": "L52",
       "_origin": "ast",
-      "id": "2026_06_15_gh_7_control_plane_api_design_validate_persistence_with_localstack_and_use_a_minimal_batch_fake",
+      "id": "2026_06_15_gh_7_control_plane_api_design_validate_persistence_with_floci_and_use_a_minimal_batch_fake",
       "community": 24,
-      "norm_label": "validate persistence with localstack and use a minimal batch fake"
+      "norm_label": "validate persistence with floci and use a minimal batch fake"
     },
     {
       "label": "Use FastAPI with Pydantic models and a Lambda adapter",
@@ -41788,7 +41788,7 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "2026_06_15_gh_7_control_plane_api_design_decisions",
-      "target": "2026_06_15_gh_7_control_plane_api_design_validate_persistence_with_localstack_and_use_a_minimal_batch_fake"
+      "target": "2026_06_15_gh_7_control_plane_api_design_validate_persistence_with_floci_and_use_a_minimal_batch_fake"
     },
     {
       "relation": "contains",

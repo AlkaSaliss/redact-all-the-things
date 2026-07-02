@@ -4,7 +4,9 @@ The infrastructure milestone is delivered through issue #4 child slices. The
 first slice establishes a Terragrunt and Terraform foundation that targets
 Floci as an AWS-compatible emulator. The app edge/auth/API slice adds the
 browser edge, authentication boundary, control-plane Lambda, and persistence
-resources. Worker compute and deployment automation are added by later slices.
+resources. The worker compute slice adds image storage, AWS Batch/Fargate Spot,
+worker IAM, logs, and isolated worker networking. Deployment automation is
+added by a later slice.
 
 ## Floci phase
 
@@ -55,6 +57,23 @@ The app edge/auth/API module models:
 The frontend and Lambda artifacts are placeholders. They exist only so the
 infrastructure graph has deployable references before the frontend and
 control-plane deployment slices provide real artifacts.
+
+The worker compute module composes the app edge/auth/API module and adds:
+
+- an immutable ECR worker image repository with scan-on-push enabled;
+- an AWS Batch Fargate Spot compute environment capped at 2 vCPU;
+- a worker job queue sized for one active worker globally;
+- separate `analyze` and `render` job definitions;
+- task execution and worker job roles for image pulls, logs, artifacts, and
+  job metadata;
+- seven-day worker CloudWatch log retention;
+- a small worker VPC, private worker subnets, and a no-ingress security group;
+- a temporary infrastructure-only worker stub under `infra/stubs/worker`.
+
+Batch, Fargate, ECR, and worker networking coverage depends on the configured
+Floci-compatible emulator. When those services are unsupported, static
+Terraform validation and plan review are the authoritative checks for this
+slice.
 
 ## Real AWS migration
 

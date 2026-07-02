@@ -6,19 +6,20 @@ Its shared contracts are consumed by the analysis worker and React frontend.
 
 ## Local development
 
-Install the locked environment and start LocalStack:
+Install the locked environment and start Floci:
 
 ```bash
 uv sync --locked
-docker compose up -d localstack
+docker compose up -d floci
 uv run pytest
 ```
 
-The Compose service pins `localstack/localstack:4.14.0` and exposes only
-`127.0.0.1:4566`. Tests create isolated DynamoDB and S3 resources. LocalStack
-Community does not include AWS Batch, so local tests use a minimal recording
-fake that validates worker requests and idempotency without emulating
-scheduling or execution.
+The Compose service pins the Floci image and exposes only
+`127.0.0.1:4566`. Tests create isolated DynamoDB and S3 resources. Local
+worker-submission tests deliberately use a minimal recording Batch fake
+to keep the suite fast and focused on the request contract; the fake
+validates worker submissions and idempotency without emulating Batch
+queueing, scheduling, or execution.
 
 Stop the emulator with:
 

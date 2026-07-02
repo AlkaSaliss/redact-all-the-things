@@ -1,1 +1,1 @@
-"""LocalStack integration tests."""
+"""Floci integration tests."""

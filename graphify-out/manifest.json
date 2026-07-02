@@ -615,7 +615,7 @@
     "semantic_hash": ""
   },
   "infra/live/floci/terragrunt.hcl": {
-    "mtime": 1782982124.5137753,
+    "mtime": 1782982545.0735283,
     "ast_hash": "446ee16a01a766ad3de8abb1677fb4bf",
     "semantic_hash": ""
   },
@@ -645,12 +645,12 @@
     "semantic_hash": ""
   },
   "tools/infra_smoke_floci.sh": {
-    "mtime": 1782981909.7319067,
+    "mtime": 1782982545.0772345,
     "ast_hash": "9ba291dc1b0f0a57096e289d56568b4b",
     "semantic_hash": ""
   },
   "docs/architecture/infrastructure.md": {
-    "mtime": 1782981909.966734,
+    "mtime": 1782982545.0666063,
     "ast_hash": "c1d11dd050482de40162fc5c88ad6d70",
     "semantic_hash": ""
   },
@@ -685,12 +685,12 @@
     "semantic_hash": ""
   },
   "openspec/specs/infrastructure-foundation/spec.md": {
-    "mtime": 1782982256.992015,
-    "ast_hash": "1f48d4fa921470c894f19cd73d2b96fd",
+    "mtime": 1782982545.0769508,
+    "ast_hash": "0c80f2e433df974ea67189f114af7da8",
     "semantic_hash": ""
   },
   "infra/live/floci/.terraform.lock.hcl": {
-    "mtime": 1782982107.1221588,
+    "mtime": 1782982545.0733705,
     "ast_hash": "132076afa71cf0b49800db6bc5451b3a",
     "semantic_hash": ""
   },
@@ -795,32 +795,32 @@
     "semantic_hash": ""
   },
   "infra/modules/app-edge-auth-api/.terraform.lock.hcl": {
-    "mtime": 1782981941.0523338,
+    "mtime": 1782982545.0736291,
     "ast_hash": "132076afa71cf0b49800db6bc5451b3a",
     "semantic_hash": ""
   },
   "infra/modules/app-edge-auth-api/main.tf": {
-    "mtime": 1782982040.9444778,
+    "mtime": 1782982545.073734,
     "ast_hash": "c8d788c36c3ed84a703d2a408162f2c7",
     "semantic_hash": ""
   },
   "infra/modules/app-edge-auth-api/outputs.tf": {
-    "mtime": 1782981908.8146825,
+    "mtime": 1782982545.0738182,
     "ast_hash": "ddb72feb77365b8a461113e9d3a894b8",
     "semantic_hash": ""
   },
   "infra/modules/app-edge-auth-api/stubs/lambda_handler.py": {
-    "mtime": 1782981909.3754394,
+    "mtime": 1782982545.074026,
     "ast_hash": "53ca0fe835a89ea991f6e3f411efdc2d",
     "semantic_hash": ""
   },
   "infra/modules/app-edge-auth-api/variables.tf": {
-    "mtime": 1782981908.928503,
+    "mtime": 1782982545.074105,
     "ast_hash": "58c6b1880eb4abf7734447ad76b0b5a5",
     "semantic_hash": ""
   },
   "infra/modules/app-edge-auth-api/versions.tf": {
-    "mtime": 1782981909.0424786,
+    "mtime": 1782982545.0742252,
     "ast_hash": "87cac494d3a204949d693b3cd35c0601",
     "semantic_hash": ""
   },
@@ -835,43 +835,43 @@
     "semantic_hash": ""
   },
   "infra/modules/app-edge-auth-api/stubs/frontend-index.html": {
-    "mtime": 1782981909.2525165,
+    "mtime": 1782982545.073941,
     "ast_hash": "7ac05faee7ffd57230a207738ff7b353",
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-07-02-gh-35-infra-app-edge-auth-api/.openspec.yaml": {
-    "mtime": 1782981789.721716,
+    "mtime": 1782982545.074514,
     "ast_hash": "7f48377552c3f516e4e868cb6ea8d4f2",
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-07-02-gh-35-infra-app-edge-auth-api/design.md": {
-    "mtime": 1782981832.0466223,
+    "mtime": 1782982545.074681,
     "ast_hash": "19ba258e69ce7c4039b3495fc839fc6f",
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-07-02-gh-35-infra-app-edge-auth-api/proposal.md": {
-    "mtime": 1782981831.862362,
+    "mtime": 1782982545.0750802,
     "ast_hash": "95e1eeff421eeae0f0c2da662ae2134e",
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-07-02-gh-35-infra-app-edge-auth-api/specs/infrastructure-app-edge-auth-api/spec.md": {
-    "mtime": 1782981832.2752528,
+    "mtime": 1782982545.0753357,
     "ast_hash": "43404e0c581ecc46bbdfcf3eb64b7654",
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-07-02-gh-35-infra-app-edge-auth-api/specs/infrastructure-foundation/spec.md": {
-    "mtime": 1782981832.510839,
+    "mtime": 1782982545.0758328,
     "ast_hash": "a3481c2bc2a97eedb8e13ef806b60459",
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-07-02-gh-35-infra-app-edge-auth-api/tasks.md": {
-    "mtime": 1782982250.0892358,
+    "mtime": 1782982545.076091,
     "ast_hash": "8795b01d58f810218a13e0296cf4e908",
     "semantic_hash": ""
   },
   "openspec/specs/infrastructure-app-edge-auth-api/spec.md": {
-    "mtime": 1782982256.9879556,
-    "ast_hash": "e925cbd6adc82aa1019b87602e6d935c",
+    "mtime": 1782982545.0766623,
+    "ast_hash": "17cee9b7aae6ce851387d4bf332e1de3",
     "semantic_hash": ""
   }
 }
