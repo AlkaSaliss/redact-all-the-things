@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `6ffa26dd`
+- Built from commit: `9c4cac60`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -107,6 +107,8 @@
 - [[_COMMUNITY_Community 94|Community 94]]
 - [[_COMMUNITY_Community 95|Community 95]]
 - [[_COMMUNITY_Community 96|Community 96]]
+- [[_COMMUNITY_Community 98|Community 98]]
+- [[_COMMUNITY_Community 99|Community 99]]
 - [[_COMMUNITY_Community 100|Community 100]]
 - [[_COMMUNITY_Community 102|Community 102]]
 - [[_COMMUNITY_Community 103|Community 103]]
@@ -116,8 +118,6 @@
 - [[_COMMUNITY_Community 115|Community 115]]
 - [[_COMMUNITY_Community 117|Community 117]]
 - [[_COMMUNITY_Community 118|Community 118]]
-- [[_COMMUNITY_Community 119|Community 119]]
-- [[_COMMUNITY_Community 120|Community 120]]
 - [[_COMMUNITY_Community 122|Community 122]]
 - [[_COMMUNITY_Community 126|Community 126]]
 - [[_COMMUNITY_Community 127|Community 127]]
@@ -155,9 +155,9 @@
 - `PiiEntity` --uses--> `SourceType`  [INFERRED]
   tests/worker/test_pii_mapping.py → src/redact_api/domain.py
 - `Job` --uses--> `SourceType`  [INFERRED]
-  tests/domain/test_jobs.py → src/redact_api/domain.py
-- `FailureCode` --uses--> `SourceType`  [INFERRED]
-  tests/domain/test_lifecycle.py → src/redact_api/domain.py
+  tests/integration/test_aws.py → src/redact_api/domain.py
+- `PageManifest` --uses--> `SourceType`  [INFERRED]
+  tests/integration/test_aws.py → src/redact_api/domain.py
 
 ## Import Cycles
 - 1-file cycle: `src/redact_api/domain.py -> src/redact_api/domain.py`
@@ -430,8 +430,8 @@ Cohesion: 0.33
 Nodes (5): ADDED Requirements, Requirement: Permanent worker validation failures, Scenario: Persist unsupported content safely, Scenario: Persist validation failure safely, Scenario: Reject retry for permanent validation failures
 
 ### Community 70 - "Community 70"
-Cohesion: 0.12
-Nodes (38): AwsBatchSubmitter, test_retryable_failures_select_the_worker_mode(), DynamoJobRepository, RecordingBatchSubmitter, AwsBatchSubmitter, PersistenceConflictError, Raised when an optimistic write loses a version race., Submit worker contracts to an AWS Batch queue. (+30 more)
+Cohesion: 0.10
+Nodes (37): AwsBatchSubmitter, DynamoJobRepository, RecordingBatchSubmitter, AwsBatchSubmitter, DynamoJobRepository, PersistenceConflictError, Concrete DynamoDB/S3 integration and the local Batch recording fake., Raised when an optimistic write loses a version race. (+29 more)
 
 ### Community 71 - "Community 71"
 Cohesion: 0.50
@@ -462,8 +462,8 @@ Cohesion: 0.15
 Nodes (12): ADDED Requirements, Requirement: Real AWS remote state, Requirement: Real AWS smoke boundary, Requirement: Reviewed AWS deployment workflow, Scenario: Apply only after protected approval, Scenario: Configure remote state from environment, Scenario: Fail when remote state configuration is missing, Scenario: Keep real AWS provider free of emulator endpoints (+4 more)
 
 ### Community 85 - "Community 85"
-Cohesion: 0.16
-Nodes (42): BaseModel, FastAPI, Image, LookupError, ContractModel, PageManifest, Normalized page-space rectangle selected for redaction., Versioned per-page suggestions and current redaction selections. (+34 more)
+Cohesion: 0.17
+Nodes (38): BaseModel, FastAPI, LookupError, ContractModel, PageManifest, Normalized page-space rectangle selected for redaction., Versioned per-page suggestions and current redaction selections., Immutable base model that rejects unknown contract fields. (+30 more)
 
 ### Community 86 - "Community 86"
 Cohesion: 0.40
@@ -497,13 +497,21 @@ Nodes (6): Capabilities, Impact, Modified Capabilities, New Capabilities, What C
 Cohesion: 0.40
 Nodes (4): 1. OpenSpec and Governance, 2. Infrastructure Foundation, 3. Developer Commands, 4. Verification
 
+### Community 98 - "Community 98"
+Cohesion: 0.16
+Nodes (18): Protocol, analyze_source(), create_pii_manifests(), OcrArtifactStore, OcrEngine, PageManifestWriter, PiiDetector, Persistence boundary for OCR input pages and output text artifacts. (+10 more)
+
+### Community 99 - "Community 99"
+Cohesion: 0.34
+Nodes (4): ControlPlaneService, Persist a transition and submit its corresponding worker request., Coordinate owner-scoped job workflows across persistent AWS services., Job
+
 ### Community 100 - "Community 100"
 Cohesion: 0.06
 Nodes (78): PiiEntity, Origin of a redaction region., RegionSource, _build_ocr_page_text(), _clamp_region(), extract_ocr_text(), map_pii_regions(), _normalize_polygon() (+70 more)
 
 ### Community 102 - "Community 102"
-Cohesion: 0.14
-Nodes (35): Job, JobStatus, Supported source document formats., Persistent states in the job lifecycle., Persistent owner-scoped job record., SourceType, Gliner2PiiDetector, PaddleOcrEngine (+27 more)
+Cohesion: 0.12
+Nodes (46): test_retryable_failures_select_the_worker_mode(), Image, FailureCode, Job, JobStatus, Supported source document formats., Persistent states in the job lifecycle., Safe failure classifications that may be persisted and returned. (+38 more)
 
 ### Community 103 - "Community 103"
 Cohesion: 0.12
@@ -533,21 +541,13 @@ Nodes (3): local.deployment_mode, local.environment, local.state_backend
 Cohesion: 0.17
 Nodes (11): ADDED Requirements, Requirement: Temporary worker stub, Requirement: Worker image and compute resources, Scenario: Avoid emulator dependency on AWS-managed IAM policies, Scenario: Keep worker stub separate, Scenario: Model analyze and render jobs, Scenario: Model one-worker Batch capacity, Scenario: Model worker image repository (+3 more)
 
-### Community 119 - "Community 119"
-Cohesion: 0.16
-Nodes (18): Protocol, analyze_source(), create_pii_manifests(), OcrArtifactStore, OcrEngine, PageManifestWriter, PiiDetector, Persistence boundary for OCR input pages and output text artifacts. (+10 more)
-
-### Community 120 - "Community 120"
-Cohesion: 0.13
-Nodes (10): Concrete DynamoDB/S3 integration and the local Batch recording fake., A manifest paired with the S3 ETag used for optimistic writes., Manage job objects, presigned URLs, and versioned page manifests., S3ObjectRepository, StoredManifest, build_service(), AWS Lambda entry point., Construct the production service from Lambda environment settings. (+2 more)
-
 ### Community 122 - "Community 122"
 Cohesion: 0.27
 Nodes (16): clock(), create_ready_manifest(), service(), set_status(), test_create_list_get_ownership_and_exact_expiry(), test_create_rejects_invalid_sizes(), test_download_requires_complete_existing_output(), test_export_requires_acknowledgement_and_is_idempotent() (+8 more)
 
 ### Community 126 - "Community 126"
-Cohesion: 0.27
-Nodes (4): DynamoJobRepository, Persist validated job records with DynamoDB conditional writes., Any, Job
+Cohesion: 0.40
+Nodes (4): build_service(), AWS Lambda entry point., Construct the production service from Lambda environment settings., ControlPlaneService
 
 ### Community 131 - "Community 131"
 Cohesion: 0.40
@@ -601,11 +601,11 @@ Nodes (4): 1. OpenSpec, 2. Terraform and Terragrunt, 3. Documentation and Smoke,
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Job` connect `Community 102` to `Community 100`, `Archived Governance Requirements`, `Community 70`, `Governance Design`, `Community 85`, `Community 119`, `Community 120`, `Community 126`?**
+- **Why does `Job` connect `Community 102` to `Community 98`, `Community 99`, `Community 100`, `Archived Governance Requirements`, `Community 70`, `Governance Design`, `Community 85`?**
   _High betweenness centrality (0.016) - this node is a cross-community bridge._
-- **Why does `PageManifest` connect `Community 85` to `Community 100`, `Archived Governance Requirements`, `Community 70`, `Community 102`, `Governance Design`, `Community 115`, `Community 119`, `Community 120`, `Community 122`, `Community 126`?**
+- **Why does `PageManifest` connect `Community 85` to `Community 98`, `Community 99`, `Community 100`, `Archived Governance Requirements`, `Community 102`, `Community 70`, `Governance Design`, `Community 115`, `Community 122`?**
   _High betweenness centrality (0.012) - this node is a cross-community bridge._
-- **Why does `JobStatus` connect `Community 102` to `Community 100`, `Archived Governance Requirements`, `Community 70`, `Governance Design`, `Community 115`, `Community 85`, `Community 119`, `Community 122`?**
+- **Why does `JobStatus` connect `Community 102` to `Community 98`, `Community 99`, `Community 100`, `Archived Governance Requirements`, `Community 70`, `Governance Design`, `Community 115`, `Community 85`, `Community 122`?**
   _High betweenness centrality (0.010) - this node is a cross-community bridge._
 - **Are the 112 inferred relationships involving `Job` (e.g. with `AwsBatchSubmitter` and `DynamoJobRepository`) actually correct?**
   _`Job` has 112 INFERRED edges - model-reasoned connections that need verification._

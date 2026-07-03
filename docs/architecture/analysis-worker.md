@@ -5,8 +5,9 @@ control plane and reuses the shared job, source-type, and failure-code
 contracts from `redact_api.domain`.
 
 The worker currently implements source validation, page rasterization, OCR text
-extraction, PII detection, and review page-manifest creation. Checkpoints and
-render-mode export remain later worker slices.
+extraction, PII detection, review page-manifest creation, checkpointed resume,
+and analysis lifecycle completion. Render-mode export remains a later worker
+slice.
 
 ## Source validation
 
@@ -160,6 +161,43 @@ suggestions equal to the detected automatic regions, and selected regions equal
 to those suggestions. Pages with no accepted detections still receive a valid
 empty manifest so review can load every page consistently.
 
+## Checkpoints, resume, and lifecycle
+
+Full analysis runs use the shared job record as the durable checkpoint. After
+source validation succeeds, the worker transitions the job from `queued` to
+`analyzing`, persists the validated `page_count`, and records configured OCR
+and PII model versions in `model_versions`.
+
+`completed_pages` is the only checkpoint cursor. The worker increments it only
+after the page's OCR artifact, PII mapping, and initial page manifest are
+complete. That makes a completed page immediately reviewable and avoids a
+separate per-stage checkpoint schema. Partial work for the current in-flight
+page may be repeated after retry.
+
+When an analyze retry starts with `completed_pages > 0`, the worker loads the
+existing page-artifact index:
+
+```text
+users/{owner_id}/jobs/{job_id}/artifacts/pages/index.json
+```
+
+The loaded index must match the job identifier, page count, 1-based page order,
+positive page dimensions, PNG format, and deterministic owner/job-scoped page
+artifact keys. If the index is missing or inconsistent, the worker records
+`processing_failed`.
+
+The worker skips pages with numbers at or below `completed_pages` and processes
+only the remaining pages. If a page manifest already exists, the worker loads
+it and accepts it only when it equals the initial manifest the worker would have
+written. This handles the interrupted window where the manifest write succeeded
+but the following job checkpoint save did not. Mismatched manifests fail safely
+instead of overwriting possible user edits.
+
+After every page has a completed checkpoint, the worker transitions the job to
+`ready`. Existing retry contracts preserve `page_count`, `completed_pages`, and
+`model_versions` when retryable analyze failures are moved back to `queued`, so
+a resumed worker can continue from the saved cursor.
+
 ## Safe failures
 
 Unsupported signatures or decoded content fail with `unsupported_content`.
@@ -181,3 +219,7 @@ after an OCR failure.
 Post-OCR PII detection, geometry mapping, or manifest creation failures fail
 with `processing_failed`. The worker stops writing additional review manifests
 and does not call later downstream hooks after a PII mapping failure.
+
+Checkpoint and resume failures also use `processing_failed`. If a later page
+fails after earlier pages were checkpointed, the worker preserves the prior
+`completed_pages` value and records the failure without reducing progress.

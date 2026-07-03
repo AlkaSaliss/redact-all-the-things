@@ -129,6 +129,21 @@ class S3ObjectRepository:
                 return False
             raise
 
+    def put_page_artifact(self, key: str, content: bytes) -> None:
+        self._put_artifact(key, content, content_type="image/png")
+
+    def put_page_artifact_index(self, key: str, content: bytes) -> None:
+        self._put_artifact(key, content, content_type="application/json")
+
+    def get_page_artifact_index(self, key: str) -> bytes:
+        return self._get_artifact(key)
+
+    def get_page_artifact(self, key: str) -> bytes:
+        return self._get_artifact(key)
+
+    def put_ocr_page_text(self, key: str, content: bytes) -> None:
+        self._put_artifact(key, content, content_type="application/json")
+
     def complete_multipart_upload(
         self,
         key: str,
@@ -230,6 +245,18 @@ class S3ObjectRepository:
         return (
             f"users/{owner_id}/jobs/{job_id}/manifests/pages/"
             f"{page_number}.json"
+        )
+
+    def _get_artifact(self, key: str) -> bytes:
+        response = self._client.get_object(Bucket=self._bucket, Key=key)
+        return bytes(response["Body"].read())
+
+    def _put_artifact(self, key: str, content: bytes, *, content_type: str) -> None:
+        self._client.put_object(
+            Bucket=self._bucket,
+            Key=key,
+            Body=content,
+            ContentType=content_type,
         )
 
 

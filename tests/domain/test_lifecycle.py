@@ -120,6 +120,22 @@ def test_retry_transition_clears_failure_code() -> None:
     assert updated.version == 2
 
 
+def test_retry_transition_preserves_analysis_checkpoint_fields() -> None:
+    failed = make_job(
+        JobStatus.FAILED,
+        page_count=3,
+        completed_pages=2,
+        model_versions={"ocr": "test-ocr:test-model", "pii": "test-pii:test-model"},
+        failure_code=FailureCode.ANALYZE_SPOT_INTERRUPTED,
+    )
+
+    updated = transition_job(failed, JobStatus.QUEUED, now=NOW)
+
+    assert updated.page_count == 3
+    assert updated.completed_pages == 2
+    assert updated.model_versions == failed.model_versions
+
+
 def test_expiry_is_exact_at_the_deadline() -> None:
     job = make_job(JobStatus.READY)
 

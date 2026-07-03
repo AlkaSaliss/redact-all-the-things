@@ -17,6 +17,7 @@ from PIL import Image, UnidentifiedImageError
 
 from redact_api.domain import (
     FailureCode,
+    InvalidTransitionError,
     Job,
     JobStatus,
     PageManifest,
@@ -25,6 +26,7 @@ from redact_api.domain import (
     SourceType,
     transition_job,
 )
+from redact_api.aws import PersistenceConflictError
 from redact_api.services import MAX_FILE_SIZE
 
 
@@ -237,6 +239,9 @@ class PageArtifactWriter(Protocol):
 class OcrArtifactStore(Protocol):
     """Persistence boundary for OCR input pages and output text artifacts."""
 
+    def get_page_artifact_index(self, key: str) -> bytes:
+        """Load the JSON page-artifact index."""
+
     def get_page_artifact(self, key: str) -> bytes:
         """Load one raster page artifact."""
 
@@ -266,6 +271,14 @@ class PiiDetector(Protocol):
 
 class PageManifestWriter(Protocol):
     """Persistence boundary for worker-created review manifests."""
+
+    def get_manifest(
+        self,
+        owner_id: str,
+        job_id: str,
+        page_number: int,
+    ) -> object:
+        """Load an existing page manifest if one exists."""
 
     def create_manifest(self, owner_id: str, manifest: PageManifest) -> object:
         """Persist a new page manifest."""
@@ -344,6 +357,38 @@ def analyze_source(
         )
         jobs.save(failed, expected_version=job.version)
         return failed
+    full_analysis = (
+        raster_writer is not None
+        and ocr_store is not None
+        and ocr_engine is not None
+        and pii_detector is not None
+        and manifest_writer is not None
+    )
+    if full_analysis:
+        try:
+            return _analyze_with_checkpoints(
+                job,
+                source,
+                validated,
+                jobs=jobs,
+                now=now,
+                raster_writer=raster_writer,
+                ocr_store=ocr_store,
+                ocr_engine=ocr_engine,
+                pii_detector=pii_detector,
+                manifest_writer=manifest_writer,
+                render_pages=render_pages,
+                write_artifacts=write_artifacts,
+            )
+        except (
+            RasterizationError,
+            OcrExtractionError,
+            PiiMappingError,
+            PersistenceConflictError,
+            InvalidTransitionError,
+        ):
+            failed = _processing_failed(job, jobs=jobs, now=now)
+            return failed
     page_index = None
     if raster_writer is not None:
         try:
@@ -406,6 +451,159 @@ def analyze_source(
     if write_artifacts is not None:
         write_artifacts(validated)
     return job
+
+
+def _analyze_with_checkpoints(
+    job: Job,
+    source: bytes,
+    validated: ValidatedSource,
+    *,
+    jobs: Any,
+    now: datetime,
+    raster_writer: PageArtifactWriter,
+    ocr_store: OcrArtifactStore,
+    ocr_engine: OcrEngine,
+    pii_detector: PiiDetector,
+    manifest_writer: PageManifestWriter,
+    render_pages: Callable[[], Iterable[RenderedPage]] | None,
+    write_artifacts: Callable[[ValidatedSource], None] | None,
+) -> Job:
+    current = _start_analysis(
+        job,
+        validated,
+        jobs=jobs,
+        now=now,
+        ocr_engine=ocr_engine,
+        pii_detector=pii_detector,
+    )
+    try:
+        if current.completed_pages == current.page_count:
+            if write_artifacts is not None:
+                write_artifacts(validated)
+            return _ready_job(current, jobs=jobs, now=now)
+        if current.completed_pages > 0:
+            page_index = load_page_artifact_index(
+                current,
+                store=ocr_store,
+                key=page_artifact_index_key(current.owner_id, current.id),
+            )
+        else:
+            page_index = rasterize_source(
+                current,
+                source,
+                validated,
+                writer=raster_writer,
+                render_pages=render_pages,
+            )
+        for page in page_index.pages:
+            if page.page_number <= current.completed_pages:
+                continue
+            ocr_page = extract_ocr_page_text(
+                current,
+                page,
+                store=ocr_store,
+                engine=ocr_engine,
+            )
+            create_pii_manifest(
+                current,
+                ocr_page,
+                detector=pii_detector,
+                writer=manifest_writer,
+                now=now,
+            )
+            current = _save_job_update(
+                current,
+                jobs=jobs,
+                update={"completed_pages": page.page_number},
+            )
+        if write_artifacts is not None:
+            write_artifacts(validated)
+        return _ready_job(current, jobs=jobs, now=now)
+    except (
+        RasterizationError,
+        OcrExtractionError,
+        PiiMappingError,
+        PersistenceConflictError,
+        InvalidTransitionError,
+    ):
+        return _processing_failed(current, jobs=jobs, now=now)
+
+
+def _start_analysis(
+    job: Job,
+    validated: ValidatedSource,
+    *,
+    jobs: Any,
+    now: datetime,
+    ocr_engine: OcrEngine,
+    pii_detector: PiiDetector,
+) -> Job:
+    versions = dict(job.model_versions)
+    versions["ocr"] = f"{ocr_engine.name}:{ocr_engine.model}"
+    versions["pii"] = f"{pii_detector.name}:{pii_detector.model}"
+    if job.status is JobStatus.QUEUED:
+        updated = transition_job(job, JobStatus.ANALYZING, now=now)
+        updated = updated.model_copy(
+            update={
+                "page_count": validated.page_count,
+                "model_versions": versions,
+            },
+        )
+        jobs.save(updated, expected_version=job.version)
+        return updated
+    if job.status is JobStatus.ANALYZING:
+        if job.page_count not in {0, validated.page_count}:
+            raise RasterizationError("validated page count changed during resume")
+        if job.completed_pages > validated.page_count:
+            raise RasterizationError("completed pages exceed validated page count")
+        if job.page_count == validated.page_count and job.model_versions == versions:
+            return job
+        return _save_job_update(
+            job,
+            jobs=jobs,
+            update={
+                "page_count": validated.page_count,
+                "model_versions": versions,
+            },
+        )
+    raise InvalidTransitionError(f"cannot analyze job in {job.status.value} status")
+
+
+def _ready_job(job: Job, *, jobs: Any, now: datetime) -> Job:
+    if job.completed_pages != job.page_count:
+        raise RasterizationError("analysis completed without all page checkpoints")
+    ready = transition_job(job, JobStatus.READY, now=now)
+    jobs.save(ready, expected_version=job.version)
+    return ready
+
+
+def _processing_failed(job: Job, *, jobs: Any, now: datetime) -> Job:
+    latest = job
+    try:
+        persisted = jobs.get(job.id)
+    except AttributeError:
+        persisted = None
+    if persisted is not None:
+        latest = persisted
+    failed = transition_job(
+        latest,
+        JobStatus.FAILED,
+        now=now,
+        failure_code=FailureCode.PROCESSING_FAILED,
+    )
+    jobs.save(failed, expected_version=latest.version)
+    return failed
+
+
+def _save_job_update(job: Job, *, jobs: Any, update: dict[str, object]) -> Job:
+    updated = job.model_copy(
+        update={
+            **update,
+            "version": job.version + 1,
+        },
+    )
+    jobs.save(updated, expected_version=job.version)
+    return updated
 
 
 def rasterize_source(
@@ -504,6 +702,28 @@ def extract_ocr_text(
         raise OcrExtractionError("ocr extraction failed") from error
 
 
+def extract_ocr_page_text(
+    job: Job,
+    page: PageArtifact,
+    *,
+    store: OcrArtifactStore,
+    engine: OcrEngine,
+) -> OcrPageText:
+    """Extract and persist OCR text for one raster page."""
+
+    try:
+        content = store.get_page_artifact(page.key)
+        lines = tuple(engine.recognize(page, content))
+        page_text = _build_ocr_page_text(job, page, lines, engine=engine)
+        key = ocr_page_text_key(job.owner_id, job.id, page.page_number)
+        store.put_ocr_page_text(key, _serialize_ocr_page_text(page_text))
+        return page_text
+    except OcrExtractionError:
+        raise
+    except Exception as error:
+        raise OcrExtractionError("ocr extraction failed") from error
+
+
 def ocr_page_text_key(owner_id: str, job_id: str, page_number: int) -> str:
     """Return the owner/job-namespaced key for one OCR page JSON artifact."""
 
@@ -535,6 +755,39 @@ def create_pii_manifests(
             writer.create_manifest(job.owner_id, manifest)
             manifests.append(manifest)
         return tuple(manifests)
+    except PiiMappingError:
+        raise
+    except Exception as error:
+        raise PiiMappingError("pii manifest creation failed") from error
+
+
+def create_pii_manifest(
+    job: Job,
+    page: OcrPageText,
+    *,
+    detector: PiiDetector,
+    writer: PageManifestWriter,
+    now: datetime,
+) -> PageManifest:
+    """Detect PII for one OCR page and persist its initial review manifest."""
+
+    try:
+        regions = map_pii_regions(page, detector.detect(page))
+        manifest = PageManifest(
+            job_id=job.id,
+            page_number=page.page_number,
+            suggestions=regions,
+            regions=regions,
+            version=1,
+            last_saved_at=now,
+        )
+        try:
+            writer.create_manifest(job.owner_id, manifest)
+        except PersistenceConflictError:
+            existing = writer.get_manifest(job.owner_id, job.id, page.page_number)
+            if _stored_manifest(existing) != manifest:
+                raise PiiMappingError("existing manifest does not match checkpoint")
+        return manifest
     except PiiMappingError:
         raise
     except Exception as error:
@@ -749,6 +1002,45 @@ def _serialize_page_artifact_index(index: PageArtifactIndex) -> bytes:
     return json.dumps(payload, separators=(",", ":"), sort_keys=True).encode()
 
 
+def load_page_artifact_index(
+    job: Job,
+    *,
+    store: OcrArtifactStore,
+    key: str,
+) -> PageArtifactIndex:
+    """Load and validate a persisted page-artifact index for resume."""
+
+    try:
+        payload = json.loads(store.get_page_artifact_index(key))
+        index = PageArtifactIndex(
+            job_id=str(payload["job_id"]),
+            key=key,
+            pages=tuple(
+                PageArtifact(
+                    page_number=int(page["page_number"]),
+                    width=int(page["width"]),
+                    height=int(page["height"]),
+                    format=str(page["format"]),
+                    key=str(page["key"]),
+                )
+                for page in payload["pages"]
+            ),
+        )
+    except Exception as error:
+        raise RasterizationError("page artifact index is unavailable") from error
+    if index.job_id != job.id or len(index.pages) != job.page_count:
+        raise RasterizationError("page artifact index does not match job")
+    expected_numbers = tuple(range(1, job.page_count + 1))
+    if tuple(page.page_number for page in index.pages) != expected_numbers:
+        raise RasterizationError("page artifact index has invalid page order")
+    for page in index.pages:
+        if page.width <= 0 or page.height <= 0 or page.format != "png":
+            raise RasterizationError("page artifact index has invalid page metadata")
+        if page.key != page_artifact_key(job.owner_id, job.id, page.page_number):
+            raise RasterizationError("page artifact index has invalid page key")
+    return index
+
+
 def _build_ocr_page_text(
     job: Job,
     page: PageArtifact,
@@ -909,6 +1201,13 @@ def _parse_gliner2_entity(
     except (TypeError, ValueError):
         confidence = PII_CONFIDENCE_THRESHOLD
     return PiiEntity(label=label, start=start, end=end, confidence=confidence)
+
+
+def _stored_manifest(value: object) -> PageManifest | None:
+    if value is None or isinstance(value, PageManifest):
+        return value
+    manifest = getattr(value, "manifest", None)
+    return manifest if isinstance(manifest, PageManifest) else None
 
 
 def _validate_pdf(source: bytes, *, max_pdf_pages: int) -> int:
