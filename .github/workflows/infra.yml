@@ -105,16 +105,29 @@ jobs:
           PLAN_FILE="$(pwd)/tfplan"
           terragrunt plan -input=false -out="$PLAN_FILE"
           terragrunt show -no-color "$PLAN_FILE" > tfplan.txt
+          ZIP_FILE="$(
+            find .terragrunt-cache \
+              -path '*/app-edge-auth-api/.terraform/control-plane-stub.zip' \
+              -type f \
+              -print \
+              -quit
+          )"
+          echo "Lambda package path: $ZIP_FILE"
+          test -n "$ZIP_FILE"
           ls -lah
 
       - name: Upload AWS plan artifact
         uses: actions/upload-artifact@v4
         with:
           name: aws-${{ env.AWS_LIVE_ENVIRONMENT }}-terraform-plan
+          # yamllint disable rule:line-length
           path: |
             infra/live/${{ env.AWS_LIVE_ENVIRONMENT }}/${{ env.AWS_REGION }}/worker-compute-artifacts/tfplan
             infra/live/${{ env.AWS_LIVE_ENVIRONMENT }}/${{ env.AWS_REGION }}/worker-compute-artifacts/tfplan.txt
+            infra/live/${{ env.AWS_LIVE_ENVIRONMENT }}/${{ env.AWS_REGION }}/worker-compute-artifacts/.terragrunt-cache/**/app-edge-auth-api/.terraform/control-plane-stub.zip
+
           if-no-files-found: error
+          include-hidden-files: true
 
   aws-apply:
     name: Apply AWS infrastructure
@@ -165,7 +178,16 @@ jobs:
         working-directory: infra/live/${{ env.AWS_LIVE_ENVIRONMENT }}/${{ env.AWS_REGION }}/worker-compute-artifacts
         run: |
           PLAN_FILE="$(pwd)/tfplan"
+          ZIP_FILE="$(
+            find .terragrunt-cache \
+              -path '*/app-edge-auth-api/.terraform/control-plane-stub.zip' \
+              -type f \
+              -print \
+              -quit
+          )"
           echo "Plan file path: $PLAN_FILE"
+          echo "Lambda package path: $ZIP_FILE"
           ls -lah
           test -f "$PLAN_FILE"
+          test -n "$ZIP_FILE"
           terragrunt apply -auto-approve -input=false "$PLAN_FILE"
