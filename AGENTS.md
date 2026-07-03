@@ -178,3 +178,9 @@ Rules:
 ## Tooling
 
 - Python package manager: always use uv for python package management locally or in docker or in CI.
+
+## Terraform / Terragrunt setup
+
+- To be able to run plan locally, you need to set up aws access and other environment variables:
+  - `tools/set_local_aws_credentials.sh`
+  - `tools/set_local_env_vars.sh`

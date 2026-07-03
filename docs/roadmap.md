@@ -13,8 +13,8 @@ The issue #4 infrastructure work has an approved exception to start through
 child slices before all original prerequisite epics are complete. The early
 slices target Floci as an AWS-compatible emulator, keep Terraform state local,
 and do not deploy to a real AWS account. The later real-AWS swap ticket owns
-remote state, production endpoint removal, GitHub Actions OIDC apply, and
-production smoke tests.
+remote state, real AWS endpoint removal, GitHub Actions OIDC apply, and AWS
+smoke tests.
 
 ## Sequence
 

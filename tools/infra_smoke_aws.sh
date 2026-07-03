@@ -34,10 +34,12 @@ if (( ${#missing[@]} > 0 )); then
 fi
 
 aws_region="${AWS_REGION:-eu-west-1}"
+aws_environment="${AWS_LIVE_ENVIRONMENT:-dev}"
+live_stack="infra/live/${aws_environment}/${aws_region}/worker-compute-artifacts"
 
 aws sts get-caller-identity >/dev/null
 
-pushd infra/live/aws >/dev/null
+pushd "$live_stack" >/dev/null
 outputs="$(terragrunt output -json)"
 popd >/dev/null
 

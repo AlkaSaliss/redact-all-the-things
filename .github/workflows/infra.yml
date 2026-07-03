@@ -4,17 +4,10 @@ on:
   push:
     branches:
       - main
-    paths:
-      - ".github/workflows/infra.yml"
-      - "Makefile"
-      - "infra/**"
+      - "feat/**"
   pull_request:
     branches:
       - main
-    paths:
-      - ".github/workflows/infra.yml"
-      - "Makefile"
-      - "infra/**"
   workflow_dispatch:
     inputs:
       action:
@@ -26,12 +19,12 @@ on:
           - plan
           - apply
       aws_environment:
-        description: "Value passed to AWS_ENVIRONMENT for the live stack."
+        description: "Live environment to deploy."
         required: true
         type: choice
-        default: prod
+        default: dev
         options:
-          - prod
+          - dev
 
 permissions:
   contents: read
@@ -71,14 +64,13 @@ jobs:
 
   aws-plan:
     name: Plan AWS infrastructure
-    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     needs: validate
     permissions:
       contents: read
       id-token: write
     env:
-      AWS_ENVIRONMENT: ${{ inputs.aws_environment }}
+      AWS_LIVE_ENVIRONMENT: ${{ github.event_name == 'workflow_dispatch' && inputs.aws_environment || 'dev' }}
       AWS_REGION: ${{ vars.AWS_REGION || 'eu-west-1' }}
       TG_LOCK_TABLE: ${{ vars.TG_LOCK_TABLE || secrets.TG_LOCK_TABLE }}
       TG_STATE_BUCKET: ${{ vars.TG_STATE_BUCKET || secrets.TG_STATE_BUCKET }}
@@ -108,7 +100,7 @@ jobs:
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Plan AWS live stack
-        working-directory: infra/live/aws
+        working-directory: infra/live/${{ env.AWS_LIVE_ENVIRONMENT }}/${{ env.AWS_REGION }}/worker-compute-artifacts
         run: |
           terragrunt plan -input=false -out=tfplan
           terragrunt show -no-color tfplan > tfplan.txt
@@ -116,10 +108,10 @@ jobs:
       - name: Upload AWS plan artifact
         uses: actions/upload-artifact@v4
         with:
-          name: aws-${{ inputs.aws_environment }}-terraform-plan
+          name: aws-${{ env.AWS_LIVE_ENVIRONMENT }}-terraform-plan
           path: |
-            infra/live/aws/tfplan
-            infra/live/aws/tfplan.txt
+            infra/live/${{ env.AWS_LIVE_ENVIRONMENT }}/${{ env.AWS_REGION }}/worker-compute-artifacts/tfplan
+            infra/live/${{ env.AWS_LIVE_ENVIRONMENT }}/${{ env.AWS_REGION }}/worker-compute-artifacts/tfplan.txt
           if-no-files-found: error
 
   aws-apply:
@@ -132,7 +124,7 @@ jobs:
       contents: read
       id-token: write
     env:
-      AWS_ENVIRONMENT: ${{ inputs.aws_environment }}
+      AWS_LIVE_ENVIRONMENT: ${{ github.event_name == 'workflow_dispatch' && inputs.aws_environment || 'dev' }}
       AWS_REGION: ${{ vars.AWS_REGION || 'eu-west-1' }}
       TG_LOCK_TABLE: ${{ vars.TG_LOCK_TABLE || secrets.TG_LOCK_TABLE }}
       TG_STATE_BUCKET: ${{ vars.TG_STATE_BUCKET || secrets.TG_STATE_BUCKET }}
@@ -164,9 +156,9 @@ jobs:
       - name: Download reviewed AWS plan artifact
         uses: actions/download-artifact@v4
         with:
-          name: aws-${{ inputs.aws_environment }}-terraform-plan
-          path: infra/live/aws
+          name: aws-${{ env.AWS_LIVE_ENVIRONMENT }}-terraform-plan
+          path: infra/live/${{ env.AWS_LIVE_ENVIRONMENT }}/${{ env.AWS_REGION }}/worker-compute-artifacts
 
       - name: Apply AWS live stack
-        working-directory: infra/live/aws
+        working-directory: infra/live/${{ env.AWS_LIVE_ENVIRONMENT }}/${{ env.AWS_REGION }}/worker-compute-artifacts
         run: terragrunt apply -auto-approve -input=false tfplan
