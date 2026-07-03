@@ -19,11 +19,6 @@ repos:
 
   - repo: local
     hooks:
-      - id: strip-notebook-outputs
-        name: strip notebook outputs
-        entry: uv run python tools/strip_notebook_outputs.py
-        language: system
-        files: \.ipynb$
       - id: pymarkdown
         name: pymarkdown
         entry: uv run pymarkdown --config .pymarkdown.json scan
@@ -35,3 +30,8 @@ repos:
         entry: uv run yamllint
         language: system
         files: \.(yaml|yml)$
+
+  - repo: https://github.com/kynan/nbstripout
+    rev: 0.8.1
+    hooks:
+      - id: nbstripout

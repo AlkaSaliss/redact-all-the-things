@@ -6,8 +6,9 @@ Floci as an AWS-compatible emulator. The app edge/auth/API slice adds the
 browser edge, authentication boundary, control-plane Lambda, and persistence
 resources. The worker compute slice adds image storage, AWS Batch/Fargate Spot,
 worker IAM, logs, isolated worker networking, and GitHub Actions validation and
-manual AWS deployment entrypoints. Issue #38 swaps the AWS live stack to remote
-state and reviewed real-account deployment.
+manual AWS deployment entrypoints. Issue #38 moves the live stack into the
+Terragrunt env/region/component hierarchy and uses reviewed real-account
+deployment for the `dev` environment.
 
 ## Floci phase
 
@@ -30,21 +31,22 @@ make terragrunt-apply-local
 
 `make floci-up` starts the local Floci AWS emulator with persistent local state.
 `make terragrunt-plan` and `make terragrunt-apply` default to
-`INFRA_TARGET=floci`; set `INFRA_TARGET=aws` or use `make terragrunt-plan-aws`
+`INFRA_TARGET=floci`; set `INFRA_TARGET=dev` or use `make terragrunt-plan-aws`
 and `make terragrunt-apply-aws` for the real AWS live stack.
 
 ## GitHub Actions deployment
 
 The `Infrastructure` workflow validates Terraform modules and Terragrunt HCL on
-pull requests and pushes that touch infrastructure files. Manual dispatch runs
-the AWS live stack through GitHub Actions OIDC using the
-`AWS_ROLE_TO_ASSUME` secret and `AWS_REGION` repository variable, defaulting to
-`eu-west-1` when the variable is unset.
+pushes to `main` or `feat/**` branches and on pull requests targeting `main`.
+Those runs also plan the dev AWS live stack through GitHub Actions OIDC using
+the `AWS_ROLE_TO_ASSUME` secret and `AWS_REGION` repository variable,
+defaulting to `eu-west-1` when the variable is unset.
 
-Manual `plan` runs `terragrunt plan` for `infra/live/aws` and uploads the
-reviewed plan artifact. Manual `apply` runs the same plan job first, then
-downloads and applies that saved plan after the `aws-production` GitHub
-Environment gate approves the run.
+Automatic and manual `plan` runs execute `terragrunt plan` for
+`infra/live/dev/eu-west-1/worker-compute-artifacts` and uploads the reviewed
+plan artifact. Manual `apply` runs the same plan job first, then downloads and
+applies that saved plan after the `aws-production` GitHub Environment gate
+approves the run.
 
 The real AWS workflow requires these repository or environment settings:
 
@@ -102,47 +104,22 @@ the AWS-managed Batch service policy. In `aws` mode, the AWS live stack omits
 endpoint overrides, enables CloudFront, and uses the AWS-managed
 `AWSBatchServiceRole` attachment.
 
-## Remote-state bootstrap
+## Remote state
 
-The `infra/modules/remote-state` module provisions the S3 state bucket and
-DynamoDB lock table that `infra/live/aws` depends on. This is a one-time
-bootstrap step that must run before the first real AWS plan or apply.
-
-The remote-state stack uses a local Terraform backend because the state bucket
-itself cannot store its own creation state. Keep the resulting
-`terraform.tfstate` secure or import the resources into the state bucket after
-first apply.
-
-The `Remote State Bootstrap` GitHub Actions workflow deploys remote-state
-resources through the same OIDC role as the main infrastructure workflow. It
-follows the same plan-artifact and `aws-production` environment gate pattern:
-
-1. Dispatch the workflow with `plan` to produce a reviewed plan artifact.
-2. Dispatch with `apply` and approve the `aws-production` gate.
-3. The workflow's `verify` job checks that the S3 bucket has encryption,
-   public-access blocking, and versioning enabled, and that the DynamoDB lock
-   table has server-side encryption enabled.
-
-After the bootstrap succeeds, set the following GitHub variables so the main
-infrastructure workflow can use the new backend:
-
-- `TG_STATE_BUCKET` to the S3 bucket name output by the remote-state stack.
-- `TG_LOCK_TABLE` to the DynamoDB table name output by the remote-state stack.
-- Optional `TG_STATE_REGION`, defaulting to `eu-west-1`.
-
-Use the remote-state smoke check locally after the bootstrap apply:
-
-```bash
-make infra-smoke-remote-state
-```
+The S3 state bucket and DynamoDB lock table already exist outside this
+repository. The real AWS live stack consumes those resources through
+`TG_STATE_BUCKET`, `TG_LOCK_TABLE`, and optional `TG_STATE_REGION`; this
+repository does not provision or bootstrap them.
 
 ## Real AWS deployment
 
 The Floci live stack keeps local state, fake credentials, and AWS-compatible
 endpoint overrides. The AWS live stack uses S3 remote state, DynamoDB locking,
-the default AWS provider, and no emulator endpoint overrides. Remote state is
-provisioned by the `infra/modules/remote-state` module and deployed through the
-`Remote State Bootstrap` workflow before the first real AWS plan.
+the default AWS provider, and no emulator endpoint overrides. Both stacks use
+the same env/region/component hierarchy:
+
+- `infra/live/floci/eu-west-1/worker-compute-artifacts`
+- `infra/live/dev/eu-west-1/worker-compute-artifacts`
 
 Use the AWS smoke check after an approved apply:
 
