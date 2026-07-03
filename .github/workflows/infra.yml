@@ -102,8 +102,10 @@ jobs:
       - name: Plan AWS live stack
         working-directory: infra/live/${{ env.AWS_LIVE_ENVIRONMENT }}/${{ env.AWS_REGION }}/worker-compute-artifacts
         run: |
-          terragrunt plan -input=false -out=tfplan
-          terragrunt show -no-color tfplan > tfplan.txt
+          PLAN_FILE="$(pwd)/tfplan"
+          terragrunt plan -input=false -out="$PLAN_FILE"
+          terragrunt show -no-color "$PLAN_FILE" > tfplan.txt
+          ls -lah
 
       - name: Upload AWS plan artifact
         uses: actions/upload-artifact@v4
@@ -161,4 +163,9 @@ jobs:
 
       - name: Apply AWS live stack
         working-directory: infra/live/${{ env.AWS_LIVE_ENVIRONMENT }}/${{ env.AWS_REGION }}/worker-compute-artifacts
-        run: terragrunt apply -auto-approve -input=false tfplan
+        run: |
+          PLAN_FILE="$(pwd)/tfplan"
+          echo "Plan file path: $PLAN_FILE"
+          ls -lah
+          test -f "$PLAN_FILE"
+          terragrunt apply -auto-approve -input=false "$PLAN_FILE"

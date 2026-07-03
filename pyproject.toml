@@ -23,6 +23,8 @@ dev = [
   "pymarkdownlnt==0.9.35",
   "pytest==9.1.0",
   "yamllint==1.37.1",
+  "ipykernel",
+
 ]
 
 [tool.pytest.ini_options]

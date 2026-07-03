@@ -5,12 +5,12 @@
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1603 nodes · 3219 edges · 129 communities (115 shown, 14 thin omitted)
+- 1603 nodes · 3219 edges · 130 communities (116 shown, 14 thin omitted)
 - Extraction: 66% EXTRACTED · 34% INFERRED · 0% AMBIGUOUS · INFERRED: 1100 edges (avg confidence: 0.5)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `87a25367`
+- Built from commit: `9c4cac60`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -108,6 +108,7 @@
 - [[_COMMUNITY_Community 95|Community 95]]
 - [[_COMMUNITY_Community 96|Community 96]]
 - [[_COMMUNITY_Community 98|Community 98]]
+- [[_COMMUNITY_Community 99|Community 99]]
 - [[_COMMUNITY_Community 100|Community 100]]
 - [[_COMMUNITY_Community 102|Community 102]]
 - [[_COMMUNITY_Community 103|Community 103]]
@@ -170,7 +171,7 @@
 - **Versioned documentation delivery** — agents_documentation_as_code, repository_governance_spec_published_documentation, workflows_pages_strict_mkdocs_build, workflows_pages_github_pages_deployment [INFERRED 0.95]
 - **Tracked knowledge asset lifecycle** — agents_tracked_knowledge_assets, agents_graphify_workflow, repository_governance_spec_tracked_assets, 2026_06_14_gh_1_bootstrap_governance_tasks_completed_bootstrap [INFERRED 0.85]
 
-## Communities (129 total, 14 thin omitted)
+## Communities (130 total, 14 thin omitted)
 
 ### Community 0 - "Project Architecture"
 Cohesion: 0.22
@@ -193,8 +194,8 @@ Cohesion: 0.12
 Nodes (22): OpenSpec Apply Change, Task-Driven Implementation, Archive Validation, OpenSpec Archive Change, OpenSpec Bulk Archive Change, Spec Conflict Resolution, Artifact Dependency Order, OpenSpec Continue Change (+14 more)
 
 ### Community 5 - "Archived Governance Requirements"
-Cohesion: 0.11
-Nodes (27): _image_to_rendered_page(), page_artifact_key(), PageArtifactWriter, RasterizationError, rasterize_source(), Tunable rasterization settings., Persistence boundary for raster page artifacts., Persist one PNG page artifact. (+19 more)
+Cohesion: 0.06
+Nodes (52): _image_to_rendered_page(), page_artifact_index_key(), page_artifact_key(), PageArtifactWriter, RasterizationError, rasterize_source(), Analysis worker validation and rasterization boundaries., Tunable rasterization settings. (+44 more)
 
 ### Community 6 - "Community 6"
 Cohesion: 0.05
@@ -429,8 +430,8 @@ Cohesion: 0.33
 Nodes (5): ADDED Requirements, Requirement: Permanent worker validation failures, Scenario: Persist unsupported content safely, Scenario: Persist validation failure safely, Scenario: Reject retry for permanent validation failures
 
 ### Community 70 - "Community 70"
-Cohesion: 0.12
-Nodes (33): AwsBatchSubmitter, DynamoJobRepository, RecordingBatchSubmitter, AwsBatchSubmitter, PersistenceConflictError, Concrete DynamoDB/S3 integration and the local Batch recording fake., Raised when an optimistic write loses a version race., A manifest paired with the S3 ETag used for optimistic writes. (+25 more)
+Cohesion: 0.10
+Nodes (37): AwsBatchSubmitter, DynamoJobRepository, RecordingBatchSubmitter, AwsBatchSubmitter, DynamoJobRepository, PersistenceConflictError, Concrete DynamoDB/S3 integration and the local Batch recording fake., Raised when an optimistic write loses a version race. (+29 more)
 
 ### Community 71 - "Community 71"
 Cohesion: 0.50
@@ -461,8 +462,8 @@ Cohesion: 0.15
 Nodes (12): ADDED Requirements, Requirement: Real AWS remote state, Requirement: Real AWS smoke boundary, Requirement: Reviewed AWS deployment workflow, Scenario: Apply only after protected approval, Scenario: Configure remote state from environment, Scenario: Fail when remote state configuration is missing, Scenario: Keep real AWS provider free of emulator endpoints (+4 more)
 
 ### Community 85 - "Community 85"
-Cohesion: 0.13
-Nodes (43): BaseModel, FastAPI, LookupError, ContractModel, PageManifest, Normalized page-space rectangle selected for redaction., Versioned per-page suggestions and current redaction selections., Immutable base model that rejects unknown contract fields. (+35 more)
+Cohesion: 0.17
+Nodes (38): BaseModel, FastAPI, LookupError, ContractModel, PageManifest, Normalized page-space rectangle selected for redaction., Versioned per-page suggestions and current redaction selections., Immutable base model that rejects unknown contract fields. (+30 more)
 
 ### Community 86 - "Community 86"
 Cohesion: 0.40
@@ -470,7 +471,7 @@ Nodes (4): local.deployment_mode, local.environment, local.floci_endpoint_url, l
 
 ### Community 90 - "Community 90"
 Cohesion: 0.07
-Nodes (29): infrastructure-foundation Specification, Purpose, Requirement: Floci developer commands, Requirement: Floci infrastructure foundation, Requirement: Infrastructure deployment workflow, Requirements, Scenario: Apply AWS infrastructure after approval, Scenario: Configure the Floci endpoint from the environment (+21 more)
+Nodes (29): infrastructure-foundation Specification, Purpose, Requirement: Infrastructure deployment workflow, Requirements, Scenario: Apply AWS infrastructure after approval, Scenario: Plan AWS infrastructure manually, Scenario: Plan AWS infrastructure on branch and pull request updates, Scenario: Validate infrastructure changes in CI (+21 more)
 
 ### Community 91 - "Community 91"
 Cohesion: 0.22
@@ -497,16 +498,20 @@ Cohesion: 0.40
 Nodes (4): 1. OpenSpec and Governance, 2. Infrastructure Foundation, 3. Developer Commands, 4. Verification
 
 ### Community 98 - "Community 98"
-Cohesion: 0.15
-Nodes (21): Raised when source validation maps to a safe failure code., Validate source bytes before any analysis artifact can be created., SourceValidationError, _validate_jpeg(), _validate_pdf(), _validate_png(), validate_source(), SourceType (+13 more)
+Cohesion: 0.16
+Nodes (18): Protocol, analyze_source(), create_pii_manifests(), OcrArtifactStore, OcrEngine, PageManifestWriter, PiiDetector, Persistence boundary for OCR input pages and output text artifacts. (+10 more)
+
+### Community 99 - "Community 99"
+Cohesion: 0.34
+Nodes (4): ControlPlaneService, Persist a transition and submit its corresponding worker request., Coordinate owner-scoped job workflows across persistent AWS services., Job
 
 ### Community 100 - "Community 100"
 Cohesion: 0.06
-Nodes (82): PiiEntity, Origin of a redaction region., RegionSource, _build_ocr_page_text(), _clamp_region(), extract_ocr_text(), map_pii_regions(), _normalize_polygon() (+74 more)
+Nodes (78): PiiEntity, Origin of a redaction region., RegionSource, _build_ocr_page_text(), _clamp_region(), extract_ocr_text(), map_pii_regions(), _normalize_polygon() (+70 more)
 
 ### Community 102 - "Community 102"
-Cohesion: 0.09
-Nodes (63): test_retryable_failures_select_the_worker_mode(), Image, Protocol, FailureCode, Job, JobStatus, Supported source document formats., Persistent states in the job lifecycle. (+55 more)
+Cohesion: 0.12
+Nodes (46): test_retryable_failures_select_the_worker_mode(), Image, FailureCode, Job, JobStatus, Supported source document formats., Persistent states in the job lifecycle., Safe failure classifications that may be persisted and returned. (+38 more)
 
 ### Community 103 - "Community 103"
 Cohesion: 0.12
@@ -541,8 +546,8 @@ Cohesion: 0.27
 Nodes (16): clock(), create_ready_manifest(), service(), set_status(), test_create_list_get_ownership_and_exact_expiry(), test_create_rejects_invalid_sizes(), test_download_requires_complete_existing_output(), test_export_requires_acknowledgement_and_is_idempotent() (+8 more)
 
 ### Community 126 - "Community 126"
-Cohesion: 0.18
-Nodes (8): DynamoJobRepository, Persist validated job records with DynamoDB conditional writes., build_service(), AWS Lambda entry point., Construct the production service from Lambda environment settings., Any, Job, ControlPlaneService
+Cohesion: 0.40
+Nodes (4): build_service(), AWS Lambda entry point., Construct the production service from Lambda environment settings., ControlPlaneService
 
 ### Community 131 - "Community 131"
 Cohesion: 0.40
@@ -589,19 +594,19 @@ Cohesion: 0.40
 Nodes (4): 1. OpenSpec, 2. Terraform and Terragrunt, 3. Documentation and Smoke, 4. Verification
 
 ## Knowledge Gaps
-- **669 isolated node(s):** `Collaboration Platform`, `Change Workflow`, `Git Conventions`, `Definition of Done`, `Engineering Guidance` (+664 more)
+- **669 isolated node(s):** `local.deployment_mode`, `local.environment`, `local.state_backend`, `local.aws_region`, `local.deployment_mode` (+664 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **14 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Job` connect `Community 102` to `Community 98`, `Community 100`, `Archived Governance Requirements`, `Community 70`, `Governance Design`, `Community 85`, `Community 126`?**
-  _High betweenness centrality (0.011) - this node is a cross-community bridge._
-- **Why does `PageManifest` connect `Community 85` to `Community 98`, `Community 100`, `Archived Governance Requirements`, `Community 102`, `Community 70`, `Governance Design`, `Community 115`, `Community 122`, `Community 126`?**
-  _High betweenness centrality (0.008) - this node is a cross-community bridge._
-- **Why does `JobStatus` connect `Community 102` to `Community 98`, `Community 100`, `Archived Governance Requirements`, `Community 70`, `Governance Design`, `Community 115`, `Community 85`, `Community 122`?**
-  _High betweenness centrality (0.008) - this node is a cross-community bridge._
+- **Why does `Job` connect `Community 102` to `Community 98`, `Community 99`, `Community 100`, `Archived Governance Requirements`, `Community 70`, `Governance Design`, `Community 85`?**
+  _High betweenness centrality (0.016) - this node is a cross-community bridge._
+- **Why does `PageManifest` connect `Community 85` to `Community 98`, `Community 99`, `Community 100`, `Archived Governance Requirements`, `Community 102`, `Community 70`, `Governance Design`, `Community 115`, `Community 122`?**
+  _High betweenness centrality (0.012) - this node is a cross-community bridge._
+- **Why does `JobStatus` connect `Community 102` to `Community 98`, `Community 99`, `Community 100`, `Archived Governance Requirements`, `Community 70`, `Governance Design`, `Community 115`, `Community 85`, `Community 122`?**
+  _High betweenness centrality (0.010) - this node is a cross-community bridge._
 - **Are the 112 inferred relationships involving `Job` (e.g. with `AwsBatchSubmitter` and `DynamoJobRepository`) actually correct?**
   _`Job` has 112 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 107 inferred relationships involving `SourceType` (e.g. with `AwsBatchSubmitter` and `DynamoJobRepository`) actually correct?**

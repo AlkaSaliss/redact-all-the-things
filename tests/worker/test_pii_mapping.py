@@ -300,8 +300,13 @@ def test_analyze_source_runs_pii_after_ocr_and_creates_manifest() -> None:
         write_artifacts=write_downstream,
     )
 
-    assert job.status is JobStatus.QUEUED
-    assert jobs.saved == []
+    assert job.status is JobStatus.READY
+    assert job.completed_pages == 1
+    assert [saved.status for saved, _ in jobs.saved] == [
+        JobStatus.ANALYZING,
+        JobStatus.ANALYZING,
+        JobStatus.READY,
+    ]
     assert detector.pages == [1]
     assert downstream_called
     manifest = manifest_writer.manifests[0][1]
@@ -347,6 +352,9 @@ def test_analyze_source_persists_processing_failed_on_pii_error() -> None:
 
     assert failed.status is JobStatus.FAILED
     assert failed.failure_code is FailureCode.PROCESSING_FAILED
-    assert jobs.saved == [(failed, 1)]
+    assert [saved.status for saved, _ in jobs.saved] == [
+        JobStatus.ANALYZING,
+        JobStatus.FAILED,
+    ]
     assert manifest_writer.manifests == []
     assert not downstream_called
