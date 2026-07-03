@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := help
 
-.PHONY: help test test-worker docs openspec-validate worker-image worker-ocr-smoke floci-up floci-down floci-check terragrunt-validate terragrunt-plan terragrunt-apply terragrunt-plan-local terragrunt-apply-local terragrunt-plan-aws terragrunt-apply-aws infra-smoke-floci
+.PHONY: help test test-worker docs openspec-validate worker-image worker-ocr-smoke floci-up floci-down floci-check terragrunt-validate terragrunt-plan terragrunt-apply terragrunt-plan-local terragrunt-apply-local terragrunt-plan-aws terragrunt-apply-aws infra-smoke-floci infra-smoke-aws terragrunt-plan-remote-state terragrunt-apply-remote-state infra-smoke-remote-state
 
 help: ## Show available make targets.
 	@awk 'BEGIN {FS = ":.*## "}; /^[a-zA-Z0-9_-]+:.*## / {printf "%-20s %s\n", $$1, $$2}' $(MAKEFILE_LIST)
@@ -66,6 +66,10 @@ terragrunt-validate: ## Validate Terraform modules and Terragrunt HCL.
 	$(TERRAFORM) -chdir=infra/modules/worker-compute-artifacts validate
 	$(TERRAGRUNT) hcl format --check $(FLOCI_ENV_DIR)/terragrunt.hcl
 	$(TERRAGRUNT) hcl format --check infra/live/aws/terragrunt.hcl
+	$(TERRAFORM) -chdir=infra/modules/remote-state fmt -check
+	$(TERRAFORM) -chdir=infra/modules/remote-state init -backend=false
+	$(TERRAFORM) -chdir=infra/modules/remote-state validate
+	$(TERRAGRUNT) hcl format --check infra/live/remote-state/terragrunt.hcl
 
 terragrunt-plan: ## Generate a Terragrunt plan for INFRA_TARGET=floci or aws.
 	@if [ "$(INFRA_TARGET)" = "floci" ]; then \
@@ -95,6 +99,18 @@ terragrunt-apply-aws: ## Apply against the configured AWS account.
 
 infra-smoke-floci: ## Run Floci foundation smoke checks.
 	@export $(FLOCI_ENV) && ./tools/infra_smoke_floci.sh
+
+infra-smoke-aws: ## Run read-only smoke checks against the configured AWS live stack.
+	@./tools/infra_smoke_aws.sh
+
+terragrunt-plan-remote-state: ## Plan the remote-state bootstrap resources (S3 bucket + DynamoDB lock table).
+	cd infra/live/remote-state && $(TERRAGRUNT) plan
+
+terragrunt-apply-remote-state: ## Apply the remote-state bootstrap resources.
+	cd infra/live/remote-state && $(TERRAGRUNT) apply
+
+infra-smoke-remote-state: ## Run read-only smoke checks against deployed remote-state resources.
+	@./tools/infra_smoke_remote_state.sh
 
 pre-commit:
 	@echo "Pre-Commit Checks"

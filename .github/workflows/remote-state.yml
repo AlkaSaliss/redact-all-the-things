@@ -1,0 +1,208 @@
+name: Remote State Bootstrap
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: "Remote-state action to run."
+        required: true
+        type: choice
+        default: plan
+        options:
+          - plan
+          - apply
+      aws_environment:
+        description: "Value passed to AWS_ENVIRONMENT for the remote-state stack."
+        required: true
+        type: choice
+        default: prod
+        options:
+          - prod
+
+permissions:
+  contents: read
+
+concurrency:
+  group: remote-state-${{ inputs.aws_environment }}
+  cancel-in-progress: false
+
+env:
+  TERRAFORM_VERSION: 1.13.3
+  TERRAGRUNT_VERSION: 0.87.6
+
+jobs:
+  validate:
+    name: Validate infrastructure
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: ${{ env.TERRAFORM_VERSION }}
+          terraform_wrapper: false
+
+      - name: Set up Terragrunt
+        run: |
+          curl --fail --location --silent --show-error \
+            --output terragrunt \
+            "https://github.com/gruntwork-io/terragrunt/releases/download/v${TERRAGRUNT_VERSION}/terragrunt_linux_amd64"
+          chmod +x terragrunt
+          sudo mv terragrunt /usr/local/bin/terragrunt
+
+      - name: Validate Terraform and Terragrunt
+        run: make terragrunt-validate
+
+  plan:
+    name: Plan remote-state resources
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    needs: validate
+    permissions:
+      contents: read
+      id-token: write
+    env:
+      AWS_ENVIRONMENT: ${{ inputs.aws_environment }}
+      AWS_REGION: ${{ vars.AWS_REGION || 'eu-west-1' }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: ${{ env.TERRAFORM_VERSION }}
+          terraform_wrapper: false
+
+      - name: Set up Terragrunt
+        run: |
+          curl --fail --location --silent --show-error \
+            --output terragrunt \
+            "https://github.com/gruntwork-io/terragrunt/releases/download/v${TERRAGRUNT_VERSION}/terragrunt_linux_amd64"
+          chmod +x terragrunt
+          sudo mv terragrunt /usr/local/bin/terragrunt
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v5
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Plan remote-state stack
+        working-directory: infra/live/remote-state
+        run: |
+          terragrunt plan -input=false -out=tfplan
+          terragrunt show -no-color tfplan > tfplan.txt
+
+      - name: Upload plan artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: remote-state-${{ inputs.aws_environment }}-terraform-plan
+          path: |
+            infra/live/remote-state/tfplan
+            infra/live/remote-state/tfplan.txt
+          if-no-files-found: error
+
+  apply:
+    name: Apply remote-state resources
+    if: github.event_name == 'workflow_dispatch' && inputs.action == 'apply'
+    runs-on: ubuntu-latest
+    needs: plan
+    environment: aws-production
+    permissions:
+      contents: read
+      id-token: write
+    env:
+      AWS_ENVIRONMENT: ${{ inputs.aws_environment }}
+      AWS_REGION: ${{ vars.AWS_REGION || 'eu-west-1' }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: ${{ env.TERRAFORM_VERSION }}
+          terraform_wrapper: false
+
+      - name: Set up Terragrunt
+        run: |
+          curl --fail --location --silent --show-error \
+            --output terragrunt \
+            "https://github.com/gruntwork-io/terragrunt/releases/download/v${TERRAGRUNT_VERSION}/terragrunt_linux_amd64"
+          chmod +x terragrunt
+          sudo mv terragrunt /usr/local/bin/terragrunt
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v5
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Download reviewed plan artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: remote-state-${{ inputs.aws_environment }}-terraform-plan
+          path: infra/live/remote-state
+
+      - name: Apply remote-state stack
+        working-directory: infra/live/remote-state
+        run: terragrunt apply -auto-approve -input=false tfplan
+
+  verify:
+    name: Verify remote-state resources
+    if: github.event_name == 'workflow_dispatch' && inputs.action == 'apply'
+    runs-on: ubuntu-latest
+    needs: apply
+    permissions:
+      contents: read
+      id-token: write
+    env:
+      AWS_ENVIRONMENT: ${{ inputs.aws_environment }}
+      AWS_REGION: ${{ vars.AWS_REGION || 'eu-west-1' }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: ${{ env.TERRAFORM_VERSION }}
+          terraform_wrapper: false
+
+      - name: Set up Terragrunt
+        run: |
+          curl --fail --location --silent --show-error \
+            --output terragrunt \
+            "https://github.com/gruntwork-io/terragrunt/releases/download/v${TERRAGRUNT_VERSION}/terragrunt_linux_amd64"
+          chmod +x terragrunt
+          sudo mv terragrunt /usr/local/bin/terragrunt
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v5
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Verify remote-state resources
+        working-directory: infra/live/remote-state
+        run: |
+          set -euo pipefail
+          outputs=$(terragrunt output -json)
+
+          state_bucket=$(printf '%s' "$outputs" | jq -r '.state_bucket.value')
+          lock_table=$(printf '%s' "$outputs" | jq -r '.lock_table.value')
+
+          echo "State bucket: $state_bucket"
+          echo "Lock table: $lock_table"
+
+          aws s3api get-bucket-encryption --bucket "$state_bucket" --region "$AWS_REGION" >/dev/null
+          aws s3api get-public-access-block --bucket "$state_bucket" --region "$AWS_REGION" >/dev/null
+          aws s3api get-bucket-versioning --bucket "$state_bucket" --region "$AWS_REGION" \
+            | jq -e '.Status == "Enabled"' >/dev/null
+          aws dynamodb describe-table --table-name "$lock_table" --region "$AWS_REGION" \
+            | jq -e '.Table.SSEDescription.Status == "ENABLED"' >/dev/null
+
+          echo "✅ Remote-state resources verified successfully."

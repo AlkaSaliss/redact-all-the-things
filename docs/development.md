@@ -75,14 +75,44 @@ make terragrunt-plan-local
 ```
 
 `make floci-up` starts the local Floci AWS emulator with persistent state.
-Terraform state remains local during the emulator phase; real AWS remote state
-is deferred to the real-AWS swap ticket.
+Terraform state remains local for the Floci environment.
 
 The `Infrastructure` GitHub Actions workflow runs `make terragrunt-validate`
 for infrastructure pull requests. Manual workflow dispatch can run an AWS plan
-or apply against `infra/live/aws` after configuring the `AWS_ROLE_TO_ASSUME`
-secret, optional `AWS_REGION` variable, and `aws-production` environment
-approval gate.
+or apply against `infra/live/aws` after configuring:
+
+- `AWS_ROLE_TO_ASSUME` as a repository or environment secret;
+- `TG_STATE_BUCKET` as a repository variable or secret;
+- `TG_LOCK_TABLE` as a repository variable or secret;
+- optional `AWS_REGION` and `TG_STATE_REGION` variables, defaulting to
+  `eu-west-1`;
+- the `aws-production` environment approval gate.
+
+The S3 state bucket and DynamoDB lock table are provisioned by the
+`infra/modules/remote-state` module. Deploy them first using the
+`Remote State Bootstrap` GitHub Actions workflow (same OIDC role and
+`aws-production` gate), or locally:
+
+```bash
+make terragrunt-plan-remote-state
+make terragrunt-apply-remote-state
+make infra-smoke-remote-state
+```
+
+After the bootstrap, set `TG_STATE_BUCKET` and `TG_LOCK_TABLE` to the values
+output by the remote-state stack. Manual plan runs upload the reviewed
+Terraform plan artifact. Manual apply runs download that artifact and apply it
+only after the protected environment approves the apply job.
+
+After an approved apply, run the read-only production smoke check from a shell
+that has AWS credentials for the approved account:
+
+```bash
+export TG_STATE_BUCKET=<state-bucket>
+export TG_LOCK_TABLE=<lock-table>
+export AWS_REGION=eu-west-1
+make infra-smoke-aws
+```
 
 Preview the documentation:
 

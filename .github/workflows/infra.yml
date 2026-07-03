@@ -80,6 +80,9 @@ jobs:
     env:
       AWS_ENVIRONMENT: ${{ inputs.aws_environment }}
       AWS_REGION: ${{ vars.AWS_REGION || 'eu-west-1' }}
+      TG_LOCK_TABLE: ${{ vars.TG_LOCK_TABLE || secrets.TG_LOCK_TABLE }}
+      TG_STATE_BUCKET: ${{ vars.TG_STATE_BUCKET || secrets.TG_STATE_BUCKET }}
+      TG_STATE_REGION: ${{ vars.TG_STATE_REGION || vars.AWS_REGION || 'eu-west-1' }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
@@ -106,7 +109,18 @@ jobs:
 
       - name: Plan AWS live stack
         working-directory: infra/live/aws
-        run: terragrunt plan -input=false
+        run: |
+          terragrunt plan -input=false -out=tfplan
+          terragrunt show -no-color tfplan > tfplan.txt
+
+      - name: Upload AWS plan artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: aws-${{ inputs.aws_environment }}-terraform-plan
+          path: |
+            infra/live/aws/tfplan
+            infra/live/aws/tfplan.txt
+          if-no-files-found: error
 
   aws-apply:
     name: Apply AWS infrastructure
@@ -120,6 +134,9 @@ jobs:
     env:
       AWS_ENVIRONMENT: ${{ inputs.aws_environment }}
       AWS_REGION: ${{ vars.AWS_REGION || 'eu-west-1' }}
+      TG_LOCK_TABLE: ${{ vars.TG_LOCK_TABLE || secrets.TG_LOCK_TABLE }}
+      TG_STATE_BUCKET: ${{ vars.TG_STATE_BUCKET || secrets.TG_STATE_BUCKET }}
+      TG_STATE_REGION: ${{ vars.TG_STATE_REGION || vars.AWS_REGION || 'eu-west-1' }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
@@ -144,6 +161,12 @@ jobs:
           role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
           aws-region: ${{ env.AWS_REGION }}
 
+      - name: Download reviewed AWS plan artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: aws-${{ inputs.aws_environment }}-terraform-plan
+          path: infra/live/aws
+
       - name: Apply AWS live stack
         working-directory: infra/live/aws
-        run: terragrunt apply -auto-approve -input=false
+        run: terragrunt apply -auto-approve -input=false tfplan
