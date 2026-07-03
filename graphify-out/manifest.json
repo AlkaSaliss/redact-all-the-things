@@ -895,8 +895,8 @@
     "semantic_hash": ""
   },
   "local-data/floci-state/cwlogs-events.json": {
-    "mtime": 1783030266.7484539,
-    "ast_hash": "a6bdbbdea5b8511cbb60f9f1b6196638",
+    "mtime": 1783100684.4764104,
+    "ast_hash": "ad37650154cc836faeac097c4bd1eca8",
     "semantic_hash": ""
   },
   "local-data/floci-state/cwlogs-groups.json": {
@@ -905,8 +905,8 @@
     "semantic_hash": ""
   },
   "local-data/floci-state/cwlogs-streams.json": {
-    "mtime": 1783030266.7528248,
-    "ast_hash": "b15f04de7ad4e6d947a0032a5fcc1bb7",
+    "mtime": 1783100684.4769762,
+    "ast_hash": "225000af4a22ef9da8433675a0ca5e43",
     "semantic_hash": ""
   },
   "local-data/floci-state/dynamodb-tables.json": {
@@ -1040,8 +1040,8 @@
     "semantic_hash": ""
   },
   "local-data/floci-state/s3-objects.json": {
-    "mtime": 1783093011.6470869,
-    "ast_hash": "cf642753b43a2f09efbe9807355e9970",
+    "mtime": 1783100209.242162,
+    "ast_hash": "6d39736457939b06e4f4a243ac0ac3b9",
     "semantic_hash": ""
   },
   "local-data/floci-state/scheduler-groups.json": {
@@ -1080,8 +1080,8 @@
     "semantic_hash": ""
   },
   "local-data/floci-state/dynamodb-items.json": {
-    "mtime": 1783093011.6423607,
-    "ast_hash": "cbb7675a383db805de527dd603a1fa63",
+    "mtime": 1783100209.6959236,
+    "ast_hash": "ccf04f9f00b9009b89fbcd650f798bfc",
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-07-02-gh-36-infra-worker-compute-artifacts/.openspec.yaml": {
@@ -1125,8 +1125,8 @@
     "semantic_hash": ""
   },
   ".github/workflows/infra.yml": {
-    "mtime": 1783090272.8281186,
-    "ast_hash": "fcc327917a8126a627eb9dfa6ec4be90",
+    "mtime": 1783101464.687239,
+    "ast_hash": "f4d89cb219aad64d751e5425ddbff5c3",
     "semantic_hash": ""
   },
   "tools/infra_smoke_aws.sh": {
