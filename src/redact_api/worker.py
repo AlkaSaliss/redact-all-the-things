@@ -13,7 +13,7 @@ from typing import Any, Protocol
 
 import pypdfium2 as pdfium
 import yaml
-from PIL import Image, UnidentifiedImageError
+from PIL import Image, ImageDraw, UnidentifiedImageError
 
 from redact_api.domain import (
     FailureCode,
@@ -284,6 +284,33 @@ class PageManifestWriter(Protocol):
         """Persist a new page manifest."""
 
 
+class RenderArtifactStore(Protocol):
+    """Persistence boundary for render-mode inputs and output."""
+
+    def get_page_artifact_index(self, key: str) -> bytes:
+        """Load the JSON page-artifact index."""
+
+    def get_page_artifact(self, key: str) -> bytes:
+        """Load one raster page artifact."""
+
+    def get_manifest(
+        self,
+        owner_id: str,
+        job_id: str,
+        page_number: int,
+    ) -> object:
+        """Load a saved review manifest."""
+
+    def put_output_object(
+        self,
+        key: str,
+        content: bytes,
+        *,
+        content_type: str,
+    ) -> None:
+        """Persist the final redacted output object."""
+
+
 class SourceValidationError(ValueError):
     """Raised when source validation maps to a safe failure code."""
 
@@ -302,6 +329,10 @@ class OcrExtractionError(RuntimeError):
 
 class PiiMappingError(RuntimeError):
     """Raised when OCR text cannot be converted into review manifests."""
+
+
+class RenderError(RuntimeError):
+    """Raised when review manifests cannot be rendered safely."""
 
 
 def validate_source(
@@ -451,6 +482,52 @@ def analyze_source(
     if write_artifacts is not None:
         write_artifacts(validated)
     return job
+
+
+def render_redacted_output(
+    job: Job,
+    *,
+    jobs: Any,
+    store: RenderArtifactStore,
+    now: datetime,
+) -> Job:
+    """Render selected redaction regions into raster-only output artifacts."""
+
+    if job.status is not JobStatus.EXPORTING:
+        raise InvalidTransitionError(f"cannot render job in {job.status.value} status")
+    try:
+        page_index = load_page_artifact_index(
+            job,
+            store=store,
+            key=page_artifact_index_key(job.owner_id, job.id),
+        )
+        pages = [
+            _render_redacted_page(job, page, store=store)
+            for page in page_index.pages
+        ]
+        output, content_type = _serialize_redacted_output(job, pages)
+        store.put_output_object(
+            job.output_key,
+            output,
+            content_type=content_type,
+        )
+        complete = transition_job(job, JobStatus.COMPLETE, now=now)
+        jobs.save(complete, expected_version=job.version)
+        return complete
+    except (
+        RenderError,
+        RasterizationError,
+        PersistenceConflictError,
+        InvalidTransitionError,
+    ):
+        failed = transition_job(
+            job,
+            JobStatus.FAILED,
+            now=now,
+            failure_code=FailureCode.PROCESSING_FAILED,
+        )
+        jobs.save(failed, expected_version=job.version)
+        return failed
 
 
 def _analyze_with_checkpoints(
@@ -1039,6 +1116,55 @@ def load_page_artifact_index(
         if page.key != page_artifact_key(job.owner_id, job.id, page.page_number):
             raise RasterizationError("page artifact index has invalid page key")
     return index
+
+
+def _render_redacted_page(
+    job: Job,
+    page: PageArtifact,
+    *,
+    store: RenderArtifactStore,
+) -> Image.Image:
+    try:
+        with Image.open(io.BytesIO(store.get_page_artifact(page.key))) as raw:
+            image = raw.convert("RGB")
+    except Exception as error:
+        raise RenderError("page artifact is unavailable") from error
+    stored = store.get_manifest(job.owner_id, job.id, page.page_number)
+    manifest = _stored_manifest(stored)
+    if manifest is None:
+        raise RenderError("page manifest is unavailable")
+    if manifest.job_id != job.id or manifest.page_number != page.page_number:
+        raise RenderError("page manifest does not match artifact")
+    draw = ImageDraw.Draw(image)
+    for region in manifest.regions:
+        if not region.selected:
+            continue
+        left = round(region.x * image.width)
+        top = round(region.y * image.height)
+        right = round((region.x + region.width) * image.width)
+        bottom = round((region.y + region.height) * image.height)
+        draw.rectangle((left, top, right, bottom), fill=(0, 0, 0))
+    return image
+
+
+def _serialize_redacted_output(
+    job: Job,
+    pages: list[Image.Image],
+) -> tuple[bytes, str]:
+    if not pages:
+        raise RenderError("render produced no pages")
+    output = io.BytesIO()
+    if job.source_type is SourceType.PDF:
+        first, *rest = pages
+        first.save(output, format="PDF", save_all=True, append_images=rest)
+        return output.getvalue(), "application/pdf"
+    if job.source_type is SourceType.JPEG:
+        pages[0].save(output, format="JPEG", quality=95)
+        return output.getvalue(), "image/jpeg"
+    if job.source_type is SourceType.PNG:
+        pages[0].save(output, format="PNG")
+        return output.getvalue(), "image/png"
+    raise RenderError("unsupported render output type")
 
 
 def _build_ocr_page_text(

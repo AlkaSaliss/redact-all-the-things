@@ -167,6 +167,18 @@ class S3ObjectRepository:
             )
         )
 
+    def presign_page_preview(self, key: str) -> str:
+        return self.presign_download(key)
+
+    def put_output_object(
+        self,
+        key: str,
+        content: bytes,
+        *,
+        content_type: str,
+    ) -> None:
+        self._put_artifact(key, content, content_type=content_type)
+
     def get_manifest(
         self,
         owner_id: str,

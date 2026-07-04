@@ -13,6 +13,16 @@ locals {
   name_prefix                    = module.foundation.name_prefix
   artifact_expiry_days           = 1
   lambda_source_hash             = filesha256("${path.module}/stubs/lambda_handler.py")
+  localhost_frontend_origin      = "http://localhost:5173"
+  cloudfront_frontend_origin = (
+    local.create_cloudfront_distribution
+    ? "https://${aws_cloudfront_distribution.frontend[0].domain_name}"
+    : null
+  )
+  frontend_allowed_origins = compact([
+    local.localhost_frontend_origin,
+    local.cloudfront_frontend_origin,
+  ])
 }
 
 data "archive_file" "lambda_stub" {
@@ -96,6 +106,18 @@ resource "aws_s3_bucket_lifecycle_configuration" "artifacts" {
   }
 }
 
+resource "aws_s3_bucket_cors_configuration" "artifacts" {
+  bucket = aws_s3_bucket.artifacts.id
+
+  cors_rule {
+    allowed_headers = ["*"]
+    allowed_methods = ["GET", "PUT", "POST"]
+    allowed_origins = local.frontend_allowed_origins
+    expose_headers  = ["ETag"]
+    max_age_seconds = 300
+  }
+}
+
 resource "aws_dynamodb_table" "jobs" {
   name         = "${local.name_prefix}-jobs"
   billing_mode = "PAY_PER_REQUEST"
@@ -149,12 +171,34 @@ resource "aws_cognito_user_pool_client" "web" {
   name         = "${local.name_prefix}-web"
   user_pool_id = aws_cognito_user_pool.users.id
 
+  allowed_oauth_flows = [
+    "code",
+  ]
+
+  allowed_oauth_flows_user_pool_client = true
+
+  allowed_oauth_scopes = [
+    "email",
+    "openid",
+    "profile",
+  ]
+
+  callback_urls = [
+    for origin in local.frontend_allowed_origins : "${origin}/auth/callback"
+  ]
+
   explicit_auth_flows = [
     "ALLOW_REFRESH_TOKEN_AUTH",
     "ALLOW_USER_SRP_AUTH",
   ]
 
   generate_secret = false
+
+  logout_urls = local.frontend_allowed_origins
+
+  supported_identity_providers = [
+    "COGNITO",
+  ]
 
   dynamic "analytics_configuration" {
     for_each = var.deployment_mode == "floci" ? [1] : []
@@ -168,6 +212,11 @@ resource "aws_cognito_user_pool_client" "web" {
     feature                    = "DISABLED"
     retry_grace_period_seconds = 0
   }
+}
+
+resource "aws_cognito_user_pool_domain" "hosted_ui" {
+  domain       = local.name_prefix
+  user_pool_id = aws_cognito_user_pool.users.id
 }
 
 resource "aws_cloudwatch_log_group" "api" {
@@ -250,11 +299,12 @@ resource "aws_lambda_function" "api" {
 
   environment {
     variables = {
-      FILES_BUCKET         = aws_s3_bucket.artifacts.bucket
-      JOBS_TABLE           = aws_dynamodb_table.jobs.name
-      STUB_SOURCE_HASH     = local.lambda_source_hash
-      BATCH_JOB_DEFINITION = "floci-render-placeholder"
-      BATCH_JOB_QUEUE      = "floci-worker-placeholder"
+      FILES_BUCKET             = aws_s3_bucket.artifacts.bucket
+      JOBS_TABLE               = aws_dynamodb_table.jobs.name
+      STUB_SOURCE_HASH         = local.lambda_source_hash
+      FRONTEND_ALLOWED_ORIGINS = join(",", local.frontend_allowed_origins)
+      BATCH_JOB_DEFINITION     = "floci-render-placeholder"
+      BATCH_JOB_QUEUE          = "floci-worker-placeholder"
     }
   }
 
@@ -267,6 +317,24 @@ resource "aws_lambda_function" "api" {
 resource "aws_apigatewayv2_api" "http" {
   name          = "${local.name_prefix}-api"
   protocol_type = "HTTP"
+
+  cors_configuration {
+    allow_headers = [
+      "authorization",
+      "content-type",
+    ]
+    allow_methods = [
+      "GET",
+      "POST",
+      "PUT",
+      "OPTIONS",
+    ]
+    allow_origins = local.frontend_allowed_origins
+    expose_headers = [
+      "etag",
+    ]
+    max_age = 300
+  }
 }
 
 resource "aws_apigatewayv2_authorizer" "cognito" {
@@ -294,6 +362,14 @@ resource "aws_apigatewayv2_route" "default" {
 
   authorization_type = "JWT"
   authorizer_id      = aws_apigatewayv2_authorizer.cognito.id
+  target             = "integrations/${aws_apigatewayv2_integration.lambda.id}"
+}
+
+resource "aws_apigatewayv2_route" "cors_preflight" {
+  api_id    = aws_apigatewayv2_api.http.id
+  route_key = "OPTIONS /{proxy+}"
+
+  authorization_type = "NONE"
   target             = "integrations/${aws_apigatewayv2_integration.lambda.id}"
 }
 

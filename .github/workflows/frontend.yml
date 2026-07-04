@@ -1,0 +1,121 @@
+name: Frontend
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      aws_environment:
+        description: "Live environment to deploy."
+        required: true
+        type: choice
+        default: dev
+        options:
+          - dev
+
+permissions:
+  contents: read
+
+concurrency:
+  group: frontend-${{ github.event_name == 'workflow_dispatch' && inputs.aws_environment || github.ref }}
+  cancel-in-progress: false
+
+env:
+  AWS_REGION: ${{ vars.AWS_REGION || 'eu-west-1' }}
+  TERRAGRUNT_VERSION: 0.87.6
+
+jobs:
+  build:
+    name: Build and test frontend
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install frontend dependencies
+        working-directory: frontend
+        run: npm ci
+
+      - name: Run frontend tests
+        working-directory: frontend
+        run: npm test
+
+      - name: Build frontend
+        working-directory: frontend
+        run: npm run build
+
+      - name: Upload frontend artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: frontend-dist
+          path: frontend/dist
+          if-no-files-found: error
+
+  deploy:
+    name: Sync frontend assets
+    if: github.event_name == 'workflow_dispatch' || github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    environment: aws-production
+    permissions:
+      contents: read
+      id-token: write
+    env:
+      AWS_LIVE_ENVIRONMENT: ${{ github.event_name == 'workflow_dispatch' && inputs.aws_environment || 'dev' }}
+      TG_LOCK_TABLE: ${{ vars.TG_LOCK_TABLE || secrets.TG_LOCK_TABLE }}
+      TG_STATE_BUCKET: ${{ vars.TG_STATE_BUCKET || secrets.TG_STATE_BUCKET }}
+      TG_STATE_REGION: ${{ vars.TG_STATE_REGION || vars.AWS_REGION || 'eu-west-1' }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Download frontend artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: frontend-dist
+          path: frontend/dist
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_wrapper: false
+
+      - name: Set up Terragrunt
+        run: |
+          curl --fail --location --silent --show-error \
+            --output terragrunt \
+            "https://github.com/gruntwork-io/terragrunt/releases/download/v${TERRAGRUNT_VERSION}/terragrunt_linux_amd64"
+          chmod +x terragrunt
+          sudo mv terragrunt /usr/local/bin/terragrunt
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v5
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Sync frontend assets
+        working-directory: infra/live/${{ env.AWS_LIVE_ENVIRONMENT }}/${{ env.AWS_REGION }}/worker-compute-artifacts
+        run: |
+          FRONTEND_BUCKET="$(terragrunt output -raw frontend_bucket)"
+          DISTRIBUTION_ID="$(terragrunt output -raw cloudfront_distribution_id || true)"
+          aws s3 sync "${GITHUB_WORKSPACE}/frontend/dist" "s3://${FRONTEND_BUCKET}" --delete
+          if [ -n "$DISTRIBUTION_ID" ] && [ "$DISTRIBUTION_ID" != "null" ]; then
+            aws cloudfront create-invalidation \
+              --distribution-id "$DISTRIBUTION_ID" \
+              --paths "/*"
+          fi

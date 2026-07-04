@@ -18,6 +18,26 @@ output "frontend_bucket" {
   value       = module.app.frontend_bucket
 }
 
+output "cloudfront_domain_name" {
+  description = "CloudFront generated domain for the frontend app."
+  value       = module.app.cloudfront_domain_name
+}
+
+output "cloudfront_distribution_id" {
+  description = "CloudFront distribution ID for frontend cache invalidation."
+  value       = module.app.cloudfront_distribution_id
+}
+
+output "frontend_allowed_origins" {
+  description = "Browser origins allowed to call API and artifact paths."
+  value       = module.app.frontend_allowed_origins
+}
+
+output "hosted_ui_url" {
+  description = "Cognito hosted UI base URL for browser sign-in."
+  value       = module.app.hosted_ui_url
+}
+
 output "jobs_table_name" {
   description = "DynamoDB table storing job metadata."
   value       = module.app.jobs_table
@@ -26,6 +46,16 @@ output "jobs_table_name" {
 output "render_job_definition" {
   description = "AWS Batch job definition for render workers."
   value       = aws_batch_job_definition.render.name
+}
+
+output "user_pool_id" {
+  description = "Cognito user pool ID for invited users."
+  value       = module.app.user_pool_id
+}
+
+output "web_client_id" {
+  description = "Cognito user pool client ID for the browser app."
+  value       = module.app.web_client_id
 }
 
 output "worker_image_repository" {

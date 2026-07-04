@@ -6,8 +6,7 @@ contracts from `redact_api.domain`.
 
 The worker currently implements source validation, page rasterization, OCR text
 extraction, PII detection, review page-manifest creation, checkpointed resume,
-and analysis lifecycle completion. Render-mode export remains a later worker
-slice.
+analysis lifecycle completion, and render-mode export.
 
 ## Source validation
 
@@ -197,6 +196,23 @@ After every page has a completed checkpoint, the worker transitions the job to
 `ready`. Existing retry contracts preserve `page_count`, `completed_pages`, and
 `model_versions` when retryable analyze failures are moved back to `queued`, so
 a resumed worker can continue from the saved cursor.
+
+## Render export
+
+Render mode starts from an `exporting` job. It loads the existing page-artifact
+index, reads each raster page artifact, reads the saved page manifest, and burns
+only selected redaction regions into the output pixels.
+
+PDF output is rebuilt from the redacted raster page images. Source PDF text
+layers, metadata, annotations, attachments, and forms are not copied into the
+output because the worker serializes a new image-only PDF.
+
+JPEG and PNG outputs are created from clean decoded RGB image data and written
+in the source image format. Source image metadata is not copied.
+
+After output persistence succeeds, the worker transitions the job to
+`complete`. Render failures persist a safe failed state and do not expose raw
+document content in job metadata.
 
 ## Safe failures
 

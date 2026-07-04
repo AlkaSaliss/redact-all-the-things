@@ -18,6 +18,11 @@ output "cloudfront_domain_name" {
   value       = local.create_cloudfront_distribution ? aws_cloudfront_distribution.frontend[0].domain_name : null
 }
 
+output "cloudfront_distribution_id" {
+  description = "CloudFront distribution ID for frontend cache invalidation."
+  value       = local.create_cloudfront_distribution ? aws_cloudfront_distribution.frontend[0].id : null
+}
+
 output "frontend_bucket" {
   description = "S3 bucket for the static frontend placeholder."
   value       = aws_s3_bucket.frontend.bucket
@@ -46,6 +51,21 @@ output "user_pool_id" {
 output "web_client_id" {
   description = "Cognito user pool client ID for the browser app."
   value       = aws_cognito_user_pool_client.web.id
+}
+
+output "hosted_ui_domain" {
+  description = "Cognito hosted UI domain for browser sign-in."
+  value       = aws_cognito_user_pool_domain.hosted_ui.domain
+}
+
+output "hosted_ui_url" {
+  description = "Cognito hosted UI base URL for browser sign-in."
+  value       = "https://${aws_cognito_user_pool_domain.hosted_ui.domain}.auth.${var.aws_region}.amazoncognito.com"
+}
+
+output "frontend_allowed_origins" {
+  description = "Browser origins allowed to call the API and artifact upload paths."
+  value       = local.frontend_allowed_origins
 }
 
 output "name_prefix" {

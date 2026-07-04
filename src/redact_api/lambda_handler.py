@@ -44,5 +44,12 @@ def build_service() -> ControlPlaneService:
     )
 
 
-app = create_app(build_service())
+def cors_allowed_origins() -> tuple[str, ...]:
+    """Return configured browser origins allowed to call the API."""
+
+    raw = environ.get("FRONTEND_ALLOWED_ORIGINS", "")
+    return tuple(origin.strip() for origin in raw.split(",") if origin.strip())
+
+
+app = create_app(build_service(), cors_allowed_origins=cors_allowed_origins())
 handler = Mangum(app, lifespan="off")

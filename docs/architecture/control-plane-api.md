@@ -47,6 +47,8 @@ all return the same non-disclosing `404` response.
 | `GET` | `/jobs` | List the owner's unexpired jobs |
 | `GET` | `/jobs/{job_id}` | Retrieve an accessible job |
 | `POST` | `/jobs/{job_id}/upload-complete` | Complete multipart upload and submit analysis |
+| `GET` | `/jobs/{job_id}/pages` | List review page summaries and preview URLs |
+| `GET` | `/jobs/{job_id}/pages/{page}/preview` | Refresh one page preview URL |
 | `GET` | `/jobs/{job_id}/pages/{page}/manifest` | Read a page manifest |
 | `PUT` | `/jobs/{job_id}/pages/{page}/manifest` | Save regions with optimistic versioning |
 | `POST` | `/jobs/{job_id}/export` | Confirm review and submit rendering |
@@ -56,6 +58,10 @@ all return the same non-disclosing `404` response.
 FastAPI publishes the full request and response schema at `/openapi.json`.
 Job creation returns one presigned upload URL per 5 MB part. Upload completion
 accepts the upload ID plus each uploaded part number and ETag.
+
+Page preview URLs are owner-checked by the API and short-lived. They authorize
+the raster page artifacts created by analysis and are used by the React
+thumbnail strip and zoomable editor canvas.
 
 ## Persistence
 
