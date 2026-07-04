@@ -8,6 +8,7 @@ and implementation tracking, and MkDocs for versioned documentation.
 - Git
 - Python 3.12
 - [uv](https://docs.astral.sh/uv/)
+- Node.js 24 and npm for the React frontend
 - Docker with Compose
 - Node.js with OpenSpec `1.4.1`
 - Terraform `1.13.3` and Terragrunt `0.87.6` for infrastructure work
@@ -58,6 +59,43 @@ uv run pytest
 uv run mkdocs build --strict
 openspec validate --all --strict --no-interactive
 ```
+
+Frontend checks run from `frontend/`:
+
+```bash
+cd frontend
+npm ci
+npm test
+npm run build
+```
+
+Local frontend runtime defaults to the real AWS `dev` stack, not fixture mode.
+Create `frontend/.env.local` from reviewed Terragrunt outputs before starting
+the frontend:
+
+```bash
+make frontend-env-local
+make frontend-dev
+```
+
+Use the exact local origin printed by the Make target:
+`http://localhost:5173`. Cognito is configured for that callback origin only;
+if port `5173` is already in use, `make frontend-dev` fails instead of
+falling forward to an unregistered port.
+
+The env file contains:
+
+```dotenv
+VITE_API_ENDPOINT=<api_endpoint>
+VITE_AWS_REGION=eu-west-1
+VITE_COGNITO_USER_POOL_ID=<user_pool_id>
+VITE_COGNITO_CLIENT_ID=<web_client_id>
+VITE_COGNITO_HOSTED_UI_URL=<hosted_ui_url>
+```
+
+The frontend still keeps contract fixtures for unit tests and fallback UI
+states, but authenticated local development signs in through Cognito Hosted UI
+and calls the deployed API Gateway endpoint.
 
 The test suite uses pinned Floci services for DynamoDB and S3. See the
 [control-plane API documentation](architecture/control-plane-api.md) for the

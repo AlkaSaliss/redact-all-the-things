@@ -10,6 +10,13 @@ from redact_api.domain import (
     RedactionRegion,
     RegionSource,
 )
+from redact_api.worker import (
+    PageArtifact,
+    PageArtifactIndex,
+    _serialize_page_artifact_index,
+    page_artifact_index_key,
+    page_artifact_key,
+)
 from redact_api.http import create_app
 from redact_api.services import ControlPlaneService
 
@@ -85,6 +92,20 @@ def create_manifest(aws_resources: dict[str, object]) -> PageManifest:
     return manifest
 
 
+def create_page_artifacts(aws_resources: dict[str, object]) -> None:
+    page_key = page_artifact_key("user-456", "job-123", 1)
+    aws_resources["objects"].put_page_artifact(page_key, b"\x89PNG\r\n\x1a\npreview")
+    index = PageArtifactIndex(
+        job_id="job-123",
+        key=page_artifact_index_key("user-456", "job-123"),
+        pages=(PageArtifact(1, 100, 200, "png", page_key),),
+    )
+    aws_resources["objects"].put_page_artifact_index(
+        index.key,
+        _serialize_page_artifact_index(index),
+    )
+
+
 def test_identity_validation_and_request_validation(client: TestClient) -> None:
     assert client.get("/jobs").status_code == 401
     invalid = client.post(
@@ -137,6 +158,7 @@ def test_upload_complete_export_retry_manifest_and_download_routes(
 
     set_status(aws_resources, JobStatus.READY)
     create_manifest(aws_resources)
+    create_page_artifacts(aws_resources)
     manifest = client.get(
         "/jobs/job-123/pages/1/manifest",
         headers=HEADERS,
@@ -167,6 +189,17 @@ def test_upload_complete_export_retry_manifest_and_download_routes(
         json={"version": 1, "regions": [manual]},
     )
     assert stale.status_code == 409
+    pages = client.get("/jobs/job-123/pages", headers=HEADERS)
+    assert pages.status_code == 200
+    assert pages.json()[0]["suggestion_count"] == 1
+    assert pages.json()[0]["selected_count"] == 1
+    assert "artifacts/pages/1.png" in pages.json()[0]["preview_url"]
+    preview = client.get(
+        "/jobs/job-123/pages/1/preview",
+        headers=HEADERS,
+    )
+    assert preview.status_code == 200
+    assert preview.json()["width"] == 100
 
     rejected_export = client.post(
         "/jobs/job-123/export",
@@ -208,6 +241,8 @@ def test_openapi_contains_the_public_contract(client: TestClient) -> None:
         "/jobs",
         "/jobs/{job_id}",
         "/jobs/{job_id}/upload-complete",
+        "/jobs/{job_id}/pages",
+        "/jobs/{job_id}/pages/{page_number}/preview",
         "/jobs/{job_id}/pages/{page_number}/manifest",
         "/jobs/{job_id}/export",
         "/jobs/{job_id}/download",

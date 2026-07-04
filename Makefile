@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := help
 
-.PHONY: help test test-worker docs openspec-validate worker-image worker-ocr-smoke floci-up floci-down floci-check terragrunt-validate terragrunt-plan terragrunt-apply terragrunt-plan-local terragrunt-apply-local terragrunt-plan-aws terragrunt-apply-aws infra-smoke-floci infra-smoke-aws
+.PHONY: help test test-worker docs openspec-validate frontend-test frontend-build frontend-env-local frontend-dev worker-image worker-ocr-smoke floci-up floci-down floci-check terragrunt-validate terragrunt-plan terragrunt-apply terragrunt-plan-local terragrunt-apply-local terragrunt-plan-aws terragrunt-apply-aws infra-smoke-floci infra-smoke-aws
 
 help: ## Show available make targets.
 	@awk 'BEGIN {FS = ":.*## "}; /^[a-zA-Z0-9_-]+:.*## / {printf "%-20s %s\n", $$1, $$2}' $(MAKEFILE_LIST)
@@ -10,6 +10,8 @@ INFRA_REGION ?= eu-west-1
 INFRA_COMPONENT ?= worker-compute-artifacts
 INFRA_ROOT_FOLDER ?= infra
 INFRA_ENV_DIR ?= infra/live/$(INFRA_TARGET)/$(INFRA_REGION)/$(INFRA_COMPONENT)
+AWS_ENV_DIR ?= infra/live/dev/$(INFRA_REGION)/$(INFRA_COMPONENT)
+FRONTEND_ENV_FILE ?= frontend/.env.local
 FLOCI_ENV_DIR ?= infra/live/floci/$(INFRA_REGION)/$(INFRA_COMPONENT)
 FLOCI_ENV := AWS_ENDPOINT_URL=http://localhost.floci.io:4566 \
              AWS_ACCESS_KEY_ID=test \
@@ -31,6 +33,49 @@ docs: ## Build project documentation in strict mode.
 
 openspec-validate: ## Validate all OpenSpec artifacts in strict mode.
 	openspec validate --all --strict --no-interactive
+
+frontend-test: ## Run frontend unit tests.
+	cd frontend && npm test
+
+frontend-build: ## Build the frontend application.
+	cd frontend && npm run build
+
+frontend-env-local: ## Generate frontend/.env.local from the real dev stack outputs.
+	@set -eu; \
+	if { [ -z "$${TG_STATE_BUCKET:-}" ] || [ -z "$${TG_LOCK_TABLE:-}" ]; } && [ -f tools/set_local_env_vars.sh ]; then \
+		. tools/set_local_env_vars.sh; \
+	fi; \
+	if [ -z "$${AWS_ACCESS_KEY_ID:-}" ] && [ -f tools/set_local_aws_credentials.sh ]; then \
+		. tools/set_local_aws_credentials.sh; \
+	fi; \
+	if [ -z "$${TG_STATE_BUCKET:-}" ] || [ -z "$${TG_LOCK_TABLE:-}" ]; then \
+		echo "Missing TG_STATE_BUCKET or TG_LOCK_TABLE. Run: . tools/set_local_env_vars.sh"; \
+		exit 1; \
+	fi; \
+	if [ ! -d "$(AWS_ENV_DIR)" ]; then \
+		echo "Missing AWS stack directory: $(AWS_ENV_DIR)"; \
+		exit 1; \
+	fi; \
+	api_endpoint=$$(cd "$(AWS_ENV_DIR)" && $(TERRAGRUNT) output -raw api_endpoint); \
+	user_pool_id=$$(cd "$(AWS_ENV_DIR)" && $(TERRAGRUNT) output -raw user_pool_id); \
+	web_client_id=$$(cd "$(AWS_ENV_DIR)" && $(TERRAGRUNT) output -raw web_client_id); \
+	hosted_ui_url=$$(cd "$(AWS_ENV_DIR)" && $(TERRAGRUNT) output -raw hosted_ui_url); \
+	cp frontend/.env.example "$(FRONTEND_ENV_FILE)"; \
+	{ \
+		printf '%s\n' "VITE_API_ENDPOINT=$$api_endpoint"; \
+		printf '%s\n' "VITE_AWS_REGION=$(INFRA_REGION)"; \
+		printf '%s\n' "VITE_COGNITO_USER_POOL_ID=$$user_pool_id"; \
+		printf '%s\n' "VITE_COGNITO_CLIENT_ID=$$web_client_id"; \
+		printf '%s\n' "VITE_COGNITO_HOSTED_UI_URL=$$hosted_ui_url"; \
+	} > "$(FRONTEND_ENV_FILE)"; \
+	echo "Wrote $(FRONTEND_ENV_FILE) from $(AWS_ENV_DIR) outputs."
+
+frontend-dev: ## Start the frontend dev server using frontend/.env.local.
+	@if [ ! -f "$(FRONTEND_ENV_FILE)" ]; then \
+		echo "Missing $(FRONTEND_ENV_FILE). Run: make frontend-env-local"; \
+		exit 1; \
+	fi
+	cd frontend && npm run dev -- --host localhost --port 5173 --strictPort
 
 worker-image: ## Build the local analysis worker image.
 	docker build --platform linux/amd64 -f Dockerfile.worker -t redact-worker-ocr:test .

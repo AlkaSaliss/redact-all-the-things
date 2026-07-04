@@ -5,10 +5,18 @@ from __future__ import annotations
 from typing import Any
 
 from fastapi import Depends, FastAPI, Request
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel, ConfigDict, Field
 
-from redact_api.domain import Job, PageManifest, RedactionRegion, SourceType
+from redact_api.domain import (
+    Job,
+    PageManifest,
+    PagePreview,
+    PageSummary,
+    RedactionRegion,
+    SourceType,
+)
 from redact_api.services import (
     ControlPlaneService,
     InvalidRequestError,
@@ -70,12 +78,22 @@ def create_app(
     service: ControlPlaneService,
     *,
     allow_test_identity_header: bool = False,
+    cors_allowed_origins: tuple[str, ...] = (),
 ) -> FastAPI:
     """Build the control-plane API around a configured application service."""
 
     app = FastAPI(title="Redact All The Things Control Plane", version="0.1.0")
     app.state.service = service
     app.state.allow_test_identity_header = allow_test_identity_header
+    if cors_allowed_origins:
+        app.add_middleware(
+            CORSMiddleware,
+            allow_origins=list(cors_allowed_origins),
+            allow_methods=["GET", "POST", "PUT", "OPTIONS"],
+            allow_headers=["authorization", "content-type"],
+            expose_headers=["etag"],
+            max_age=300,
+        )
 
     @app.exception_handler(JobNotFoundError)
     async def handle_not_found(
@@ -207,6 +225,24 @@ def create_app(
             expected_version=payload.version,
             regions=payload.regions,
         )
+
+    @app.get("/jobs/{job_id}/pages", response_model=tuple[PageSummary, ...])
+    def list_pages(
+        job_id: str,
+        owner_id: str = Depends(current_owner),
+    ) -> tuple[PageSummary, ...]:
+        return service.list_pages(owner_id, job_id)
+
+    @app.get(
+        "/jobs/{job_id}/pages/{page_number}/preview",
+        response_model=PagePreview,
+    )
+    def authorize_page_preview(
+        job_id: str,
+        page_number: int,
+        owner_id: str = Depends(current_owner),
+    ) -> PagePreview:
+        return service.authorize_page_preview(owner_id, job_id, page_number)
 
     @app.post("/jobs/{job_id}/export", response_model=Job)
     def confirm_export(

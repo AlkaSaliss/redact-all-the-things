@@ -1,7 +1,17 @@
 from datetime import UTC, datetime, timedelta
+from io import BytesIO
 
+from PIL import Image
 from redact_api.aws import PersistenceConflictError
-from redact_api.domain import FailureCode, Job, JobStatus, PageManifest, SourceType
+from redact_api.domain import (
+    FailureCode,
+    Job,
+    JobStatus,
+    PageManifest,
+    RedactionRegion,
+    RegionSource,
+    SourceType,
+)
 from redact_api.worker import (
     OcrLine,
     OcrPageText,
@@ -12,6 +22,7 @@ from redact_api.worker import (
     RenderedPage,
     analyze_source,
     page_artifact_index_key,
+    render_redacted_output,
 )
 
 
@@ -116,6 +127,42 @@ class RecordingManifestWriter:
         return manifest
 
 
+class RecordingRenderStore:
+    def __init__(self, job: Job, manifest: PageManifest, page_png: bytes) -> None:
+        self.output: tuple[str, bytes, str] | None = None
+        self.manifest = manifest
+        self.objects = {
+            page_artifact_index_key(job.owner_id, job.id): serialized_index(
+                job.model_copy(update={"page_count": 2})
+            ),
+            "users/user-456/jobs/job-123/artifacts/pages/1.png": page_png,
+            "users/user-456/jobs/job-123/artifacts/pages/2.png": page_png,
+        }
+
+    def get_page_artifact_index(self, key: str) -> bytes:
+        return self.objects[key]
+
+    def get_page_artifact(self, key: str) -> bytes:
+        return self.objects[key]
+
+    def get_manifest(
+        self,
+        owner_id: str,
+        job_id: str,
+        page_number: int,
+    ) -> PageManifest:
+        return self.manifest.model_copy(update={"page_number": page_number})
+
+    def put_output_object(
+        self,
+        key: str,
+        content: bytes,
+        *,
+        content_type: str,
+    ) -> None:
+        self.output = (key, content, content_type)
+
+
 def make_job(**overrides: object) -> Job:
     values: dict[str, object] = {
         "id": "job-123",
@@ -170,6 +217,12 @@ def render_pages():
     yield RenderedPage(2, 100, 50, b"\x89PNG\r\n\x1a\npage-2")
 
 
+def png_bytes() -> bytes:
+    output = BytesIO()
+    Image.new("RGB", (100, 100), "white").save(output, format="PNG")
+    return output.getvalue()
+
+
 def serialized_index(job: Job) -> bytes:
     index = PageArtifactIndex(
         job_id=job.id,
@@ -194,6 +247,28 @@ def serialized_index(job: Job) -> bytes:
     from redact_api.worker import _serialize_page_artifact_index
 
     return _serialize_page_artifact_index(index)
+
+
+def selected_manifest(job: Job) -> PageManifest:
+    region = RedactionRegion(
+        id="region-1",
+        page_number=1,
+        x=0,
+        y=0,
+        width=0.5,
+        height=0.5,
+        source=RegionSource.MANUAL,
+        category="manual",
+        selected=True,
+    )
+    return PageManifest(
+        job_id=job.id,
+        page_number=1,
+        suggestions=(),
+        regions=(region,),
+        version=1,
+        last_saved_at=NOW,
+    )
 
 
 def test_analyze_source_checkpoints_pages_and_marks_ready() -> None:
@@ -227,6 +302,47 @@ def test_analyze_source_checkpoints_pages_and_marks_ready() -> None:
     assert [saved.completed_pages for saved, _ in jobs.saved] == [0, 1, 2, 2]
     assert engine.pages == [1, 2]
     assert detector.pages == [1, 2]
+
+
+def test_render_redacted_output_burns_regions_and_marks_complete() -> None:
+    job = make_job(
+        status=JobStatus.EXPORTING,
+        page_count=2,
+        completed_pages=2,
+        version=5,
+    )
+    jobs = RecordingJobs(job)
+    store = RecordingRenderStore(job, selected_manifest(job), png_bytes())
+
+    complete = render_redacted_output(job, jobs=jobs, store=store, now=NOW)
+
+    assert complete.status is JobStatus.COMPLETE
+    assert store.output is not None
+    key, content, content_type = store.output
+    assert key == "users/user-456/jobs/job-123/output"
+    assert content_type == "application/pdf"
+    assert content.startswith(b"%PDF")
+
+
+def test_render_redacted_image_output_burns_selected_pixels() -> None:
+    job = make_job(
+        source_type=SourceType.PNG,
+        status=JobStatus.EXPORTING,
+        page_count=2,
+        completed_pages=2,
+        version=5,
+    )
+    jobs = RecordingJobs(job)
+    store = RecordingRenderStore(job, selected_manifest(job), png_bytes())
+
+    render_redacted_output(job, jobs=jobs, store=store, now=NOW)
+
+    assert store.output is not None
+    _, content, content_type = store.output
+    assert content_type == "image/png"
+    with Image.open(BytesIO(content)) as image:
+        assert image.getpixel((10, 10)) == (0, 0, 0)
+        assert image.getpixel((75, 75)) == (255, 255, 255)
 
 
 def test_analyze_source_resumes_after_completed_pages() -> None:

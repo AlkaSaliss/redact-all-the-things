@@ -198,6 +198,27 @@ class PageManifest(ContractModel):
         return self
 
 
+class PagePreview(ContractModel):
+    """Short-lived authorization for one rasterized review page."""
+
+    page_number: int = Field(ge=1, le=200)
+    width: int = Field(gt=0)
+    height: int = Field(gt=0)
+    preview_url: str = Field(min_length=1)
+
+
+class PageSummary(ContractModel):
+    """Frontend summary for one reviewable page."""
+
+    page_number: int = Field(ge=1, le=200)
+    width: int = Field(gt=0)
+    height: int = Field(gt=0)
+    suggestion_count: int = Field(ge=0)
+    selected_count: int = Field(ge=0)
+    manifest_version: int = Field(ge=1)
+    preview_url: str = Field(min_length=1)
+
+
 _NORMAL_TRANSITIONS: dict[JobStatus, frozenset[JobStatus]] = {
     JobStatus.UPLOADING: frozenset({JobStatus.QUEUED}),
     JobStatus.QUEUED: frozenset({JobStatus.ANALYZING, JobStatus.FAILED}),

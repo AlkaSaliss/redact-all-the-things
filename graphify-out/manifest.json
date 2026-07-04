@@ -145,8 +145,8 @@
     "semantic_hash": "74b281136e58def7c6e743056dc31062"
   },
   "docs/development.md": {
-    "mtime": 1783090272.8294299,
-    "ast_hash": "695a28faf4a9a50275d52bbcb50408e0",
+    "mtime": 1783198600.917357,
+    "ast_hash": "8f96310518fbf6f42e21c76160e30c6f",
     "semantic_hash": ""
   },
   "docs/index.md": {
@@ -225,28 +225,28 @@
     "semantic_hash": ""
   },
   "src/redact_api/aws.py": {
-    "mtime": 1783091724.1903572,
-    "ast_hash": "ee45e8ef70042b61f85ba1434a4b353e",
+    "mtime": 1783116764.6208868,
+    "ast_hash": "60daccf718b0c49d7e81729b010e1f7c",
     "semantic_hash": ""
   },
   "src/redact_api/domain.py": {
-    "mtime": 1781633416.8907077,
-    "ast_hash": "b68ac6f7911bf87fb0c629d92e19abcc",
+    "mtime": 1783116756.8463423,
+    "ast_hash": "834d03e502a9a250dfd69428c2f1cd9c",
     "semantic_hash": ""
   },
   "src/redact_api/http.py": {
-    "mtime": 1781633416.8915873,
-    "ast_hash": "e219c88268202642ed1b53440fae02c2",
+    "mtime": 1783150430.4973214,
+    "ast_hash": "a208541036255e9157b7d91363c23ac1",
     "semantic_hash": ""
   },
   "src/redact_api/lambda_handler.py": {
-    "mtime": 1781633416.8921015,
-    "ast_hash": "609845f5e078fbc1aa6a00f0f1a6cc96",
+    "mtime": 1783150438.4700902,
+    "ast_hash": "2ff4126dff5b8967fdf5bfbceee4e224",
     "semantic_hash": ""
   },
   "src/redact_api/services.py": {
-    "mtime": 1781633416.892353,
-    "ast_hash": "950fa284617194d4dddd6bb677070299",
+    "mtime": 1783121007.1057768,
+    "ast_hash": "a04693830740372eae374817502f6941",
     "semantic_hash": ""
   },
   "tests/__init__.py": {
@@ -260,8 +260,8 @@
     "semantic_hash": ""
   },
   "tests/api/test_http.py": {
-    "mtime": 1783024600.720164,
-    "ast_hash": "7de34954ef581d46a6bccd2acd631547",
+    "mtime": 1783116860.2660127,
+    "ast_hash": "0725142251986e0415fab3aa645d58d3",
     "semantic_hash": ""
   },
   "tests/conftest.py": {
@@ -285,7 +285,7 @@
     "semantic_hash": ""
   },
   "tests/domain/test_lifecycle.py": {
-    "mtime": 1783091709.2595725,
+    "mtime": 1783110642.121648,
     "ast_hash": "4a5022f2069b653a55f5f330b4f15acd",
     "semantic_hash": ""
   },
@@ -345,8 +345,8 @@
     "semantic_hash": ""
   },
   "docs/architecture/control-plane-api.md": {
-    "mtime": 1783024600.6813776,
-    "ast_hash": "a374540a3f93ffe5873362703c24c56f",
+    "mtime": 1783119281.2146852,
+    "ast_hash": "2fc49b788b3a9b327f9f061aa92a37f8",
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-06-15-gh-7-control-plane-api/.openspec.yaml": {
@@ -385,8 +385,8 @@
     "semantic_hash": ""
   },
   "openspec/specs/job-contracts/spec.md": {
-    "mtime": 1781726421.8475075,
-    "ast_hash": "9611849c64024f03c2d8854531f54ad8",
+    "mtime": 1783120842.962867,
+    "ast_hash": "414230685592a6cd580da8cad2ec5b41",
     "semantic_hash": ""
   },
   ".github/ISSUE_TEMPLATE/epic.yml": {
@@ -425,8 +425,8 @@
     "semantic_hash": ""
   },
   "src/redact_api/worker.py": {
-    "mtime": 1783091855.3072774,
-    "ast_hash": "68afa3ea2f0805e9c8edb10175ca80b5",
+    "mtime": 1783116835.2763598,
+    "ast_hash": "aeef0feb9a16fc9b262a359e076aed0b",
     "semantic_hash": ""
   },
   "tests/worker/__init__.py": {
@@ -445,8 +445,8 @@
     "semantic_hash": ""
   },
   "docs/architecture/analysis-worker.md": {
-    "mtime": 1783091784.5450835,
-    "ast_hash": "20edcc5c8ba3500db9527b0939087139",
+    "mtime": 1783119281.319211,
+    "ast_hash": "57cf0731f984df28c0150ee7ecb96d95",
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-06-17-gh-16-worker-input-validation/.openspec.yaml": {
@@ -575,7 +575,7 @@
     "semantic_hash": ""
   },
   "tests/worker/test_pii_mapping.py": {
-    "mtime": 1783091666.4586146,
+    "mtime": 1783110642.1225533,
     "ast_hash": "21bd7d8b6eed7642d8e09b27b78c2524",
     "semantic_hash": ""
   },
@@ -680,18 +680,18 @@
     "semantic_hash": ""
   },
   "infra/modules/app-edge-auth-api/main.tf": {
-    "mtime": 1783024600.7104828,
-    "ast_hash": "79dcce6aa22be07ea058528e90ff7c8a",
+    "mtime": 1783150810.1253116,
+    "ast_hash": "7ecc7f9c17a274be5ed670ec982b87a1",
     "semantic_hash": ""
   },
   "infra/modules/app-edge-auth-api/outputs.tf": {
-    "mtime": 1783024600.7108684,
-    "ast_hash": "5eb4372971bdeba632ad5cb195d88c90",
+    "mtime": 1783118509.9926038,
+    "ast_hash": "4411e64986eca989359e35bc8a84cea5",
     "semantic_hash": ""
   },
   "infra/modules/app-edge-auth-api/stubs/lambda_handler.py": {
-    "mtime": 1782982545.074026,
-    "ast_hash": "53ca0fe835a89ea991f6e3f411efdc2d",
+    "mtime": 1783150788.992238,
+    "ast_hash": "e0aa86ff65b6b2a20b1026e2555d2b65",
     "semantic_hash": ""
   },
   "infra/modules/app-edge-auth-api/variables.tf": {
@@ -750,8 +750,8 @@
     "semantic_hash": ""
   },
   "infra/modules/worker-compute-artifacts/outputs.tf": {
-    "mtime": 1783090272.8489575,
-    "ast_hash": "35f1446c1bb0dccfaf433a33395d787b",
+    "mtime": 1783118510.1066828,
+    "ast_hash": "54ab02859dee0903dfb9caef4bac6a64",
     "semantic_hash": ""
   },
   "infra/modules/worker-compute-artifacts/variables.tf": {
@@ -895,8 +895,8 @@
     "semantic_hash": ""
   },
   "local-data/floci-state/cwlogs-events.json": {
-    "mtime": 1783100684.4764104,
-    "ast_hash": "ad37650154cc836faeac097c4bd1eca8",
+    "mtime": 1783147141.9656446,
+    "ast_hash": "5ba98c6731924effd4cfa5a15a393281",
     "semantic_hash": ""
   },
   "local-data/floci-state/cwlogs-groups.json": {
@@ -905,13 +905,13 @@
     "semantic_hash": ""
   },
   "local-data/floci-state/cwlogs-streams.json": {
-    "mtime": 1783100684.4769762,
-    "ast_hash": "225000af4a22ef9da8433675a0ca5e43",
+    "mtime": 1783147141.9667792,
+    "ast_hash": "56d9bbd5fc3f14570ab34d38b5c44745",
     "semantic_hash": ""
   },
   "local-data/floci-state/dynamodb-tables.json": {
-    "mtime": 1783093011.6269019,
-    "ast_hash": "a7bb1b7a991b560b59d92828ab846765",
+    "mtime": 1783201547.7275617,
+    "ast_hash": "ad181a47bf92f5d91d56190ca70b93fd",
     "semantic_hash": ""
   },
   "local-data/floci-state/ec2-internet-gateways.json": {
@@ -1040,8 +1040,8 @@
     "semantic_hash": ""
   },
   "local-data/floci-state/s3-objects.json": {
-    "mtime": 1783100209.242162,
-    "ast_hash": "6d39736457939b06e4f4a243ac0ac3b9",
+    "mtime": 1783201547.7733812,
+    "ast_hash": "e5ea17e1219967fec568f140f4849afa",
     "semantic_hash": ""
   },
   "local-data/floci-state/scheduler-groups.json": {
@@ -1080,8 +1080,8 @@
     "semantic_hash": ""
   },
   "local-data/floci-state/dynamodb-items.json": {
-    "mtime": 1783100209.6959236,
-    "ast_hash": "ccf04f9f00b9009b89fbcd650f798bfc",
+    "mtime": 1783201547.7657373,
+    "ast_hash": "cbb7675a383db805de527dd603a1fa63",
     "semantic_hash": ""
   },
   "openspec/changes/archive/2026-07-02-gh-36-infra-worker-compute-artifacts/.openspec.yaml": {
@@ -1125,7 +1125,7 @@
     "semantic_hash": ""
   },
   ".github/workflows/infra.yml": {
-    "mtime": 1783106979.2216306,
+    "mtime": 1783110642.0934045,
     "ast_hash": "695af5be55926218ce2596344715cb85",
     "semantic_hash": ""
   },
@@ -1205,38 +1205,273 @@
     "semantic_hash": ""
   },
   "tests/worker/test_checkpoint_resume.py": {
-    "mtime": 1783091862.7784617,
-    "ast_hash": "03919be1f62b157920070313e7ee883c",
+    "mtime": 1783116894.352188,
+    "ast_hash": "9c2a304f43d811fc9d5831d32354720b",
     "semantic_hash": ""
   },
-  "openspec/changes/gh-20-worker-checkpoint-manifest-integration/.openspec.yaml": {
-    "mtime": 1783091417.4315064,
+  "frontend/package.json": {
+    "mtime": 1783122124.7221231,
+    "ast_hash": "bd6a43a648a5e6499049f0ecce255f99",
+    "semantic_hash": ""
+  },
+  "frontend/src/App.test.tsx": {
+    "mtime": 1783150240.9426327,
+    "ast_hash": "c0356585a44ee1baa90c57398977b337",
+    "semantic_hash": ""
+  },
+  "frontend/src/App.tsx": {
+    "mtime": 1783150193.2950764,
+    "ast_hash": "4ac125614acb93496fbbdcb5e9833552",
+    "semantic_hash": ""
+  },
+  "frontend/src/api/client.test.ts": {
+    "mtime": 1783201457.9065895,
+    "ast_hash": "b1559d85d58e6fc51f0d7990c85feef6",
+    "semantic_hash": ""
+  },
+  "frontend/src/api/client.ts": {
+    "mtime": 1783201457.8951333,
+    "ast_hash": "c549f125e2b72d65d306c11a01647272",
+    "semantic_hash": ""
+  },
+  "frontend/src/auth.ts": {
+    "mtime": 1783201457.8941562,
+    "ast_hash": "54cda0d00d42df00b917236562789a71",
+    "semantic_hash": ""
+  },
+  "frontend/src/config.ts": {
+    "mtime": 1783201457.8911726,
+    "ast_hash": "60913381223fbf9c30aac159ad2306ce",
+    "semantic_hash": ""
+  },
+  "frontend/src/contracts/openapi.json": {
+    "mtime": 1783119723.1772356,
+    "ast_hash": "8b762c3517c779ee55498aa60d0e8f64",
+    "semantic_hash": ""
+  },
+  "frontend/src/contracts/types.ts": {
+    "mtime": 1783201457.8919864,
+    "ast_hash": "9994f9d397ccf0e91d4e2cfb886f6374",
+    "semantic_hash": ""
+  },
+  "frontend/src/editor/geometry.test.ts": {
+    "mtime": 1783201457.8980417,
+    "ast_hash": "d5053bb315451c3728090e53c0f7e414",
+    "semantic_hash": ""
+  },
+  "frontend/src/editor/geometry.ts": {
+    "mtime": 1783118405.4004338,
+    "ast_hash": "32468f234f83c0d43235b8d6101a32e8",
+    "semantic_hash": ""
+  },
+  "frontend/src/fixtures/contracts.ts": {
+    "mtime": 1783201457.8950427,
+    "ast_hash": "aa60fb06445ecfcbd8ec762285f0d936",
+    "semantic_hash": ""
+  },
+  "frontend/src/main.tsx": {
+    "mtime": 1783198425.9931228,
+    "ast_hash": "49890c07a5dce4c657973c1bd94360d6",
+    "semantic_hash": ""
+  },
+  "frontend/src/test/setup.ts": {
+    "mtime": 1783117301.3199217,
+    "ast_hash": "3709e3aa95abf0544678f0f2d9b46702",
+    "semantic_hash": ""
+  },
+  "frontend/src/vite-env.d.ts": {
+    "mtime": 1783119778.0719576,
+    "ast_hash": "0352474ba2918efe13895edbc3780d94",
+    "semantic_hash": ""
+  },
+  "frontend/tsconfig.json": {
+    "mtime": 1783117300.8587947,
+    "ast_hash": "51e5247a8869201ffaabdcfe71bd232d",
+    "semantic_hash": ""
+  },
+  "frontend/vite.config.ts": {
+    "mtime": 1783117300.9706097,
+    "ast_hash": "ee80d09370b6bfb1ad86efd9a737e411",
+    "semantic_hash": ""
+  },
+  "frontend/vitest.config.ts": {
+    "mtime": 1783117301.104767,
+    "ast_hash": "fa0df9f21ae89ffc286f2ada7574a545",
+    "semantic_hash": ""
+  },
+  "tools/export_openapi.py": {
+    "mtime": 1783119706.7055833,
+    "ast_hash": "8e70e345c675052b8e08d1c7df6e421e",
+    "semantic_hash": ""
+  },
+  ".github/workflows/frontend.yml": {
+    "mtime": 1783202380.0733547,
+    "ast_hash": "01210e5a36830e5af040078103ea50f2",
+    "semantic_hash": ""
+  },
+  "frontend/index.html": {
+    "mtime": 1783117300.7487218,
+    "ast_hash": "f583f684137d515cf7130bff998d9561",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-07-04-gh-20-worker-checkpoint-manifest-integration/.openspec.yaml": {
+    "mtime": 1783110642.1185217,
     "ast_hash": "02f6db0a449be79349504bc19b245e9b",
     "semantic_hash": ""
   },
-  "openspec/changes/gh-20-worker-checkpoint-manifest-integration/design.md": {
-    "mtime": 1783091417.7296953,
+  "openspec/changes/archive/2026-07-04-gh-20-worker-checkpoint-manifest-integration/design.md": {
+    "mtime": 1783110642.1187289,
     "ast_hash": "0ad9e738cef43d2312992c33bb495fae",
     "semantic_hash": ""
   },
-  "openspec/changes/gh-20-worker-checkpoint-manifest-integration/proposal.md": {
-    "mtime": 1783091417.561086,
+  "openspec/changes/archive/2026-07-04-gh-20-worker-checkpoint-manifest-integration/proposal.md": {
+    "mtime": 1783110642.118978,
     "ast_hash": "8ef46caf125731554079a86cd6e35498",
     "semantic_hash": ""
   },
-  "openspec/changes/gh-20-worker-checkpoint-manifest-integration/specs/job-contracts/spec.md": {
-    "mtime": 1783091750.3177192,
+  "openspec/changes/archive/2026-07-04-gh-20-worker-checkpoint-manifest-integration/specs/job-contracts/spec.md": {
+    "mtime": 1783110642.1195774,
     "ast_hash": "e9b00397652e2da49d44f0989eda36a9",
     "semantic_hash": ""
   },
-  "openspec/changes/gh-20-worker-checkpoint-manifest-integration/specs/worker-checkpoint-manifest-integration/spec.md": {
-    "mtime": 1783091750.1323037,
+  "openspec/changes/archive/2026-07-04-gh-20-worker-checkpoint-manifest-integration/specs/worker-checkpoint-manifest-integration/spec.md": {
+    "mtime": 1783110642.1199183,
     "ast_hash": "3633ed81ef56b5f815d9ee90dac27bc0",
     "semantic_hash": ""
   },
-  "openspec/changes/gh-20-worker-checkpoint-manifest-integration/tasks.md": {
-    "mtime": 1783091890.4055312,
+  "openspec/changes/archive/2026-07-04-gh-20-worker-checkpoint-manifest-integration/tasks.md": {
+    "mtime": 1783110642.120174,
     "ast_hash": "1c23be2e25ddf125c30b02e819b175b6",
+    "semantic_hash": ""
+  },
+  "openspec/specs/worker-checkpoint-manifest-integration/spec.md": {
+    "mtime": 1783120843.1646578,
+    "ast_hash": "4c811c8f0d2898bbad9aa3eb86589315",
+    "semantic_hash": ""
+  },
+  "infra/live/dev/eu-west-1/worker-compute-artifacts/.terragrunt-cache/T0LNcCDCALv9woQ1eBrh0t1jACY/ydJuPepCPq6yewwDRNZxNScbotQ/app-edge-auth-api/main.tf": {
+    "mtime": 1783197661.5461156,
+    "ast_hash": "7ecc7f9c17a274be5ed670ec982b87a1",
+    "semantic_hash": ""
+  },
+  "infra/live/dev/eu-west-1/worker-compute-artifacts/.terragrunt-cache/T0LNcCDCALv9woQ1eBrh0t1jACY/ydJuPepCPq6yewwDRNZxNScbotQ/app-edge-auth-api/outputs.tf": {
+    "mtime": 1783197661.5465598,
+    "ast_hash": "4411e64986eca989359e35bc8a84cea5",
+    "semantic_hash": ""
+  },
+  "infra/live/dev/eu-west-1/worker-compute-artifacts/.terragrunt-cache/T0LNcCDCALv9woQ1eBrh0t1jACY/ydJuPepCPq6yewwDRNZxNScbotQ/app-edge-auth-api/stubs/lambda_handler.py": {
+    "mtime": 1783197661.5474792,
+    "ast_hash": "e0aa86ff65b6b2a20b1026e2555d2b65",
+    "semantic_hash": ""
+  },
+  "infra/live/dev/eu-west-1/worker-compute-artifacts/.terragrunt-cache/T0LNcCDCALv9woQ1eBrh0t1jACY/ydJuPepCPq6yewwDRNZxNScbotQ/app-edge-auth-api/variables.tf": {
+    "mtime": 1783197661.5477822,
+    "ast_hash": "b0374862dc6508c7b89ea9890cc3db1f",
+    "semantic_hash": ""
+  },
+  "infra/live/dev/eu-west-1/worker-compute-artifacts/.terragrunt-cache/T0LNcCDCALv9woQ1eBrh0t1jACY/ydJuPepCPq6yewwDRNZxNScbotQ/app-edge-auth-api/versions.tf": {
+    "mtime": 1783197661.5480425,
+    "ast_hash": "87cac494d3a204949d693b3cd35c0601",
+    "semantic_hash": ""
+  },
+  "infra/live/dev/eu-west-1/worker-compute-artifacts/.terragrunt-cache/T0LNcCDCALv9woQ1eBrh0t1jACY/ydJuPepCPq6yewwDRNZxNScbotQ/foundation/main.tf": {
+    "mtime": 1783197661.5485065,
+    "ast_hash": "c371ca8008422f9ebab2e9d8f94fe09d",
+    "semantic_hash": ""
+  },
+  "infra/live/dev/eu-west-1/worker-compute-artifacts/.terragrunt-cache/T0LNcCDCALv9woQ1eBrh0t1jACY/ydJuPepCPq6yewwDRNZxNScbotQ/foundation/outputs.tf": {
+    "mtime": 1783197661.5487692,
+    "ast_hash": "3527a67423fbb34f4463d74132165952",
+    "semantic_hash": ""
+  },
+  "infra/live/dev/eu-west-1/worker-compute-artifacts/.terragrunt-cache/T0LNcCDCALv9woQ1eBrh0t1jACY/ydJuPepCPq6yewwDRNZxNScbotQ/foundation/variables.tf": {
+    "mtime": 1783197661.5492575,
+    "ast_hash": "37ab66eb09c44bace96deb9fbcb3b7ff",
+    "semantic_hash": ""
+  },
+  "infra/live/dev/eu-west-1/worker-compute-artifacts/.terragrunt-cache/T0LNcCDCALv9woQ1eBrh0t1jACY/ydJuPepCPq6yewwDRNZxNScbotQ/foundation/versions.tf": {
+    "mtime": 1783197661.5497088,
+    "ast_hash": "b3920b057cd56728edd109d33b59ce50",
+    "semantic_hash": ""
+  },
+  "infra/live/dev/eu-west-1/worker-compute-artifacts/.terragrunt-cache/T0LNcCDCALv9woQ1eBrh0t1jACY/ydJuPepCPq6yewwDRNZxNScbotQ/worker-compute-artifacts/.terraform.lock.hcl": {
+    "mtime": 1783198468.136957,
+    "ast_hash": "132076afa71cf0b49800db6bc5451b3a",
+    "semantic_hash": ""
+  },
+  "infra/live/dev/eu-west-1/worker-compute-artifacts/.terragrunt-cache/T0LNcCDCALv9woQ1eBrh0t1jACY/ydJuPepCPq6yewwDRNZxNScbotQ/worker-compute-artifacts/backend.tf": {
+    "mtime": 1783198468.1374795,
+    "ast_hash": "ada30d8c42c0489ee23aa563a407c385",
+    "semantic_hash": ""
+  },
+  "infra/live/dev/eu-west-1/worker-compute-artifacts/.terragrunt-cache/T0LNcCDCALv9woQ1eBrh0t1jACY/ydJuPepCPq6yewwDRNZxNScbotQ/worker-compute-artifacts/main.tf": {
+    "mtime": 1783197661.5506248,
+    "ast_hash": "1d0c2a50b1f6d194bc39e3196fe34611",
+    "semantic_hash": ""
+  },
+  "infra/live/dev/eu-west-1/worker-compute-artifacts/.terragrunt-cache/T0LNcCDCALv9woQ1eBrh0t1jACY/ydJuPepCPq6yewwDRNZxNScbotQ/worker-compute-artifacts/outputs.tf": {
+    "mtime": 1783197661.5511642,
+    "ast_hash": "54ab02859dee0903dfb9caef4bac6a64",
+    "semantic_hash": ""
+  },
+  "infra/live/dev/eu-west-1/worker-compute-artifacts/.terragrunt-cache/T0LNcCDCALv9woQ1eBrh0t1jACY/ydJuPepCPq6yewwDRNZxNScbotQ/worker-compute-artifacts/provider.tf": {
+    "mtime": 1783198468.1373208,
+    "ast_hash": "b54c546cac82185cbafda397e41705ef",
+    "semantic_hash": ""
+  },
+  "infra/live/dev/eu-west-1/worker-compute-artifacts/.terragrunt-cache/T0LNcCDCALv9woQ1eBrh0t1jACY/ydJuPepCPq6yewwDRNZxNScbotQ/worker-compute-artifacts/terragrunt.hcl": {
+    "mtime": 1783198468.137161,
+    "ast_hash": "021ec3e41ad81d84b737a0c33bc991b4",
+    "semantic_hash": ""
+  },
+  "infra/live/dev/eu-west-1/worker-compute-artifacts/.terragrunt-cache/T0LNcCDCALv9woQ1eBrh0t1jACY/ydJuPepCPq6yewwDRNZxNScbotQ/worker-compute-artifacts/variables.tf": {
+    "mtime": 1783197661.5514588,
+    "ast_hash": "b0374862dc6508c7b89ea9890cc3db1f",
+    "semantic_hash": ""
+  },
+  "infra/live/dev/eu-west-1/worker-compute-artifacts/.terragrunt-cache/T0LNcCDCALv9woQ1eBrh0t1jACY/ydJuPepCPq6yewwDRNZxNScbotQ/worker-compute-artifacts/versions.tf": {
+    "mtime": 1783197661.5516443,
+    "ast_hash": "59150b9fe161f68f576dd0cb3bd92853",
+    "semantic_hash": ""
+  },
+  "infra/live/dev/eu-west-1/worker-compute-artifacts/.terragrunt-cache/T0LNcCDCALv9woQ1eBrh0t1jACY/ydJuPepCPq6yewwDRNZxNScbotQ/app-edge-auth-api/stubs/frontend-index.html": {
+    "mtime": 1783197661.547104,
+    "ast_hash": "7ac05faee7ffd57230a207738ff7b353",
+    "semantic_hash": ""
+  },
+  "frontend/src/local-origin.test.ts": {
+    "mtime": 1783198426.1639068,
+    "ast_hash": "1fdc111fac824ad9111b3b111259ebf1",
+    "semantic_hash": ""
+  },
+  "frontend/src/local-origin.ts": {
+    "mtime": 1783198425.8004127,
+    "ast_hash": "fa6417bb618e3c1de73eae0ea9cdbdad",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-07-04-gh-21-22-23-24-5-worker-frontend-review-export/design.md": {
+    "mtime": 1783201457.8909764,
+    "ast_hash": "675c06918df90c0337a06c54223bd7b2",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-07-04-gh-21-22-23-24-5-worker-frontend-review-export/proposal.md": {
+    "mtime": 1783201457.894913,
+    "ast_hash": "05ec922df189827110063535d4910fb7",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-07-04-gh-21-22-23-24-5-worker-frontend-review-export/specs/review-export-workflow/spec.md": {
+    "mtime": 1783201457.9070446,
+    "ast_hash": "35904a893e1613273dfcf9f7840c3113",
+    "semantic_hash": ""
+  },
+  "openspec/changes/archive/2026-07-04-gh-21-22-23-24-5-worker-frontend-review-export/tasks.md": {
+    "mtime": 1783120793.8743849,
+    "ast_hash": "73e8bd662a827a734948d19425e147cf",
+    "semantic_hash": ""
+  },
+  "openspec/specs/review-export-workflow/spec.md": {
+    "mtime": 1783200993.936066,
+    "ast_hash": "afb9634a6ca38aff8ff16ec4c2627cec",
     "semantic_hash": ""
   }
 }

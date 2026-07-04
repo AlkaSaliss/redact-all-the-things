@@ -19,6 +19,8 @@ from redact_api.domain import (
     Job,
     JobStatus,
     PageManifest,
+    PagePreview,
+    PageSummary,
     RedactionRegion,
     SourceType,
     WorkerMode,
@@ -226,6 +228,51 @@ class ControlPlaneService:
         except PersistenceConflictError as error:
             raise ManifestConflictError("manifest version conflict") from error
 
+    def list_pages(self, owner_id: str, job_id: str) -> tuple[PageSummary, ...]:
+        job = self.get_job(owner_id, job_id)
+        self._require_manifest_status(job)
+        index = self._load_page_index(job)
+        summaries = []
+        for page in index["pages"]:
+            page_number = int(page["page_number"])
+            stored = self._objects.get_manifest(owner_id, job_id, page_number)
+            if stored is None:
+                raise JobNotFoundError(f"{job_id}:{page_number}")
+            manifest = stored.manifest
+            summaries.append(
+                PageSummary(
+                    page_number=page_number,
+                    width=int(page["width"]),
+                    height=int(page["height"]),
+                    suggestion_count=len(manifest.suggestions),
+                    selected_count=sum(
+                        1 for region in manifest.regions if region.selected
+                    ),
+                    manifest_version=manifest.version,
+                    preview_url=self._objects.presign_page_preview(str(page["key"])),
+                )
+            )
+        return tuple(summaries)
+
+    def authorize_page_preview(
+        self,
+        owner_id: str,
+        job_id: str,
+        page_number: int,
+    ) -> PagePreview:
+        job = self.get_job(owner_id, job_id)
+        self._require_manifest_status(job)
+        index = self._load_page_index(job)
+        for page in index["pages"]:
+            if int(page["page_number"]) == page_number:
+                return PagePreview(
+                    page_number=page_number,
+                    width=int(page["width"]),
+                    height=int(page["height"]),
+                    preview_url=self._objects.presign_page_preview(str(page["key"])),
+                )
+        raise JobNotFoundError(f"{job_id}:{page_number}")
+
     def authorize_download(self, owner_id: str, job_id: str) -> str:
         job = self.get_job(owner_id, job_id)
         if job.status is not JobStatus.COMPLETE:
@@ -277,3 +324,16 @@ class ControlPlaneService:
     def _require_manifest_status(job: Job) -> None:
         if job.status not in {JobStatus.READY, JobStatus.FAILED}:
             raise InvalidRequestError("page manifests are not available")
+
+    def _load_page_index(self, job: Job) -> dict[str, object]:
+        key = f"users/{job.owner_id}/jobs/{job.id}/artifacts/pages/index.json"
+        try:
+            import json
+
+            payload = json.loads(self._objects.get_page_artifact_index(key))
+        except Exception as error:
+            raise JobNotFoundError(job.id) from error
+        pages = payload.get("pages")
+        if payload.get("job_id") != job.id or not isinstance(pages, list):
+            raise JobNotFoundError(job.id)
+        return payload

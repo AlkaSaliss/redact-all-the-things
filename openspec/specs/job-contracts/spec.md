@@ -124,7 +124,7 @@ use a stable idempotency token for each accepted lifecycle transition.
 
 #### Scenario: Retry an eligible failure
 - **WHEN** a job has a failure code classified as transient infrastructure or Spot interruption
-- **THEN** the system permits an idempotent retry in the mode identified by that failure code
+- **THEN** the system permits an idempotent retry in the mode identified by that failure code while preserving existing page count, completed page count, and model version checkpoint fields
 
 #### Scenario: Reject a permanent failure retry
 - **WHEN** a job has a permanent validation, content, or processing failure code
