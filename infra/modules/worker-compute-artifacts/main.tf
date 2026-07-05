@@ -1,17 +1,18 @@
 module "app" {
   source = "../app-edge-auth-api"
 
-  aws_region         = var.aws_region
-  deployment_mode    = var.deployment_mode
-  environment        = var.environment
-  floci_endpoint_url = var.floci_endpoint_url
-  project_name       = var.project_name
+  aws_region          = var.aws_region
+  deployment_mode     = var.deployment_mode
+  environment         = var.environment
+  floci_endpoint_url  = var.floci_endpoint_url
+  lambda_package_path = var.lambda_package_path
+  project_name        = var.project_name
 }
 
 locals {
   use_floci_compatibility = var.deployment_mode == "floci"
   name_prefix             = module.app.name_prefix
-  worker_image            = "${aws_ecr_repository.worker.repository_url}:stub"
+  worker_image            = "${aws_ecr_repository.worker.repository_url}:${var.worker_image_tag}"
 }
 
 resource "aws_ecr_repository" "worker" {
@@ -42,14 +43,37 @@ resource "aws_subnet" "worker_a" {
   vpc_id                  = aws_vpc.worker.id
   cidr_block              = "10.42.0.0/25"
   availability_zone       = "${var.aws_region}a"
-  map_public_ip_on_launch = false
+  map_public_ip_on_launch = true
 }
 
 resource "aws_subnet" "worker_b" {
   vpc_id                  = aws_vpc.worker.id
   cidr_block              = "10.42.0.128/25"
   availability_zone       = "${var.aws_region}b"
-  map_public_ip_on_launch = false
+  map_public_ip_on_launch = true
+}
+
+resource "aws_internet_gateway" "worker" {
+  vpc_id = aws_vpc.worker.id
+}
+
+resource "aws_route_table" "worker" {
+  vpc_id = aws_vpc.worker.id
+
+  route {
+    cidr_block = "0.0.0.0/0"
+    gateway_id = aws_internet_gateway.worker.id
+  }
+}
+
+resource "aws_route_table_association" "worker_a" {
+  subnet_id      = aws_subnet.worker_a.id
+  route_table_id = aws_route_table.worker.id
+}
+
+resource "aws_route_table_association" "worker_b" {
+  subnet_id      = aws_subnet.worker_b.id
+  route_table_id = aws_route_table.worker.id
 }
 
 resource "aws_security_group" "worker" {
@@ -249,8 +273,19 @@ resource "aws_batch_job_definition" "analyze" {
   container_properties = jsonencode({
     command = [
       "python",
-      "/app/worker_stub.py",
+      "-m",
+      "redact_api.worker_runtime",
       "analyze",
+      "--job-id",
+      "Ref::job_id",
+      "--owner-id",
+      "Ref::owner_id",
+      "--source-key",
+      "Ref::source_key",
+      "--output-key",
+      "Ref::output_key",
+      "--idempotency-token",
+      "Ref::idempotency_token",
     ]
     environment = [
       {
@@ -265,7 +300,7 @@ resource "aws_batch_job_definition" "analyze" {
     executionRoleArn       = aws_iam_role.task_execution.arn
     image                  = local.worker_image
     jobRoleArn             = aws_iam_role.worker_job.arn
-    readonlyRootFilesystem = true
+    readonlyRootFilesystem = false
     logConfiguration = {
       logDriver = "awslogs"
       options = {
@@ -275,7 +310,7 @@ resource "aws_batch_job_definition" "analyze" {
       }
     }
     networkConfiguration = {
-      assignPublicIp = "DISABLED"
+      assignPublicIp = "ENABLED"
     }
     resourceRequirements = [
       {
@@ -298,8 +333,19 @@ resource "aws_batch_job_definition" "render" {
   container_properties = jsonencode({
     command = [
       "python",
-      "/app/worker_stub.py",
+      "-m",
+      "redact_api.worker_runtime",
       "render",
+      "--job-id",
+      "Ref::job_id",
+      "--owner-id",
+      "Ref::owner_id",
+      "--source-key",
+      "Ref::source_key",
+      "--output-key",
+      "Ref::output_key",
+      "--idempotency-token",
+      "Ref::idempotency_token",
     ]
     environment = [
       {
@@ -314,7 +360,7 @@ resource "aws_batch_job_definition" "render" {
     executionRoleArn       = aws_iam_role.task_execution.arn
     image                  = local.worker_image
     jobRoleArn             = aws_iam_role.worker_job.arn
-    readonlyRootFilesystem = true
+    readonlyRootFilesystem = false
     logConfiguration = {
       logDriver = "awslogs"
       options = {
@@ -324,7 +370,7 @@ resource "aws_batch_job_definition" "render" {
       }
     }
     networkConfiguration = {
-      assignPublicIp = "DISABLED"
+      assignPublicIp = "ENABLED"
     }
     resourceRequirements = [
       {

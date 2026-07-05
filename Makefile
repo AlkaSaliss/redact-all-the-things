@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := help
 
-.PHONY: help test test-worker docs openspec-validate frontend-test frontend-build frontend-env-local frontend-dev worker-image worker-ocr-smoke floci-up floci-down floci-check terragrunt-validate terragrunt-plan terragrunt-apply terragrunt-plan-local terragrunt-apply-local terragrunt-plan-aws terragrunt-apply-aws infra-smoke-floci infra-smoke-aws
+.PHONY: help test test-worker docs openspec-validate frontend-test frontend-build frontend-env-local frontend-dev lambda-package worker-image worker-ocr-smoke floci-up floci-down floci-check terragrunt-validate terragrunt-plan terragrunt-apply terragrunt-plan-local terragrunt-apply-local terragrunt-plan-aws terragrunt-apply-aws infra-smoke-floci infra-smoke-aws
 
 help: ## Show available make targets.
 	@awk 'BEGIN {FS = ":.*## "}; /^[a-zA-Z0-9_-]+:.*## / {printf "%-20s %s\n", $$1, $$2}' $(MAKEFILE_LIST)
@@ -12,6 +12,8 @@ INFRA_ROOT_FOLDER ?= infra
 INFRA_ENV_DIR ?= infra/live/$(INFRA_TARGET)/$(INFRA_REGION)/$(INFRA_COMPONENT)
 AWS_ENV_DIR ?= infra/live/dev/$(INFRA_REGION)/$(INFRA_COMPONENT)
 FRONTEND_ENV_FILE ?= frontend/.env.local
+LAMBDA_PACKAGE_PATH ?= $(CURDIR)/.build/control-plane-lambda.zip
+WORKER_IMAGE_TAG ?= local
 FLOCI_ENV_DIR ?= infra/live/floci/$(INFRA_REGION)/$(INFRA_COMPONENT)
 FLOCI_ENV := AWS_ENDPOINT_URL=http://localhost.floci.io:4566 \
              AWS_ACCESS_KEY_ID=test \
@@ -77,6 +79,9 @@ frontend-dev: ## Start the frontend dev server using frontend/.env.local.
 	fi
 	cd frontend && npm run dev -- --host localhost --port 5173 --strictPort
 
+lambda-package: ## Build the control-plane Lambda ZIP package.
+	./tools/build_lambda_package.sh "$(LAMBDA_PACKAGE_PATH)"
+
 worker-image: ## Build the local analysis worker image.
 	docker build --platform linux/amd64 -f Dockerfile.worker -t redact-worker-ocr:test .
 
@@ -140,11 +145,11 @@ terragrunt-plan-local: floci-check ## Generate a Terragrunt plan against Floci.
 terragrunt-apply-local: floci-check ## Apply the Floci Terragrunt environment.
 	@export $(FLOCI_ENV) && cd $(FLOCI_ENV_DIR) && $(TERRAGRUNT) apply
 
-terragrunt-plan-aws: ## Generate a Terragrunt plan against the configured AWS account.
-	@$(MAKE) terragrunt-plan INFRA_TARGET=dev
+terragrunt-plan-aws: lambda-package ## Generate a Terragrunt plan against the configured AWS account.
+	@TF_VAR_lambda_package_path="$(LAMBDA_PACKAGE_PATH)" TF_VAR_worker_image_tag="$(WORKER_IMAGE_TAG)" $(MAKE) terragrunt-plan INFRA_TARGET=dev
 
-terragrunt-apply-aws: ## Apply against the configured AWS account.
-	@$(MAKE) terragrunt-apply INFRA_TARGET=dev
+terragrunt-apply-aws: lambda-package ## Apply against the configured AWS account.
+	@TF_VAR_lambda_package_path="$(LAMBDA_PACKAGE_PATH)" TF_VAR_worker_image_tag="$(WORKER_IMAGE_TAG)" $(MAKE) terragrunt-apply INFRA_TARGET=dev
 
 infra-smoke-floci: ## Run Floci foundation smoke checks.
 	@export $(FLOCI_ENV) && ./tools/infra_smoke_floci.sh

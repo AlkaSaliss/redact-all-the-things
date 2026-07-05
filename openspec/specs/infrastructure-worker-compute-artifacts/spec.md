@@ -52,13 +52,27 @@ Spot compute resources for analysis and render workers.
 - **THEN** it defines worker network resources with no inbound security group
   rules.
 
-### Requirement: Temporary worker stub
+### Requirement: Run real worker image commands
 
-The Floci worker compute slice SHALL include a minimal worker stub only for
-infrastructure wiring until the worker image pipeline provides the real image.
+The worker compute infrastructure SHALL run the real worker image entrypoint
+for analyze and render jobs instead of the infrastructure-only worker stub.
 
-#### Scenario: Keep worker stub separate
+#### Scenario: Analyze job uses real runtime
 
-- **WHEN** contributors inspect infrastructure stubs
-- **THEN** the worker stub is located under infrastructure paths and does not
-  replace runtime worker implementation code.
+- **WHEN** the analyze Batch job definition is registered
+- **THEN** it uses the configured worker image tag and invokes
+  `python -m redact_api.worker_runtime analyze` with Batch-substituted job
+  parameters.
+
+#### Scenario: Render job uses real runtime
+
+- **WHEN** the render Batch job definition is registered
+- **THEN** it uses the configured worker image tag and invokes
+  `python -m redact_api.worker_runtime render` with Batch-substituted job
+  parameters.
+
+#### Scenario: Worker tasks have outbound runtime access
+
+- **WHEN** AWS Batch starts a Fargate worker task
+- **THEN** the task can reach required AWS service APIs and ECR through an
+  outbound-only network path while retaining no inbound security-group access.

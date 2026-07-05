@@ -71,13 +71,13 @@ The app edge/auth/API module models:
 - DynamoDB job metadata with TTL;
 - Cognito invited-user authentication resources;
 - API Gateway HTTP API with a Cognito JWT authorizer;
-- Lambda control-plane stub wiring and least-privilege IAM;
+- Lambda control-plane package wiring and runtime IAM;
 - CloudFront frontend distribution with origin access control;
 - seven-day CloudWatch log retention.
 
-The frontend and Lambda artifacts are placeholders. They exist only so the
-infrastructure graph has deployable references before the frontend and
-control-plane deployment slices provide real artifacts.
+The frontend artifact is still a placeholder. The Lambda artifact is built from
+the checked-in control-plane package before AWS planning/apply so the deployed
+function runs `redact_api.lambda_handler.handler`.
 
 The worker compute module composes the app edge/auth/API module and adds:
 
@@ -88,8 +88,10 @@ The worker compute module composes the app edge/auth/API module and adds:
 - task execution and worker job roles for image pulls, logs, artifacts, and
   job metadata;
 - seven-day worker CloudWatch log retention;
-- a small worker VPC, private worker subnets, and a no-ingress security group;
-- a temporary infrastructure-only worker stub under `infra/stubs/worker`.
+- a small worker VPC, public worker subnets with outbound Internet Gateway
+  routing, and a no-ingress security group;
+- real worker image commands for `redact_api.worker_runtime` analyze and render
+  modes.
 
 Batch, Fargate, ECR, and worker networking coverage depends on the configured
 Floci-compatible emulator. When those services are unsupported, static
@@ -128,8 +130,16 @@ make infra-smoke-aws
 ```
 
 The smoke check reads Terragrunt outputs from the real AWS live stack and
-verifies deployed DynamoDB, S3, Batch, and ECR resources that Floci cannot
-fully cover. It is read-only and expects credentials for the approved account.
+verifies deployed DynamoDB, S3, Batch, ECR, and Lambda resources that Floci
+cannot fully cover. It is read-only by default and expects credentials for the
+approved account.
+
+To run the mutating runtime smoke that invokes the real Lambda, uploads one
+multipart source object, completes upload, and verifies Batch submission:
+
+```bash
+AWS_E2E_SMOKE=1 make infra-smoke-aws
+```
 
 Issue #38 revalidates the `eu-west-1` cost model before apply. Terraform-managed
 AWS budget alerts are deferred to follow-up issue #42 because alert notification

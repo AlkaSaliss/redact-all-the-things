@@ -1,5 +1,5 @@
 output "api_endpoint" {
-  description = "HTTP API endpoint for the control-plane stub."
+  description = "HTTP API endpoint for the control plane."
   value       = aws_apigatewayv2_api.http.api_endpoint
 }
 
@@ -39,7 +39,7 @@ output "jobs_table_arn" {
 }
 
 output "lambda_function_name" {
-  description = "Control-plane Lambda stub function name."
+  description = "Control-plane Lambda function name."
   value       = aws_lambda_function.api.function_name
 }
 

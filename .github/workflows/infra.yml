@@ -36,6 +36,8 @@ concurrency:
 env:
   TERRAFORM_VERSION: 1.13.3
   TERRAGRUNT_VERSION: 0.87.6
+  LAMBDA_PACKAGE_PATH: ${{ github.workspace }}/.build/control-plane-lambda.zip
+  WORKER_IMAGE_TAG: ${{ github.sha }}
 
 jobs:
   validate:
@@ -93,27 +95,29 @@ jobs:
           chmod +x terragrunt
           sudo mv terragrunt /usr/local/bin/terragrunt
 
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v7
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v5
         with:
           role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
           aws-region: ${{ env.AWS_REGION }}
 
+      - name: Build control-plane Lambda package
+        run: make lambda-package
+
       - name: Plan AWS live stack
         working-directory: infra/live/${{ env.AWS_LIVE_ENVIRONMENT }}/${{ env.AWS_REGION }}/worker-compute-artifacts
+        env:
+          TF_VAR_lambda_package_path: ${{ env.LAMBDA_PACKAGE_PATH }}
+          TF_VAR_worker_image_tag: ${{ env.WORKER_IMAGE_TAG }}
         run: |
           PLAN_FILE="$(pwd)/tfplan"
           terragrunt plan -input=false -out="$PLAN_FILE"
           terragrunt show -no-color "$PLAN_FILE" > tfplan.txt
-          ZIP_FILE="$(
-            find .terragrunt-cache \
-              -path '*/app-edge-auth-api/.terraform/control-plane-stub.zip' \
-              -type f \
-              -print \
-              -quit
-          )"
-          echo "Lambda package path: $ZIP_FILE"
-          test -n "$ZIP_FILE"
+          echo "Lambda package path: ${LAMBDA_PACKAGE_PATH}"
+          test -f "${LAMBDA_PACKAGE_PATH}"
           ls -lah
 
       - name: Upload AWS plan artifact
@@ -124,7 +128,7 @@ jobs:
           path: |
             infra/live/${{ env.AWS_LIVE_ENVIRONMENT }}/${{ env.AWS_REGION }}/worker-compute-artifacts/tfplan
             infra/live/${{ env.AWS_LIVE_ENVIRONMENT }}/${{ env.AWS_REGION }}/worker-compute-artifacts/tfplan.txt
-            infra/live/${{ env.AWS_LIVE_ENVIRONMENT }}/${{ env.AWS_REGION }}/worker-compute-artifacts/.terragrunt-cache/**/app-edge-auth-api/.terraform/control-plane-stub.zip
+            .build/control-plane-lambda.zip
 
           if-no-files-found: error
           include-hidden-files: true
@@ -162,6 +166,9 @@ jobs:
           chmod +x terragrunt
           sudo mv terragrunt /usr/local/bin/terragrunt
 
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v7
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v5
         with:
@@ -172,22 +179,36 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: aws-${{ env.AWS_LIVE_ENVIRONMENT }}-terraform-plan
-          path: infra/live/${{ env.AWS_LIVE_ENVIRONMENT }}/${{ env.AWS_REGION }}/worker-compute-artifacts
+          path: .
 
       - name: Apply AWS live stack
         working-directory: infra/live/${{ env.AWS_LIVE_ENVIRONMENT }}/${{ env.AWS_REGION }}/worker-compute-artifacts
+        env:
+          TF_VAR_lambda_package_path: ${{ env.LAMBDA_PACKAGE_PATH }}
+          TF_VAR_worker_image_tag: ${{ env.WORKER_IMAGE_TAG }}
         run: |
           PLAN_FILE="$(pwd)/tfplan"
-          ZIP_FILE="$(
-            find .terragrunt-cache \
-              -path '*/app-edge-auth-api/.terraform/control-plane-stub.zip' \
-              -type f \
-              -print \
-              -quit
-          )"
           echo "Plan file path: $PLAN_FILE"
-          echo "Lambda package path: $ZIP_FILE"
+          echo "Lambda package path: ${LAMBDA_PACKAGE_PATH}"
           ls -lah
           test -f "$PLAN_FILE"
-          test -n "$ZIP_FILE"
+          test -f "${LAMBDA_PACKAGE_PATH}"
           terragrunt apply -auto-approve -input=false "$PLAN_FILE"
+
+      - name: Build and push worker image
+        working-directory: infra/live/${{ env.AWS_LIVE_ENVIRONMENT }}/${{ env.AWS_REGION }}/worker-compute-artifacts
+        run: |
+          repository_url="$(terragrunt output -raw worker_repository_url)"
+          registry="${repository_url%/*}"
+          aws ecr get-login-password --region "${AWS_REGION}" \
+            | docker login --username AWS --password-stdin "$registry"
+          docker build --platform linux/amd64 \
+            -f "${GITHUB_WORKSPACE}/Dockerfile.worker" \
+            -t "${repository_url}:${WORKER_IMAGE_TAG}" \
+            "${GITHUB_WORKSPACE}"
+          docker push "${repository_url}:${WORKER_IMAGE_TAG}"
+
+      - name: Smoke AWS runtime
+        env:
+          AWS_E2E_SMOKE: "1"
+        run: make infra-smoke-aws

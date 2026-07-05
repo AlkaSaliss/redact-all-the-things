@@ -48,6 +48,7 @@ required_outputs=(
   artifact_bucket
   frontend_bucket
   jobs_table_name
+  lambda_function_name
   worker_repository_url
   worker_job_queue_name
 )
@@ -79,9 +80,13 @@ aws s3api get-public-access-block --bucket "$frontend_bucket" --region "$aws_reg
 aws batch describe-job-queues --job-queues "$worker_queue" --region "$aws_region" >/dev/null
 aws ecr describe-repositories --repository-names "$worker_repository" --region "$aws_region" >/dev/null
 
+if [[ "${AWS_E2E_SMOKE:-0}" == "1" ]]; then
+  uv run python tools/aws_runtime_smoke.py "$live_stack" "$aws_region"
+fi
+
 cat <<EOF
 AWS infrastructure smoke check passed in ${aws_region}.
 
 Verified deployed DynamoDB, S3 encryption/public-access blocks, AWS Batch job
-queue, and ECR repository outputs from the real AWS live stack.
+queue, ECR repository, and Lambda outputs from the real AWS live stack.
 EOF

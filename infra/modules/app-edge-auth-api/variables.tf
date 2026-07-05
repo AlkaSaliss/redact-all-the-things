@@ -33,3 +33,10 @@ variable "project_name" {
   type        = string
   default     = "redact-all-the-things"
 }
+
+variable "lambda_package_path" {
+  description = "Path to the built control-plane Lambda ZIP package."
+  type        = string
+  default     = null
+  nullable    = true
+}

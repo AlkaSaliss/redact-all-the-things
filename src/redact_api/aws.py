@@ -8,7 +8,7 @@ from typing import Any
 from boto3.dynamodb.conditions import Key
 from botocore.exceptions import ClientError
 
-from redact_api.domain import Job, PageManifest, WorkerSubmission
+from redact_api.domain import Job, PageManifest, WorkerMode, WorkerSubmission
 
 
 class PersistenceConflictError(RuntimeError):
@@ -129,6 +129,9 @@ class S3ObjectRepository:
                 return False
             raise
 
+    def get_source_object(self, key: str) -> bytes:
+        return self._get_artifact(key)
+
     def put_page_artifact(self, key: str, content: bytes) -> None:
         self._put_artifact(key, content, content_type="image/png")
 
@@ -151,11 +154,12 @@ class S3ObjectRepository:
         upload_id: str,
         parts: tuple[dict[str, Any], ...],
     ) -> None:
+        normalized_parts = sorted(parts, key=lambda part: int(part["PartNumber"]))
         self._client.complete_multipart_upload(
             Bucket=self._bucket,
             Key=key,
             UploadId=upload_id,
-            MultipartUpload={"Parts": list(parts)},
+            MultipartUpload={"Parts": normalized_parts},
         )
 
     def presign_download(self, key: str) -> str:
@@ -280,11 +284,15 @@ class AwsBatchSubmitter:
         client: Any,
         *,
         job_queue: str,
-        job_definition: str,
+        analyze_job_definition: str,
+        render_job_definition: str,
     ) -> None:
         self._client = client
         self._job_queue = job_queue
-        self._job_definition = job_definition
+        self._job_definitions = {
+            WorkerMode.ANALYZE: analyze_job_definition,
+            WorkerMode.RENDER: render_job_definition,
+        }
 
     def submit(self, submission: WorkerSubmission) -> WorkerSubmission:
         self._client.submit_job(
@@ -293,7 +301,7 @@ class AwsBatchSubmitter:
                 f"{submission.idempotency_token.rsplit(':', 1)[-1]}"
             ),
             jobQueue=self._job_queue,
-            jobDefinition=self._job_definition,
+            jobDefinition=self._job_definitions[submission.mode],
             parameters={
                 "job_id": submission.job_id,
                 "owner_id": submission.owner_id,
