@@ -38,7 +38,8 @@ def build_service() -> ControlPlaneService:
         AwsBatchSubmitter(
             batch,
             job_queue=environ["BATCH_JOB_QUEUE"],
-            job_definition=environ["BATCH_JOB_DEFINITION"],
+            analyze_job_definition=environ["BATCH_ANALYZE_DEFINITION"],
+            render_job_definition=environ["BATCH_RENDER_DEFINITION"],
         ),
         clock=lambda: datetime.now(UTC),
     )

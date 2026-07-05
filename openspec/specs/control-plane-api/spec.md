@@ -60,6 +60,14 @@ accepting an uploaded job for analysis and submitting the worker request.
 - **WHEN** the owner repeats completion after the analysis submission was accepted
 - **THEN** the API does not create a second logical analysis submission
 
+#### Scenario: Complete unordered uploaded parts
+- **WHEN** an upload completion request includes unique uploaded parts in any order
+- **THEN** the service sends the parts to S3 sorted by part number and submits analysis after the source object exists
+
+#### Scenario: Reject duplicate uploaded parts
+- **WHEN** an upload completion request contains duplicate part numbers
+- **THEN** the service rejects the request without completing the upload
+
 ### Requirement: Read and update page manifests
 The API SHALL allow the owner of a `ready` or `failed` unexpired job to read
 page manifests and SHALL accept valid user-region updates using optimistic

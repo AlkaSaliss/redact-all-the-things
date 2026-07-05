@@ -142,6 +142,7 @@ class ControlPlaneService:
             raise InvalidRequestError("job is not awaiting upload")
         if not upload_id or not parts:
             raise InvalidRequestError("completed multipart parts are required")
+        parts = self._normalize_upload_parts(parts)
         self._objects.complete_multipart_upload(
             job.source_key,
             upload_id=upload_id,
@@ -337,3 +338,22 @@ class ControlPlaneService:
         if payload.get("job_id") != job.id or not isinstance(pages, list):
             raise JobNotFoundError(job.id)
         return payload
+
+    @staticmethod
+    def _normalize_upload_parts(
+        parts: tuple[dict[str, object], ...],
+    ) -> tuple[dict[str, object], ...]:
+        seen = set()
+        normalized = []
+        for part in parts:
+            part_number = int(part["PartNumber"])
+            if part_number in seen:
+                raise InvalidRequestError("multipart part numbers must be unique")
+            seen.add(part_number)
+            normalized.append(
+                {
+                    "PartNumber": part_number,
+                    "ETag": str(part["ETag"]),
+                }
+            )
+        return tuple(sorted(normalized, key=lambda part: int(part["PartNumber"])))

@@ -178,6 +178,30 @@ def test_upload_completion_is_idempotent(
     assert submissions[0].mode is WorkerMode.ANALYZE
 
 
+def test_upload_completion_normalizes_unordered_parts() -> None:
+    parts = ControlPlaneService._normalize_upload_parts(
+        (
+            {"PartNumber": 2, "ETag": '"two"'},
+            {"PartNumber": 1, "ETag": '"one"'},
+        )
+    )
+
+    assert parts == (
+        {"PartNumber": 1, "ETag": '"one"'},
+        {"PartNumber": 2, "ETag": '"two"'},
+    )
+
+
+def test_upload_completion_rejects_duplicate_parts() -> None:
+    with pytest.raises(InvalidRequestError):
+        ControlPlaneService._normalize_upload_parts(
+            (
+                {"PartNumber": 1, "ETag": '"one"'},
+                {"PartNumber": 1, "ETag": '"again"'},
+            )
+        )
+
+
 def test_export_requires_acknowledgement_and_is_idempotent(
     service: ControlPlaneService,
     aws_resources: dict[str, object],

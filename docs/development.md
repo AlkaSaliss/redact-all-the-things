@@ -143,6 +143,13 @@ export AWS_REGION=eu-west-1
 make infra-smoke-aws
 ```
 
+To exercise the first real Lambda/S3 multipart/Batch submission path, opt in to
+the mutating runtime smoke:
+
+```bash
+AWS_E2E_SMOKE=1 make infra-smoke-aws
+```
+
 Preview the documentation:
 
 ```bash

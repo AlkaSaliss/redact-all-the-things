@@ -84,7 +84,8 @@ The Lambda entry point requires:
 - `JOBS_TABLE`
 - `FILES_BUCKET`
 - `BATCH_JOB_QUEUE`
-- `BATCH_JOB_DEFINITION`
+- `BATCH_ANALYZE_DEFINITION`
+- `BATCH_RENDER_DEFINITION`
 
 `AWS_REGION` defaults to `eu-west-1`. `AWS_ENDPOINT_URL` may point boto3 at a
 local endpoint, but production omits it. The Lambda runtime uses the real AWS

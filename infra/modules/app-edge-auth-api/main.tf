@@ -12,8 +12,11 @@ locals {
   create_cloudfront_distribution = var.deployment_mode == "aws"
   name_prefix                    = module.foundation.name_prefix
   artifact_expiry_days           = 1
-  lambda_source_hash             = filesha256("${path.module}/stubs/lambda_handler.py")
+  lambda_package_path            = coalesce(var.lambda_package_path, "${path.module}/.terraform/control-plane.zip")
   localhost_frontend_origin      = "http://localhost:5173"
+  worker_job_queue               = "${local.name_prefix}-worker"
+  analyze_job_definition         = "${local.name_prefix}-analyze"
+  render_job_definition          = "${local.name_prefix}-render"
   cloudfront_frontend_origin = (
     local.create_cloudfront_distribution
     ? "https://${aws_cloudfront_distribution.frontend[0].domain_name}"
@@ -23,12 +26,6 @@ locals {
     local.localhost_frontend_origin,
     local.cloudfront_frontend_origin,
   ])
-}
-
-data "archive_file" "lambda_stub" {
-  type        = "zip"
-  source_file = "${path.module}/stubs/lambda_handler.py"
-  output_path = "${path.module}/.terraform/control-plane-stub.zip"
 }
 
 resource "aws_s3_bucket" "frontend" {
@@ -139,7 +136,7 @@ resource "aws_dynamodb_table" "jobs" {
   }
 
   global_secondary_index {
-    name            = "owner-created-at"
+    name            = "owner-created-index"
     hash_key        = "owner_id"
     range_key       = "created_at"
     projection_type = "ALL"
@@ -285,6 +282,11 @@ resource "aws_iam_role_policy" "lambda" {
           "${aws_s3_bucket.artifacts.arn}/*",
         ]
       },
+      {
+        Effect   = "Allow"
+        Action   = "batch:SubmitJob"
+        Resource = "*"
+      },
     ]
   })
 }
@@ -292,19 +294,19 @@ resource "aws_iam_role_policy" "lambda" {
 resource "aws_lambda_function" "api" {
   function_name    = "${local.name_prefix}-api"
   role             = aws_iam_role.lambda.arn
-  handler          = "lambda_handler.handler"
+  handler          = "redact_api.lambda_handler.handler"
   runtime          = "python3.12"
-  filename         = data.archive_file.lambda_stub.output_path
-  source_code_hash = data.archive_file.lambda_stub.output_base64sha256
+  filename         = local.lambda_package_path
+  source_code_hash = filebase64sha256(local.lambda_package_path)
 
   environment {
     variables = {
       FILES_BUCKET             = aws_s3_bucket.artifacts.bucket
       JOBS_TABLE               = aws_dynamodb_table.jobs.name
-      STUB_SOURCE_HASH         = local.lambda_source_hash
       FRONTEND_ALLOWED_ORIGINS = join(",", local.frontend_allowed_origins)
-      BATCH_JOB_DEFINITION     = "floci-render-placeholder"
-      BATCH_JOB_QUEUE          = "floci-worker-placeholder"
+      BATCH_JOB_QUEUE          = local.worker_job_queue
+      BATCH_ANALYZE_DEFINITION = local.analyze_job_definition
+      BATCH_RENDER_DEFINITION  = local.render_job_definition
     }
   }
 

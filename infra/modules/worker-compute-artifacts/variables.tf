@@ -33,3 +33,16 @@ variable "project_name" {
   type        = string
   default     = "redact-all-the-things"
 }
+
+variable "lambda_package_path" {
+  description = "Path to the built control-plane Lambda ZIP package."
+  type        = string
+  default     = null
+  nullable    = true
+}
+
+variable "worker_image_tag" {
+  description = "Immutable ECR image tag used by worker Batch job definitions."
+  type        = string
+  default     = "latest"
+}

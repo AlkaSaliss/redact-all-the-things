@@ -43,6 +43,11 @@ output "jobs_table_name" {
   value       = module.app.jobs_table
 }
 
+output "lambda_function_name" {
+  description = "Control-plane Lambda function name."
+  value       = module.app.lambda_function_name
+}
+
 output "render_job_definition" {
   description = "AWS Batch job definition for render workers."
   value       = aws_batch_job_definition.render.name
