@@ -43,10 +43,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Set up Terraform
-        uses: hashicorp/setup-terraform@v3
+        uses: hashicorp/setup-terraform@v4
         with:
           terraform_version: ${{ env.TERRAFORM_VERSION }}
           terraform_wrapper: false
@@ -77,10 +77,10 @@ jobs:
       TG_STATE_REGION: ${{ vars.TG_STATE_REGION || vars.AWS_REGION || 'eu-west-1' }}
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Set up Terraform
-        uses: hashicorp/setup-terraform@v3
+        uses: hashicorp/setup-terraform@v4
         with:
           terraform_version: ${{ env.TERRAFORM_VERSION }}
           terraform_wrapper: false
@@ -94,7 +94,7 @@ jobs:
           sudo mv terragrunt /usr/local/bin/terragrunt
 
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v5
+        uses: aws-actions/configure-aws-credentials@v6
         with:
           role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
           aws-region: ${{ env.AWS_REGION }}
@@ -117,7 +117,7 @@ jobs:
           ls -lah
 
       - name: Upload AWS plan artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: aws-${{ env.AWS_LIVE_ENVIRONMENT }}-terraform-plan
           # yamllint disable rule:line-length
@@ -146,10 +146,10 @@ jobs:
       TG_STATE_REGION: ${{ vars.TG_STATE_REGION || vars.AWS_REGION || 'eu-west-1' }}
     steps:
       - name: Check out repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Set up Terraform
-        uses: hashicorp/setup-terraform@v3
+        uses: hashicorp/setup-terraform@v4
         with:
           terraform_version: ${{ env.TERRAFORM_VERSION }}
           terraform_wrapper: false
@@ -163,13 +163,13 @@ jobs:
           sudo mv terragrunt /usr/local/bin/terragrunt
 
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v5
+        uses: aws-actions/configure-aws-credentials@v6
         with:
           role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Download reviewed AWS plan artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: aws-${{ env.AWS_LIVE_ENVIRONMENT }}-terraform-plan
           path: infra/live/${{ env.AWS_LIVE_ENVIRONMENT }}/${{ env.AWS_REGION }}/worker-compute-artifacts
