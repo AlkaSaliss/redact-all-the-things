@@ -146,7 +146,7 @@ button:disabled {
 .app-shell {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 116px 408px minmax(680px, 1fr);
+  grid-template-columns: 104px 360px minmax(0, 1fr);
   grid-template-rows: 64px 1fr;
 }
 
@@ -176,12 +176,16 @@ button:disabled {
   padding: 16px 10px;
 }
 
-.sidebar a {
+.sidebar button {
   display: block;
+  width: 100%;
+  border: 0;
   border-left: 4px solid transparent;
   border-radius: 6px;
+  background: transparent;
   padding: 14px 12px;
   font-weight: 650;
+  text-align: left;
 }
 
 .sidebar .active {
@@ -242,6 +246,15 @@ h3 {
 .jobs-table tr.selected {
   background: #effaf8;
   box-shadow: inset 4px 0 #00897b;
+}
+
+.job-link {
+  border: 0;
+  background: transparent;
+  color: #006b60;
+  padding: 0;
+  font-weight: 650;
+  text-align: left;
 }
 
 .status {
@@ -315,8 +328,8 @@ h3 {
 
 .editor {
   display: grid;
-  grid-template-columns: 168px minmax(460px, 1fr) 286px;
-  grid-template-rows: 56px 76px 1fr;
+  grid-template-columns: 140px minmax(360px, 1fr) 240px;
+  grid-template-rows: 56px auto 1fr;
   min-width: 0;
   background: #f3f5f7;
 }
@@ -344,6 +357,7 @@ h3 {
 
 .toolbar {
   justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .toolbar button {
@@ -375,7 +389,7 @@ h3 {
 .inspector {
   background: #fff;
   border-right: 1px solid #dce2e8;
-  padding: 16px;
+  padding: 12px;
   overflow: auto;
 }
 
@@ -390,6 +404,11 @@ h3 {
   margin-top: 14px;
   padding: 6px;
   background: #fff;
+}
+
+.thumbnail.active {
+  border-color: #00897b;
+  box-shadow: 0 0 0 2px #b9ebe5;
 }
 
 .thumbnail img {
@@ -430,15 +449,22 @@ h3 {
   width: 100%;
 }
 
-.region-layer,
-.region {
+.region-layer {
   position: absolute;
   inset: 0;
 }
 
+.region-layer.drawing {
+  cursor: crosshair;
+  touch-action: none;
+}
+
 .region {
+  position: absolute;
   border: 2px dashed #8a2a2a;
   background: rgba(239, 68, 68, 0.25);
+  cursor: move;
+  touch-action: none;
 }
 
 .region.selected {
@@ -446,14 +472,70 @@ h3 {
   background: rgba(239, 68, 68, 0.35);
 }
 
-.draw-target {
+.resize-handle {
   position: absolute;
-  right: 26px;
-  top: 26px;
-  display: grid;
-  width: 44px;
-  height: 44px;
-  place-items: center;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #15202b;
+  border-radius: 2px;
+  background: #fff;
+}
+
+.resize-handle.nw {
+  left: -7px;
+  top: -7px;
+  cursor: nwse-resize;
+}
+
+.resize-handle.ne {
+  right: -7px;
+  top: -7px;
+  cursor: nesw-resize;
+}
+
+.resize-handle.sw {
+  left: -7px;
+  bottom: -7px;
+  cursor: nesw-resize;
+}
+
+.resize-handle.se {
+  right: -7px;
+  bottom: -7px;
+  cursor: nwse-resize;
+}
+
+.job-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: #f3f5f7;
+  text-align: center;
+}
+
+.job-detail .text-button {
+  position: absolute;
+  align-self: flex-start;
+  top: 84px;
+  margin-left: 20px;
+}
+
+.job-detail .primary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+}
+
+.success-text {
+  color: #087f5b;
+}
+
+.canvas-loading {
+  margin: 0 0 12px;
+  color: #52606d;
 }
 
 .inspector dl {

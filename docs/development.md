@@ -97,6 +97,26 @@ The frontend still keeps contract fixtures for unit tests and fallback UI
 states, but authenticated local development signs in through Cognito Hosted UI
 and calls the deployed API Gateway endpoint.
 
+### Frontend MVP workflow
+
+The **Jobs** and **Upload** sidebar buttons switch the primary workflow. Select
+a ready job from **Recent Jobs** to resume its review session. Page thumbnails
+load page-specific manifests; edits and save status remain independent for
+each visited page.
+
+The editor supports pointer drawing, moving, corner resizing, deletion,
+suggestion navigation, select/deselect all, zoom, and session undo/redo. Use
+`Ctrl+Z`/`Cmd+Z` to undo, `Ctrl+Y` or `Cmd+Shift+Z` to redo, and
+`Delete`/`Backspace` to remove the selected region. Failed autosaves retain
+the local edit and expose **Retry save**.
+
+Uploads accept one PDF, JPEG, or PNG up to 100 MB, use the API-provided
+multipart URLs, show aggregate part progress, and can be cancelled while a
+part is transferring. Processing and export states refresh automatically.
+Retryable worker failures expose **Retry job**; permanent failures remain
+read-only. A complete unexpired job exposes **Download redacted file**, which
+requests a fresh short-lived download URL immediately before opening it.
+
 The test suite uses pinned Floci services for DynamoDB and S3. See the
 [control-plane API documentation](architecture/control-plane-api.md) for the
 local AWS boundary and the rationale for using a recording Batch fake.

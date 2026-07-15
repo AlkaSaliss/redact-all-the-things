@@ -82,6 +82,10 @@ export class RedactionApiClient {
     });
   }
 
+  async retryJob(jobId: string): Promise<Job> {
+    return this.request<Job>(`/jobs/${jobId}/retry`, { method: "POST" });
+  }
+
   async authorizeDownload(jobId: string): Promise<string> {
     const response = await this.request<{ download_url: string }>(
       `/jobs/${jobId}/download`,
@@ -111,13 +115,15 @@ export class RedactionApiClient {
 
 export async function uploadMultipartPart(
   url: string,
-  file: File,
+  file: Blob,
   onProgress: (progress: number) => void,
+  signal?: AbortSignal,
 ): Promise<string> {
   onProgress(0);
   const response = await fetch(url, {
     method: "PUT",
     body: file,
+    signal,
   });
   if (!response.ok) {
     throw new ApiError("upload failed", response.status);
