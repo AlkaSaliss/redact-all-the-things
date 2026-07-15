@@ -665,7 +665,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "api_client_redactionapiclient_createjob",
-      "community": 194,
+      "community": 151,
       "norm_label": ".createjob()"
     },
     {
@@ -905,7 +905,7 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "contracts_types_pagesummary",
-      "community": 194,
+      "community": 136,
       "norm_label": "pagesummary"
     },
     {
@@ -1115,7 +1115,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "fixtures_contracts",
-      "community": 194,
+      "community": 136,
       "norm_label": "contracts.ts"
     },
     {
@@ -1125,7 +1125,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "fixtures_contracts_fixturejobs",
-      "community": 194,
+      "community": 136,
       "norm_label": "fixturejobs"
     },
     {
@@ -1135,7 +1135,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "fixtures_contracts_fixturepages",
-      "community": 194,
+      "community": 136,
       "norm_label": "fixturepages"
     },
     {
@@ -1145,7 +1145,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "fixtures_contracts_fixturemanifest",
-      "community": 194,
+      "community": 136,
       "norm_label": "fixturemanifest"
     },
     {
@@ -4735,7 +4735,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "redact_api_aws_dynamojobrepository",
-      "community": 202,
+      "community": 42,
       "norm_label": "dynamojobrepository"
     },
     {
@@ -4745,7 +4745,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "redact_api_aws_dynamojobrepository_init",
-      "community": 202,
+      "community": 42,
       "norm_label": ".__init__()"
     },
     {
@@ -4755,7 +4755,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "src_redact_api_aws_py_any",
-      "community": 202,
+      "community": 42,
       "norm_label": "any"
     },
     {
@@ -4765,7 +4765,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "redact_api_aws_dynamojobrepository_create",
-      "community": 202,
+      "community": 42,
       "norm_label": ".create()"
     },
     {
@@ -4775,7 +4775,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "src_redact_api_aws_py_job",
-      "community": 202,
+      "community": 42,
       "norm_label": "job"
     },
     {
@@ -4785,7 +4785,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "redact_api_aws_dynamojobrepository_get",
-      "community": 202,
+      "community": 42,
       "norm_label": ".get()"
     },
     {
@@ -4795,7 +4795,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "redact_api_aws_dynamojobrepository_list_owner",
-      "community": 202,
+      "community": 42,
       "norm_label": ".list_owner()"
     },
     {
@@ -4805,7 +4805,7 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "redact_api_aws_dynamojobrepository_save",
-      "community": 202,
+      "community": 42,
       "norm_label": ".save()"
     },
     {
@@ -4815,7 +4815,7 @@
       "source_location": "L78",
       "_origin": "ast",
       "id": "redact_api_aws_dynamojobrepository_serialize",
-      "community": 202,
+      "community": 42,
       "norm_label": "._serialize()"
     },
     {
@@ -4825,7 +4825,7 @@
       "source_location": "L85",
       "_origin": "ast",
       "id": "redact_api_aws_dynamojobrepository_deserialize",
-      "community": 202,
+      "community": 42,
       "norm_label": "._deserialize()"
     },
     {
@@ -4845,7 +4845,7 @@
       "source_location": "L95",
       "_origin": "ast",
       "id": "redact_api_aws_s3objectrepository_init",
-      "community": 202,
+      "community": 42,
       "norm_label": ".__init__()"
     },
     {
@@ -4945,7 +4945,7 @@
       "source_location": "L160",
       "_origin": "ast",
       "id": "redact_api_aws_s3objectrepository_complete_multipart_upload",
-      "community": 202,
+      "community": 42,
       "norm_label": ".complete_multipart_upload()"
     },
     {
@@ -5065,7 +5065,7 @@
       "source_location": "L292",
       "_origin": "ast",
       "id": "redact_api_aws_awsbatchsubmitter_init",
-      "community": 202,
+      "community": 42,
       "norm_label": ".__init__()"
     },
     {
@@ -5155,7 +5155,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "redact_api_aws_rationale_37",
-      "community": 202,
+      "community": 42,
       "norm_label": "persist validated job records with dynamodb conditional writes."
     },
     {
@@ -5195,7 +5195,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "redact_api_domain",
-      "community": 21,
+      "community": 1,
       "norm_label": "domain.py"
     },
     {
@@ -5255,7 +5255,7 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "redact_api_domain_regionsource",
-      "community": 5,
+      "community": 30,
       "norm_label": "regionsource"
     },
     {
@@ -5265,7 +5265,7 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "redact_api_domain_invalidtransitionerror",
-      "community": 183,
+      "community": 122,
       "norm_label": "invalidtransitionerror"
     },
     {
@@ -5275,7 +5275,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "valueerror",
-      "community": 183,
+      "community": 21,
       "norm_label": "valueerror"
     },
     {
@@ -5335,7 +5335,7 @@
       "source_location": "L108",
       "_origin": "ast",
       "id": "redact_api_domain_job_validate_contract",
-      "community": 183,
+      "community": 21,
       "norm_label": ".validate_contract()"
     },
     {
@@ -5355,7 +5355,7 @@
       "source_location": "L140",
       "_origin": "ast",
       "id": "redact_api_domain_workersubmission_validate_keys",
-      "community": 183,
+      "community": 21,
       "norm_label": ".validate_keys()"
     },
     {
@@ -5375,7 +5375,7 @@
       "source_location": "L164",
       "_origin": "ast",
       "id": "redact_api_domain_redactionregion_validate_geometry",
-      "community": 183,
+      "community": 21,
       "norm_label": ".validate_geometry()"
     },
     {
@@ -5385,7 +5385,7 @@
       "source_location": "L177",
       "_origin": "ast",
       "id": "redact_api_domain_pagemanifest",
-      "community": 42,
+      "community": 30,
       "norm_label": "pagemanifest"
     },
     {
@@ -5395,7 +5395,7 @@
       "source_location": "L188",
       "_origin": "ast",
       "id": "redact_api_domain_pagemanifest_validate_contract",
-      "community": 183,
+      "community": 21,
       "norm_label": ".validate_contract()"
     },
     {
@@ -5435,7 +5435,7 @@
       "source_location": "L246",
       "_origin": "ast",
       "id": "redact_api_domain_retry_mode",
-      "community": 183,
+      "community": 21,
       "norm_label": "retry_mode()"
     },
     {
@@ -5465,7 +5465,7 @@
       "source_location": "L302",
       "_origin": "ast",
       "id": "redact_api_domain_save_manifest",
-      "community": 21,
+      "community": 1,
       "norm_label": "save_manifest()"
     },
     {
@@ -5475,7 +5475,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "redact_api_domain_rationale_1",
-      "community": 21,
+      "community": 1,
       "norm_label": "validated job and page-manifest contracts."
     },
     {
@@ -5525,7 +5525,7 @@
       "source_location": "L70",
       "_origin": "ast",
       "id": "redact_api_domain_rationale_70",
-      "community": 5,
+      "community": 30,
       "norm_label": "origin of a redaction region."
     },
     {
@@ -5535,7 +5535,7 @@
       "source_location": "L77",
       "_origin": "ast",
       "id": "redact_api_domain_rationale_77",
-      "community": 183,
+      "community": 122,
       "norm_label": "raised when a job status transition violates the lifecycle."
     },
     {
@@ -5585,7 +5585,7 @@
       "source_location": "L178",
       "_origin": "ast",
       "id": "redact_api_domain_rationale_178",
-      "community": 42,
+      "community": 30,
       "norm_label": "versioned per-page suggestions and current redaction selections."
     },
     {
@@ -5625,7 +5625,7 @@
       "source_location": "L247",
       "_origin": "ast",
       "id": "redact_api_domain_rationale_247",
-      "community": 183,
+      "community": 21,
       "norm_label": "return the worker mode allowed for a retryable failure code."
     },
     {
@@ -5655,7 +5655,7 @@
       "source_location": "L308",
       "_origin": "ast",
       "id": "redact_api_domain_rationale_308",
-      "community": 21,
+      "community": 1,
       "norm_label": "create the next immutable version of a page manifest."
     },
     {
@@ -5855,7 +5855,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "redact_api_lambda_handler_build_service",
-      "community": 202,
+      "community": 120,
       "norm_label": "build_service()"
     },
     {
@@ -5865,7 +5865,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "src_redact_api_lambda_handler_py_controlplaneservice",
-      "community": 202,
+      "community": 120,
       "norm_label": "controlplaneservice"
     },
     {
@@ -5895,7 +5895,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "redact_api_lambda_handler_rationale_20",
-      "community": 202,
+      "community": 120,
       "norm_label": "construct the production service from lambda environment settings."
     },
     {
@@ -5965,7 +5965,7 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "redact_api_services_controlplaneservice",
-      "community": 1,
+      "community": 24,
       "norm_label": "controlplaneservice"
     },
     {
@@ -6035,7 +6035,7 @@
       "source_location": "L70",
       "_origin": "ast",
       "id": "redact_api_services_controlplaneservice_create_job",
-      "community": 1,
+      "community": 24,
       "norm_label": ".create_job()"
     },
     {
@@ -6055,7 +6055,7 @@
       "source_location": "L70",
       "_origin": "ast",
       "id": "src_redact_api_services_py_job",
-      "community": 1,
+      "community": 24,
       "norm_label": "job"
     },
     {
@@ -6065,7 +6065,7 @@
       "source_location": "L112",
       "_origin": "ast",
       "id": "redact_api_services_controlplaneservice_list_jobs",
-      "community": 1,
+      "community": 24,
       "norm_label": ".list_jobs()"
     },
     {
@@ -6075,7 +6075,7 @@
       "source_location": "L120",
       "_origin": "ast",
       "id": "redact_api_services_controlplaneservice_get_job",
-      "community": 1,
+      "community": 24,
       "norm_label": ".get_job()"
     },
     {
@@ -6085,7 +6085,7 @@
       "source_location": "L130",
       "_origin": "ast",
       "id": "redact_api_services_controlplaneservice_complete_upload",
-      "community": 1,
+      "community": 24,
       "norm_label": ".complete_upload()"
     },
     {
@@ -6095,7 +6095,7 @@
       "source_location": "L155",
       "_origin": "ast",
       "id": "redact_api_services_controlplaneservice_confirm_export",
-      "community": 1,
+      "community": 24,
       "norm_label": ".confirm_export()"
     },
     {
@@ -6105,7 +6105,7 @@
       "source_location": "L175",
       "_origin": "ast",
       "id": "redact_api_services_controlplaneservice_retry",
-      "community": 1,
+      "community": 24,
       "norm_label": ".retry()"
     },
     {
@@ -6115,7 +6115,7 @@
       "source_location": "L189",
       "_origin": "ast",
       "id": "redact_api_services_controlplaneservice_get_manifest",
-      "community": 1,
+      "community": 24,
       "norm_label": ".get_manifest()"
     },
     {
@@ -6135,7 +6135,7 @@
       "source_location": "L202",
       "_origin": "ast",
       "id": "redact_api_services_controlplaneservice_save_manifest",
-      "community": 1,
+      "community": 24,
       "norm_label": ".save_manifest()"
     },
     {
@@ -6155,7 +6155,7 @@
       "source_location": "L232",
       "_origin": "ast",
       "id": "redact_api_services_controlplaneservice_list_pages",
-      "community": 1,
+      "community": 24,
       "norm_label": ".list_pages()"
     },
     {
@@ -6175,7 +6175,7 @@
       "source_location": "L258",
       "_origin": "ast",
       "id": "redact_api_services_controlplaneservice_authorize_page_preview",
-      "community": 1,
+      "community": 24,
       "norm_label": ".authorize_page_preview()"
     },
     {
@@ -6195,7 +6195,7 @@
       "source_location": "L277",
       "_origin": "ast",
       "id": "redact_api_services_controlplaneservice_authorize_download",
-      "community": 1,
+      "community": 24,
       "norm_label": ".authorize_download()"
     },
     {
@@ -6205,7 +6205,7 @@
       "source_location": "L285",
       "_origin": "ast",
       "id": "redact_api_services_controlplaneservice_transition_and_submit",
-      "community": 1,
+      "community": 24,
       "norm_label": "._transition_and_submit()"
     },
     {
@@ -6235,7 +6235,7 @@
       "source_location": "L325",
       "_origin": "ast",
       "id": "redact_api_services_controlplaneservice_require_manifest_status",
-      "community": 1,
+      "community": 24,
       "norm_label": "._require_manifest_status()"
     },
     {
@@ -6245,7 +6245,7 @@
       "source_location": "L329",
       "_origin": "ast",
       "id": "redact_api_services_controlplaneservice_load_page_index",
-      "community": 1,
+      "community": 24,
       "norm_label": "._load_page_index()"
     },
     {
@@ -6255,7 +6255,7 @@
       "source_location": "L343",
       "_origin": "ast",
       "id": "redact_api_services_controlplaneservice_normalize_upload_parts",
-      "community": 1,
+      "community": 24,
       "norm_label": "._normalize_upload_parts()"
     },
     {
@@ -6305,7 +6305,7 @@
       "source_location": "L53",
       "_origin": "ast",
       "id": "redact_api_services_rationale_53",
-      "community": 1,
+      "community": 24,
       "norm_label": "coordinate owner-scoped job workflows across persistent aws services."
     },
     {
@@ -6315,7 +6315,7 @@
       "source_location": "L291",
       "_origin": "ast",
       "id": "redact_api_services_rationale_291",
-      "community": 1,
+      "community": 24,
       "norm_label": "persist a transition and submit its corresponding worker request."
     },
     {
@@ -6325,7 +6325,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "redact_api_worker",
-      "community": 30,
+      "community": 425,
       "norm_label": "worker.py"
     },
     {
@@ -6345,7 +6345,7 @@
       "source_location": "L121",
       "_origin": "ast",
       "id": "redact_api_worker_renderedpage",
-      "community": 5,
+      "community": 3,
       "norm_label": "renderedpage"
     },
     {
@@ -6355,7 +6355,7 @@
       "source_location": "L131",
       "_origin": "ast",
       "id": "redact_api_worker_pageartifact",
-      "community": 180,
+      "community": 30,
       "norm_label": "pageartifact"
     },
     {
@@ -6365,7 +6365,7 @@
       "source_location": "L142",
       "_origin": "ast",
       "id": "redact_api_worker_pageartifactindex",
-      "community": 3,
+      "community": 30,
       "norm_label": "pageartifactindex"
     },
     {
@@ -6375,7 +6375,7 @@
       "source_location": "L151",
       "_origin": "ast",
       "id": "redact_api_worker_ocrline",
-      "community": 5,
+      "community": 3,
       "norm_label": "ocrline"
     },
     {
@@ -6425,7 +6425,7 @@
       "source_location": "L203",
       "_origin": "ast",
       "id": "redact_api_worker_workervalidationconfig_from_yaml",
-      "community": 183,
+      "community": 21,
       "norm_label": ".from_yaml()"
     },
     {
@@ -6465,7 +6465,7 @@
       "source_location": "L237",
       "_origin": "ast",
       "id": "redact_api_worker_pageartifactwriter",
-      "community": 198,
+      "community": 188,
       "norm_label": "pageartifactwriter"
     },
     {
@@ -6475,7 +6475,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "protocol",
-      "community": 24,
+      "community": 188,
       "norm_label": "protocol"
     },
     {
@@ -6485,7 +6485,7 @@
       "source_location": "L240",
       "_origin": "ast",
       "id": "redact_api_worker_pageartifactwriter_put_page_artifact",
-      "community": 198,
+      "community": 188,
       "norm_label": ".put_page_artifact()"
     },
     {
@@ -6495,7 +6495,7 @@
       "source_location": "L243",
       "_origin": "ast",
       "id": "redact_api_worker_pageartifactwriter_put_page_artifact_index",
-      "community": 198,
+      "community": 188,
       "norm_label": ".put_page_artifact_index()"
     },
     {
@@ -6505,7 +6505,7 @@
       "source_location": "L247",
       "_origin": "ast",
       "id": "redact_api_worker_ocrartifactstore",
-      "community": 24,
+      "community": 44,
       "norm_label": "ocrartifactstore"
     },
     {
@@ -6515,7 +6515,7 @@
       "source_location": "L250",
       "_origin": "ast",
       "id": "redact_api_worker_ocrartifactstore_get_page_artifact_index",
-      "community": 24,
+      "community": 44,
       "norm_label": ".get_page_artifact_index()"
     },
     {
@@ -6525,7 +6525,7 @@
       "source_location": "L253",
       "_origin": "ast",
       "id": "redact_api_worker_ocrartifactstore_get_page_artifact",
-      "community": 24,
+      "community": 44,
       "norm_label": ".get_page_artifact()"
     },
     {
@@ -6535,7 +6535,7 @@
       "source_location": "L256",
       "_origin": "ast",
       "id": "redact_api_worker_ocrartifactstore_put_ocr_page_text",
-      "community": 24,
+      "community": 44,
       "norm_label": ".put_ocr_page_text()"
     },
     {
@@ -6545,7 +6545,7 @@
       "source_location": "L260",
       "_origin": "ast",
       "id": "redact_api_worker_ocrengine",
-      "community": 24,
+      "community": 44,
       "norm_label": "ocrengine"
     },
     {
@@ -6555,7 +6555,7 @@
       "source_location": "L266",
       "_origin": "ast",
       "id": "redact_api_worker_ocrengine_recognize",
-      "community": 180,
+      "community": 30,
       "norm_label": ".recognize()"
     },
     {
@@ -6615,7 +6615,7 @@
       "source_location": "L291",
       "_origin": "ast",
       "id": "src_redact_api_worker_py_pagemanifest",
-      "community": 183,
+      "community": 122,
       "norm_label": "pagemanifest"
     },
     {
@@ -6625,7 +6625,7 @@
       "source_location": "L295",
       "_origin": "ast",
       "id": "redact_api_worker_renderartifactstore",
-      "community": 44,
+      "community": 137,
       "norm_label": "renderartifactstore"
     },
     {
@@ -6635,7 +6635,7 @@
       "source_location": "L298",
       "_origin": "ast",
       "id": "redact_api_worker_renderartifactstore_get_page_artifact_index",
-      "community": 44,
+      "community": 425,
       "norm_label": ".get_page_artifact_index()"
     },
     {
@@ -6645,7 +6645,7 @@
       "source_location": "L301",
       "_origin": "ast",
       "id": "redact_api_worker_renderartifactstore_get_page_artifact",
-      "community": 44,
+      "community": 137,
       "norm_label": ".get_page_artifact()"
     },
     {
@@ -6655,7 +6655,7 @@
       "source_location": "L304",
       "_origin": "ast",
       "id": "redact_api_worker_renderartifactstore_get_manifest",
-      "community": 44,
+      "community": 137,
       "norm_label": ".get_manifest()"
     },
     {
@@ -6665,7 +6665,7 @@
       "source_location": "L312",
       "_origin": "ast",
       "id": "redact_api_worker_renderartifactstore_put_output_object",
-      "community": 44,
+      "community": 137,
       "norm_label": ".put_output_object()"
     },
     {
@@ -6675,7 +6675,7 @@
       "source_location": "L322",
       "_origin": "ast",
       "id": "redact_api_worker_sourcevalidationerror",
-      "community": 183,
+      "community": 46,
       "norm_label": "sourcevalidationerror"
     },
     {
@@ -6685,7 +6685,7 @@
       "source_location": "L325",
       "_origin": "ast",
       "id": "redact_api_worker_sourcevalidationerror_init",
-      "community": 183,
+      "community": 46,
       "norm_label": ".__init__()"
     },
     {
@@ -6735,7 +6735,7 @@
       "source_location": "L342",
       "_origin": "ast",
       "id": "redact_api_worker_rendererror",
-      "community": 183,
+      "community": 137,
       "norm_label": "rendererror"
     },
     {
@@ -6805,7 +6805,7 @@
       "source_location": "L495",
       "_origin": "ast",
       "id": "redact_api_worker_render_redacted_output",
-      "community": 44,
+      "community": 137,
       "norm_label": "render_redacted_output()"
     },
     {
@@ -6865,7 +6865,7 @@
       "source_location": "L694",
       "_origin": "ast",
       "id": "redact_api_worker_rasterize_source",
-      "community": 425,
+      "community": 188,
       "norm_label": "rasterize_source()"
     },
     {
@@ -6875,7 +6875,7 @@
       "source_location": "L753",
       "_origin": "ast",
       "id": "redact_api_worker_page_artifact_key",
-      "community": 30,
+      "community": 425,
       "norm_label": "page_artifact_key()"
     },
     {
@@ -6885,7 +6885,7 @@
       "source_location": "L759",
       "_origin": "ast",
       "id": "redact_api_worker_page_artifact_index_key",
-      "community": 30,
+      "community": 188,
       "norm_label": "page_artifact_index_key()"
     },
     {
@@ -6895,7 +6895,7 @@
       "source_location": "L765",
       "_origin": "ast",
       "id": "redact_api_worker_extract_ocr_text",
-      "community": 24,
+      "community": 44,
       "norm_label": "extract_ocr_text()"
     },
     {
@@ -6905,7 +6905,7 @@
       "source_location": "L790",
       "_origin": "ast",
       "id": "redact_api_worker_extract_ocr_page_text",
-      "community": 24,
+      "community": 44,
       "norm_label": "extract_ocr_page_text()"
     },
     {
@@ -6915,7 +6915,7 @@
       "source_location": "L812",
       "_origin": "ast",
       "id": "redact_api_worker_ocr_page_text_key",
-      "community": 24,
+      "community": 44,
       "norm_label": "ocr_page_text_key()"
     },
     {
@@ -6945,7 +6945,7 @@
       "source_location": "L882",
       "_origin": "ast",
       "id": "redact_api_worker_map_pii_regions",
-      "community": 129,
+      "community": 5,
       "norm_label": "map_pii_regions()"
     },
     {
@@ -6965,7 +6965,7 @@
       "source_location": "L939",
       "_origin": "ast",
       "id": "redact_api_worker_gliner2piidetector",
-      "community": 137,
+      "community": 183,
       "norm_label": "gliner2piidetector"
     },
     {
@@ -6995,7 +6995,7 @@
       "source_location": "L975",
       "_origin": "ast",
       "id": "redact_api_worker_paddleocrengine",
-      "community": 137,
+      "community": 183,
       "norm_label": "paddleocrengine"
     },
     {
@@ -7005,7 +7005,7 @@
       "source_location": "L981",
       "_origin": "ast",
       "id": "redact_api_worker_paddleocrengine_init",
-      "community": 183,
+      "community": 46,
       "norm_label": ".__init__()"
     },
     {
@@ -7015,7 +7015,7 @@
       "source_location": "L993",
       "_origin": "ast",
       "id": "redact_api_worker_paddleocrengine_recognize",
-      "community": 24,
+      "community": 3,
       "norm_label": ".recognize()"
     },
     {
@@ -7025,7 +7025,7 @@
       "source_location": "L1023",
       "_origin": "ast",
       "id": "redact_api_worker_render_source_pages",
-      "community": 30,
+      "community": 425,
       "norm_label": "_render_source_pages()"
     },
     {
@@ -7035,7 +7035,7 @@
       "source_location": "L1035",
       "_origin": "ast",
       "id": "redact_api_worker_render_pdf_pages",
-      "community": 30,
+      "community": 425,
       "norm_label": "_render_pdf_pages()"
     },
     {
@@ -7045,7 +7045,7 @@
       "source_location": "L1053",
       "_origin": "ast",
       "id": "redact_api_worker_render_image_page",
-      "community": 30,
+      "community": 425,
       "norm_label": "_render_image_page()"
     },
     {
@@ -7055,7 +7055,7 @@
       "source_location": "L1061",
       "_origin": "ast",
       "id": "redact_api_worker_image_to_rendered_page",
-      "community": 30,
+      "community": 425,
       "norm_label": "_image_to_rendered_page()"
     },
     {
@@ -7065,7 +7065,7 @@
       "source_location": "L1061",
       "_origin": "ast",
       "id": "image",
-      "community": 183,
+      "community": 137,
       "norm_label": "image"
     },
     {
@@ -7085,7 +7085,7 @@
       "source_location": "L1090",
       "_origin": "ast",
       "id": "redact_api_worker_load_page_artifact_index",
-      "community": 44,
+      "community": 425,
       "norm_label": "load_page_artifact_index()"
     },
     {
@@ -7095,7 +7095,7 @@
       "source_location": "L1129",
       "_origin": "ast",
       "id": "redact_api_worker_render_redacted_page",
-      "community": 44,
+      "community": 137,
       "norm_label": "_render_redacted_page()"
     },
     {
@@ -7105,7 +7105,7 @@
       "source_location": "L1158",
       "_origin": "ast",
       "id": "redact_api_worker_serialize_redacted_output",
-      "community": 44,
+      "community": 137,
       "norm_label": "_serialize_redacted_output()"
     },
     {
@@ -7115,7 +7115,7 @@
       "source_location": "L1178",
       "_origin": "ast",
       "id": "redact_api_worker_build_ocr_page_text",
-      "community": 24,
+      "community": 44,
       "norm_label": "_build_ocr_page_text()"
     },
     {
@@ -7125,7 +7125,7 @@
       "source_location": "L1213",
       "_origin": "ast",
       "id": "redact_api_worker_normalize_polygon",
-      "community": 24,
+      "community": 44,
       "norm_label": "_normalize_polygon()"
     },
     {
@@ -7135,7 +7135,7 @@
       "source_location": "L1227",
       "_origin": "ast",
       "id": "redact_api_worker_serialize_ocr_page_text",
-      "community": 24,
+      "community": 44,
       "norm_label": "_serialize_ocr_page_text()"
     },
     {
@@ -7165,7 +7165,7 @@
       "source_location": "L1290",
       "_origin": "ast",
       "id": "redact_api_worker_parse_gliner2_entities",
-      "community": 30,
+      "community": 122,
       "norm_label": "_parse_gliner2_entities()"
     },
     {
@@ -7175,7 +7175,7 @@
       "source_location": "L1307",
       "_origin": "ast",
       "id": "redact_api_worker_parse_gliner2_entity",
-      "community": 30,
+      "community": 122,
       "norm_label": "_parse_gliner2_entity()"
     },
     {
@@ -7185,7 +7185,7 @@
       "source_location": "L1340",
       "_origin": "ast",
       "id": "redact_api_worker_stored_manifest",
-      "community": 44,
+      "community": 122,
       "norm_label": "_stored_manifest()"
     },
     {
@@ -7225,7 +7225,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "redact_api_worker_rationale_1",
-      "community": 30,
+      "community": 425,
       "norm_label": "analysis worker validation and rasterization boundaries."
     },
     {
@@ -7245,7 +7245,7 @@
       "source_location": "L122",
       "_origin": "ast",
       "id": "redact_api_worker_rationale_122",
-      "community": 5,
+      "community": 3,
       "norm_label": "png bytes for one rendered source page."
     },
     {
@@ -7255,7 +7255,7 @@
       "source_location": "L132",
       "_origin": "ast",
       "id": "redact_api_worker_rationale_132",
-      "community": 180,
+      "community": 30,
       "norm_label": "metadata for one persisted raster page artifact."
     },
     {
@@ -7265,7 +7265,7 @@
       "source_location": "L143",
       "_origin": "ast",
       "id": "redact_api_worker_rationale_143",
-      "community": 3,
+      "community": 30,
       "norm_label": "ordered metadata for page artifacts produced by rasterization."
     },
     {
@@ -7275,7 +7275,7 @@
       "source_location": "L152",
       "_origin": "ast",
       "id": "redact_api_worker_rationale_152",
-      "community": 5,
+      "community": 3,
       "norm_label": "one raw ocr line using pixel-space page coordinates."
     },
     {
@@ -7335,7 +7335,7 @@
       "source_location": "L238",
       "_origin": "ast",
       "id": "redact_api_worker_rationale_238",
-      "community": 198,
+      "community": 188,
       "norm_label": "persistence boundary for raster page artifacts."
     },
     {
@@ -7345,7 +7345,7 @@
       "source_location": "L241",
       "_origin": "ast",
       "id": "redact_api_worker_rationale_241",
-      "community": 198,
+      "community": 188,
       "norm_label": "persist one png page artifact."
     },
     {
@@ -7355,7 +7355,7 @@
       "source_location": "L244",
       "_origin": "ast",
       "id": "redact_api_worker_rationale_244",
-      "community": 198,
+      "community": 188,
       "norm_label": "persist the json page-artifact index."
     },
     {
@@ -7365,7 +7365,7 @@
       "source_location": "L248",
       "_origin": "ast",
       "id": "redact_api_worker_rationale_248",
-      "community": 24,
+      "community": 44,
       "norm_label": "persistence boundary for ocr input pages and output text artifacts."
     },
     {
@@ -7375,7 +7375,7 @@
       "source_location": "L251",
       "_origin": "ast",
       "id": "redact_api_worker_rationale_251",
-      "community": 24,
+      "community": 44,
       "norm_label": "load the json page-artifact index."
     },
     {
@@ -7385,7 +7385,7 @@
       "source_location": "L254",
       "_origin": "ast",
       "id": "redact_api_worker_rationale_254",
-      "community": 24,
+      "community": 44,
       "norm_label": "load one raster page artifact."
     },
     {
@@ -7395,7 +7395,7 @@
       "source_location": "L257",
       "_origin": "ast",
       "id": "redact_api_worker_rationale_257",
-      "community": 24,
+      "community": 44,
       "norm_label": "persist one per-page ocr json artifact."
     },
     {
@@ -7405,7 +7405,7 @@
       "source_location": "L261",
       "_origin": "ast",
       "id": "redact_api_worker_rationale_261",
-      "community": 24,
+      "community": 44,
       "norm_label": "ocr engine boundary used by production and deterministic tests."
     },
     {
@@ -7415,7 +7415,7 @@
       "source_location": "L267",
       "_origin": "ast",
       "id": "redact_api_worker_rationale_267",
-      "community": 180,
+      "community": 30,
       "norm_label": "return ocr lines for one raster page artifact."
     },
     {
@@ -7475,7 +7475,7 @@
       "source_location": "L296",
       "_origin": "ast",
       "id": "redact_api_worker_rationale_296",
-      "community": 44,
+      "community": 137,
       "norm_label": "persistence boundary for render-mode inputs and output."
     },
     {
@@ -7485,7 +7485,7 @@
       "source_location": "L299",
       "_origin": "ast",
       "id": "redact_api_worker_rationale_299",
-      "community": 44,
+      "community": 425,
       "norm_label": "load the json page-artifact index."
     },
     {
@@ -7495,7 +7495,7 @@
       "source_location": "L302",
       "_origin": "ast",
       "id": "redact_api_worker_rationale_302",
-      "community": 44,
+      "community": 137,
       "norm_label": "load one raster page artifact."
     },
     {
@@ -7505,7 +7505,7 @@
       "source_location": "L310",
       "_origin": "ast",
       "id": "redact_api_worker_rationale_310",
-      "community": 44,
+      "community": 137,
       "norm_label": "load a saved review manifest."
     },
     {
@@ -7515,7 +7515,7 @@
       "source_location": "L319",
       "_origin": "ast",
       "id": "redact_api_worker_rationale_319",
-      "community": 44,
+      "community": 137,
       "norm_label": "persist the final redacted output object."
     },
     {
@@ -7525,7 +7525,7 @@
       "source_location": "L323",
       "_origin": "ast",
       "id": "redact_api_worker_rationale_323",
-      "community": 183,
+      "community": 46,
       "norm_label": "raised when source validation maps to a safe failure code."
     },
     {
@@ -7565,7 +7565,7 @@
       "source_location": "L343",
       "_origin": "ast",
       "id": "redact_api_worker_rationale_343",
-      "community": 183,
+      "community": 137,
       "norm_label": "raised when review manifests cannot be rendered safely."
     },
     {
@@ -7595,7 +7595,7 @@
       "source_location": "L502",
       "_origin": "ast",
       "id": "redact_api_worker_rationale_502",
-      "community": 44,
+      "community": 137,
       "norm_label": "render selected redaction regions into raster-only output artifacts."
     },
     {
@@ -7605,7 +7605,7 @@
       "source_location": "L703",
       "_origin": "ast",
       "id": "redact_api_worker_rationale_703",
-      "community": 425,
+      "community": 188,
       "norm_label": "rasterize a validated source into png page artifacts and an index."
     },
     {
@@ -7615,7 +7615,7 @@
       "source_location": "L754",
       "_origin": "ast",
       "id": "redact_api_worker_rationale_754",
-      "community": 30,
+      "community": 425,
       "norm_label": "return the owner/job-namespaced key for a raster page png."
     },
     {
@@ -7625,7 +7625,7 @@
       "source_location": "L760",
       "_origin": "ast",
       "id": "redact_api_worker_rationale_760",
-      "community": 30,
+      "community": 188,
       "norm_label": "return the owner/job-namespaced key for the raster page index."
     },
     {
@@ -7635,7 +7635,7 @@
       "source_location": "L772",
       "_origin": "ast",
       "id": "redact_api_worker_rationale_772",
-      "community": 24,
+      "community": 44,
       "norm_label": "extract and persist ocr text for every raster page in an index."
     },
     {
@@ -7645,7 +7645,7 @@
       "source_location": "L797",
       "_origin": "ast",
       "id": "redact_api_worker_rationale_797",
-      "community": 24,
+      "community": 44,
       "norm_label": "extract and persist ocr text for one raster page."
     },
     {
@@ -7655,7 +7655,7 @@
       "source_location": "L813",
       "_origin": "ast",
       "id": "redact_api_worker_rationale_813",
-      "community": 24,
+      "community": 44,
       "norm_label": "return the owner/job-namespaced key for one ocr page json artifact."
     },
     {
@@ -7685,7 +7685,7 @@
       "source_location": "L886",
       "_origin": "ast",
       "id": "redact_api_worker_rationale_886",
-      "community": 129,
+      "community": 5,
       "norm_label": "map accepted pii spans to normalized page-space redaction regions."
     },
     {
@@ -7695,7 +7695,7 @@
       "source_location": "L940",
       "_origin": "ast",
       "id": "redact_api_worker_rationale_940",
-      "community": 137,
+      "community": 183,
       "norm_label": "gliner2 adapter for the worker image runtime."
     },
     {
@@ -7705,7 +7705,7 @@
       "source_location": "L976",
       "_origin": "ast",
       "id": "redact_api_worker_rationale_976",
-      "community": 137,
+      "community": 183,
       "norm_label": "embedded paddleocr adapter for the worker image runtime."
     },
     {
@@ -7715,7 +7715,7 @@
       "source_location": "L1096",
       "_origin": "ast",
       "id": "redact_api_worker_rationale_1096",
-      "community": 44,
+      "community": 425,
       "norm_label": "load and validate a persisted page-artifact index for resume."
     },
     {
@@ -7725,7 +7725,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "redact_api_worker_runtime",
-      "community": 137,
+      "community": 7,
       "norm_label": "worker_runtime.py"
     },
     {
@@ -7735,7 +7735,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "redact_api_worker_runtime_build_repositories",
-      "community": 137,
+      "community": 7,
       "norm_label": "build_repositories()"
     },
     {
@@ -7745,7 +7745,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "src_redact_api_worker_runtime_py_dynamojobrepository",
-      "community": 137,
+      "community": 7,
       "norm_label": "dynamojobrepository"
     },
     {
@@ -7755,7 +7755,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "src_redact_api_worker_runtime_py_s3objectrepository",
-      "community": 137,
+      "community": 7,
       "norm_label": "s3objectrepository"
     },
     {
@@ -7765,7 +7765,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "redact_api_worker_runtime_run_submission",
-      "community": 137,
+      "community": 7,
       "norm_label": "run_submission()"
     },
     {
@@ -7775,7 +7775,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "src_redact_api_worker_runtime_py_workersubmission",
-      "community": 137,
+      "community": 7,
       "norm_label": "workersubmission"
     },
     {
@@ -7785,7 +7785,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "src_redact_api_worker_runtime_py_datetime",
-      "community": 137,
+      "community": 7,
       "norm_label": "datetime"
     },
     {
@@ -7795,7 +7795,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "src_redact_api_worker_runtime_py_job",
-      "community": 137,
+      "community": 7,
       "norm_label": "job"
     },
     {
@@ -7805,7 +7805,7 @@
       "source_location": "L80",
       "_origin": "ast",
       "id": "redact_api_worker_runtime_parse_args",
-      "community": 137,
+      "community": 7,
       "norm_label": "parse_args()"
     },
     {
@@ -7815,7 +7815,7 @@
       "source_location": "L99",
       "_origin": "ast",
       "id": "redact_api_worker_runtime_main",
-      "community": 137,
+      "community": 7,
       "norm_label": "main()"
     },
     {
@@ -7825,7 +7825,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "redact_api_worker_runtime_rationale_1",
-      "community": 137,
+      "community": 7,
       "norm_label": "aws batch entrypoint for real worker jobs."
     },
     {
@@ -7835,7 +7835,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "redact_api_worker_runtime_rationale_25",
-      "community": 137,
+      "community": 7,
       "norm_label": "construct worker persistence repositories from environment settings."
     },
     {
@@ -7845,7 +7845,7 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "redact_api_worker_runtime_rationale_52",
-      "community": 137,
+      "community": 7,
       "norm_label": "run one validated worker submission against persistent job state."
     },
     {
@@ -7935,7 +7935,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "tests_api_test_http_py_jobstatus",
-      "community": 180,
+      "community": 30,
       "norm_label": "jobstatus"
     },
     {
@@ -7945,7 +7945,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "tests_api_test_http_py_failurecode",
-      "community": 180,
+      "community": 30,
       "norm_label": "failurecode"
     },
     {
@@ -7965,7 +7965,7 @@
       "source_location": "L70",
       "_origin": "ast",
       "id": "tests_api_test_http_py_pagemanifest",
-      "community": 180,
+      "community": 30,
       "norm_label": "pagemanifest"
     },
     {
@@ -8075,7 +8075,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "domain_test_fixtures",
-      "community": 21,
+      "community": 204,
       "norm_label": "test_fixtures.py"
     },
     {
@@ -8085,7 +8085,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "domain_test_fixtures_load",
-      "community": 21,
+      "community": 204,
       "norm_label": "load()"
     },
     {
@@ -8095,7 +8095,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "domain_test_fixtures_test_shared_job_fixtures_match_the_contract",
-      "community": 21,
+      "community": 204,
       "norm_label": "test_shared_job_fixtures_match_the_contract()"
     },
     {
@@ -8105,7 +8105,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "domain_test_fixtures_test_shared_manifest_and_worker_fixtures_match_the_contract",
-      "community": 21,
+      "community": 204,
       "norm_label": "test_shared_manifest_and_worker_fixtures_match_the_contract()"
     },
     {
@@ -8115,7 +8115,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "domain_test_jobs",
-      "community": 21,
+      "community": 198,
       "norm_label": "test_jobs.py"
     },
     {
@@ -8125,7 +8125,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "domain_test_jobs_make_job",
-      "community": 21,
+      "community": 198,
       "norm_label": "make_job()"
     },
     {
@@ -8145,7 +8145,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "domain_test_jobs_test_job_accepts_the_persistent_contract",
-      "community": 21,
+      "community": 198,
       "norm_label": "test_job_accepts_the_persistent_contract()"
     },
     {
@@ -8155,7 +8155,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "domain_test_jobs_test_job_rejects_unsupported_source_types",
-      "community": 21,
+      "community": 198,
       "norm_label": "test_job_rejects_unsupported_source_types()"
     },
     {
@@ -8165,7 +8165,7 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "domain_test_jobs_test_job_rejects_invalid_limits",
-      "community": 21,
+      "community": 198,
       "norm_label": "test_job_rejects_invalid_limits()"
     },
     {
@@ -8175,7 +8175,7 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "domain_test_jobs_test_job_rejects_progress_beyond_page_count",
-      "community": 21,
+      "community": 198,
       "norm_label": "test_job_rejects_progress_beyond_page_count()"
     },
     {
@@ -8185,7 +8185,7 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "domain_test_jobs_test_job_rejects_foreign_object_namespaces",
-      "community": 21,
+      "community": 198,
       "norm_label": "test_job_rejects_foreign_object_namespaces()"
     },
     {
@@ -8195,7 +8195,7 @@
       "source_location": "L78",
       "_origin": "ast",
       "id": "domain_test_jobs_test_job_rejects_unknown_fields",
-      "community": 21,
+      "community": 198,
       "norm_label": "test_job_rejects_unknown_fields()"
     },
     {
@@ -8205,7 +8205,7 @@
       "source_location": "L83",
       "_origin": "ast",
       "id": "domain_test_jobs_test_failed_job_requires_a_safe_failure_code",
-      "community": 21,
+      "community": 198,
       "norm_label": "test_failed_job_requires_a_safe_failure_code()"
     },
     {
@@ -8215,7 +8215,7 @@
       "source_location": "L88",
       "_origin": "ast",
       "id": "domain_test_jobs_test_non_failed_job_rejects_a_failure_code",
-      "community": 21,
+      "community": 198,
       "norm_label": "test_non_failed_job_rejects_a_failure_code()"
     },
     {
@@ -8225,7 +8225,7 @@
       "source_location": "L93",
       "_origin": "ast",
       "id": "domain_test_jobs_test_worker_submission_serializes_stable_contract",
-      "community": 21,
+      "community": 198,
       "norm_label": "test_worker_submission_serializes_stable_contract()"
     },
     {
@@ -8255,7 +8255,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "tests_domain_test_lifecycle_py_jobstatus",
-      "community": 183,
+      "community": 21,
       "norm_label": "jobstatus"
     },
     {
@@ -8335,7 +8335,7 @@
       "source_location": "L108",
       "_origin": "ast",
       "id": "domain_test_lifecycle_test_permanent_failures_are_not_retryable",
-      "community": 183,
+      "community": 21,
       "norm_label": "test_permanent_failures_are_not_retryable()"
     },
     {
@@ -8415,7 +8415,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "tests_domain_test_manifests_py_redactionregion",
-      "community": 21,
+      "community": 30,
       "norm_label": "redactionregion"
     },
     {
@@ -8435,7 +8435,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "tests_domain_test_manifests_py_pagemanifest",
-      "community": 21,
+      "community": 30,
       "norm_label": "pagemanifest"
     },
     {
@@ -8525,7 +8525,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "integration_test_aws",
-      "community": 21,
+      "community": 202,
       "norm_label": "test_aws.py"
     },
     {
@@ -8535,7 +8535,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "integration_test_aws_make_job",
-      "community": 21,
+      "community": 202,
       "norm_label": "make_job()"
     },
     {
@@ -8545,7 +8545,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "tests_integration_test_aws_py_job",
-      "community": 42,
+      "community": 183,
       "norm_label": "job"
     },
     {
@@ -8555,7 +8555,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "integration_test_aws_make_manifest",
-      "community": 21,
+      "community": 202,
       "norm_label": "make_manifest()"
     },
     {
@@ -8565,7 +8565,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "tests_integration_test_aws_py_pagemanifest",
-      "community": 42,
+      "community": 183,
       "norm_label": "pagemanifest"
     },
     {
@@ -8575,7 +8575,7 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "integration_test_aws_test_dynamodb_round_trip_listing_ttl_and_conflict",
-      "community": 21,
+      "community": 202,
       "norm_label": "test_dynamodb_round_trip_listing_ttl_and_conflict()"
     },
     {
@@ -8585,7 +8585,7 @@
       "source_location": "L91",
       "_origin": "ast",
       "id": "integration_test_aws_test_s3_presigning_objects_and_manifest_conflicts",
-      "community": 21,
+      "community": 202,
       "norm_label": "test_s3_presigning_objects_and_manifest_conflicts()"
     },
     {
@@ -8595,7 +8595,7 @@
       "source_location": "L131",
       "_origin": "ast",
       "id": "integration_test_aws_test_recording_batch_fake_is_idempotent",
-      "community": 21,
+      "community": 202,
       "norm_label": "test_recording_batch_fake_is_idempotent()"
     },
     {
@@ -8705,7 +8705,7 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "tests_services_test_control_plane_py_jobstatus",
-      "community": 1,
+      "community": 130,
       "norm_label": "jobstatus"
     },
     {
@@ -8715,7 +8715,7 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "tests_services_test_control_plane_py_failurecode",
-      "community": 1,
+      "community": 130,
       "norm_label": "failurecode"
     },
     {
@@ -9135,7 +9135,7 @@
       "source_location": "L82",
       "_origin": "ast",
       "id": "worker_test_checkpoint_resume_recordingocrengine_recognize",
-      "community": 5,
+      "community": 30,
       "norm_label": ".recognize()"
     },
     {
@@ -9145,7 +9145,7 @@
       "source_location": "L82",
       "_origin": "ast",
       "id": "tests_worker_test_checkpoint_resume_py_pageartifact",
-      "community": 5,
+      "community": 30,
       "norm_label": "pageartifact"
     },
     {
@@ -9155,7 +9155,7 @@
       "source_location": "L82",
       "_origin": "ast",
       "id": "tests_worker_test_checkpoint_resume_py_ocrline",
-      "community": 5,
+      "community": 30,
       "norm_label": "ocrline"
     },
     {
@@ -9185,7 +9185,7 @@
       "source_location": "L101",
       "_origin": "ast",
       "id": "worker_test_checkpoint_resume_recordingpiidetector_detect",
-      "community": 5,
+      "community": 30,
       "norm_label": ".detect()"
     },
     {
@@ -9195,7 +9195,7 @@
       "source_location": "L101",
       "_origin": "ast",
       "id": "tests_worker_test_checkpoint_resume_py_ocrpagetext",
-      "community": 5,
+      "community": 30,
       "norm_label": "ocrpagetext"
     },
     {
@@ -9205,7 +9205,7 @@
       "source_location": "L101",
       "_origin": "ast",
       "id": "tests_worker_test_checkpoint_resume_py_piientity",
-      "community": 5,
+      "community": 30,
       "norm_label": "piientity"
     },
     {
@@ -9345,7 +9345,7 @@
       "source_location": "L215",
       "_origin": "ast",
       "id": "worker_test_checkpoint_resume_render_pages",
-      "community": 16,
+      "community": 188,
       "norm_label": "render_pages()"
     },
     {
@@ -9755,7 +9755,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "worker_test_pii_mapping",
-      "community": 129,
+      "community": 5,
       "norm_label": "test_pii_mapping.py"
     },
     {
@@ -9805,7 +9805,7 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "worker_test_pii_mapping_recordingrasterwriter",
-      "community": 129,
+      "community": 5,
       "norm_label": "recordingrasterwriter"
     },
     {
@@ -9815,7 +9815,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "worker_test_pii_mapping_recordingrasterwriter_init",
-      "community": 129,
+      "community": 5,
       "norm_label": ".__init__()"
     },
     {
@@ -9825,7 +9825,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "worker_test_pii_mapping_recordingrasterwriter_put_page_artifact",
-      "community": 129,
+      "community": 5,
       "norm_label": ".put_page_artifact()"
     },
     {
@@ -9835,7 +9835,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "worker_test_pii_mapping_recordingrasterwriter_put_page_artifact_index",
-      "community": 129,
+      "community": 5,
       "norm_label": ".put_page_artifact_index()"
     },
     {
@@ -9935,7 +9935,7 @@
       "source_location": "L92",
       "_origin": "ast",
       "id": "worker_test_pii_mapping_recordingpiidetector_init",
-      "community": 129,
+      "community": 5,
       "norm_label": ".__init__()"
     },
     {
@@ -9945,7 +9945,7 @@
       "source_location": "L92",
       "_origin": "ast",
       "id": "tests_worker_test_pii_mapping_py_piientity",
-      "community": 129,
+      "community": 5,
       "norm_label": "piientity"
     },
     {
@@ -9995,7 +9995,7 @@
       "source_location": "L106",
       "_origin": "ast",
       "id": "worker_test_pii_mapping_recordingmanifestwriter",
-      "community": 129,
+      "community": 5,
       "norm_label": "recordingmanifestwriter"
     },
     {
@@ -10005,7 +10005,7 @@
       "source_location": "L107",
       "_origin": "ast",
       "id": "worker_test_pii_mapping_recordingmanifestwriter_init",
-      "community": 129,
+      "community": 5,
       "norm_label": ".__init__()"
     },
     {
@@ -10015,7 +10015,7 @@
       "source_location": "L110",
       "_origin": "ast",
       "id": "worker_test_pii_mapping_recordingmanifestwriter_create_manifest",
-      "community": 129,
+      "community": 5,
       "norm_label": ".create_manifest()"
     },
     {
@@ -10035,7 +10035,7 @@
       "source_location": "L115",
       "_origin": "ast",
       "id": "worker_test_pii_mapping_make_job",
-      "community": 129,
+      "community": 5,
       "norm_label": "make_job()"
     },
     {
@@ -10045,7 +10045,7 @@
       "source_location": "L135",
       "_origin": "ast",
       "id": "worker_test_pii_mapping_png_bytes",
-      "community": 129,
+      "community": 5,
       "norm_label": "png_bytes()"
     },
     {
@@ -10055,7 +10055,7 @@
       "source_location": "L141",
       "_origin": "ast",
       "id": "worker_test_pii_mapping_ocr_page",
-      "community": 129,
+      "community": 5,
       "norm_label": "ocr_page()"
     },
     {
@@ -10065,7 +10065,7 @@
       "source_location": "L162",
       "_origin": "ast",
       "id": "worker_test_pii_mapping_test_map_pii_regions_creates_safe_selected_regions",
-      "community": 129,
+      "community": 5,
       "norm_label": "test_map_pii_regions_creates_safe_selected_regions()"
     },
     {
@@ -10075,7 +10075,7 @@
       "source_location": "L181",
       "_origin": "ast",
       "id": "worker_test_pii_mapping_test_substring_geometry_uses_character_ratios",
-      "community": 129,
+      "community": 5,
       "norm_label": "test_substring_geometry_uses_character_ratios()"
     },
     {
@@ -10085,7 +10085,7 @@
       "source_location": "L192",
       "_origin": "ast",
       "id": "worker_test_pii_mapping_test_multiple_entities_on_one_line_get_stable_regions",
-      "community": 129,
+      "community": 5,
       "norm_label": "test_multiple_entities_on_one_line_get_stable_regions()"
     },
     {
@@ -10095,7 +10095,7 @@
       "source_location": "L207",
       "_origin": "ast",
       "id": "worker_test_pii_mapping_test_mapping_clamps_geometry_to_page_bounds",
-      "community": 129,
+      "community": 5,
       "norm_label": "test_mapping_clamps_geometry_to_page_bounds()"
     },
     {
@@ -10105,7 +10105,7 @@
       "source_location": "L236",
       "_origin": "ast",
       "id": "worker_test_pii_mapping_test_mapping_rejects_span_outside_page_text",
-      "community": 129,
+      "community": 5,
       "norm_label": "test_mapping_rejects_span_outside_page_text()"
     },
     {
@@ -10115,7 +10115,7 @@
       "source_location": "L241",
       "_origin": "ast",
       "id": "worker_test_pii_mapping_test_create_pii_manifests_writes_manifest_for_empty_page",
-      "community": 129,
+      "community": 5,
       "norm_label": "test_create_pii_manifests_writes_manifest_for_empty_page()"
     },
     {
@@ -10125,7 +10125,7 @@
       "source_location": "L261",
       "_origin": "ast",
       "id": "worker_test_pii_mapping_test_analyze_source_runs_pii_after_ocr_and_creates_manifest",
-      "community": 129,
+      "community": 5,
       "norm_label": "test_analyze_source_runs_pii_after_ocr_and_creates_manifest()"
     },
     {
@@ -10135,7 +10135,7 @@
       "source_location": "L323",
       "_origin": "ast",
       "id": "worker_test_pii_mapping_test_analyze_source_persists_processing_failed_on_pii_error",
-      "community": 129,
+      "community": 5,
       "norm_label": "test_analyze_source_persists_processing_failed_on_pii_error()"
     },
     {
@@ -10145,7 +10145,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "worker_test_rasterization",
-      "community": 425,
+      "community": 129,
       "norm_label": "test_rasterization.py"
     },
     {
@@ -10155,7 +10155,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "worker_test_rasterization_recordingjobs",
-      "community": 425,
+      "community": 129,
       "norm_label": "recordingjobs"
     },
     {
@@ -10165,7 +10165,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "worker_test_rasterization_recordingjobs_init",
-      "community": 425,
+      "community": 129,
       "norm_label": ".__init__()"
     },
     {
@@ -10175,7 +10175,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "worker_test_rasterization_recordingjobs_save",
-      "community": 425,
+      "community": 129,
       "norm_label": ".save()"
     },
     {
@@ -10185,7 +10185,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "tests_worker_test_rasterization_py_job",
-      "community": 425,
+      "community": 183,
       "norm_label": "job"
     },
     {
@@ -10195,7 +10195,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "worker_test_rasterization_recordingartifactwriter",
-      "community": 425,
+      "community": 129,
       "norm_label": "recordingartifactwriter"
     },
     {
@@ -10205,7 +10205,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "worker_test_rasterization_recordingartifactwriter_init",
-      "community": 425,
+      "community": 129,
       "norm_label": ".__init__()"
     },
     {
@@ -10215,7 +10215,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "worker_test_rasterization_recordingartifactwriter_put_page_artifact",
-      "community": 425,
+      "community": 129,
       "norm_label": ".put_page_artifact()"
     },
     {
@@ -10225,7 +10225,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "worker_test_rasterization_recordingartifactwriter_put_page_artifact_index",
-      "community": 425,
+      "community": 129,
       "norm_label": ".put_page_artifact_index()"
     },
     {
@@ -10235,7 +10235,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "worker_test_rasterization_make_job",
-      "community": 425,
+      "community": 129,
       "norm_label": "make_job()"
     },
     {
@@ -10245,7 +10245,7 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "worker_test_rasterization_pdf_bytes",
-      "community": 425,
+      "community": 129,
       "norm_label": "pdf_bytes()"
     },
     {
@@ -10255,7 +10255,7 @@
       "source_location": "L78",
       "_origin": "ast",
       "id": "worker_test_rasterization_image_bytes",
-      "community": 425,
+      "community": 129,
       "norm_label": "image_bytes()"
     },
     {
@@ -10265,7 +10265,7 @@
       "source_location": "L78",
       "_origin": "ast",
       "id": "tests_worker_test_rasterization_py_sourcetype",
-      "community": 425,
+      "community": 183,
       "norm_label": "sourcetype"
     },
     {
@@ -10275,7 +10275,7 @@
       "source_location": "L90",
       "_origin": "ast",
       "id": "worker_test_rasterization_assert_png",
-      "community": 425,
+      "community": 129,
       "norm_label": "assert_png()"
     },
     {
@@ -10285,7 +10285,7 @@
       "source_location": "L94",
       "_origin": "ast",
       "id": "worker_test_rasterization_test_rasterize_pdf_pages_in_source_order",
-      "community": 425,
+      "community": 129,
       "norm_label": "test_rasterize_pdf_pages_in_source_order()"
     },
     {
@@ -10295,7 +10295,7 @@
       "source_location": "L120",
       "_origin": "ast",
       "id": "worker_test_rasterization_test_rasterize_image_source_as_one_png_page",
-      "community": 425,
+      "community": 129,
       "norm_label": "test_rasterize_image_source_as_one_png_page()"
     },
     {
@@ -10305,7 +10305,7 @@
       "source_location": "L141",
       "_origin": "ast",
       "id": "worker_test_rasterization_test_page_artifact_index_records_ordered_metadata",
-      "community": 425,
+      "community": 129,
       "norm_label": "test_page_artifact_index_records_ordered_metadata()"
     },
     {
@@ -10315,7 +10315,7 @@
       "source_location": "L170",
       "_origin": "ast",
       "id": "worker_test_rasterization_test_rasterization_writes_each_page_before_rendering_next",
-      "community": 425,
+      "community": 129,
       "norm_label": "test_rasterization_writes_each_page_before_rendering_next()"
     },
     {
@@ -10325,7 +10325,7 @@
       "source_location": "L195",
       "_origin": "ast",
       "id": "worker_test_rasterization_test_analyze_source_persists_processing_failed_on_rasterization_error",
-      "community": 425,
+      "community": 129,
       "norm_label": "test_analyze_source_persists_processing_failed_on_rasterization_error()"
     },
     {
@@ -10355,7 +10355,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "tests_worker_test_runtime_py_jobstatus",
-      "community": 183,
+      "community": 7,
       "norm_label": "jobstatus"
     },
     {
@@ -10525,7 +10525,7 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "tests_worker_test_runtime_py_workermode",
-      "community": 183,
+      "community": 7,
       "norm_label": "workermode"
     },
     {
@@ -10535,7 +10535,7 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "tests_worker_test_runtime_py_workersubmission",
-      "community": 183,
+      "community": 7,
       "norm_label": "workersubmission"
     },
     {
@@ -10695,7 +10695,7 @@
       "source_location": "L143",
       "_origin": "ast",
       "id": "tests_worker_test_validation_py_sourcetype",
-      "community": 183,
+      "community": 46,
       "norm_label": "sourcetype"
     },
     {
@@ -10755,7 +10755,7 @@
       "source_location": "L217",
       "_origin": "ast",
       "id": "worker_test_validation_test_validate_source_counts_compressed_sample_pdf",
-      "community": 46,
+      "community": 5,
       "norm_label": "test_validate_source_counts_compressed_sample_pdf()"
     },
     {
@@ -11113,7 +11113,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tools_worker_ocr_smoke",
-      "community": 137,
+      "community": 183,
       "norm_label": "worker_ocr_smoke.py"
     },
     {
@@ -11123,7 +11123,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "tools_worker_ocr_smoke_memoryartifactstore",
-      "community": 137,
+      "community": 183,
       "norm_label": "memoryartifactstore"
     },
     {
@@ -11133,7 +11133,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "tools_worker_ocr_smoke_memoryartifactstore_put_page_artifact",
-      "community": 137,
+      "community": 183,
       "norm_label": ".put_page_artifact()"
     },
     {
@@ -11143,7 +11143,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "tools_worker_ocr_smoke_memoryartifactstore_put_page_artifact_index",
-      "community": 137,
+      "community": 183,
       "norm_label": ".put_page_artifact_index()"
     },
     {
@@ -11153,7 +11153,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "tools_worker_ocr_smoke_memoryartifactstore_get_page_artifact",
-      "community": 137,
+      "community": 183,
       "norm_label": ".get_page_artifact()"
     },
     {
@@ -11163,7 +11163,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "tools_worker_ocr_smoke_memoryartifactstore_put_ocr_page_text",
-      "community": 137,
+      "community": 183,
       "norm_label": ".put_ocr_page_text()"
     },
     {
@@ -11173,7 +11173,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "tools_worker_ocr_smoke_memoryartifactstore_create_manifest",
-      "community": 137,
+      "community": 183,
       "norm_label": ".create_manifest()"
     },
     {
@@ -11193,7 +11193,7 @@
       "source_location": "L55",
       "_origin": "ast",
       "id": "tools_worker_ocr_smoke_main",
-      "community": 137,
+      "community": 183,
       "norm_label": "main()"
     },
     {
@@ -11203,7 +11203,7 @@
       "source_location": "L88",
       "_origin": "ast",
       "id": "tools_worker_ocr_smoke_source_type_for",
-      "community": 137,
+      "community": 183,
       "norm_label": "source_type_for()"
     },
     {
@@ -11213,7 +11213,7 @@
       "source_location": "L88",
       "_origin": "ast",
       "id": "tools_worker_ocr_smoke_py_path",
-      "community": 137,
+      "community": 183,
       "norm_label": "path"
     },
     {
@@ -11223,7 +11223,7 @@
       "source_location": "L88",
       "_origin": "ast",
       "id": "tools_worker_ocr_smoke_py_sourcetype",
-      "community": 137,
+      "community": 183,
       "norm_label": "sourcetype"
     },
     {
@@ -11233,7 +11233,7 @@
       "source_location": "L99",
       "_origin": "ast",
       "id": "tools_worker_ocr_smoke_make_job",
-      "community": 137,
+      "community": 183,
       "norm_label": "make_job()"
     },
     {
@@ -11253,7 +11253,7 @@
       "source_location": "L116",
       "_origin": "ast",
       "id": "tools_worker_ocr_smoke_summary",
-      "community": 137,
+      "community": 183,
       "norm_label": "summary()"
     },
     {
@@ -11283,7 +11283,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tools_worker_ocr_smoke_rationale_1",
-      "community": 137,
+      "community": 183,
       "norm_label": "run a local analysis smoke test over sample files without printing ocr text."
     },
     {
@@ -19749,197 +19749,197 @@
     {
       "label": "design.md",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/design.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/design.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "gh_57_complete_mvp_frontend_interactions_design",
-      "community": 188,
+      "id": "2026_07_15_gh_57_complete_mvp_frontend_interactions_design",
+      "community": 197,
       "norm_label": "design.md"
     },
     {
       "label": "Context",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/design.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/design.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "gh_57_complete_mvp_frontend_interactions_design_context",
-      "community": 188,
+      "id": "2026_07_15_gh_57_complete_mvp_frontend_interactions_design_context",
+      "community": 197,
       "norm_label": "context"
     },
     {
       "label": "Goals / Non-Goals",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/design.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/design.md",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "gh_57_complete_mvp_frontend_interactions_design_goals_non_goals",
-      "community": 188,
+      "id": "2026_07_15_gh_57_complete_mvp_frontend_interactions_design_goals_non_goals",
+      "community": 197,
       "norm_label": "goals / non-goals"
     },
     {
       "label": "Decisions",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/design.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/design.md",
       "source_location": "L23",
       "_origin": "ast",
-      "id": "gh_57_complete_mvp_frontend_interactions_design_decisions",
-      "community": 188,
+      "id": "2026_07_15_gh_57_complete_mvp_frontend_interactions_design_decisions",
+      "community": 197,
       "norm_label": "decisions"
     },
     {
       "label": "Keep workflow state in the existing React component tree",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/design.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/design.md",
       "source_location": "L25",
       "_origin": "ast",
-      "id": "gh_57_complete_mvp_frontend_interactions_design_keep_workflow_state_in_the_existing_react_component_tree",
-      "community": 188,
+      "id": "2026_07_15_gh_57_complete_mvp_frontend_interactions_design_keep_workflow_state_in_the_existing_react_component_tree",
+      "community": 197,
       "norm_label": "keep workflow state in the existing react component tree"
     },
     {
       "label": "Cache and save manifests by page",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/design.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/design.md",
       "source_location": "L31",
       "_origin": "ast",
-      "id": "gh_57_complete_mvp_frontend_interactions_design_cache_and_save_manifests_by_page",
-      "community": 188,
+      "id": "2026_07_15_gh_57_complete_mvp_frontend_interactions_design_cache_and_save_manifests_by_page",
+      "community": 197,
       "norm_label": "cache and save manifests by page"
     },
     {
       "label": "Model edits as page-keyed snapshots",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/design.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/design.md",
       "source_location": "L37",
       "_origin": "ast",
-      "id": "gh_57_complete_mvp_frontend_interactions_design_model_edits_as_page_keyed_snapshots",
-      "community": 188,
+      "id": "2026_07_15_gh_57_complete_mvp_frontend_interactions_design_model_edits_as_page_keyed_snapshots",
+      "community": 197,
       "norm_label": "model edits as page-keyed snapshots"
     },
     {
       "label": "Derive normalized geometry from the rendered region layer",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/design.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/design.md",
       "source_location": "L43",
       "_origin": "ast",
-      "id": "gh_57_complete_mvp_frontend_interactions_design_derive_normalized_geometry_from_the_rendered_region_layer",
-      "community": 188,
+      "id": "2026_07_15_gh_57_complete_mvp_frontend_interactions_design_derive_normalized_geometry_from_the_rendered_region_layer",
+      "community": 197,
       "norm_label": "derive normalized geometry from the rendered region layer"
     },
     {
-      "label": "Use abortable single-part upload with explicit UI state",
+      "label": "Use abortable API-directed multipart upload with explicit UI state",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/design.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/design.md",
       "source_location": "L49",
       "_origin": "ast",
-      "id": "gh_57_complete_mvp_frontend_interactions_design_use_abortable_single_part_upload_with_explicit_ui_state",
-      "community": 188,
-      "norm_label": "use abortable single-part upload with explicit ui state"
+      "id": "2026_07_15_gh_57_complete_mvp_frontend_interactions_design_use_abortable_api_directed_multipart_upload_with_explicit_ui_state",
+      "community": 197,
+      "norm_label": "use abortable api-directed multipart upload with explicit ui state"
     },
     {
       "label": "Refresh asynchronous job state while work is active",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/design.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/design.md",
       "source_location": "L53",
       "_origin": "ast",
-      "id": "gh_57_complete_mvp_frontend_interactions_design_refresh_asynchronous_job_state_while_work_is_active",
-      "community": 188,
+      "id": "2026_07_15_gh_57_complete_mvp_frontend_interactions_design_refresh_asynchronous_job_state_while_work_is_active",
+      "community": 197,
       "norm_label": "refresh asynchronous job state while work is active"
     },
     {
       "label": "Risks / Trade-offs",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/design.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/design.md",
       "source_location": "L57",
       "_origin": "ast",
-      "id": "gh_57_complete_mvp_frontend_interactions_design_risks_trade_offs",
-      "community": 188,
+      "id": "2026_07_15_gh_57_complete_mvp_frontend_interactions_design_risks_trade_offs",
+      "community": 197,
       "norm_label": "risks / trade-offs"
     },
     {
       "label": "proposal.md",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/proposal.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/proposal.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "gh_57_complete_mvp_frontend_interactions_proposal",
-      "community": 197,
+      "id": "2026_07_15_gh_57_complete_mvp_frontend_interactions_proposal",
+      "community": 201,
       "norm_label": "proposal.md"
     },
     {
       "label": "Why",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/proposal.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/proposal.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "gh_57_complete_mvp_frontend_interactions_proposal_why",
-      "community": 197,
+      "id": "2026_07_15_gh_57_complete_mvp_frontend_interactions_proposal_why",
+      "community": 201,
       "norm_label": "why"
     },
     {
       "label": "What Changes",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/proposal.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/proposal.md",
       "source_location": "L5",
       "_origin": "ast",
-      "id": "gh_57_complete_mvp_frontend_interactions_proposal_what_changes",
-      "community": 197,
+      "id": "2026_07_15_gh_57_complete_mvp_frontend_interactions_proposal_what_changes",
+      "community": 201,
       "norm_label": "what changes"
     },
     {
       "label": "Capabilities",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/proposal.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/proposal.md",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "gh_57_complete_mvp_frontend_interactions_proposal_capabilities",
-      "community": 197,
+      "id": "2026_07_15_gh_57_complete_mvp_frontend_interactions_proposal_capabilities",
+      "community": 201,
       "norm_label": "capabilities"
     },
     {
       "label": "New Capabilities",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/proposal.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/proposal.md",
       "source_location": "L16",
       "_origin": "ast",
-      "id": "gh_57_complete_mvp_frontend_interactions_proposal_new_capabilities",
-      "community": 197,
+      "id": "2026_07_15_gh_57_complete_mvp_frontend_interactions_proposal_new_capabilities",
+      "community": 201,
       "norm_label": "new capabilities"
     },
     {
       "label": "Modified Capabilities",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/proposal.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/proposal.md",
       "source_location": "L20",
       "_origin": "ast",
-      "id": "gh_57_complete_mvp_frontend_interactions_proposal_modified_capabilities",
-      "community": 197,
+      "id": "2026_07_15_gh_57_complete_mvp_frontend_interactions_proposal_modified_capabilities",
+      "community": 201,
       "norm_label": "modified capabilities"
     },
     {
       "label": "Impact",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/proposal.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/proposal.md",
       "source_location": "L24",
       "_origin": "ast",
-      "id": "gh_57_complete_mvp_frontend_interactions_proposal_impact",
-      "community": 197,
+      "id": "2026_07_15_gh_57_complete_mvp_frontend_interactions_proposal_impact",
+      "community": 201,
       "norm_label": "impact"
     },
     {
       "label": "spec.md",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "openspec_changes_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec",
+      "id": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec",
       "community": 140,
       "norm_label": "spec.md"
     },
     {
       "label": "MODIFIED Requirements",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
       "source_location": "L1",
       "_origin": "ast",
       "id": "review_export_workflow_spec_modified_requirements",
@@ -19949,191 +19949,191 @@
     {
       "label": "Requirement: Browser review workflow",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
       "source_location": "L3",
       "_origin": "ast",
-      "id": "openspec_changes_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
+      "id": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
       "community": 140,
       "norm_label": "requirement: browser review workflow"
     },
     {
       "label": "Scenario: Authenticated API-backed runtime",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "openspec_changes_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_authenticated_api_backed_runtime",
+      "id": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_authenticated_api_backed_runtime",
       "community": 140,
       "norm_label": "scenario: authenticated api-backed runtime"
     },
     {
       "label": "Scenario: Navigate primary workflows",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
       "source_location": "L10",
       "_origin": "ast",
-      "id": "review_export_workflow_spec_scenario_navigate_primary_workflows",
+      "id": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_navigate_primary_workflows",
       "community": 140,
       "norm_label": "scenario: navigate primary workflows"
     },
     {
       "label": "Scenario: Upload with feedback and cancellation",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "review_export_workflow_spec_scenario_upload_with_feedback_and_cancellation",
+      "id": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_upload_with_feedback_and_cancellation",
       "community": 140,
       "norm_label": "scenario: upload with feedback and cancellation"
     },
     {
       "label": "Scenario: Reject invalid upload",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
       "source_location": "L18",
       "_origin": "ast",
-      "id": "review_export_workflow_spec_scenario_reject_invalid_upload",
+      "id": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_reject_invalid_upload",
       "community": 140,
       "norm_label": "scenario: reject invalid upload"
     },
     {
       "label": "Scenario: Navigate review pages",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
       "source_location": "L22",
       "_origin": "ast",
-      "id": "review_export_workflow_spec_scenario_navigate_review_pages",
+      "id": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_navigate_review_pages",
       "community": 140,
       "norm_label": "scenario: navigate review pages"
     },
     {
       "label": "Scenario: Edit normalized regions",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
       "source_location": "L26",
       "_origin": "ast",
-      "id": "review_export_workflow_spec_scenario_edit_normalized_regions",
+      "id": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_edit_normalized_regions",
       "community": 140,
       "norm_label": "scenario: edit normalized regions"
     },
     {
       "label": "Scenario: Navigate and select suggestions",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
       "source_location": "L30",
       "_origin": "ast",
-      "id": "review_export_workflow_spec_scenario_navigate_and_select_suggestions",
+      "id": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_navigate_and_select_suggestions",
       "community": 140,
       "norm_label": "scenario: navigate and select suggestions"
     },
     {
       "label": "Scenario: Undo and redo page edits",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
       "source_location": "L34",
       "_origin": "ast",
-      "id": "review_export_workflow_spec_scenario_undo_and_redo_page_edits",
+      "id": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_undo_and_redo_page_edits",
       "community": 140,
       "norm_label": "scenario: undo and redo page edits"
     },
     {
       "label": "Scenario: Autosave page edits",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
       "source_location": "L38",
       "_origin": "ast",
-      "id": "openspec_changes_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_autosave_page_edits",
+      "id": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_autosave_page_edits",
       "community": 140,
       "norm_label": "scenario: autosave page edits"
     },
     {
       "label": "Scenario: Recover failed autosave",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
       "source_location": "L42",
       "_origin": "ast",
-      "id": "review_export_workflow_spec_scenario_recover_failed_autosave",
+      "id": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_recover_failed_autosave",
       "community": 140,
       "norm_label": "scenario: recover failed autosave"
     },
     {
       "label": "Scenario: Display actionable job states",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
       "source_location": "L46",
       "_origin": "ast",
-      "id": "review_export_workflow_spec_scenario_display_actionable_job_states",
+      "id": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_display_actionable_job_states",
       "community": 140,
       "norm_label": "scenario: display actionable job states"
     },
     {
       "label": "Scenario: Confirm export",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
       "source_location": "L50",
       "_origin": "ast",
-      "id": "openspec_changes_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_confirm_export",
+      "id": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_confirm_export",
       "community": 140,
       "norm_label": "scenario: confirm export"
     },
     {
       "label": "Scenario: Download completed export",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
       "source_location": "L54",
       "_origin": "ast",
-      "id": "review_export_workflow_spec_scenario_download_completed_export",
+      "id": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_download_completed_export",
       "community": 140,
       "norm_label": "scenario: download completed export"
     },
     {
       "label": "tasks.md",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/tasks.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/tasks.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "gh_57_complete_mvp_frontend_interactions_tasks",
-      "community": 201,
+      "id": "2026_07_15_gh_57_complete_mvp_frontend_interactions_tasks",
+      "community": 203,
       "norm_label": "tasks.md"
     },
     {
       "label": "1. Behavioral Coverage",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/tasks.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/tasks.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "gh_57_complete_mvp_frontend_interactions_tasks_1_behavioral_coverage",
-      "community": 201,
+      "id": "2026_07_15_gh_57_complete_mvp_frontend_interactions_tasks_1_behavioral_coverage",
+      "community": 203,
       "norm_label": "1. behavioral coverage"
     },
     {
       "label": "2. Editing Workflow",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/tasks.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/tasks.md",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "gh_57_complete_mvp_frontend_interactions_tasks_2_editing_workflow",
-      "community": 201,
+      "id": "2026_07_15_gh_57_complete_mvp_frontend_interactions_tasks_2_editing_workflow",
+      "community": 203,
       "norm_label": "2. editing workflow"
     },
     {
       "label": "3. Job and Upload Workflow",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/tasks.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/tasks.md",
       "source_location": "L13",
       "_origin": "ast",
-      "id": "gh_57_complete_mvp_frontend_interactions_tasks_3_job_and_upload_workflow",
-      "community": 201,
+      "id": "2026_07_15_gh_57_complete_mvp_frontend_interactions_tasks_3_job_and_upload_workflow",
+      "community": 203,
       "norm_label": "3. job and upload workflow"
     },
     {
       "label": "4. Documentation and Verification",
       "file_type": "document",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/tasks.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/tasks.md",
       "source_location": "L19",
       "_origin": "ast",
-      "id": "gh_57_complete_mvp_frontend_interactions_tasks_4_documentation_and_verification",
-      "community": 201,
+      "id": "2026_07_15_gh_57_complete_mvp_frontend_interactions_tasks_4_documentation_and_verification",
+      "community": 203,
       "norm_label": "4. documentation and verification"
     },
     {
@@ -22070,37 +22070,137 @@
       "label": "Scenario: Authenticated API-backed runtime",
       "file_type": "document",
       "source_file": "openspec/specs/review-export-workflow/spec.md",
-      "source_location": "L29",
+      "source_location": "L30",
       "_origin": "ast",
       "id": "openspec_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_authenticated_api_backed_runtime",
       "community": 146,
       "norm_label": "scenario: authenticated api-backed runtime"
     },
     {
+      "label": "Scenario: Navigate primary workflows",
+      "file_type": "document",
+      "source_file": "openspec/specs/review-export-workflow/spec.md",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "openspec_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_navigate_primary_workflows",
+      "community": 146,
+      "norm_label": "scenario: navigate primary workflows"
+    },
+    {
+      "label": "Scenario: Upload with feedback and cancellation",
+      "file_type": "document",
+      "source_file": "openspec/specs/review-export-workflow/spec.md",
+      "source_location": "L41",
+      "_origin": "ast",
+      "id": "openspec_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_upload_with_feedback_and_cancellation",
+      "community": 146,
+      "norm_label": "scenario: upload with feedback and cancellation"
+    },
+    {
+      "label": "Scenario: Reject invalid upload",
+      "file_type": "document",
+      "source_file": "openspec/specs/review-export-workflow/spec.md",
+      "source_location": "L47",
+      "_origin": "ast",
+      "id": "openspec_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_reject_invalid_upload",
+      "community": 146,
+      "norm_label": "scenario: reject invalid upload"
+    },
+    {
+      "label": "Scenario: Navigate review pages",
+      "file_type": "document",
+      "source_file": "openspec/specs/review-export-workflow/spec.md",
+      "source_location": "L53",
+      "_origin": "ast",
+      "id": "openspec_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_navigate_review_pages",
+      "community": 146,
+      "norm_label": "scenario: navigate review pages"
+    },
+    {
+      "label": "Scenario: Edit normalized regions",
+      "file_type": "document",
+      "source_file": "openspec/specs/review-export-workflow/spec.md",
+      "source_location": "L59",
+      "_origin": "ast",
+      "id": "openspec_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_edit_normalized_regions",
+      "community": 146,
+      "norm_label": "scenario: edit normalized regions"
+    },
+    {
+      "label": "Scenario: Navigate and select suggestions",
+      "file_type": "document",
+      "source_file": "openspec/specs/review-export-workflow/spec.md",
+      "source_location": "L66",
+      "_origin": "ast",
+      "id": "openspec_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_navigate_and_select_suggestions",
+      "community": 146,
+      "norm_label": "scenario: navigate and select suggestions"
+    },
+    {
+      "label": "Scenario: Undo and redo page edits",
+      "file_type": "document",
+      "source_file": "openspec/specs/review-export-workflow/spec.md",
+      "source_location": "L73",
+      "_origin": "ast",
+      "id": "openspec_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_undo_and_redo_page_edits",
+      "community": 146,
+      "norm_label": "scenario: undo and redo page edits"
+    },
+    {
       "label": "Scenario: Autosave page edits",
       "file_type": "document",
       "source_file": "openspec/specs/review-export-workflow/spec.md",
-      "source_location": "L34",
+      "source_location": "L80",
       "_origin": "ast",
       "id": "openspec_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_autosave_page_edits",
       "community": 146,
       "norm_label": "scenario: autosave page edits"
     },
     {
+      "label": "Scenario: Recover failed autosave",
+      "file_type": "document",
+      "source_file": "openspec/specs/review-export-workflow/spec.md",
+      "source_location": "L86",
+      "_origin": "ast",
+      "id": "openspec_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_recover_failed_autosave",
+      "community": 146,
+      "norm_label": "scenario: recover failed autosave"
+    },
+    {
+      "label": "Scenario: Display actionable job states",
+      "file_type": "document",
+      "source_file": "openspec/specs/review-export-workflow/spec.md",
+      "source_location": "L92",
+      "_origin": "ast",
+      "id": "openspec_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_display_actionable_job_states",
+      "community": 146,
+      "norm_label": "scenario: display actionable job states"
+    },
+    {
       "label": "Scenario: Confirm export",
       "file_type": "document",
       "source_file": "openspec/specs/review-export-workflow/spec.md",
-      "source_location": "L40",
+      "source_location": "L99",
       "_origin": "ast",
       "id": "openspec_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_confirm_export",
       "community": 146,
       "norm_label": "scenario: confirm export"
     },
     {
+      "label": "Scenario: Download completed export",
+      "file_type": "document",
+      "source_file": "openspec/specs/review-export-workflow/spec.md",
+      "source_location": "L105",
+      "_origin": "ast",
+      "id": "openspec_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_download_completed_export",
+      "community": 146,
+      "norm_label": "scenario: download completed export"
+    },
+    {
       "label": "Requirement: Raster-only render export",
       "file_type": "document",
       "source_file": "openspec/specs/review-export-workflow/spec.md",
-      "source_location": "L46",
+      "source_location": "L111",
       "_origin": "ast",
       "id": "openspec_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_raster_only_render_export",
       "community": 146,
@@ -22110,7 +22210,7 @@
       "label": "Scenario: Render PDF output",
       "file_type": "document",
       "source_file": "openspec/specs/review-export-workflow/spec.md",
-      "source_location": "L51",
+      "source_location": "L116",
       "_origin": "ast",
       "id": "openspec_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_render_pdf_output",
       "community": 146,
@@ -22120,7 +22220,7 @@
       "label": "Scenario: Render image output",
       "file_type": "document",
       "source_file": "openspec/specs/review-export-workflow/spec.md",
-      "source_location": "L57",
+      "source_location": "L122",
       "_origin": "ast",
       "id": "openspec_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_render_image_output",
       "community": 146,
@@ -69627,352 +69727,352 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/design.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/design.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gh_57_complete_mvp_frontend_interactions_design",
-      "target": "gh_57_complete_mvp_frontend_interactions_design_context"
+      "source": "2026_07_15_gh_57_complete_mvp_frontend_interactions_design",
+      "target": "2026_07_15_gh_57_complete_mvp_frontend_interactions_design_context",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/design.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/design.md",
       "source_location": "L23",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gh_57_complete_mvp_frontend_interactions_design",
-      "target": "gh_57_complete_mvp_frontend_interactions_design_decisions"
+      "source": "2026_07_15_gh_57_complete_mvp_frontend_interactions_design",
+      "target": "2026_07_15_gh_57_complete_mvp_frontend_interactions_design_decisions",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/design.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/design.md",
       "source_location": "L7",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gh_57_complete_mvp_frontend_interactions_design",
-      "target": "gh_57_complete_mvp_frontend_interactions_design_goals_non_goals"
+      "source": "2026_07_15_gh_57_complete_mvp_frontend_interactions_design",
+      "target": "2026_07_15_gh_57_complete_mvp_frontend_interactions_design_goals_non_goals",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/design.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/design.md",
       "source_location": "L57",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gh_57_complete_mvp_frontend_interactions_design",
-      "target": "gh_57_complete_mvp_frontend_interactions_design_risks_trade_offs"
+      "source": "2026_07_15_gh_57_complete_mvp_frontend_interactions_design",
+      "target": "2026_07_15_gh_57_complete_mvp_frontend_interactions_design_risks_trade_offs",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/design.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/design.md",
       "source_location": "L31",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gh_57_complete_mvp_frontend_interactions_design_decisions",
-      "target": "gh_57_complete_mvp_frontend_interactions_design_cache_and_save_manifests_by_page"
+      "source": "2026_07_15_gh_57_complete_mvp_frontend_interactions_design_decisions",
+      "target": "2026_07_15_gh_57_complete_mvp_frontend_interactions_design_cache_and_save_manifests_by_page",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/design.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/design.md",
       "source_location": "L43",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gh_57_complete_mvp_frontend_interactions_design_decisions",
-      "target": "gh_57_complete_mvp_frontend_interactions_design_derive_normalized_geometry_from_the_rendered_region_layer"
+      "source": "2026_07_15_gh_57_complete_mvp_frontend_interactions_design_decisions",
+      "target": "2026_07_15_gh_57_complete_mvp_frontend_interactions_design_derive_normalized_geometry_from_the_rendered_region_layer",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/design.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/design.md",
       "source_location": "L25",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gh_57_complete_mvp_frontend_interactions_design_decisions",
-      "target": "gh_57_complete_mvp_frontend_interactions_design_keep_workflow_state_in_the_existing_react_component_tree"
+      "source": "2026_07_15_gh_57_complete_mvp_frontend_interactions_design_decisions",
+      "target": "2026_07_15_gh_57_complete_mvp_frontend_interactions_design_keep_workflow_state_in_the_existing_react_component_tree",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/design.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/design.md",
       "source_location": "L37",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gh_57_complete_mvp_frontend_interactions_design_decisions",
-      "target": "gh_57_complete_mvp_frontend_interactions_design_model_edits_as_page_keyed_snapshots"
+      "source": "2026_07_15_gh_57_complete_mvp_frontend_interactions_design_decisions",
+      "target": "2026_07_15_gh_57_complete_mvp_frontend_interactions_design_model_edits_as_page_keyed_snapshots",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/design.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/design.md",
       "source_location": "L53",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gh_57_complete_mvp_frontend_interactions_design_decisions",
-      "target": "gh_57_complete_mvp_frontend_interactions_design_refresh_asynchronous_job_state_while_work_is_active"
+      "source": "2026_07_15_gh_57_complete_mvp_frontend_interactions_design_decisions",
+      "target": "2026_07_15_gh_57_complete_mvp_frontend_interactions_design_refresh_asynchronous_job_state_while_work_is_active",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/design.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/design.md",
       "source_location": "L49",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gh_57_complete_mvp_frontend_interactions_design_decisions",
-      "target": "gh_57_complete_mvp_frontend_interactions_design_use_abortable_single_part_upload_with_explicit_ui_state"
+      "source": "2026_07_15_gh_57_complete_mvp_frontend_interactions_design_decisions",
+      "target": "2026_07_15_gh_57_complete_mvp_frontend_interactions_design_use_abortable_api_directed_multipart_upload_with_explicit_ui_state",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/proposal.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/proposal.md",
       "source_location": "L14",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gh_57_complete_mvp_frontend_interactions_proposal",
-      "target": "gh_57_complete_mvp_frontend_interactions_proposal_capabilities"
+      "source": "2026_07_15_gh_57_complete_mvp_frontend_interactions_proposal",
+      "target": "2026_07_15_gh_57_complete_mvp_frontend_interactions_proposal_capabilities",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/proposal.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/proposal.md",
       "source_location": "L24",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gh_57_complete_mvp_frontend_interactions_proposal",
-      "target": "gh_57_complete_mvp_frontend_interactions_proposal_impact"
+      "source": "2026_07_15_gh_57_complete_mvp_frontend_interactions_proposal",
+      "target": "2026_07_15_gh_57_complete_mvp_frontend_interactions_proposal_impact",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/proposal.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/proposal.md",
       "source_location": "L5",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gh_57_complete_mvp_frontend_interactions_proposal",
-      "target": "gh_57_complete_mvp_frontend_interactions_proposal_what_changes"
+      "source": "2026_07_15_gh_57_complete_mvp_frontend_interactions_proposal",
+      "target": "2026_07_15_gh_57_complete_mvp_frontend_interactions_proposal_what_changes",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/proposal.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/proposal.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gh_57_complete_mvp_frontend_interactions_proposal",
-      "target": "gh_57_complete_mvp_frontend_interactions_proposal_why"
+      "source": "2026_07_15_gh_57_complete_mvp_frontend_interactions_proposal",
+      "target": "2026_07_15_gh_57_complete_mvp_frontend_interactions_proposal_why",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/proposal.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/proposal.md",
       "source_location": "L20",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gh_57_complete_mvp_frontend_interactions_proposal_capabilities",
-      "target": "gh_57_complete_mvp_frontend_interactions_proposal_modified_capabilities"
+      "source": "2026_07_15_gh_57_complete_mvp_frontend_interactions_proposal_capabilities",
+      "target": "2026_07_15_gh_57_complete_mvp_frontend_interactions_proposal_modified_capabilities",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/proposal.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/proposal.md",
       "source_location": "L16",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gh_57_complete_mvp_frontend_interactions_proposal_capabilities",
-      "target": "gh_57_complete_mvp_frontend_interactions_proposal_new_capabilities"
+      "source": "2026_07_15_gh_57_complete_mvp_frontend_interactions_proposal_capabilities",
+      "target": "2026_07_15_gh_57_complete_mvp_frontend_interactions_proposal_new_capabilities",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "openspec_changes_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec",
-      "target": "review_export_workflow_spec_modified_requirements"
+      "source": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec",
+      "target": "review_export_workflow_spec_modified_requirements",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
       "source_location": "L3",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "review_export_workflow_spec_modified_requirements",
-      "target": "openspec_changes_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow"
+      "target": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
       "source_location": "L6",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "openspec_changes_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
-      "target": "openspec_changes_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_authenticated_api_backed_runtime"
+      "source": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
+      "target": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_authenticated_api_backed_runtime",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
       "source_location": "L38",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "openspec_changes_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
-      "target": "openspec_changes_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_autosave_page_edits"
+      "source": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
+      "target": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_autosave_page_edits",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
       "source_location": "L50",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "openspec_changes_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
-      "target": "openspec_changes_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_confirm_export"
+      "source": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
+      "target": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_confirm_export",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
       "source_location": "L46",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "openspec_changes_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
-      "target": "review_export_workflow_spec_scenario_display_actionable_job_states"
+      "source": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
+      "target": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_display_actionable_job_states",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
       "source_location": "L54",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "openspec_changes_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
-      "target": "review_export_workflow_spec_scenario_download_completed_export"
+      "source": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
+      "target": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_download_completed_export",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
       "source_location": "L26",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "openspec_changes_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
-      "target": "review_export_workflow_spec_scenario_edit_normalized_regions"
+      "source": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
+      "target": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_edit_normalized_regions",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
       "source_location": "L30",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "openspec_changes_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
-      "target": "review_export_workflow_spec_scenario_navigate_and_select_suggestions"
+      "source": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
+      "target": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_navigate_and_select_suggestions",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
       "source_location": "L10",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "openspec_changes_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
-      "target": "review_export_workflow_spec_scenario_navigate_primary_workflows"
+      "source": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
+      "target": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_navigate_primary_workflows",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
       "source_location": "L22",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "openspec_changes_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
-      "target": "review_export_workflow_spec_scenario_navigate_review_pages"
+      "source": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
+      "target": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_navigate_review_pages",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
       "source_location": "L42",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "openspec_changes_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
-      "target": "review_export_workflow_spec_scenario_recover_failed_autosave"
+      "source": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
+      "target": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_recover_failed_autosave",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
       "source_location": "L18",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "openspec_changes_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
-      "target": "review_export_workflow_spec_scenario_reject_invalid_upload"
+      "source": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
+      "target": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_reject_invalid_upload",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
       "source_location": "L34",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "openspec_changes_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
-      "target": "review_export_workflow_spec_scenario_undo_and_redo_page_edits"
+      "source": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
+      "target": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_undo_and_redo_page_edits",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md",
       "source_location": "L14",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "openspec_changes_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
-      "target": "review_export_workflow_spec_scenario_upload_with_feedback_and_cancellation"
+      "source": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
+      "target": "openspec_changes_archive_2026_07_15_gh_57_complete_mvp_frontend_interactions_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_upload_with_feedback_and_cancellation",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/tasks.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/tasks.md",
       "source_location": "L1",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gh_57_complete_mvp_frontend_interactions_tasks",
-      "target": "gh_57_complete_mvp_frontend_interactions_tasks_1_behavioral_coverage"
+      "source": "2026_07_15_gh_57_complete_mvp_frontend_interactions_tasks",
+      "target": "2026_07_15_gh_57_complete_mvp_frontend_interactions_tasks_1_behavioral_coverage",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/tasks.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/tasks.md",
       "source_location": "L7",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gh_57_complete_mvp_frontend_interactions_tasks",
-      "target": "gh_57_complete_mvp_frontend_interactions_tasks_2_editing_workflow"
+      "source": "2026_07_15_gh_57_complete_mvp_frontend_interactions_tasks",
+      "target": "2026_07_15_gh_57_complete_mvp_frontend_interactions_tasks_2_editing_workflow",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/tasks.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/tasks.md",
       "source_location": "L13",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gh_57_complete_mvp_frontend_interactions_tasks",
-      "target": "gh_57_complete_mvp_frontend_interactions_tasks_3_job_and_upload_workflow"
+      "source": "2026_07_15_gh_57_complete_mvp_frontend_interactions_tasks",
+      "target": "2026_07_15_gh_57_complete_mvp_frontend_interactions_tasks_3_job_and_upload_workflow",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "openspec/changes/gh-57-complete-mvp-frontend-interactions/tasks.md",
+      "source_file": "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/tasks.md",
       "source_location": "L19",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "gh_57_complete_mvp_frontend_interactions_tasks",
-      "target": "gh_57_complete_mvp_frontend_interactions_tasks_4_documentation_and_verification"
+      "source": "2026_07_15_gh_57_complete_mvp_frontend_interactions_tasks",
+      "target": "2026_07_15_gh_57_complete_mvp_frontend_interactions_tasks_4_documentation_and_verification",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -71868,6 +71968,106 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "openspec/specs/review-export-workflow/spec.md",
+      "source_location": "L92",
+      "weight": 1.0,
+      "source": "openspec_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
+      "target": "openspec_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_display_actionable_job_states",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/review-export-workflow/spec.md",
+      "source_location": "L105",
+      "weight": 1.0,
+      "source": "openspec_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
+      "target": "openspec_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_download_completed_export",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/review-export-workflow/spec.md",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "openspec_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
+      "target": "openspec_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_edit_normalized_regions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/review-export-workflow/spec.md",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "openspec_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
+      "target": "openspec_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_navigate_and_select_suggestions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/review-export-workflow/spec.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "openspec_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
+      "target": "openspec_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_navigate_primary_workflows",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/review-export-workflow/spec.md",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "openspec_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
+      "target": "openspec_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_navigate_review_pages",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/review-export-workflow/spec.md",
+      "source_location": "L86",
+      "weight": 1.0,
+      "source": "openspec_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
+      "target": "openspec_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_recover_failed_autosave",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/review-export-workflow/spec.md",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "openspec_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
+      "target": "openspec_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_reject_invalid_upload",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/review-export-workflow/spec.md",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "openspec_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
+      "target": "openspec_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_undo_and_redo_page_edits",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/review-export-workflow/spec.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "openspec_specs_review_export_workflow_spec_md_review_export_workflow_spec_requirement_browser_review_workflow",
+      "target": "openspec_specs_review_export_workflow_spec_md_review_export_workflow_spec_scenario_upload_with_feedback_and_cancellation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "openspec/specs/review-export-workflow/spec.md",
       "source_location": "L57",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -73569,5 +73769,5 @@
       "source_file": "AGENTS.md"
     }
   ],
-  "built_at_commit": "3384a4921bd4374075238dde7e018b31ef251aa5"
+  "built_at_commit": "6d859243e401657f209a5a1514c4205459910fd8"
 }

@@ -910,8 +910,8 @@
     "semantic_hash": ""
   },
   "local-data/floci-state/dynamodb-tables.json": {
-    "mtime": 1784147928.2409344,
-    "ast_hash": "f0645ce3e55a4f210c94f9f48f89cd43",
+    "mtime": 1784150531.5474446,
+    "ast_hash": "03903eba9313485c565b1ac37de03102",
     "semantic_hash": ""
   },
   "local-data/floci-state/ec2-internet-gateways.json": {
@@ -1040,8 +1040,8 @@
     "semantic_hash": ""
   },
   "local-data/floci-state/s3-objects.json": {
-    "mtime": 1784147928.2931657,
-    "ast_hash": "db5d55d0708389540dee95c5e4ebffc8",
+    "mtime": 1784150531.5861955,
+    "ast_hash": "5f426d2ffcdd79600331f59cc84a7e9a",
     "semantic_hash": ""
   },
   "local-data/floci-state/scheduler-groups.json": {
@@ -1080,7 +1080,7 @@
     "semantic_hash": ""
   },
   "local-data/floci-state/dynamodb-items.json": {
-    "mtime": 1784147928.286697,
+    "mtime": 1784150531.5796468,
     "ast_hash": "cbb7675a383db805de527dd603a1fa63",
     "semantic_hash": ""
   },
@@ -1465,8 +1465,8 @@
     "semantic_hash": ""
   },
   "openspec/specs/review-export-workflow/spec.md": {
-    "mtime": 1783203477.118247,
-    "ast_hash": "afb9634a6ca38aff8ff16ec4c2627cec",
+    "mtime": 1784150527.567626,
+    "ast_hash": "927f6a4ced4e63aeff8305e1b229658d",
     "semantic_hash": ""
   },
   "src/redact_api/worker_runtime.py": {
@@ -1614,27 +1614,27 @@
     "ast_hash": "40a94671916ed8d81fb64cdfc34b7657",
     "semantic_hash": ""
   },
-  "openspec/changes/gh-57-complete-mvp-frontend-interactions/.openspec.yaml": {
+  "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/.openspec.yaml": {
     "mtime": 1784146565.0149748,
     "ast_hash": "cd28d93e0bdeca7395a309017174b6c6",
     "semantic_hash": ""
   },
-  "openspec/changes/gh-57-complete-mvp-frontend-interactions/design.md": {
-    "mtime": 1784146669.3844786,
-    "ast_hash": "b3bda53d340891140878ecac18b9ba4a",
+  "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/design.md": {
+    "mtime": 1784148228.8524268,
+    "ast_hash": "539c2f43ea07fd5a6366ed362828ff6b",
     "semantic_hash": ""
   },
-  "openspec/changes/gh-57-complete-mvp-frontend-interactions/proposal.md": {
+  "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/proposal.md": {
     "mtime": 1784146583.2321315,
     "ast_hash": "3694be59acd09f95777506d9ab4c25fc",
     "semantic_hash": ""
   },
-  "openspec/changes/gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md": {
-    "mtime": 1784146669.5900607,
-    "ast_hash": "d69cc99c2cdb1b9e1930df2981725b94",
+  "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/specs/review-export-workflow/spec.md": {
+    "mtime": 1784150078.1546485,
+    "ast_hash": "57f4fb2c635c944f807f44b1fd3fd014",
     "semantic_hash": ""
   },
-  "openspec/changes/gh-57-complete-mvp-frontend-interactions/tasks.md": {
+  "openspec/changes/archive/2026-07-15-gh-57-complete-mvp-frontend-interactions/tasks.md": {
     "mtime": 1784147968.1877518,
     "ast_hash": "f750181bb2e5f1014512ef621885f3c0",
     "semantic_hash": ""
