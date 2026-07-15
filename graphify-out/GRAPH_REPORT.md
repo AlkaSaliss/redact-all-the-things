@@ -5,12 +5,12 @@
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2303 nodes · 4751 edges · 202 communities (176 shown, 26 thin omitted)
-- Extraction: 67% EXTRACTED · 33% INFERRED · 0% AMBIGUOUS · INFERRED: 1552 edges (avg confidence: 0.5)
+- 2303 nodes · 4723 edges · 200 communities (175 shown, 25 thin omitted)
+- Extraction: 68% EXTRACTED · 32% INFERRED · 0% AMBIGUOUS · INFERRED: 1521 edges (avg confidence: 0.5)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `82599125`
+- Built from commit: `d2b91e58`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -158,7 +158,6 @@
 - [[_COMMUNITY_Community 147|Community 147]]
 - [[_COMMUNITY_Community 148|Community 148]]
 - [[_COMMUNITY_Community 149|Community 149]]
-- [[_COMMUNITY_Community 151|Community 151]]
 - [[_COMMUNITY_Community 154|Community 154]]
 - [[_COMMUNITY_Community 155|Community 155]]
 - [[_COMMUNITY_Community 156|Community 156]]
@@ -185,7 +184,6 @@
 - [[_COMMUNITY_Community 185|Community 185]]
 - [[_COMMUNITY_Community 186|Community 186]]
 - [[_COMMUNITY_Community 187|Community 187]]
-- [[_COMMUNITY_Community 188|Community 188]]
 - [[_COMMUNITY_Community 189|Community 189]]
 - [[_COMMUNITY_Community 190|Community 190]]
 - [[_COMMUNITY_Community 191|Community 191]]
@@ -201,16 +199,16 @@
 - [[_COMMUNITY_Community 548|Community 548]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `Job` - 148 edges
-2. `SourceType` - 133 edges
-3. `JobStatus` - 127 edges
-4. `PageManifest` - 124 edges
-5. `FailureCode` - 111 edges
-6. `RedactionRegion` - 94 edges
+1. `Job` - 143 edges
+2. `SourceType` - 130 edges
+3. `JobStatus` - 124 edges
+4. `PageManifest` - 121 edges
+5. `FailureCode` - 108 edges
+6. `RedactionRegion` - 91 edges
 7. `PersistenceConflictError` - 76 edges
-8. `RegionSource` - 75 edges
-9. `InvalidTransitionError` - 59 edges
-10. `RenderedPage` - 59 edges
+8. `RegionSource` - 72 edges
+9. `RenderedPage` - 59 edges
+10. `PageArtifact` - 59 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Pull request definition of done` --semantically_similar_to--> `Project Working Agreement`  [INFERRED] [semantically similar]
@@ -221,7 +219,7 @@
   SECURITY.md → .github/ISSUE_TEMPLATE/bug.yml
 - `Job` --uses--> `PersistenceConflictError`  [INFERRED]
   tests/worker/test_checkpoint_resume.py → src/redact_api/aws.py
-- `PageManifest` --uses--> `PersistenceConflictError`  [INFERRED]
+- `OcrLine` --uses--> `PersistenceConflictError`  [INFERRED]
   tests/worker/test_checkpoint_resume.py → src/redact_api/aws.py
 
 ## Import Cycles
@@ -237,43 +235,43 @@
 - **Versioned documentation delivery** — agents_documentation_as_code, repository_governance_spec_published_documentation, workflows_pages_strict_mkdocs_build, workflows_pages_github_pages_deployment [INFERRED 0.95]
 - **Tracked knowledge asset lifecycle** — agents_tracked_knowledge_assets, agents_graphify_workflow, repository_governance_spec_tracked_assets, 2026_06_14_gh_1_bootstrap_governance_tasks_completed_bootstrap [INFERRED 0.85]
 
-## Communities (202 total, 26 thin omitted)
+## Communities (200 total, 25 thin omitted)
 
 ### Community 0 - "Project Architecture"
 Cohesion: 0.22
 Nodes (11): 24-hour job retention, Assisted File Redaction technical scope, Official AWS ECS regional price index, Mandatory human review, Normalized redaction regions, Optimistic page-manifest versioning, Assisted redaction application, GLiNER2 (+3 more)
 
 ### Community 1 - "Technical Scope"
-Cohesion: 0.17
-Nodes (42): BaseModel, FastAPI, LookupError, ContractModel, PageManifest, PagePreview, PageSummary, Normalized page-space rectangle selected for redaction. (+34 more)
+Cohesion: 0.16
+Nodes (36): BaseModel, FastAPI, LookupError, ContractModel, PagePreview, PageSummary, Validated job and page-manifest contracts., Normalized page-space rectangle selected for redaction. (+28 more)
 
 ### Community 2 - "Working Agreement"
 Cohesion: 0.17
 Nodes (16): Repository governance proposal, Repository governance capability, Completed governance bootstrap tasks, Archived repository governance requirements, Automated pull request quality requirement, Protected main workflow requirement, Published documentation requirement, Tracked agent knowledge assets requirement (+8 more)
 
 ### Community 3 - "Governance Specification"
-Cohesion: 0.12
-Nodes (46): Image, PersistenceConflictError, Raised when an optimistic write loses a version race., FailureCode, Job, Supported source document formats., Safe failure classifications that may be persisted and returned., Origin of a redaction region. (+38 more)
+Cohesion: 0.36
+Nodes (9): _image_to_rendered_page(), _parse_gliner2_entities(), _parse_gliner2_entity(), RasterizationError, Analysis worker validation and rasterization boundaries., Raised when accepted source content cannot be rasterized safely., _render_image_page(), _render_pdf_pages() (+1 more)
 
 ### Community 4 - "OpenSpec Change Lifecycle"
 Cohesion: 0.12
 Nodes (22): OpenSpec Apply Change, Task-Driven Implementation, Archive Validation, OpenSpec Archive Change, OpenSpec Bulk Archive Change, Spec Conflict Resolution, Artifact Dependency Order, OpenSpec Continue Change (+14 more)
 
 ### Community 5 - "Archived Governance Requirements"
-Cohesion: 0.10
-Nodes (35): _clamp_region(), map_pii_regions(), OcrTextBlock, _parse_gliner2_entities(), _parse_gliner2_entity(), PiiEntity, PiiMappingError, One normalized OCR text block in page text order. (+27 more)
+Cohesion: 0.06
+Nodes (110): FailureCode, JobStatus, Supported source document formats., Persistent states in the job lifecycle., Safe failure classifications that may be persisted and returned., Origin of a redaction region., RegionSource, SourceType (+102 more)
 
 ### Community 6 - "Community 6"
 Cohesion: 0.13
 Nodes (42): aws_apigatewayv2_api.http, aws_apigatewayv2_authorizer.cognito, aws_apigatewayv2_integration.lambda, aws_apigatewayv2_route.cors_preflight, aws_apigatewayv2_route.default, aws_apigatewayv2_stage.default, aws_cloudfront_distribution.frontend, aws_cloudfront_origin_access_control.frontend (+34 more)
 
 ### Community 7 - "OpenSpec Onboarding"
-Cohesion: 0.14
-Nodes (7): Job, make_job(), make_submission(), RecordingJobs, RecordingObjects, test_parse_args_builds_worker_submission(), test_run_submission_rejects_mismatched_job()
+Cohesion: 0.15
+Nodes (6): Job, make_job(), make_submission(), RecordingJobs, RecordingObjects, test_run_submission_rejects_mismatched_job()
 
 ### Community 8 - "Bootstrap Execution"
-Cohesion: 0.19
-Nodes (23): Protocol, analyze_source(), _analyze_with_checkpoints(), create_pii_manifest(), create_pii_manifests(), PageManifestWriter, PiiDetector, _processing_failed() (+15 more)
+Cohesion: 0.29
+Nodes (17): Protocol, analyze_source(), _analyze_with_checkpoints(), OcrEngine, PageArtifactWriter, PiiDetector, _processing_failed(), Persistence boundary for raster page artifacts. (+9 more)
 
 ### Community 9 - "Security Reporting"
 Cohesion: 0.05
@@ -321,7 +319,7 @@ Nodes (21): Requirement: Architecture decision records, Requirement: Automated p
 
 ### Community 21 - "Documentation Home"
 Cohesion: 0.09
-Nodes (32): make_job(), test_expiry_is_exact_at_the_deadline(), test_invalid_transition_is_rejected(), test_normal_transitions_increment_version(), test_only_expired_jobs_can_transition_to_expired(), test_permanent_failures_are_not_retryable(), test_processing_can_fail(), test_retry_transition_clears_failure_code() (+24 more)
+Nodes (35): make_job(), test_expiry_is_exact_at_the_deadline(), test_invalid_transition_is_rejected(), test_normal_transitions_increment_version(), test_only_expired_jobs_can_transition_to_expired(), test_permanent_failures_are_not_retryable(), test_processing_can_fail(), test_retry_transition_clears_failure_code() (+27 more)
 
 ### Community 22 - "Feature Requests"
 Cohesion: 0.67
@@ -348,12 +346,12 @@ Cohesion: 0.12
 Nodes (16): Requirement: Rejected validation produces no analysis artifacts, Requirement: Worker rejects invalid source content safely, Requirement: Worker validates supported source content, Scenario: Accept valid JPEG content, Scenario: Accept valid PDF content, Scenario: Accept valid PNG content, Scenario: Preserve storage on validation failure, Scenario: Reject encrypted PDF content (+8 more)
 
 ### Community 30 - "Community 30"
-Cohesion: 0.12
-Nodes (29): OcrExtractionError, OcrLine, PageArtifact, Source metadata safe for later analysis stages., Metadata for one persisted raster page artifact., One raw OCR line using pixel-space page coordinates., Return OCR lines for one raster page artifact., Raised when accepted page artifacts cannot be OCR-processed safely. (+21 more)
+Cohesion: 0.23
+Nodes (10): create_pii_manifest(), create_pii_manifests(), PageManifestWriter, Persistence boundary for worker-created review manifests., Load an existing page manifest if one exists., Persist a new page manifest., Detect PII on OCR pages and persist initial review manifests., Detect PII for one OCR page and persist its initial review manifest. (+2 more)
 
 ### Community 31 - "Community 31"
 Cohesion: 0.09
-Nodes (22): infrastructure-app-edge-auth-api Specification, Purpose, Requirement: Bootstrap frontend placeholder, Requirements, Scenario: Bootstrap the frontend bucket, Requirement: App-facing infrastructure resources, Requirement: Deploy real control-plane Lambda package, Requirement: Publish real frontend application (+14 more)
+Nodes (22): infrastructure-app-edge-auth-api Specification, Purpose, Requirement: App-facing infrastructure resources, Requirement: Bootstrap frontend placeholder, Requirement: Deploy real control-plane Lambda package, Requirements, Scenario: Activate edge delivery in AWS mode, Scenario: Avoid Lambda package path-only drift (+14 more)
 
 ### Community 32 - "Community 32"
 Cohesion: 0.12
@@ -392,24 +390,24 @@ Cohesion: 0.14
 Nodes (13): Requirement: Page artifact metadata preserves downstream ordering, Requirement: Rasterization failures are safe permanent failures, Requirement: Rasterization remains memory bounded, Requirement: Worker rasterizes accepted sources into page artifacts, Scenario: Avoid downstream artifacts after rasterization failure, Scenario: Keep rasterization metadata separate from review manifests, Scenario: Persist safe failure on rasterization error, Scenario: Process PDF pages sequentially (+5 more)
 
 ### Community 42 - "Community 42"
-Cohesion: 0.24
-Nodes (26): AwsBatchSubmitter, PagePreview, PageSummary, RecordingBatchSubmitter, AwsBatchSubmitter, DynamoJobRepository, Submit worker contracts to an AWS Batch queue., Record one local submission per idempotency token. (+18 more)
+Cohesion: 0.19
+Nodes (37): AwsBatchSubmitter, Image, PagePreview, PageSummary, RecordingBatchSubmitter, AwsBatchSubmitter, PersistenceConflictError, Raised when an optimistic write loses a version race. (+29 more)
 
 ### Community 43 - "Community 43"
 Cohesion: 0.15
 Nodes (12): Change Workflow, Collaboration Platform, Definition of Done, Engineering Guidance, Git Conventions, graphify, Project Working Agreement, Terraform / Terragrunt setup (+4 more)
 
 ### Community 44 - "Community 44"
-Cohesion: 0.12
-Nodes (23): _serialize_page_artifact_index(), Job, PageManifest, make_job(), pdf_bytes(), png_bytes(), RecordingJobs, RecordingManifestWriter (+15 more)
+Cohesion: 0.20
+Nodes (8): page_artifact_index_key(), page_artifact_key(), rasterize_source(), Persist one PNG page artifact., Persist the JSON page-artifact index., Rasterize a validated source into PNG page artifacts and an index., Return the owner/job-namespaced key for a raster page PNG., Return the owner/job-namespaced key for the raster page index.
 
 ### Community 45 - "Community 45"
 Cohesion: 0.22
 Nodes (8): Assumptions, Batch wiring, Control-plane package, Design, Multipart normalization, Network path, Smoke path, Worker runtime
 
 ### Community 46 - "Community 46"
-Cohesion: 0.14
-Nodes (22): Analysis worker validation and rasterization boundaries., Raised when source validation maps to a safe failure code., Validate source bytes before any analysis artifact can be created., SourceValidationError, _validate_jpeg(), _validate_pdf(), _validate_png(), validate_source() (+14 more)
+Cohesion: 0.11
+Nodes (24): FailureCode, Path, Raised when source validation maps to a safe failure code., Validate source bytes before any analysis artifact can be created., SourceValidationError, _validate_jpeg(), _validate_pdf(), _validate_png() (+16 more)
 
 ### Community 47 - "Community 47"
 Cohesion: 0.15
@@ -684,20 +682,20 @@ Cohesion: 0.50
 Nodes (3): TG_LOCK_TABLE, TG_STATE_BUCKET, set_local_env_vars.sh script
 
 ### Community 120 - "Community 120"
-Cohesion: 0.14
-Nodes (5): A manifest paired with the S3 ETag used for optimistic writes., Manage job objects, presigned URLs, and versioned page manifests., S3ObjectRepository, StoredManifest, PageManifest
+Cohesion: 0.12
+Nodes (8): ControlPlaneService, A manifest paired with the S3 ETag used for optimistic writes., Manage job objects, presigned URLs, and versioned page manifests., S3ObjectRepository, StoredManifest, build_service(), Construct the production service from Lambda environment settings., PageManifest
 
 ### Community 122 - "Community 122"
-Cohesion: 0.13
-Nodes (17): _build_ocr_page_text(), extract_ocr_page_text(), extract_ocr_text(), _normalize_polygon(), ocr_page_text_key(), OcrArtifactStore, OcrEngine, Persistence boundary for OCR input pages and output text artifacts. (+9 more)
+Cohesion: 0.14
+Nodes (15): _build_ocr_page_text(), extract_ocr_page_text(), extract_ocr_text(), _normalize_polygon(), ocr_page_text_key(), OcrArtifactStore, Persistence boundary for OCR input pages and output text artifacts., Load the JSON page-artifact index. (+7 more)
 
 ### Community 129 - "Community 129"
 Cohesion: 0.11
-Nodes (15): Config, Concrete DynamoDB/S3 integration and the local Batch recording fake., Use stable Signature V4 URLs for browser artifact transfers., s3_client_config(), Validated job and page-manifest contracts., Create the next immutable version of a page manifest., save_manifest(), build_service() (+7 more)
+Nodes (13): Config, DynamoJobRepository, Concrete DynamoDB/S3 integration and the local Batch recording fake., Use stable Signature V4 URLs for browser artifact transfers., Persist validated job records with DynamoDB conditional writes., s3_client_config(), cors_allowed_origins(), AWS Lambda entry point. (+5 more)
 
 ### Community 130 - "Community 130"
-Cohesion: 0.23
-Nodes (16): clock(), create_ready_manifest(), service(), set_status(), test_create_list_get_ownership_and_exact_expiry(), test_create_rejects_invalid_sizes(), test_download_requires_complete_existing_output(), test_export_requires_acknowledgement_and_is_idempotent() (+8 more)
+Cohesion: 0.20
+Nodes (18): clock(), create_ready_manifest(), service(), set_status(), test_create_list_get_ownership_and_exact_expiry(), test_create_rejects_invalid_sizes(), test_download_requires_complete_existing_output(), test_export_requires_acknowledgement_and_is_idempotent() (+10 more)
 
 ### Community 134 - "Community 134"
 Cohesion: 0.11
@@ -708,8 +706,8 @@ Cohesion: 0.06
 Nodes (29): ApiError, RedactionApiClient, uploadMultipartPart(), CreateJobResponse, Job, JobStatus, PageManifest, PageSummary (+21 more)
 
 ### Community 137 - "Community 137"
-Cohesion: 0.14
-Nodes (25): JobStatus, Persistent states in the job lifecycle., OcrPageText, PageArtifactIndex, Ordered metadata for page artifacts produced by rasterization., OCR text and line geometry for one rasterized page., Tunable validation limits loaded from YAML., WorkerValidationConfig (+17 more)
+Cohesion: 0.11
+Nodes (34): DynamoJobRepository, PageManifest, Versioned per-page suggestions and current redaction selections., Gliner2PiiDetector, PaddleOcrEngine, Tunable validation limits loaded from YAML., GLiNER2 adapter for the worker image runtime., Embedded PaddleOCR adapter for the worker image runtime. (+26 more)
 
 ### Community 138 - "Community 138"
 Cohesion: 0.23
@@ -720,8 +718,8 @@ Cohesion: 0.29
 Nodes (6): Capabilities, Impact, Modified Capabilities, New Capabilities, What Changes, Why
 
 ### Community 140 - "Community 140"
-Cohesion: 0.27
-Nodes (4): ControlPlaneService, Persist a transition and submit its corresponding worker request., Coordinate owner-scoped job workflows across persistent AWS services., Job
+Cohesion: 0.23
+Nodes (8): Build the stable token for a specific persisted lifecycle transition., submission_token(), ControlPlaneService, InvalidRequestError, Persist a transition and submit its corresponding worker request., Raised when an operation is invalid for the current job., Coordinate owner-scoped job workflows across persistent AWS services., Job
 
 ### Community 141 - "Community 141"
 Cohesion: 0.07
@@ -758,10 +756,6 @@ Nodes (5): 1. OpenSpec, 2. Backend and Worker, 3. Frontend, 4. Infrastructure an
 ### Community 149 - "Community 149"
 Cohesion: 0.50
 Nodes (3): Impact, What Changes, Why
-
-### Community 151 - "Community 151"
-Cohesion: 0.22
-Nodes (16): Gliner2PiiDetector, PaddleOcrEngine, GLiNER2 adapter for the worker image runtime., Embedded PaddleOCR adapter for the worker image runtime., build_repositories(), main(), parse_args(), AWS Batch entrypoint for real worker jobs. (+8 more)
 
 ### Community 154 - "Community 154"
 Cohesion: 0.29
@@ -820,8 +814,8 @@ Cohesion: 0.33
 Nodes (10): make_job(), test_failed_job_requires_a_safe_failure_code(), test_job_accepts_the_persistent_contract(), test_job_rejects_foreign_object_namespaces(), test_job_rejects_invalid_limits(), test_job_rejects_progress_beyond_page_count(), test_job_rejects_unknown_fields(), test_job_rejects_unsupported_source_types() (+2 more)
 
 ### Community 183 - "Community 183"
-Cohesion: 0.14
-Nodes (15): load_page_artifact_index(), page_artifact_index_key(), page_artifact_key(), Load and validate a persisted page-artifact index for resume., Persistence boundary for render-mode inputs and output., Load the JSON page-artifact index., Load a saved review manifest., Persist the final redacted output object. (+7 more)
+Cohesion: 0.17
+Nodes (13): load_page_artifact_index(), Load and validate a persisted page-artifact index for resume., Persistence boundary for render-mode inputs and output., Load the JSON page-artifact index., Load a saved review manifest., Persist the final redacted output object., Raised when review manifests cannot be rendered safely., Render selected redaction regions into raster-only output artifacts. (+5 more)
 
 ### Community 184 - "Community 184"
 Cohesion: 0.25
@@ -848,8 +842,8 @@ Cohesion: 0.83
 Nodes (3): load(), test_shared_job_fixtures_match_the_contract(), test_shared_manifest_and_worker_fixtures_match_the_contract()
 
 ### Community 425 - "Community 425"
-Cohesion: 0.17
-Nodes (16): PageArtifactWriter, rasterize_source(), Persistence boundary for raster page artifacts., Persist one PNG page artifact., Persist the JSON page-artifact index., Rasterize a validated source into PNG page artifacts and an index., assert_png(), image_bytes() (+8 more)
+Cohesion: 0.19
+Nodes (15): Tunable rasterization settings., WorkerRasterizationConfig, Job, SourceType, assert_png(), image_bytes(), make_job(), pdf_bytes() (+7 more)
 
 ### Community 443 - "Community 443"
 Cohesion: 0.14
@@ -872,24 +866,24 @@ Cohesion: 0.50
 Nodes (3): 1. Frontend Deployment, 2. AWS Runtime Journey, 3. Documentation And Verification
 
 ## Knowledge Gaps
-- **984 isolated node(s):** `name`, `version`, `private`, `type`, `node` (+979 more)
+- **984 isolated node(s):** `Source validation`, `Rasterization`, `OCR extraction`, `PII detection and region mapping`, `Checkpoints, resume, and lifecycle` (+979 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **26 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **25 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Job` connect `Governance Specification` to `Community 129`, `Technical Scope`, `Archived Governance Requirements`, `OpenSpec Onboarding`, `Bootstrap Execution`, `Community 137`, `Community 42`, `Community 425`, `Community 140`, `Community 44`, `Community 46`, `Documentation Home`, `Community 151`, `Community 120`, `Community 183`, `Community 122`, `Community 188`, `Community 30`?**
-  _High betweenness centrality (0.014) - this node is a cross-community bridge._
-- **Why does `PageManifest` connect `Technical Scope` to `Community 129`, `Community 130`, `Governance Specification`, `Archived Governance Requirements`, `Bootstrap Execution`, `Community 137`, `Community 140`, `Documentation Home`, `Community 151`, `Community 30`, `Community 425`, `Community 42`, `Community 44`, `Community 46`, `Community 180`, `Community 183`, `Community 188`, `Community 120`, `Community 122`?**
+- **Why does `Job` connect `Community 42` to `Community 129`, `Technical Scope`, `Governance Specification`, `Archived Governance Requirements`, `OpenSpec Onboarding`, `Bootstrap Execution`, `Community 137`, `Community 425`, `Community 140`, `Community 46`, `Documentation Home`, `Community 183`, `Community 120`, `Community 122`, `Community 30`?**
+  _High betweenness centrality (0.017) - this node is a cross-community bridge._
+- **Why does `PageManifest` connect `Community 137` to `Community 129`, `Technical Scope`, `Governance Specification`, `Community 130`, `Archived Governance Requirements`, `Bootstrap Execution`, `Community 425`, `Community 42`, `Community 140`, `Community 46`, `Community 180`, `Documentation Home`, `Community 183`, `Community 120`, `Community 122`, `Community 30`?**
+  _High betweenness centrality (0.010) - this node is a cross-community bridge._
+- **Why does `JobStatus` connect `Archived Governance Requirements` to `Technical Scope`, `Community 130`, `Governance Specification`, `OpenSpec Onboarding`, `Bootstrap Execution`, `Community 137`, `Community 42`, `Community 425`, `Community 140`, `Community 46`, `Community 180`, `Documentation Home`, `Community 183`, `Community 122`, `Community 30`?**
   _High betweenness centrality (0.008) - this node is a cross-community bridge._
-- **Why does `JobStatus` connect `Community 137` to `Community 129`, `Technical Scope`, `Governance Specification`, `Community 130`, `Archived Governance Requirements`, `OpenSpec Onboarding`, `Bootstrap Execution`, `Community 425`, `Community 42`, `Community 140`, `Community 44`, `Community 46`, `Community 180`, `Documentation Home`, `Community 151`, `Community 183`, `Community 122`, `Community 30`?**
-  _High betweenness centrality (0.007) - this node is a cross-community bridge._
-- **Are the 141 inferred relationships involving `Job` (e.g. with `AwsBatchSubmitter` and `Config`) actually correct?**
-  _`Job` has 141 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 130 inferred relationships involving `SourceType` (e.g. with `AwsBatchSubmitter` and `FastAPI`) actually correct?**
-  _`SourceType` has 130 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 122 inferred relationships involving `JobStatus` (e.g. with `AwsBatchSubmitter` and `Image`) actually correct?**
-  _`JobStatus` has 122 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 119 inferred relationships involving `PageManifest` (e.g. with `AwsBatchSubmitter` and `Config`) actually correct?**
-  _`PageManifest` has 119 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 136 inferred relationships involving `Job` (e.g. with `AwsBatchSubmitter` and `Config`) actually correct?**
+  _`Job` has 136 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 127 inferred relationships involving `SourceType` (e.g. with `AwsBatchSubmitter` and `FastAPI`) actually correct?**
+  _`SourceType` has 127 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 119 inferred relationships involving `JobStatus` (e.g. with `AwsBatchSubmitter` and `Image`) actually correct?**
+  _`JobStatus` has 119 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 116 inferred relationships involving `PageManifest` (e.g. with `AwsBatchSubmitter` and `Config`) actually correct?**
+  _`PageManifest` has 116 INFERRED edges - model-reasoned connections that need verification._
