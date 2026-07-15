@@ -4,13 +4,13 @@ from datetime import UTC, datetime
 from os import environ
 
 import boto3
-from botocore.config import Config
 from mangum import Mangum
 
 from redact_api.aws import (
     AwsBatchSubmitter,
     DynamoJobRepository,
     S3ObjectRepository,
+    s3_client_config,
 )
 from redact_api.http import create_app
 from redact_api.services import ControlPlaneService
@@ -28,7 +28,7 @@ def build_service() -> ControlPlaneService:
     dynamodb = boto3.resource("dynamodb", **client_options)
     s3 = boto3.client(
         "s3",
-        config=Config(s3={"addressing_style": "path"}),
+        config=s3_client_config(),
         **client_options,
     )
     batch = boto3.client("batch", **client_options)

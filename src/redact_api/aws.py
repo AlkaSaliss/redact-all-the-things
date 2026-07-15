@@ -6,9 +6,19 @@ from dataclasses import dataclass, field
 from typing import Any
 
 from boto3.dynamodb.conditions import Key
+from botocore.config import Config
 from botocore.exceptions import ClientError
 
 from redact_api.domain import Job, PageManifest, WorkerMode, WorkerSubmission
+
+
+def s3_client_config() -> Config:
+    """Use stable Signature V4 URLs for browser artifact transfers."""
+
+    return Config(
+        signature_version="s3v4",
+        s3={"addressing_style": "path"},
+    )
 
 
 class PersistenceConflictError(RuntimeError):

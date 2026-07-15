@@ -910,8 +910,8 @@
     "semantic_hash": ""
   },
   "local-data/floci-state/dynamodb-tables.json": {
-    "mtime": 1783205189.4787538,
-    "ast_hash": "aec414c9d260e72f9a19a44bf49a60ea",
+    "mtime": 1783278618.5437727,
+    "ast_hash": "b98630d81852db0d5c86c81ca9ca1523",
     "semantic_hash": ""
   },
   "local-data/floci-state/ec2-internet-gateways.json": {
@@ -1040,8 +1040,8 @@
     "semantic_hash": ""
   },
   "local-data/floci-state/s3-objects.json": {
-    "mtime": 1783205189.5022154,
-    "ast_hash": "2d25fa144131fa36659bbc7b11ac664d",
+    "mtime": 1783278618.5702124,
+    "ast_hash": "3f59fe9e1437ede8d2c017eb8c8b392d",
     "semantic_hash": ""
   },
   "local-data/floci-state/scheduler-groups.json": {
@@ -1080,7 +1080,7 @@
     "semantic_hash": ""
   },
   "local-data/floci-state/dynamodb-items.json": {
-    "mtime": 1783205189.4970016,
+    "mtime": 1783278618.5641162,
     "ast_hash": "cbb7675a383db805de527dd603a1fa63",
     "semantic_hash": ""
   },
@@ -1494,37 +1494,37 @@
     "ast_hash": "b10d1eed1895bf8c2778c0a3283773ca",
     "semantic_hash": ""
   },
-  "openspec/changes/archive/2026-07-05-deploy-real-runtime-smoke/.openspec.yaml": {
+  "openspec/changes/archive/2026-07-05-gh-49-deploy-real-runtime-smoke/.openspec.yaml": {
     "mtime": 1783204722.5521154,
     "ast_hash": "ff548009fead911022d5b7c4c25d58ae",
     "semantic_hash": ""
   },
-  "openspec/changes/archive/2026-07-05-deploy-real-runtime-smoke/design.md": {
+  "openspec/changes/archive/2026-07-05-gh-49-deploy-real-runtime-smoke/design.md": {
     "mtime": 1783204824.300423,
     "ast_hash": "0e1a1b9feeb00663009603198a1d4a35",
     "semantic_hash": ""
   },
-  "openspec/changes/archive/2026-07-05-deploy-real-runtime-smoke/proposal.md": {
+  "openspec/changes/archive/2026-07-05-gh-49-deploy-real-runtime-smoke/proposal.md": {
     "mtime": 1783204824.1635926,
     "ast_hash": "c04edd2da3ee8d3828bed34c884a0d73",
     "semantic_hash": ""
   },
-  "openspec/changes/archive/2026-07-05-deploy-real-runtime-smoke/specs/control-plane-api/spec.md": {
+  "openspec/changes/archive/2026-07-05-gh-49-deploy-real-runtime-smoke/specs/control-plane-api/spec.md": {
     "mtime": 1783205169.2801497,
     "ast_hash": "d3ca39e2e166a98092422be3820fa1e4",
     "semantic_hash": ""
   },
-  "openspec/changes/archive/2026-07-05-deploy-real-runtime-smoke/specs/infrastructure-app-edge-auth-api/spec.md": {
+  "openspec/changes/archive/2026-07-05-gh-49-deploy-real-runtime-smoke/specs/infrastructure-app-edge-auth-api/spec.md": {
     "mtime": 1783205169.0277872,
     "ast_hash": "7c629cc438ea71e69529bb883403d5bc",
     "semantic_hash": ""
   },
-  "openspec/changes/archive/2026-07-05-deploy-real-runtime-smoke/specs/infrastructure-worker-compute-artifacts/spec.md": {
+  "openspec/changes/archive/2026-07-05-gh-49-deploy-real-runtime-smoke/specs/infrastructure-worker-compute-artifacts/spec.md": {
     "mtime": 1783205169.155641,
     "ast_hash": "445d396e1fd5d282a3a7925c9ef32699",
     "semantic_hash": ""
   },
-  "openspec/changes/archive/2026-07-05-deploy-real-runtime-smoke/tasks.md": {
+  "openspec/changes/archive/2026-07-05-gh-49-deploy-real-runtime-smoke/tasks.md": {
     "mtime": 1783278483.675823,
     "ast_hash": "a10ad8375b9dab8c9452182b5f2f2512",
     "semantic_hash": ""

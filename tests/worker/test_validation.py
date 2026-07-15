@@ -5,6 +5,7 @@ import pytest
 
 from redact_api.domain import FailureCode, Job, JobStatus, SourceType
 from redact_api.worker import (
+    DEFAULT_CONFIG_PATH,
     SourceValidationError,
     ValidatedSource,
     WorkerValidationConfig,
@@ -14,6 +15,10 @@ from redact_api.worker import (
 
 
 NOW = datetime(2026, 6, 17, 12, 0, tzinfo=UTC)
+
+
+def test_default_worker_validation_config_exists() -> None:
+    assert DEFAULT_CONFIG_PATH.is_file()
 
 
 class RecordingJobs:

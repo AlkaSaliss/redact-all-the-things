@@ -71,8 +71,9 @@ infrastructure-only Lambda stub.
 #### Scenario: Package real Lambda runtime
 
 - **WHEN** the AWS live stack is planned or applied
-- **THEN** the Lambda function references a generated control-plane ZIP built
-  from the real Python package and Lambda runtime dependencies
+- **THEN** Terraform stages a generated control-plane ZIP built from the real
+  Python package and Lambda runtime dependencies in private S3 storage
+- **AND** the Lambda function references that staged package artifact
 - **AND** the Lambda handler is `redact_api.lambda_handler.handler`.
 
 #### Scenario: Wire Lambda to real Batch jobs
@@ -83,14 +84,49 @@ infrastructure-only Lambda stub.
   origins
 - **AND** its execution role can submit jobs to AWS Batch.
 
-### Requirement: Temporary frontend placeholder
+#### Scenario: Avoid Lambda package path-only drift
 
-The app edge/auth/API slice SHALL include a minimal frontend placeholder only
-for infrastructure wiring until product slices provide the real frontend
-artifact.
+- **GIVEN** the generated Lambda ZIP content hash has not changed
+- **WHEN** Terraform plans from a different local or CI filesystem path
+- **THEN** the plan does not update the Lambda function only because the ZIP
+  filename path differs.
 
-#### Scenario: Publish a frontend placeholder
+#### Scenario: Keep unchanged package builds stable
+
+- **GIVEN** the Lambda source files and runtime dependency versions have not
+  changed
+- **WHEN** the Lambda package is rebuilt
+- **THEN** the generated ZIP content hash remains stable.
+
+### Requirement: Bootstrap frontend placeholder
+
+The app edge/auth/API infrastructure SHALL include a minimal frontend object
+for initial wiring without taking ownership of later application deployments.
+
+#### Scenario: Bootstrap the frontend bucket
 
 - **WHEN** Terraform plans the Floci stack
-- **THEN** a minimal static frontend placeholder object is available for the
-  frontend bucket without implementing product UI behavior.
+- **THEN** a minimal static frontend object is available for the frontend bucket
+- **AND** Terraform does not replace a frontend build published later.
+
+### Requirement: Publish real frontend application
+
+The frontend deployment workflow SHALL publish the tested React build to the
+private frontend bucket using the Terraform toolchain supported by the live
+stack.
+
+#### Scenario: Resolve live outputs with pinned Terraform
+
+- **WHEN** the frontend deployment job resolves Terragrunt outputs
+- **THEN** it installs the repository-supported Terraform version explicitly
+- **AND** it obtains the frontend bucket and CloudFront distribution outputs
+  from the selected live environment.
+
+#### Scenario: Publish and invalidate frontend assets
+
+- **WHEN** the frontend build and deployment jobs succeed
+- **THEN** the published build embeds the selected environment's API endpoint,
+  AWS region, Cognito user pool, browser client, and hosted UI URL
+- **AND** the built assets are synchronized to the private frontend bucket
+- **AND** the CloudFront distribution is invalidated so the new application is
+  served.

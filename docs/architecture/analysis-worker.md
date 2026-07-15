@@ -22,6 +22,10 @@ worker_validation:
   max_image_pixels: 50000000
 ```
 
+The worker image copies this file into `/app/config` and selects it through
+`WORKER_VALIDATION_CONFIG`, keeping the same policy available after the Python
+package is installed in AWS Batch.
+
 Tests may load smaller limits from temporary YAML files so limit behavior is
 covered without creating large source artifacts.
 
