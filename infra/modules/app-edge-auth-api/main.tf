@@ -63,6 +63,10 @@ resource "aws_s3_bucket" "artifacts" {
   bucket = "${local.name_prefix}-artifacts"
 }
 
+resource "aws_s3_bucket" "lambda_packages" {
+  bucket = "${local.name_prefix}-lambda-packages"
+}
+
 resource "aws_s3_bucket_public_access_block" "artifacts" {
   bucket = aws_s3_bucket.artifacts.id
 
@@ -80,6 +84,32 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "artifacts" {
       sse_algorithm = "AES256"
     }
   }
+}
+
+resource "aws_s3_bucket_public_access_block" "lambda_packages" {
+  bucket = aws_s3_bucket.lambda_packages.id
+
+  block_public_acls       = true
+  block_public_policy     = true
+  ignore_public_acls      = true
+  restrict_public_buckets = true
+}
+
+resource "aws_s3_bucket_server_side_encryption_configuration" "lambda_packages" {
+  bucket = aws_s3_bucket.lambda_packages.id
+
+  rule {
+    apply_server_side_encryption_by_default {
+      sse_algorithm = "AES256"
+    }
+  }
+}
+
+resource "aws_s3_object" "api_package" {
+  bucket      = aws_s3_bucket.lambda_packages.id
+  key         = "control-plane/api.zip"
+  source      = local.lambda_package_path
+  source_hash = filebase64sha256(local.lambda_package_path)
 }
 
 resource "aws_s3_bucket_lifecycle_configuration" "artifacts" {
@@ -296,7 +326,8 @@ resource "aws_lambda_function" "api" {
   role             = aws_iam_role.lambda.arn
   handler          = "redact_api.lambda_handler.handler"
   runtime          = "python3.12"
-  filename         = local.lambda_package_path
+  s3_bucket        = aws_s3_bucket.lambda_packages.id
+  s3_key           = aws_s3_object.api_package.key
   source_code_hash = filebase64sha256(local.lambda_package_path)
 
   environment {
@@ -313,6 +344,7 @@ resource "aws_lambda_function" "api" {
   depends_on = [
     aws_cloudwatch_log_group.api,
     aws_iam_role_policy.lambda,
+    aws_s3_object.api_package,
   ]
 }
 

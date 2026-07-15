@@ -13,7 +13,7 @@ INFRA_ENV_DIR ?= infra/live/$(INFRA_TARGET)/$(INFRA_REGION)/$(INFRA_COMPONENT)
 AWS_ENV_DIR ?= infra/live/dev/$(INFRA_REGION)/$(INFRA_COMPONENT)
 FRONTEND_ENV_FILE ?= frontend/.env.local
 LAMBDA_PACKAGE_PATH ?= $(CURDIR)/.build/control-plane-lambda.zip
-WORKER_IMAGE_TAG ?= local
+WORKER_IMAGE_TAG ?= $(shell git rev-parse HEAD)
 FLOCI_ENV_DIR ?= infra/live/floci/$(INFRA_REGION)/$(INFRA_COMPONENT)
 FLOCI_ENV := AWS_ENDPOINT_URL=http://localhost.floci.io:4566 \
              AWS_ACCESS_KEY_ID=test \

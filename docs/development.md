@@ -143,12 +143,24 @@ export AWS_REGION=eu-west-1
 make infra-smoke-aws
 ```
 
-To exercise the first real Lambda/S3 multipart/Batch submission path, opt in to
-the mutating runtime smoke:
+To exercise the complete deployed document lifecycle, opt in to the mutating
+runtime smoke:
 
 ```bash
 AWS_E2E_SMOKE=1 make infra-smoke-aws
 ```
+
+The smoke uploads the checked-in one-page PDF sample through a presigned URL,
+waits for the real Batch analysis worker to produce review manifests, confirms
+export, waits for the render worker, and downloads a non-empty result. It can
+run for up to 30 minutes and incurs Batch compute cost. Override the deadline
+with `AWS_E2E_TIMEOUT_SECONDS` when diagnosing unusually slow cold starts.
+
+Browser verification is a separate boundary: open the stack's
+`cloudfront_domain_name`, verify the signed-out React application renders, and
+start sign-in to confirm navigation reaches the configured Cognito hosted UI.
+Invited-user credentials are operator-owned and are not stored in this
+repository or smoke artifacts.
 
 Preview the documentation:
 

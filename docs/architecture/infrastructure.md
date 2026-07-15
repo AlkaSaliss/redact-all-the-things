@@ -134,12 +134,20 @@ verifies deployed DynamoDB, S3, Batch, ECR, and Lambda resources that Floci
 cannot fully cover. It is read-only by default and expects credentials for the
 approved account.
 
-To run the mutating runtime smoke that invokes the real Lambda, uploads one
-multipart source object, completes upload, and verifies Batch submission:
+To run the mutating runtime smoke that invokes the real Lambda and exercises a
+valid sample through multipart upload, Batch analysis, export rendering, and
+authorized result download:
 
 ```bash
 AWS_E2E_SMOKE=1 make infra-smoke-aws
 ```
+
+The smoke polls the owner-scoped control-plane job contract with a 30-minute
+deadline and fails on safe terminal failure codes. Presigned transfer errors
+include the S3 response body for diagnosis but never log signed URLs. Browser
+verification separately checks that the CloudFront React entry page starts the
+Cognito hosted sign-in flow; invited-user credentials remain outside the
+repository.
 
 Issue #38 revalidates the `eu-west-1` cost model before apply. Terraform-managed
 AWS budget alerts are deferred to follow-up issue #42 because alert notification

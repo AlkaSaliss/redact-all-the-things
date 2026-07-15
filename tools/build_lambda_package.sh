@@ -21,15 +21,26 @@ uv pip install \
 cp -R src/redact_api "$package_dir/redact_api"
 
 python - "$package_dir" "$package_path" <<'PY'
+import os
 from pathlib import Path
 from zipfile import ZIP_DEFLATED, ZipFile
 import sys
 
 package_dir = Path(sys.argv[1])
 package_path = Path(sys.argv[2])
+fixed_timestamp = 315532800
+
+for path in package_dir.rglob("*"):
+    if path.is_file():
+        path.chmod(0o644)
+        os.utime(path, (fixed_timestamp, fixed_timestamp))
+
 with ZipFile(package_path, "w", ZIP_DEFLATED) as archive:
     for path in sorted(package_dir.rglob("*")):
         if path.is_file():
+            if "__pycache__" in path.parts or path.suffix == ".pyc":
+                continue
+
             archive.write(path, path.relative_to(package_dir))
 PY
 

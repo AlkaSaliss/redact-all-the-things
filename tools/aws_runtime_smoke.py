@@ -3,13 +3,29 @@
 from __future__ import annotations
 
 import json
+import re
 import subprocess
 import sys
+import time
+from collections.abc import Callable
+from os import environ
 from pathlib import Path
 from typing import Any
+from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 
 import boto3
+
+
+TERMINAL_FAILURE_STATUSES = {"expired", "failed"}
+DEFAULT_TIMEOUT_SECONDS = 1800
+DEFAULT_POLL_INTERVAL_SECONDS = 10
+SAMPLE_PATH = (
+    Path(__file__).resolve().parents[1]
+    / "tests"
+    / "samples"
+    / "dlptest-name-dob-email.pdf"
+)
 
 
 def terragrunt_outputs(live_stack: Path) -> dict[str, Any]:
@@ -67,6 +83,58 @@ def invoke_api(
     return status_code, response_body
 
 
+def wait_for_job(
+    fetch_job: Callable[[], dict[str, Any]],
+    desired_status: str,
+    *,
+    timeout_seconds: int,
+    poll_interval_seconds: int,
+    monotonic: Callable[[], float] = time.monotonic,
+) -> dict[str, Any]:
+    """Poll a job until the desired or a terminal state is reached."""
+
+    deadline = monotonic() + timeout_seconds
+    last_status = ""
+    while True:
+        job = fetch_job()
+        status = str(job.get("status", "unknown"))
+        if status != last_status:
+            print(f"AWS runtime smoke job status: {status}", file=sys.stderr)
+            last_status = status
+        if status == desired_status:
+            return job
+        if status in TERMINAL_FAILURE_STATUSES:
+            failure_code = job.get("failure_code") or "none"
+            raise RuntimeError(
+                f"job reached {status} while waiting for {desired_status}: "
+                f"failure_code={failure_code}"
+            )
+        if monotonic() >= deadline:
+            raise RuntimeError(
+                f"timed out waiting for {desired_status}: last_status={status}"
+            )
+        time.sleep(poll_interval_seconds)
+
+
+def open_presigned(
+    operation: str,
+    request: Request,
+    *,
+    opener: Callable[..., Any] = urlopen,
+) -> Any:
+    """Open a presigned request while keeping signed URLs out of errors."""
+
+    try:
+        return opener(request, timeout=30)
+    except HTTPError as error:
+        body = error.read().decode("utf-8", errors="replace")
+        body = re.sub(r"https?://\S+", "[redacted-url]", body)
+        body = " ".join(body.split())[:1000] or error.reason
+        raise RuntimeError(
+            f"presigned {operation} failed: HTTP {error.code}: {body}"
+        ) from None
+
+
 def main(argv: list[str]) -> int:
     if len(argv) != 3:
         print(
@@ -78,7 +146,16 @@ def main(argv: list[str]) -> int:
     live_stack = Path(argv[1])
     aws_region = argv[2]
     owner_id = "runtime-smoke"
-    sample = b"%PDF-1.4\n% runtime smoke placeholder\n"
+    sample = SAMPLE_PATH.read_bytes()
+    timeout_seconds = int(
+        environ.get("AWS_E2E_TIMEOUT_SECONDS", DEFAULT_TIMEOUT_SECONDS)
+    )
+    poll_interval_seconds = int(
+        environ.get(
+            "AWS_E2E_POLL_INTERVAL_SECONDS",
+            DEFAULT_POLL_INTERVAL_SECONDS,
+        )
+    )
 
     outputs = terragrunt_outputs(live_stack)
     function_name = output_value(outputs, "lambda_function_name")
@@ -97,7 +174,7 @@ def main(argv: list[str]) -> int:
 
     upload = created["upload_parts"][0]
     request = Request(upload["upload_url"], data=sample, method="PUT")
-    with urlopen(request, timeout=30) as response:
+    with open_presigned("upload", request) as response:
         etag = response.headers["ETag"]
 
     job_id = created["job"]["id"]
@@ -115,11 +192,66 @@ def main(argv: list[str]) -> int:
     if status != 200 or completed["status"] != "queued":
         raise RuntimeError(f"upload completion failed: {status} {completed}")
 
+    def fetch_job() -> dict[str, Any]:
+        status_code, job = invoke_api(
+            lambda_client,
+            function_name,
+            owner_id=owner_id,
+            method="GET",
+            path=f"/jobs/{job_id}",
+        )
+        if status_code != 200:
+            raise RuntimeError(f"job polling failed: {status_code} {job}")
+        return job
+
+    wait_for_job(
+        fetch_job,
+        "ready",
+        timeout_seconds=timeout_seconds,
+        poll_interval_seconds=poll_interval_seconds,
+    )
+
+    status, exporting = invoke_api(
+        lambda_client,
+        function_name,
+        owner_id=owner_id,
+        method="POST",
+        path=f"/jobs/{job_id}/export",
+        body={"acknowledged": True},
+    )
+    if status != 200 or exporting["status"] != "exporting":
+        raise RuntimeError(f"export submission failed: {status} {exporting}")
+
+    wait_for_job(
+        fetch_job,
+        "complete",
+        timeout_seconds=timeout_seconds,
+        poll_interval_seconds=poll_interval_seconds,
+    )
+
+    status, download = invoke_api(
+        lambda_client,
+        function_name,
+        owner_id=owner_id,
+        method="GET",
+        path=f"/jobs/{job_id}/download",
+    )
+    if status != 200:
+        raise RuntimeError(f"download authorization failed: {status} {download}")
+    with open_presigned(
+        "download",
+        Request(download["download_url"], method="GET"),
+    ) as response:
+        result = response.read()
+    if not result:
+        raise RuntimeError("authorized result download was empty")
+
     print(
         json.dumps(
             {
                 "job_id": job_id,
-                "status": completed["status"],
+                "result_bytes": len(result),
+                "status": "complete",
                 "lambda_function": function_name,
             },
             sort_keys=True,

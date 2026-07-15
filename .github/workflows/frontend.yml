@@ -26,6 +26,7 @@ concurrency:
 
 env:
   AWS_REGION: ${{ vars.AWS_REGION || 'eu-west-1' }}
+  TERRAFORM_VERSION: 1.13.3
   TERRAGRUNT_VERSION: 0.87.6
 
 jobs:
@@ -83,15 +84,10 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v6
 
-      - name: Download frontend artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: frontend-dist
-          path: frontend/dist
-
       - name: Set up Terraform
         uses: hashicorp/setup-terraform@v3
         with:
+          terraform_version: ${{ env.TERRAFORM_VERSION }}
           terraform_wrapper: false
 
       - name: Set up Terragrunt
@@ -108,11 +104,43 @@ jobs:
           role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
           aws-region: ${{ env.AWS_REGION }}
 
-      - name: Sync frontend assets
+      - name: Resolve frontend configuration
+        id: stack
         working-directory: infra/live/${{ env.AWS_LIVE_ENVIRONMENT }}/${{ env.AWS_REGION }}/worker-compute-artifacts
         run: |
-          FRONTEND_BUCKET="$(terragrunt output -raw frontend_bucket)"
-          DISTRIBUTION_ID="$(terragrunt output -raw cloudfront_distribution_id || true)"
+          echo "api_endpoint=$(terragrunt output -raw api_endpoint)" >> "$GITHUB_OUTPUT"
+          echo "frontend_bucket=$(terragrunt output -raw frontend_bucket)" >> "$GITHUB_OUTPUT"
+          echo "distribution_id=$(terragrunt output -raw cloudfront_distribution_id)" >> "$GITHUB_OUTPUT"
+          echo "hosted_ui_url=$(terragrunt output -raw hosted_ui_url)" >> "$GITHUB_OUTPUT"
+          echo "user_pool_id=$(terragrunt output -raw user_pool_id)" >> "$GITHUB_OUTPUT"
+          echo "web_client_id=$(terragrunt output -raw web_client_id)" >> "$GITHUB_OUTPUT"
+
+      - name: Set up Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install frontend dependencies
+        working-directory: frontend
+        run: npm ci
+
+      - name: Build configured frontend
+        working-directory: frontend
+        env:
+          VITE_API_ENDPOINT: ${{ steps.stack.outputs.api_endpoint }}
+          VITE_AWS_REGION: ${{ env.AWS_REGION }}
+          VITE_COGNITO_USER_POOL_ID: ${{ steps.stack.outputs.user_pool_id }}
+          VITE_COGNITO_CLIENT_ID: ${{ steps.stack.outputs.web_client_id }}
+          VITE_COGNITO_HOSTED_UI_URL: ${{ steps.stack.outputs.hosted_ui_url }}
+        run: npm run build
+
+      - name: Sync frontend assets
+        env:
+          FRONTEND_BUCKET: ${{ steps.stack.outputs.frontend_bucket }}
+          DISTRIBUTION_ID: ${{ steps.stack.outputs.distribution_id }}
+        run: |
           aws s3 sync "${GITHUB_WORKSPACE}/frontend/dist" "s3://${FRONTEND_BUCKET}" --delete
           if [ -n "$DISTRIBUTION_ID" ] && [ "$DISTRIBUTION_ID" != "null" ]; then
             aws cloudfront create-invalidation \
