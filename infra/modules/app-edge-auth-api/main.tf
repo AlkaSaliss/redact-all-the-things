@@ -57,6 +57,10 @@ resource "aws_s3_object" "frontend_placeholder" {
   source       = "${path.module}/stubs/frontend-index.html"
   content_type = "text/html"
   etag         = filemd5("${path.module}/stubs/frontend-index.html")
+
+  lifecycle {
+    ignore_changes = [etag]
+  }
 }
 
 resource "aws_s3_bucket" "artifacts" {
@@ -459,6 +463,18 @@ resource "aws_cloudfront_distribution" "frontend" {
     viewer_protocol_policy = "redirect-to-https"
   }
 
+  custom_error_response {
+    error_code         = 403
+    response_code      = 200
+    response_page_path = "/index.html"
+  }
+
+  custom_error_response {
+    error_code         = 404
+    response_code      = 200
+    response_page_path = "/index.html"
+  }
+
   restrictions {
     geo_restriction {
       restriction_type = "none"
@@ -468,4 +484,25 @@ resource "aws_cloudfront_distribution" "frontend" {
   viewer_certificate {
     cloudfront_default_certificate = true
   }
+}
+
+resource "aws_s3_bucket_policy" "frontend" {
+  count = local.create_cloudfront_distribution ? 1 : 0
+
+  bucket = aws_s3_bucket.frontend.id
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [{
+      Sid       = "AllowCloudFrontRead"
+      Effect    = "Allow"
+      Principal = { Service = "cloudfront.amazonaws.com" }
+      Action    = "s3:GetObject"
+      Resource  = "${aws_s3_bucket.frontend.arn}/*"
+      Condition = {
+        StringEquals = {
+          "AWS:SourceArn" = aws_cloudfront_distribution.frontend[0].arn
+        }
+      }
+    }]
+  })
 }

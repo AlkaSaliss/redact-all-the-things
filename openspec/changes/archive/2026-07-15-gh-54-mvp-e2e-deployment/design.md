@@ -24,6 +24,20 @@ invalid placeholder bytes and exits immediately after analysis submission.
 
 ## Decisions
 
+### Package worker validation configuration in the runtime image
+
+The worker image copies `config/worker-validation.yml` to `/app/config` and
+sets `WORKER_VALIDATION_CONFIG` to that path. The worker retains its repository
+default for local execution while using an explicit, stable path in AWS Batch.
+
+### Grant CloudFront private frontend access and preserve deployed assets
+
+The frontend bucket policy grants `s3:GetObject` only to the configured
+CloudFront distribution through its Origin Access Control. CloudFront maps S3
+403 and 404 responses to `index.html` so OAuth callbacks and client-side routes
+reach React. Terraform ignores the placeholder object's deployed ETag so a
+later infrastructure apply does not replace a published frontend build.
+
 ### Use the existing valid PDF sample
 
 The runtime smoke uploads `tests/samples/dlptest-name-dob-email.pdf`. This
@@ -45,6 +59,11 @@ is the job lifecycle persisted by the worker.
 Uploads and downloads use the URLs returned by the control plane. This covers
 the same S3 authorization boundary used by the browser. HTTP errors include the
 status and sanitized response body but never print the signed URL.
+
+The Lambda and worker S3 clients explicitly use Signature V4. The boto3 S3
+presign default can select legacy Signature V2, where an HTTP client's implicit
+content type changes the canonical request and invalidates an otherwise valid
+multipart URL.
 
 ### Pin Terraform in every workflow job that invokes Terragrunt
 

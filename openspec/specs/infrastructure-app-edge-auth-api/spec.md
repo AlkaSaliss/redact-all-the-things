@@ -98,14 +98,35 @@ infrastructure-only Lambda stub.
 - **WHEN** the Lambda package is rebuilt
 - **THEN** the generated ZIP content hash remains stable.
 
-### Requirement: Temporary frontend placeholder
+### Requirement: Bootstrap frontend placeholder
 
-The app edge/auth/API slice SHALL include a minimal frontend placeholder only
-for infrastructure wiring until product slices provide the real frontend
-artifact.
+The app edge/auth/API infrastructure SHALL include a minimal frontend object
+for initial wiring without taking ownership of later application deployments.
 
-#### Scenario: Publish a frontend placeholder
+#### Scenario: Bootstrap the frontend bucket
 
 - **WHEN** Terraform plans the Floci stack
-- **THEN** a minimal static frontend placeholder object is available for the
-  frontend bucket without implementing product UI behavior.
+- **THEN** a minimal static frontend object is available for the frontend bucket
+- **AND** Terraform does not replace a frontend build published later.
+
+### Requirement: Publish real frontend application
+
+The frontend deployment workflow SHALL publish the tested React build to the
+private frontend bucket using the Terraform toolchain supported by the live
+stack.
+
+#### Scenario: Resolve live outputs with pinned Terraform
+
+- **WHEN** the frontend deployment job resolves Terragrunt outputs
+- **THEN** it installs the repository-supported Terraform version explicitly
+- **AND** it obtains the frontend bucket and CloudFront distribution outputs
+  from the selected live environment.
+
+#### Scenario: Publish and invalidate frontend assets
+
+- **WHEN** the frontend build and deployment jobs succeed
+- **THEN** the published build embeds the selected environment's API endpoint,
+  AWS region, Cognito user pool, browser client, and hosted UI URL
+- **AND** the built assets are synchronized to the private frontend bucket
+- **AND** the CloudFront distribution is invalidated so the new application is
+  served.

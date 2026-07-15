@@ -8,7 +8,18 @@ from urllib.request import Request
 
 import pytest
 
+from redact_api import aws
 from tools import aws_runtime_smoke
+
+
+def test_runtime_s3_config_forces_signature_v4() -> None:
+    s3_client_config = getattr(aws, "s3_client_config", None)
+    assert s3_client_config is not None
+
+    config = s3_client_config()
+
+    assert config.signature_version == "s3v4"
+    assert config.s3 == {"addressing_style": "path"}
 
 
 def test_wait_for_job_returns_requested_status() -> None:

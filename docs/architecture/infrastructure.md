@@ -72,12 +72,16 @@ The app edge/auth/API module models:
 - Cognito invited-user authentication resources;
 - API Gateway HTTP API with a Cognito JWT authorizer;
 - Lambda control-plane package wiring and runtime IAM;
-- CloudFront frontend distribution with origin access control;
+- CloudFront frontend distribution with origin access control and an
+  OAC-scoped S3 read policy;
 - seven-day CloudWatch log retention.
 
-The frontend artifact is still a placeholder. The Lambda artifact is built from
-the checked-in control-plane package before AWS planning/apply so the deployed
-function runs `redact_api.lambda_handler.handler`.
+Terraform creates a placeholder frontend object only to bootstrap the stack and
+ignores its ETag after deployment so frontend publishing owns the live assets.
+CloudFront maps S3 403/404 responses to `index.html` for OAuth callbacks and
+client-side routes. The Lambda artifact is built from the checked-in
+control-plane package before AWS planning/apply so the deployed function runs
+`redact_api.lambda_handler.handler`.
 
 The worker compute module composes the app edge/auth/API module and adds:
 

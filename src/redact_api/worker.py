@@ -8,6 +8,7 @@ import tempfile
 from collections.abc import Callable, Iterable
 from dataclasses import dataclass
 from datetime import datetime
+from os import environ
 from pathlib import Path
 from typing import Any, Protocol
 
@@ -33,7 +34,14 @@ from redact_api.services import MAX_FILE_SIZE
 MAX_PDF_PAGES = 200
 MAX_IMAGE_PIXELS = 50_000_000
 DEFAULT_CONFIG_PATH = (
-    Path(__file__).resolve().parents[2] / "config" / "worker-validation.yml"
+    Path(
+        environ.get(
+            "WORKER_VALIDATION_CONFIG",
+            Path(__file__).resolve().parents[2]
+            / "config"
+            / "worker-validation.yml",
+        )
+    )
 )
 PNG_SIGNATURE = b"\x89PNG\r\n\x1a\n"
 JPEG_SIGNATURE = b"\xff\xd8"

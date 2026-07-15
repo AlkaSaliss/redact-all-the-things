@@ -10,9 +10,8 @@ from os import environ
 from typing import Any
 
 import boto3
-from botocore.config import Config
 
-from redact_api.aws import DynamoJobRepository, S3ObjectRepository
+from redact_api.aws import DynamoJobRepository, S3ObjectRepository, s3_client_config
 from redact_api.domain import Job, WorkerMode, WorkerSubmission
 from redact_api.worker import (
     Gliner2PiiDetector,
@@ -34,7 +33,7 @@ def build_repositories() -> tuple[DynamoJobRepository, S3ObjectRepository]:
     dynamodb = boto3.resource("dynamodb", **client_options)
     s3 = boto3.client(
         "s3",
-        config=Config(s3={"addressing_style": "path"}),
+        config=s3_client_config(),
         **client_options,
     )
     return (
