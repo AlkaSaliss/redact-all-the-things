@@ -18,7 +18,7 @@ dependencies = [
 dev = [
   "httpx==0.28.1",
   "mkdocs==1.6.1",
-  "mkdocs-material==9.7.6",
+  "mkdocs-material==9.7.7",
   "pre-commit==4.6.0",
   "pymarkdownlnt==0.9.35",
   "pytest==9.1.0",
